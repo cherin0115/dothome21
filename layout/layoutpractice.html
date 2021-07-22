@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습6</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            height: 110px;
+            background-color: #e3f2fd;
+        }
+
+        #banner {
+            height: 750px;
+            background-color: #bbdefb;
+        }
+
+        #content1 {
+            height: 2280px;
+            background-color: #90caf9;
+        }
+
+        #content2 {
+            height: 1570px;
+            background-color: #64b5f6;
+        }
+
+        #content3 {
+            height: 530px;
+            background-color: #42a5f5;
+        }
+
+        #footer {
+            height: 270px;
+            background-color: #2196f3;
+        }
+
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container"></div>
+        </div>
+        <!-- header -->
+
+        <div id="banner">
+            <div class="container"></div>
+        </div>
+        <!-- banner -->
+
+        <div id="contents">
+            <div id="content1">
+                <div class="container"></div>
+            </div>
+            <div id="content2">
+                <div class="container"></div>
+            </div>
+            <div id="content3">
+                <div class="container"></div>
+            </div>
+        </div>
+        <!-- contents -->
+
+        <div id="footer">
+            <div class="container"></div>
+        </div>
+        <!-- footer -->
+        
+    </div>
+    <!-- wrap -->
+</body>
+
+</html>

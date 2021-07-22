@@ -5,108 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>레이아웃 연습6</title>
-    <style>
-         @font-face {
-         font-family: 'twaysky';
-         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
-         font-weight: normal;
-         font-style: normal;
-}
-        * {   /*초기화 시켜주는 것 */
-            margin: 0;
-            padding: 0;
-        }
-        #wrap {
-            font-family: 'twaysky';
-            width: 100%;
-            font-size: 60px;
-            text-align: center;
-            color: #fff;
-            text-transform: uppercase;
-            background-color: #e3f2fd;
-        }
-        #header {
-            width: 100%;
-            height: 110px;
-            line-height: 110px;
-            background-color: #bbdefb;
-        }
-        #banner {
-            width: 100%;
-            height: 750px;
-            line-height: 750px;
-            background-color: #90caf9;
-        }
-        #content1 {
-            width: 100%;
-            height: 2280px;
-            line-height: 2280px;
-            background-color: #64b5f6;
-        }
-        #content2 {
-            width: 100%;
-            height: 1570px;
-            line-height: 1570px;
-            background-color: #42a5f5;
-        }
-        #content3 {
-            width: 100%;
-            height: 530px;
-            line-height: 530px;
-            background-color: #2196f3;
-        }
-        #footer {
-            width: 100%;
-            height: 270px;
-            line-height: 270px;
-            background-color: #1e88e5;
-        }
-        .header_inner {
-            width: 1200px;
-            height: 110px;
-            background-color: #d1c4e9;
-            margin: 0 auto;
-        }
-        .banner_inner {
-            width: 1200px;
-            height: 750px;
-            background-color: #b39ddb;
-            margin: 0 auto;
-        }
-        .content1_inner {
-            width: 1200px;
-            height: 2280px;
-            background-color: #9575cd;
-            margin: 0 auto;
-        }
-        .content2_inner {
-            width: 1200px;
-            height: 1570px;
-            background-color: #7e57c2;
-            margin: 0 auto;
-        }
-        .content3_inner {
-            width: 1200px;
-            height: 530px;
-            background-color: #673ab7;
-            margin: 0 auto;
-        }
-        .footer_inner {
-            width: 1200px;
-            height: 270px;
-            background-color: #5e35b1;
-            margin: 0 auto;
-        }
-    </style>
+   <style>
+       * {
+           margin: 0;
+           padding: 0;
+       }
+       #header {
+           height: 110px;
+           background-color: #f3e5f5 ;
+       }
+       #banner {
+           height: 750px;
+           background-color: #e1bee7 ;
+       }
+       #content1 {
+           height: 2280px;
+           background-color: #ba68c8;
+       }
+       #content2 {
+           height: 1570px;
+           background-color: #ab47bc ;
+       }
+       #content3 {
+           height: 530px;
+           background-color: #9c27b0;
+       }
+       #footer {
+           height: 270px;
+           background-color: #8e24aa;
+       }
+       .container {
+           width: 1200px;
+           height: inherit;
+           background-color: rgba(0, 0, 0, 0.3);
+           margin: 0 auto;
+       }
+   </style>
 </head>
 <body>
     <div id="wrap">
-       <div id="header"><div class="header_inner">header(1200px * 110px)</div></div>
-       <div id="banner"><div class="banner_inner">banner(1200px * 750px)</div></div>
-       <div id="content1"><div class="content1_inner">content1(1200px * 2280px)</div></div>
-       <div id="content2"><div class="content2_inner">content2(1200px * 1570px)</div></div>
-       <div id="content3"><div class="content3_inner">content3(1200px * 530px)</div></div>
-       <div id="footer"><div class="footer_inner">footer(1200px * 270px)</div></div>
+        <div id="header">
+            <div class="container">header</div>
+        </div>
+        <!-- header -->
+
+        <div id="banner">
+            <div class="container">banner</div>
+        </div>
+        <!-- banner -->
+
+        <div id="contents">
+            <div id="content1">
+                <div class="container">content1</div>
+            </div>
+            <div id="content2">
+                <div class="container">content2</div>
+            </div>
+            <div id="content3">
+                <div class="container">content3</div>
+            </div>            
+        </div>
+        <!-- contents -->
+        
+        <div id="footer">
+            <div class="container">footer</div>
+        </div>
+        <!-- footer -->
     </div>
 </body>
 </html>

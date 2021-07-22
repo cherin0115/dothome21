@@ -243,15 +243,15 @@
     <h2 class="mt20">알고리즘</h2>
 
     <ul>
-        <li>01. 1부터 100까지 출력하기 </li>
-        <li>02. 1부터 100까지 출력하기 : 짝수만 </li>
-        <li>03. 1부터 100까지 출력하기 :5의 배수만</li>
-        <li>04. 1부터 100까지 출력하기 :짝수는 빨간색, 홀수는 파란색</li>
-        <li>05. 1부터 100까지 합 출력하기</li>
-        <li>06. 구구단 출력하기</li>
-        <li>07. 테이블 만들기1</li>
-        <li>08. 테이블 만들기2</li>
-        <li>09. 테이블 만들기3- 짝수만</li>
+        <li><a href="#sample1">01. 1부터 100까지 출력하기</a></li>
+        <li><a href="#sample2">02. 1부터 100까지 출력하기 : 짝수만 </a></li>
+        <li><a href="#sample3">03. 1부터 100까지 출력하기 :5의 배수만</a></li>
+        <li><a href="#sample4">04. 1부터 100까지 출력하기 :짝수는 빨간색, 홀수는 파란색</a></li>
+        <li><a href="#sample5">05. 1부터 100까지 합 출력하기</a></li>
+        <li><a href="#sample6">06. 구구단 출력하기</a></li>
+        <li><a href="#sample7">07. 테이블 만들기1</a></li>
+        <li><a href="#sample8">08. 테이블 만들기2</a></li>
+        <li><a href="#sample9">09. 테이블 만들기3- 짝수만</a></li>
 
     </ul>
 
@@ -307,9 +307,9 @@
             <pre class="line-numbers"><code class="language-js">{
     for (let i = 1; i &lt;= 100; i++){
          if (i % 2 == 0) {
-         document.write("<span style='color:red'> "+ i +" </span>");
+         document.write("&lt;span style='color:red' &gt; "+ i +" &lt;/span&gt;");
         } else
-            document.write("<span style='color:blue'>"+ i +" </span>");
+            document.write("&lt;span style='color:blue'&gt;"+ i +" &lt;/span&gt;");
     }
 }
         </code></pre>
@@ -317,7 +317,7 @@
     </div>
 
     <hr>
-    <!-- sample4 -->
+    <!-- sample5 -->
     <div id="sample5" class="sample">
         <h2>05. 1부터 100까지 합 출력하기<span class="dot"></span></h2>
         <div class="code">
@@ -334,9 +334,9 @@
 
     <hr>
 
-    <!-- sample5 -->
-    <div id="sample7" class="sample">
-        <h2>05. 구구단 만들기 <span class="dot"></span></h2>
+    <!-- sample6 -->
+    <div id="sample6" class="sample">
+        <h2>06. 구구단 만들기 <span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
     for(var i=2; i&lt;=9; i++){
@@ -363,9 +363,9 @@
           2 * 9 = 18; -->
     <hr>
 
-    <!-- sample6 -->
-    <div id="sample6" class="sample">
-        <h2>06. 테이블 만들기 <span class="dot"></span></h2>
+    <!-- sample7 -->
+    <div id="sample7" class="sample">
+        <h2>07. 테이블 만들기 <span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
     let num = 1;
@@ -386,10 +386,12 @@
         </div>
     </div>
 
+    <hr>
+
 
     <!-- sample7 -->
     <div id="sample7" class="sample">
-        <h2>07. 테이블 만들기2 <span class="dot"></span></h2>
+        <h2>08. 테이블 만들기2 <span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
     let num = 100;
@@ -694,7 +696,7 @@
 
             for (let i = 2; i <= 10; i++) {
                 if (i % 2 == 0)
-                
+
                 table += "<tr>";
                 for (let j = 1; j <= 10; j++) {
                     table += "<td>" + num + "</td>";
