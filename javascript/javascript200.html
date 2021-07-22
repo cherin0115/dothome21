@@ -520,13 +520,13 @@
             table += "&lt;tr&gt;";
                 for ( let j=1; jl&lt;=10; j++ ){
                     table +="&lt;td&gt;"+ num +"&lt;/td&gt;";
-                    num ++;
+                    num++;
                 }
-            table += "&lt;tr&gt;";  
+            table += "&lt;/tr&gt;";  
         }
             
-            table += "&lt;/table&gt;";
-
+        table += "&lt;/table&gt;";
+        document.write(table);
 }
 </code></pre>
     </div>
@@ -889,19 +889,19 @@
                 table += "<tr>";
                    for ( let j=1; j<=10; j++ ){
                        table +="<td>"+ num +"</td>";
-                       num ++;
+                       num++;
                    }
                 table += "</tr>";  
             }
-             
-                table += "</table>";
+            
+            table += "</table>";
 
-                document.write(table);
+            document.write(table);
         }   document.write("<br>")
 
         
         {   
-            document.write("*** 숙제 ***<br>");
+            document.write("*** 테이블 만들기2 ***<br>");
             let num = 100;
             let table = "<table>";
 
@@ -909,14 +909,36 @@
                 table += "<tr>";
                    for ( let j=1; j<=10; j++ ){
                        table +="<td>"+ num +"</td>";
-                       num --;
+                       num--;
                    }
                 table += "</tr>";  
             }
              
-                table += "</table>";
+            table += "</table>";
 
-                document.write(table);
+            document.write(table);
+        }   document.write("<br>")
+
+        // sample 101: 테이블 만들기3 
+        //짝수만 나오게 
+
+        {   
+            document.write("*** 테이블 만들기3 ***<br>");
+            let num = 2;
+            let table = "<table>";
+
+            for( let i=2; i<=10; i++ ){
+                table += "<tr>";
+                   for ( let j=1; j<=10; j++ ){
+                       table +="<td>"+ num +"</td>";
+                       num--;
+                   }
+                table += "</tr>";  
+            }
+             
+            table += "</table>";
+
+            document.write(table);
         }
 
       
