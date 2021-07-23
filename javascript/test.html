@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //변수 : 데이터 저장소
+        // 100 200 300 변수에 저장을 출력해 보세요!
+        {
+            var x = 100;
+            var y = 200;
+            var z = 300;
+
+            document.write("*** 100 200 300 변수에 저장을 출력해 보세요!***<br>");
+            document.write(x);
+            document.write(y);
+            document.write(z);
+        }
+        document.write("<br><br>");
+        //배열
+        // 100 200 300 변수에 저장을 출력해 보세요!
+        {
+            const arr = [100, 200, 300];
+
+            document.write("*** 100 200 300 변수에 저장을 출력해 보세요!***<br>");
+            document.write(arr[0]);
+            document.write(arr[1]);
+            document.write(arr[2]);
+        }
+        document.write("<br><br>");
+
+        //객체
+        // 100 200 300 변수에 저장을 출력해 보세요!
+        {
+            const obj = new Object();
+
+            obj.a = 100;
+            obj.b = 200;
+            obj.c = 300;
+
+            document.write("*** 100 200 300 변수에 저장을 출력해 보세요!***<br>");
+            document.write(obj.a);
+            document.write(obj.b);
+            document.write(obj.c);
+        }
+        document.write("<br><br>");
+
+        //반복문
+        // for문을 이용해서 1-50까지 출력을 해보세요!
+        {
+            document.write("*** for문을 이용해서 1-50까지 출력을 해보세요! ***<br>");
+
+            for (let i = 1; i <= 50; i++) {
+                document.write(i);
+            }
+            document.write("<br><br>");
+        }
+
+
+        //반복문
+        // for문을 이용해서 50-1까지 출력을 해보세요!
+        {
+            document.write("*** for문을 이용해서 50-1까지 출력을 해보세요! ***<br>");
+
+            for (let i = 50; i >= 1; i--) {
+                document.write(i);
+            }
+            document.write("<br><br>");
+        }
+
+        //반복문
+        // for문을 이용해서 1-50까지 (짝수)을 해보세요!
+        {
+            document.write("*** for문을 이용해서 1-50(짝수만)까지 출력을 해보세요! ***<br>");
+            for (let i = 2; i <= 50; i += 2) {
+                if (i % 2 == 0) {
+                    document.write(i);
+                }
+            }
+            document.write("<br><br>");
+        }
+
+        //반복문
+        // for문을 이용해서 1-50까지 (홀수)을 해보세요!
+        {
+            document.write("*** for문을 이용해서 1-50(홀수만)까지 출력을 해보세요! ***<br>");
+            for (let i = 1; i < 50; i += 2) {
+                if (i % 2 == 1) {
+                    document.write(i);
+                }
+            }
+            document.write("<br><br>");
+        }
+
+        //반복문
+        // for문을 이용해서 구구단 8단만 출력을 해보세요!
+        {
+            document.write("***  for문을 이용해서 구구단 8단만 출력을 해보세요! ***<br>");
+
+            for (let i = 8; i == 8; i++) {
+                for (let j = 1; j <= 9; j++) {
+                    let sum = i * j;
+                    document.write(i + "*" + j + "=" + sum, "<br>");
+                }
+            }
+            document.write("<br><br>")
+        }
+
+        //반복문
+        // for문을 이용해서 구구단 5-8단만 출력을 해보세요!
+        {
+            document.write("*** for문을 이용해서 구구단 5-8단만 출력을 해보세요! ***<br>");
+
+            for (var i = 5; i <= 8; i++) {
+                for (var j = 1; j <= 9; j++) {
+                    var sum = i * j;
+                    document.write(i + " * " + j + " = " + sum, "<br>");
+                }
+            }
+            document.write("<br><br>")
+        }
+    </script>
+</body>
+
+</html>
