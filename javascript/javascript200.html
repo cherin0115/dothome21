@@ -211,12 +211,13 @@
         .ol1::before {
             content: "데이터 저장하기 : ";
         }
-
         .ol2::before {
+            content: "데이터 불러오기 : ";
+        }
+        .ol3::before {
             content: "데이터 실행하기 : ";
         }
-
-        .ol3::before {
+        .ol4::before {
             content: "데이터 제어하기 : ";
         }
     </style>
@@ -232,12 +233,15 @@
         <li><a href="javascript100.html">객체(Object)</a></li>
     </ol>
     <ol class="ol2">
-        <li><a href="javascript300.html">함수(Function)</a></li>
+        <li><a href="javascript500.html">데이터</a></li>
     </ol>
     <ol class="ol3">
+        <li><a href="javascript300.html">함수(Function)</a></li>
+    </ol>
+    <ol class="ol4">
         <li><a href="javascript200.html">조건문</a></li>
         <li><a href="javascript200.html">반복문</a></li>
-
+ 
     </ol>
     <ol>
         <li><a href="javascript400.html">알고리즘</a></li>
@@ -269,7 +273,7 @@
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
     // true, false, 1, "1", 0 (false나옴), null (값이 없을때도 false), undefined (값이 아예없을때 false), [] (배열은 true), {} , ""(false)
-    if( ture ){
+    if( true ){
         document.write("***01. if문***");
         document.write("조건문이 실행되었습니다.(true)");
     } else {
@@ -384,7 +388,7 @@
 
     document.write("***05. 조건부 연산자***");
     
-    ( num == 100) ? document.write("true") : document.write("false");
+    (num == 100) ? document.write("true") : document.write("false");
 
 }    
 </code></pre>
@@ -581,7 +585,6 @@
     document.write("*** 14. break문 ***");
 
     //while문을 이용해서 1부터 20까지 출력을 해주세요!!
-
     let num = 0;
     while(num &lt; 20){
         num++;
@@ -592,7 +595,6 @@
     }
 
     //for문을 이용해서 1부터 20까지 출력을 해주세요!!
-
     for(let i=1; i&lt;=20; i++){
         document.write(i);
         if( i == 10){
