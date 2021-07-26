@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습8 : float을 이용한 반응형</title>
+    <style>
+        * {
+            margin: 0; padding: 0;
+        }
+        body {
+            background-color: #f3e5f5;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            width: 100%;
+            height: 150px;
+            background-color: #e1bee7;
+        }
+        main {
+            overflow: hidden;
+        }
+        aside {
+            width: 30%;
+            height: 700px;
+            background-color: #ce93d8;
+            float: left;
+        }
+        section {
+            width: 70%;
+            height: 700px;
+            background-color: #ba68c8;
+            float: left;
+        }
+        footer {
+            width: 100%;
+            height: 150px;
+            background-color: #ab47bc;           
+        }
+
+        @media (max-width: 1210px){
+           #wap{
+                width: 90%;
+           } 
+        }
+        
+        @media (max-width: 800px){
+           #wap{
+                width: 100%;
+           } 
+        }
+
+        @media (max-width: 600px){
+           aside{
+                float: none;
+                width: 100%;
+                height: 300px;
+           } 
+           section{
+                float: none;
+                width: 100%;
+                height: 300px;
+           } 
+        }
+      
+    </style>
+</head>
+<body>
+    <!-- 옛날 스타일 -->
+    <!-- <div>
+        <div id= "header"></div>
+        <div id="side"></div>
+        <div id="contents"></div>
+        <div id="footer"></div>
+    </div> -->
+    <!-- 요즘 스타일 의미가 부여된 시멘틱 태그 ->웹표준 준수 ->웹 접근성 준수 ->웹 호환성 준수-->
+    <div id="wrap">
+        <header></header>
+        <main>
+            <aside></aside>
+            <section></section>
+        </main>     
+        <footer></footer>
+    </div>
+</body>
+</html>
