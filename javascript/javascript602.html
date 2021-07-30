@@ -23,6 +23,7 @@
             padding: 0;
             font-family: 'NEXON Lv1 Gothic OTF';
             line-height: 1.6;
+            word-break: break-all;
         }
 
         body {
@@ -979,10 +980,8 @@
 
     document.querySelector(".sample08_M5").innerHTML = ".replace(/-/g,' ')";
     document.querySelector(".sample08_R5").innerHTML = text5;
-    
-    
     }    
-    </code></pre>
+</code></pre>
         </div>
     </div>
 
@@ -1045,21 +1044,39 @@
         </div>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{ 
-    
-    
-    
+    const str1 = "자바스크립트(javascript) 공부";
+    const text1 = str1.split('');
+
+    document.querySelector(".sample09_R1").innerHTML = text1;
+
+    const str2 = "자바스크립트(javascript) 공부";
+    const text2 = str2.split(' ');
+
+    document.querySelector(".sample09_R2").innerHTML = text2;
+
+    const str3 = "자바스크립트(javascript) 공부";
+    const text3 = str3.split('').join('/');
+
+    document.querySelector(".sample09_R3").innerHTML = text3;
+
+    const str4 = "https://webstoryboy.co.kr/main.html?id=1234&name=webs";
+    const text4 = str4.split('&');
+
+    document.querySelector(".sample09_R4").innerHTML = text4;
+
+    const str5 = "https://webstoryboy.co.kr/main.html?id=1234&name=webs";
+    const text5 = str5.split(/&|\?/);
+
+    document.querySelector(".sample09_R5").innerHTML = text5; 
+       
     }    
-    </code></pre>
+</code></pre>
         </div>
     </div>
 
 
     <hr>
     <!-- sample09 -->
-
-    <hr>
-    <hr>
-    <hr>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
@@ -1369,7 +1386,7 @@
         }
 
         //sample09
-        //09.
+        //09. 문자열 메서드 : split() : 문자열 반환 : 반환(문자열)
         {
             const str1 = "자바스크립트(javascript) 공부";
             const text1 = str1.split('');
@@ -1409,8 +1426,8 @@
             document.querySelector(".sample09_N5").innerHTML = "5";
             document.querySelector(".sample09_Q5").innerHTML = str5;
             document.querySelector(".sample09_M5").innerHTML = ".split(/&|\?/)";
-            document.querySelector(".sample09_R5").innerHTML = text5; 
-            console.log(text5)         
+            document.querySelector(".sample09_R5").innerHTML = text5;
+            console.log(text5)
         }
     </script>
 </body>
