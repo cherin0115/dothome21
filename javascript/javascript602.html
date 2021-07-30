@@ -316,7 +316,7 @@
 
     <h2 class="mt20">문자열 메서드</h2>
     <ul>
-        <li><a href="#sample01">01. 문자열 메서드 : 문자열 결합 / 텝플릿 문자열 </a></li>
+        <li><a href="#sample01">01. 문자열 메서드 : 문자열 결합 / 템플릿 문자열 </a></li>
         <li><a href="#sample02">02. 문자열 메서드 : length : 문자열 길이 구하기 : 반환(숫자</a></li>
         <li><a href="#sample03">03. 문자열 메서드 : toUpperCase() : 문자열 대문자 변경하기 : 반환(문자열) </a></li>
         <li><a href="#sample03">03. 문자열 메서드 : toLowerCase() : 문자열 소문자 변경하기 : 반환(문자열) </a></li>
@@ -337,17 +337,16 @@
 
     <h2 class="mt20">문자열 메서드 샘플</h2>
     <ul>
-        <li><a href="#sample01">01. charAt() 이용한첫 글자 검색하기</a></li>
+        <li><a href="/javascript/javascriptsample602-1.html">01. charAt() 이용한 첫 글자 검색하기</a></li>
+        <li><a href="/javascript/javascriptsample602-2.html">02. find()를 이용한 CSS 속성 검색하기</a></li>
 
     </ul>
-
-
 
     <hr>
 
     <!-- sample01 -->
     <div id="sample01" class="sample">
-        <h2>01. 문자열 메서드 : 문자열 결합 / 텝플릿 문자열 <span class="dot"></span></h2>
+        <h2>01. 문자열 메서드 : 문자열 결합 / 템플릿 문자열 <span class="dot"></span></h2>
         <div class="view">
             <table>
                 <colgroup>
@@ -677,58 +676,46 @@
     const str = "자바스크립트(javascript)를 공부.";
     const text1 = str.indexOf("javascript");
 
-    document.querySelector(".sample05_M1").innerHTML = "indexOf(`javascript`)";
     document.querySelector(".sample05_R1").innerHTML = text1;
 
     const text2 = str.indexOf("자바스크립트");
-
-    document.querySelector(".sample05_M2").innerHTML = "indexOf(`자바스크립트`)";
+    
     document.querySelector(".sample05_R2").innerHTML = text2;
-
 
     const text3 = str.indexOf("제이쿼리");
 
-    document.querySelector(".sample05_M3").innerHTML = "indexOf(`제이쿼리`)";
     document.querySelector(".sample05_R3").innerHTML = text3;
 
     const text4 = str.indexOf("a");
 
-    document.querySelector(".sample05_M4").innerHTML = "indexOf(`a`)";
     document.querySelector(".sample05_R4").innerHTML = text4;
     
     const text5 = str.lastIndexOf("a");
 
-    document.querySelector(".sample05_M5").innerHTML = "lastIndexOf(`a`)";
     document.querySelector(".sample05_R5").innerHTML = text5;
 
     const text6 = str.search(/javascript/);
 
-    document.querySelector(".sample05_M6").innerHTML = "search(/javascript/)";
     document.querySelector(".sample05_R6").innerHTML = text6;
 
     const text7 = str.search(/jquery/);
 
-    document.querySelector(".sample05_M7").innerHTML = "search(/jquery/)";
     document.querySelector(".sample05_R7").innerHTML = text7;
 
     const text8 = str.includes("javascript");
 
-    document.querySelector(".sample05_M8").innerHTML = "includes(`javascript`)";
     document.querySelector(".sample05_R8").innerHTML = text8;
 
     const text9 = str.includes("javascript");
 
-    document.querySelector(".sample05_M9").innerHTML ="includes(`jquery`)";
     document.querySelector(".sample05_R9").innerHTML = text9;
 
     const text10 = str.startsWith("자바스크립트");
 
-    document.querySelector(".sample05_M10").innerHTML = "startsWith(`자바스크립트`)";
     document.querySelector(".sample05_R10").innerHTML = text10;
 
     const text11 = str.endsWith("javascript");
 
-    document.querySelector(".sample05_M11").innerHTML = "endsWith(`javascript`)";
     document.querySelector(".sample05_R11").innerHTML = text11;
 }    
 </code></pre>
