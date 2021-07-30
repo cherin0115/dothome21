@@ -216,24 +216,31 @@
             border: 1px solid #989898;
             padding: 5px;
         }
+
         .mt20 {
             margin-top: 20px;
         }
+
         .ol1::before {
             content: "데이터 저장하기 : ";
         }
+
         .ol2::before {
             content: "데이터 불러오기 : ";
         }
+
         .ol3::before {
             content: "데이터 실행하기 : ";
         }
+
         .ol4::before {
             content: "데이터 제어하기 : ";
         }
+
         .ol5::before {
             content: "데이터 연습하기 : ";
         }
+
         .ol6::before {
             content: "데이터 메서드 : ";
         }
@@ -260,7 +267,7 @@
     <ol class="ol4">
         <li><a href="javascript200.html">조건문</a></li>
         <li><a href="javascript200.html">반복문</a></li>
- 
+
     </ol>
     <ol class="ol5">
         <li><a href="javascript400.html">알고리즘</a></li>
@@ -330,7 +337,7 @@
         document.write(i);
     }
 }
-    </code></pre>
+</code></pre>
         </div>
     </div>
     <hr>
@@ -343,10 +350,10 @@
          if (i % 2 == 0) {
          document.write("&lt;span style='color:red' &gt; "+ i +" &lt;/span&gt;");
         } else
-            document.write("&lt;span style='color:blue'&gt;"+ i +" &lt;/span&gt;");
+          document.write("&lt;span style='color:blue'&gt;"+ i +" &lt;/span&gt;");
     }
 }
-        </code></pre>
+</code></pre>
         </div>
     </div>
 
@@ -362,7 +369,7 @@
     }
     document.write(sum);
 }
-        </code></pre>
+</code></pre>
         </div>
     </div>
 
@@ -438,8 +445,8 @@
                     num--;
                 }
             table += "&lt;/tr&gt;";  
-        }            
-        table += "&lt;/table&gt;";
+        }                    
+    table += "&lt;/table&gt;";
 }
 </code></pre>
         </div>
@@ -462,8 +469,7 @@
             num += 2;
         }
         table += "&lt;/tr&gt;";
-    }
-
+    }    
     table += "&lt;/table&gt;";
 }
 </code></pre>
@@ -592,7 +598,7 @@
         </tr>
       
     </table> -->
-
+    <hr>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -604,7 +610,7 @@
         {
             document.write("*** 01. 1부터 100까지 출력***<br>")
 
-            for (let i = 1; i <= 100; i++){
+            for (let i = 1; i <= 100; i++) {
                 document.write(i, " &nbsp;");
             }
             document.write("<br><br>");
@@ -613,7 +619,7 @@
         //1부터 100까지 출력(짝수만 출력)
         {
             document.write("*** 02. 1부터 100까지 출력(짝수만 출력)***<br>")
-            for (let i = 2; i < 100; i += 2){
+            for (let i = 2; i < 100; i += 2) {
                 if (i % 2 == 0) {
                     document.write(i, " &nbsp;");
                 }
@@ -633,7 +639,7 @@
         {
             document.write("*** 03. 1부터 100까지 출력(5의 배수)***<br>")
 
-            for (let i = 1; i < 100; i++){
+            for (let i = 1; i < 100; i++) {
                 if (i % 5 == 0) document.write(i, "&nbsp;");
 
             }
@@ -645,7 +651,7 @@
         {
             document.write("*** 04. 1부터 100까지 출력(짝수는 빨간색출력, 홀수는 파란색)***<br>")
 
-            for (let i = 1; i <= 100; i++){
+            for (let i = 1; i <= 100; i++) {
                 if (i % 2 == 0) {
                     document.write("<span style='color:red'> " + i + " </span>");
                 } else
@@ -655,13 +661,13 @@
         }
 
 
-        //sample05
+        //sample06
         // 1부터 100까지 합 출력
         {
             document.write("*** 05. 1부터 100까지 합 출력***<br>")
 
             let sum = 0;
-            for (let i=1; i<=100; i++){
+            for (let i = 1; i <= 100; i++) {
                 sum += i;
             }
             document.write(sum);
@@ -683,7 +689,7 @@
             //  2 * 7 = 14;     9 * 2 = 18
             //  2 * 8 = 16;
             //  2 * 9 = 18;
-            document.write("*** 100. 구구단 만들기 ***<br>");
+            document.write("*** 06. 구구단 만들기 ***<br>");
             for (var i = 2; i <= 9; i++) {
                 for (var j = 1; j <= 9; j++) {
                     var sum = i * j;
@@ -692,10 +698,10 @@
             }
             document.write("<br>");
         }
-        //sample06
+        //sample07
         // 테이블 만들기1
         {
-            document.write("*** 06. 테이블만들기 ***<br>");
+            document.write("*** 07. 테이블만들기 ***<br>");
             let num = 1;
             let table = "<table>";
 
@@ -714,11 +720,11 @@
         }
         document.write("<br>")
 
-        //sample07
+        //sample08
         // 테이블 만들기2
 
         {
-            document.write("*** 테이블 만들기2 ***<br>");
+            document.write("*** 08. 테이블 만들기2 ***<br>");
             let num = 100;
             let table = "<table>";
 
@@ -741,7 +747,7 @@
         //짝수만 나오게 
 
         {
-            document.write("*** 테이블 만들기3 ***<br>");
+            document.write("*** 09.테이블 만들기3 ***<br>");
             let num = 2;
             let table = "<table>";
 
