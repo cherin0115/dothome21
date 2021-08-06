@@ -11,86 +11,75 @@
         padding: 0;
     }
     body {
-        width: 100%;
-        height: 1200px;
         background-color: #fff3e0 ;
     }
     #wrap {
         width: 1200px;
-        height: 1300px;
         margin: 0 auto;
     }
     header {
-        width: 1200px;
+        width: 100%;
         height: 150px;
         background-color: #ffe0b2 ;
-        margin: 0 auto;
     }
     main {
-        width: 1200px;
-        height: 1200px;
-        margin: 0 auto;
+        width:  100%;
         overflow: hidden;
     }
-    footer {
-        width: 1200px;
-        height: 150px;
-        background-color: #ff9800 ;
-        margin: 0 auto;
-    }
-    main aside {
-        width: 1200px;
+    .aside {
+        width:  100%;
         height: 300px;
         background-color: #ffcc80 ;
-        margin: 0 auto;
     }
-    main article {
-        width: 400px;
+    .article1 {
+        width: 30%;
         height: 900px;
-        background-color: #ffb74d ;
-        margin: 0 auto;
+        background-color: #ffb74d ; 
         float: left;
     }
-    main section {
-        width: 800px;
+    .article2 {
+        width: 70%;
         height: 900px;
         background-color: #ffa726 ;
-        margin: 0 auto;
         float: left;
     }
+    footer {
+        width:  100%;
+        height: 150px;
+        background-color: #ff9800 ;
+    }
 
-    @media (max-width:800px){
-        header{
-            height: 200px;
+    @media (max-width:1220px){
+        #wrap {
+            width: 100%;
         }
-        main{
-            height: 900px;
-        }
-        main aside{
+        .aside{
             display: none;
         }
-        footer{
-            height: 200px;
+        .article1 {
+            width: 30%;
+        }
+        .article2 {
+            width: 70%;
         }
     }
 
-    @media (max-width:300px){
+    @media (max-width:600px){
+        #wrap {
+            width: 100%;
+        }
         header{
             width: 100%;
             height: 200px;
         }
-        main{
-            width: 100%;
-            height: 900px;
-        }
-        main aside{
+        .aside{
             display: none;
         }
-        main article{
+        .article1{
             width: 100%;
             height: 500px;
         }
-        main section{
+        .article2{
             width: 100%;
             height: 400px;
         }
@@ -106,9 +95,9 @@
     <div id="wrap">
         <header></header>
         <main>
-            <aside></aside>
-            <article></article>
-            <section></section>
+            <aside class="aside"></aside>
+            <article class="article1"></article>
+            <article class="article2"></section>
         </main>
         <footer></footer>
     </div>
