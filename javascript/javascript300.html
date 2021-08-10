@@ -336,11 +336,11 @@
         <h2>03. 매개변수 함수 <span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
-    function func(str){
-        document.write(str);
+    function func(str1, str2) {
+        document.write("*** 03. 매개변수 함수 *** ");
+        document.write(str1, str2);
     }
-    document.write("*** 03. 매개변수 함수 ***");
-    func("함수가 실행되었습니다."); 
+    func("함수가", "실행되었습니다.");
 }   
 </code></pre>
         </div>
@@ -723,11 +723,11 @@
         // sample 3
         // 03. 매개변수 함수 
         {
-            function func(str) {
+            function func(str1, str2) {
                 document.write("*** 03. 매개변수 함수 *** <br>");
-                document.write(str);
+                document.write(str1, str2);
             }
-            func("함수가 실행되었습니다. <br><br>");
+            func("함수가", " 실행되었습니다. <br><br>");
         }
 
         // sample 4
