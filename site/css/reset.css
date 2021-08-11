@@ -31,3 +31,27 @@ button {
     margin: 0;
     padding: 0
 }
+
+/* 폰트초기화 */
+body,
+button,
+input,
+select,
+table,
+textarea {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #222;
+    font-family: AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+}
+/* a 링크 초기화 */
+a {
+    color: #222;
+    text-decoration: none;
+}
+ 
+/* a 목록 초기화 */
+ol,
+ul {
+    list-style: none
+}
