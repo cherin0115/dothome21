@@ -67,7 +67,7 @@
         }
 
         main h2 em {
-            color: #ffc117;
+            color: #00db72;
             font-style: normal;
         }
 
@@ -88,8 +88,17 @@
             padding: 6px 30px;
             background: #fff;
             margin-bottom: 40px;
-            background-color: #ffc117;
+            background-color: #00db72;
             color: #fff;
+        }
+
+        .refer h3 a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .refer h3.active {
+            box-shadow: inset 0px -5px 0 0px #068d4c;
         }
 
         .refer table {
@@ -109,17 +118,21 @@
             border: 1px solid #aaa;
             padding: 15px;
         }
+
         .refer table tr {
             transition: all 0.3s;
         }
+
         .refer table tr:hover {
-            background-color: #ffc117;
+            background-color: #00db72;
             color: #fff;
             cursor: crosshair;
         }
+
         .link li {
             list-style: none;
         }
+
         .link li a {
             text-decoration: none;
             background: #000;
@@ -128,49 +141,75 @@
             display: inline-block;
             margin-bottom: 10px;
         }
+
         .link li a:hover {
-            background: #ffb327;
+            background: #00db72;
         }
-        @media (max-width:1220px){
+        .page {
+            text-align: right;
+            margin-bottom: 3px;
+        }
+        .page li {
+            display: inline;
+            list-style: none;
+        }
+        .page li a {
+            text-decoration: none;
+            color: #222;
+        }
+        .page li a:hover {
+            color: #008d49;
+        }
+
+        @media (max-width:1220px) {
             #contents {
                 width: 98%;
             }
         }
-        @media (max-width:800px){
+
+        @media (max-width:800px) {
             #contents {
                 width: 96%;
             }
+
             #header {
                 padding: 6% 2% 0% 2%;
             }
+
             #header h1 {
-               font-size: 16px;
+                font-size: 16px;
             }
+
             #header strong {
                 font-size: 14px;
                 bottom: 10%;
             }
+
             main h2 {
                 font-size: 30px;
                 padding: 22% 5% 5%;
             }
+
             .refer {
                 padding: 10px;
                 margin-bottom: 100px;
             }
+
             .refer h3 {
                 margin-bottom: 10px;
                 font-size: 16px;
                 padding: 6px 10px;
             }
-            .refer table th{
+
+            .refer table th {
                 padding: 8px;
             }
-            .refer table td{
+
+            .refer table td {
                 padding: 8px;
                 font-size: 14px;
             }
-            
+
         }
     </style>
 </head>
@@ -184,11 +223,14 @@
 
     <main id="contents">
         <h2>HTML <em>레퍼런스 북</em></h2>
-        <ul class="link">
-            <li><a href="../javascript/javascriptsample603-1.html">HTML 속성 첫 글자 검색하기</a></li>
+        <ul class="page">
+            <li><a href="../refer-html/index.html">HTML</a></li>
+            <li><a href="../refer-css/index.html">CSS</a></li>
+            <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>
         </ul>
         <section class="refer">
-            <h3>Alphabet</h3>
+            <h3 class="active"><a href="index.html">Alphabet</a></h3>
+            <h3><a href="index2.html">Topics</a></h3>
             <table>
                 <colgroup>
                     <col style="width: 30%">
@@ -423,7 +465,7 @@
                     </tr>
                     <tr>
                         <td> &lt;iframe&gt;</td>
-                        <td>>iframe 태그는 웹 문서에 다른 문서를 포함하는데 사용합니다.</td>
+                        <td>iframe 태그는 웹 문서에 다른 문서를 포함하는데 사용합니다.</td>
                     </tr>
                     <tr>
                         <td> &lt;img&gt;</td>
@@ -575,7 +617,8 @@
                     </tr>
                     <tr>
                         <td> &lt;section&gt;</td>
-                        <td>section 태그는 주제별 그룹의 콘텐츠 섹션을 나타낼 때 사용하며, 각 섹션에는 &lt;h1&gt;~&lt;h6&gt; 요소를 자식으로 포함시켜 식별해야 합니다</td>
+                        <td>section 태그는 주제별 그룹의 콘텐츠 섹션을 나타낼 때 사용하며, 각 섹션에는 &lt;h1&gt;~&lt;h6&gt; 요소를 자식으로 포함시켜 식별해야 합니다
+                        </td>
                     </tr>
                     <tr>
                         <td> &lt;select&gt;</td>
@@ -688,7 +731,7 @@
                     <tr>
                         <td> &lt;wbr&gt;</td>
                         <td>wbr 태그는 줄바꿈 할 위치를 정의할 때 사용합니다.</td>
-                    </tr>                    
+                    </tr>
                 </tbody>
             </table>
         </section>
