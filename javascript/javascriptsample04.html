@@ -206,6 +206,13 @@
             white-space: nowrap;
         }
 
+        .tday {
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+        }
     </style>
 </head>
 
@@ -234,6 +241,7 @@
     </div>
 
     <div class="time">00:00:00</div>
+    <div class="tday">오늘은 <span class="day-now">00</span>입니다.</div>
     <div class="dday">앞으로 수료일은 <span class="dday-time">00</span>일 남았습니다.</div>
 
     <script>
@@ -262,8 +270,15 @@
             const time = document.querySelector(".time");
             time.innerHTML = nowTime;
 
-            //요일
-    
+            //요일  
+            const date = new Date();
+            const year = date.getFullYear();
+
+            const day = date.getDay();
+            const dayList = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일']
+
+            document.querySelector(".day-now").innerHTML = dayList[day];
+
             //디데이
 
             const dDay = new Date("December 20, 2021");
