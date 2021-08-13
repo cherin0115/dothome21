@@ -23,7 +23,6 @@
             padding: 0;
             font-family: 'NEXON Lv1 Gothic OTF';
             line-height: 1.6;
-            word-break: break-all;
         }
 
         body {
@@ -32,7 +31,8 @@
         }
 
         h1 {
-            padding-bottom: 20px;
+            padding-top: 40px;
+            padding-top: 20px;
         }
 
         hr {
@@ -300,6 +300,33 @@
         .page li a:hover {
             color: #008d49;
         }
+        @media(max-width: 800px){
+            body {
+                font-size: 13px;
+            }
+            h1{
+                text-align: center;
+            }
+            .sample h2 {
+                font-size: 14px;
+                font-weight: normal;
+                padding: 7px 5px 5px;
+            }
+            .sample h2 .dot {
+                display: none;
+            }
+            .view {
+                padding: 5px;
+                max-width: 800px;
+                overflow: auto;
+            }
+            .view th {
+                font-weight: normal;
+            }
+            .view table td.result {
+                color: #000;
+            }
+        }
     </style>
 </head>
 
@@ -359,13 +386,12 @@
         <li><a href="#sample05">05. 문자열 메서드 : includes() : 문자열 포함 여부: 반환(불린) </a></li>
         <li><a href="#sample05">05. 문자열 메서드 : startWith() : 문자열 포함 여부: 반환(불린) </a></li>
         <li><a href="#sample05">05. 문자열 메서드 : endWith() : 문자열 포함 여부: 반환(불린) </a></li>
-        <li><a href="#sample06">06. 문자열 메서드 : charAt() : 지정한 인텍스의 문자를 추출 : 반환(문자) </a><a class="sam"
-                href="javascriptsample01.html">sample</a></li>
+        <li><a href="#sample06">06. 문자열 메서드 : charAt() : 지정한 인텍스의 문자를 추출 : 반환(문자) </a><a class="sam"  href="javascriptsample01.html">sample</a></li>
         <li><a href="#sample07">07. 문자열 메서드 : slice() : 지정한 범위 내 문자열를 추출 : 반환(문자열) </a></li>
         <li><a href="#sample07">07. 문자열 메서드 : subString() : 지정한 범위 내 문자열를 추출 : 반환(문자열) </a></li>
         <li><a href="#sample07">07. 문자열 메서드 : substr() : 지정한 범위 내 문자열를 추출 : 반환(문자열) </a></li>
-        <li><a hreff="#sample09">09. 문자열 메서드 : split() : 문자열 반환 : 반환(문자열) </a></li>
-        <li><a hre="#sample08">08. 문자열 메서드 : replace() : 문자열 변경 : 반환(문자열) </a></li>
+        <li><a href="#sample08">08. 문자열 메서드 : replace() : 문자열 변경 : 반환(문자열) </a></li>
+        <li><a href="#sample09">09. 문자열 메서드 : split() : 문자열 반환 : 반환(문자열) </a></li>
         <li><a href="#sample10">10. 문자열 메서드 : padStart() : 문자열 시작 부분에 문자열 추가 : 반환(문자열) </a></li>
         <li><a href="#sample10">10. 문자열 메서드 : padEnd() : 문자열 끝 부분에 문자열 추가 : 반환(문자열) </a></li>
         <li><a href="#sample11">11. 문자열 메서드 : encodeURL() : 문자열 인코딩 : 반환(문자열) </a></li>

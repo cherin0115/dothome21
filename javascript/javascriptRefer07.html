@@ -40,7 +40,8 @@
         }
 
         h1 {
-            padding: 20px 0;
+            padding-top: 40px;
+            padding-top: 20px;
         }
 
         h1 a {
@@ -205,7 +206,6 @@
             text-decoration: none;
             color: #222;
         }
-
         .page li a:hover {
             color: #008d49;
         }
@@ -272,8 +272,15 @@
             color: #fff;
             border-radius: 30px;
             padding: 0 20px;
-        }
+        }   
+
         @media (max-width:800px) {
+            body {
+                font-size: 13px;
+            }
+            h1{
+                text-align: center;
+            }
             .menu li a {
                 font-size: 12px;
                 padding: 5px 20px;
@@ -288,8 +295,9 @@
             }
 
             .sample h2 {
-                padding: 12px 10px;
                 font-size: 14px;
+                font-weight: normal;
+                padding: 7px 5px 5px;
             }
 
             .sample h2 .dot {
@@ -298,6 +306,17 @@
 
             .sample pre {
                 font-size: 14px;
+            }
+            .view {
+                padding: 5px;
+                max-width: 800px;
+                overflow: auto;
+            }
+            .view th {
+                font-weight: normal;
+            }
+            .view table td.result {
+                color: #000;
             }
         }
     </style>
