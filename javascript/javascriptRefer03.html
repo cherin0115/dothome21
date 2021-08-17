@@ -1240,9 +1240,43 @@
                         func(5);
                         document.write("<br>");
                     }
+                    //17. 콜백 함수
+                    //함수를 실행시키고 난 뒤 다른 함수를 다시 호출하는 함수
+                    //다른 함수에 매개변수로 넘겨주는 함수
+                    {
+                        document.write("*** 17. 콜백함수 ***<br>");
 
-                    // sample17
-                    // 17. 콜백 함수
+                        function func() {
+                            document.write("함수2가 실행되었습니다.<br><br>");
+                        }
+
+                        function callback(str) {
+                            document.write("함수1가 실행되었습니다.<br>");
+                            str();
+                        }
+                        callback(func);
+                    }
+
+                    //18. 콜백함수 : 반복문
+                    {
+                        document.write("*** 18. 콜백함수 : 반복문 ***<br>");
+
+                        function func() {
+                            document.write("함수가 실행되었습니다.<br>");
+                        }
+
+                        function callblack(num) {
+                            for (let i = 1; i <= 5; i++) {
+                                num(i)
+                            }
+                        }
+                        callblack(func);
+
+                        document.write("<br>");
+                    }
+
+                    // sample19
+                    //19. 콜백 함수
                     // 첫번째 함수가 실행되고 난 뒤 두번째 함수를 다시 호출하는 함수
                     // 로딩소스 -> 메인페이지 애니메이션 작동 -> 두번째 애니메이션 작동 
                     {
