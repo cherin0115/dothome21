@@ -1,9 +1,14 @@
 /* 카드 타입 유형 */
-#cardType{}
+#cardType{
+    margin: 150px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgb(0 0 0 / 10%);
+}
+
 /* cardType01 */
 
 .cardType01 {
-    font-family: 'GmarketSans';
+    font-family: 'NEXON Lv1 Gothic OTF';
     padding: 60px 0;
 }
 .cardType01 h2 {
@@ -12,7 +17,7 @@
     margin-bottom: 7px;
 }
 .cardType01 p {
-    font-weight: 200;
+    font-weight: 300;
     font-size: 26px;
     line-height: 1.28;
     margin-bottom: 40px;
@@ -31,7 +36,8 @@
     margin-right: 0;
 } */
 
-/* flext를 이용한 레이아웃 */
+/* flex를 이용한 레이아웃 */
+
 .cardType01 .card-wrap  {
     display: flex;
     justify-content: space-between;
@@ -61,25 +67,38 @@
     opacity: 0.5;
 }
 
-
+/* flex를 이용한 레이아웃 */
+/* .cardType02 .card-wrap {
+    display: flex;
+} */
+/* grid */
+/* .cardType02 .card-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 285px);
+    gap: 20px;
+} */
 
 
 /* cardtype02 */
 .cardType02 {
-    padding: 150px 0;
+    padding: 101px 0;
     font-family: 'S-CoreDream';
-    text-align: center;
 }
 .cardType02 h2 {
     font-size: 50px;
     font-weight: 500;
+    text-align: center;
 }
 .cardType02 p {
     font-size: 26px;
     font-weight: 300;
+    text-align: center;
 }
-.cardType02 .card-wrap {}
-
+.cardType02 .card-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 285px);
+    gap: 20px;
+}
 .cardType02 .card-wrap .card {
     width: 285px;
     height: 356px;
@@ -87,7 +106,32 @@
     padding: 15px 15px 16px 14px;
     border-radius: 5px;
     border: solid 1px #e6e6e6;
+    box-sizing: border-box;
 }
-.cardType02 .card-wrap .card .card-title{}
-.cardType02 .card-wrap .card .card-desc{}
-.cardType02 .card-wrap .card .card-keyword{}
+.cardType02 .card-wrap .card:last-child{
+    margin-right: 0;
+}
+.cardType02 .card-wrap .card .card-title{
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.cardType02 .card-wrap .card .card-desc{
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+.cardType02 .card-wrap .card .card-word span{
+    text-align: left;
+    margin: 6px 202px 0 0;
+    font-size: 10px;
+    padding: 4px 12px;
+    color: #fff;
+    background-color: black;
+    border-radius: 20px;
+    text-align: center;
+}
