@@ -172,12 +172,12 @@
 
 }
 .cardType03 .card-head .list1 {
-    color: red;
     float: right;
 }
 .cardType03 .card-head .list2 {
     float: right;
     margin-right: 20px;
+    color: #ff2626;
 }
 .cardType03 .card-head .card-list span {
     font-size: 16px;
@@ -245,7 +245,6 @@
 .cardType03 .card-wrap .card .card-contents .card-day {
     margin: 2px 682px 27px 20px;
     font-size: 14px;
-    line-height: 1.4;
     color: #555;
-
+    text-decoration: underline;
 }
