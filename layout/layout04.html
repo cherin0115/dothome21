@@ -6,83 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>레이아웃 연습4</title>
     <style>
-         @font-face {
-         font-family: 'twaysky';
-         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
-         font-weight: normal;
-         font-style: normal;
-}
+        @font-face {
+            font-family: 'twaysky';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
             font-family: 'twaysky';
             background-color: #efebe9;
-            font-size: 60px;
             color: #fff;
+            font-size: 50px;
             text-transform: uppercase;
             text-align: center;
-        }        
-        .wrap {
+        }
+        #wrap {
             width: 1200px;
             height: 1200px;
             margin: 0 auto;
         }
-        .header {
+        #header {
             width: 1200px;
             height: 100px;
             line-height: 100px;
             background-color: #d7ccc8;
         }
-        .nav {
+        #nav {
             width: 1200px;
             height: 100px;
             line-height: 100px;
-            background-color: #bcaaa4 ;
+            background-color: #bcaaa4;
         }
-        .side {
+        #side {
             width: 400px;
             height: 900px;
             line-height: 900px;
-            float: left;
             background-color: #a1887f;
+            float: left;
         }
-        .content1 {
+        #content1 {
             width: 800px;
             height: 300px;
             line-height: 300px;
-            float: left;
             background-color: #8d6e63;
-        }
-        .content2 {
-            width: 800px;
-            height: 300px;
-            line-height: 300px;
             float: left;
-            background-color: #795548;
         }
-        .content3 {
+        #content2 {
             width: 800px;
             height: 300px;
             line-height: 300px;
-            clear: both;
-            background-color: #6d4c41;
+            background-color: #795548;
+            float: left;
         }
-        .footer {
+        #content3 {
+            width: 800px;
+            height: 300px;
+            line-height: 300px;
+            background-color: #6d4c41;
+            float: left;
+        }
+        #footer {
             width: 1200px;
             height: 100px;
             line-height: 100px;
-            
             background-color: #5d4037;
+            clear: both;
         }
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <div class="header">header</div>
-        <div class="nav">nav</div>
-        <div class="side">side</div>
-        <div class="content1">content1</div>
-        <div class="content2">content2</div>
-        <div class="content3">content3</div>
-        <div class="footer">footer</div>
+    <div id="wrap">
+        <div id="header">header</div>
+        <div id="nav">nav</div>
+        <div id="side">side</div>
+        <div id="content1">content1</div>
+        <div id="content2">content2</div>
+        <div id="content3">content3</div>
+        <div id="footer">footer</div>
     </div>
 </body>
 </html>
