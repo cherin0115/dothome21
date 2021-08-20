@@ -151,52 +151,145 @@
     text-align: center;
 }
 
-
 /* cardType03 */
 .cardType03 {
+    padding: 100px 0;
+    font-family: 'NanumSquare';
+    position: relative;
+}
+
+.cardType03 h2 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.cardType03 p {
+    font-size: 18px;
+    line-height: 1.28;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.cardType03 .popular {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.28;
+    position: absolute;
+    right: 0;
+    top: 180px;
+}
+
+.cardType03 .card-wrap .card {
+    margin-bottom: 28px;
+}
+
+.cardType03 .card-wrap .card .card-img {
+    width: 285px;
+    height: 185px;
+    position: absolute;
+}
+
+.cardType03 .card-wrap .card .right {
+    padding-left: 305px;
+}
+
+.cardType03 .card-wrap .card .card-cate {
+    font-size: 14px;
+    font-weight: 800;
+    padding: 4px 14px 3px 15px;
+    color: #fff;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.cardType03 .card-wrap .card .card-cate.red {
+    background-color: #ff5151;
+}
+.cardType03 .card-wrap .card .card-cate.blue {
+    background-color: #5465ff;
+}
+
+.cardType03 .card-wrap .card .card-cate.green {
+    background-color: #11c865;
+}
+
+.cardType03 .card-wrap .card .card-tit {
+    display: block;
+    font-weight: bold;
+    font-size: 26px;
+
+}
+
+.cardType03 .card-wrap .card .card-desc {
+    font-size: 16px;
+    line-height: 1.53;
+    color: #555;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.cardType03 .card-wrap .card .card-date {
+    display: block;
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-top: 20px;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+
+/* cardType04 */
+/* .cardType04 {
     padding: 150px 0;
     font-family: 'GmarketSans';
 }
 
-.cardType03 .card-head h2 {
+.cardType04 .card-head h2 {
     font-size: 50px;
     font-weight: 800;
     text-align-last: left;
     display: block;
 }
 
-.cardType03 .card-head p {
+.cardType04 .card-head p {
     display: inline;
     font-size: 18px;
     line-height: 1.8;
 
 }
-.cardType03 .card-head .list1 {
+
+.cardType04 .card-head .list1 {
     float: right;
 }
-.cardType03 .card-head .list2 {
+
+.cardType04 .card-head .list2 {
     float: right;
     margin-right: 20px;
     color: #ff2626;
 }
-.cardType03 .card-head .card-list span {
+
+.cardType04 .card-head .card-list span {
     font-size: 16px;
-  margin-left: 15px;
-}
-.cardType03 .card-wrap {
+    margin-left: 15px;
 }
 
-.cardType03 .card-wrap .card a {
-   height: 185px;
-   display: flex;
-   margin: 30px 0;
+.cardType04 .card-wrap {}
+
+.cardType04 .card-wrap .card a {
+    height: 185px;
+    display: flex;
+    margin: 30px 0;
 }
 
-.cardType03 .card-wrap .card .card-img {
+.cardType04 .card-wrap .card .card-img {
     width: 285px;
     border-radius: 10px;
 }
-.cardType03 .card-wrap .card .card-contents .red{
+
+.cardType04 .card-wrap .card .card-contents .red {
     margin: 46px 716px 9px 20px;
     padding: 2px 15px 2px 15px;
     border-radius: 20px;
@@ -205,7 +298,8 @@
     text-align: center;
     text-transform: uppercase;
 }
-.cardType03 .card-wrap .card .card-contents .blue{
+
+.cardType04 .card-wrap .card .card-contents .blue {
     margin: 46px 716px 9px 20px;
     padding: 2px 15px 2px 15px;
     border-radius: 20px;
@@ -214,7 +308,8 @@
     text-align: center;
     text-transform: uppercase;
 }
-.cardType03 .card-wrap .card .card-contents .green{
+
+.cardType04 .card-wrap .card .card-contents .green {
     margin: 46px 716px 9px 20px;
     padding: 2px 15px 2px 15px;
     border-radius: 20px;
@@ -225,7 +320,7 @@
 }
 
 
-.cardType03 .card-wrap .card .card-contents .card-title {
+.cardType04 .card-wrap .card .card-contents .card-title {
     margin: 2px 179px 5px 19px;
     font-size: 26px;
     font-weight: bold;
@@ -233,7 +328,7 @@
     white-space: nowrap;
 }
 
-.cardType03 .card-wrap .card .card-contents .card-desc {
+.cardType04 .card-wrap .card .card-contents .card-desc {
     height: 75px;
     margin: 2px 2px 25px 19px;
     font-size: 16px;
@@ -242,9 +337,9 @@
     display: inline-block;
 }
 
-.cardType03 .card-wrap .card .card-contents .card-day {
+.cardType04 .card-wrap .card .card-contents .card-day {
     margin: 2px 682px 27px 20px;
     font-size: 14px;
     color: #555;
     text-decoration: underline;
-}
+} */
