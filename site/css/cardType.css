@@ -180,6 +180,9 @@
     top: 180px;
 }
 
+.cardType03 .popular a {
+    margin-left: 10px;
+}
 .cardType03 .card-wrap .card {
     margin-bottom: 28px;
 }

@@ -603,6 +603,13 @@
         for (let i = 0; i &lt; liList.length; i++) {
             liList[i].classList.add("red");
         }
+    });
+    jreset1.addEventListener("click", function(){
+        const liList = document.querySelectorAll(".jview1 li");
+        for (let i = 0; i &lt; liList.length; i++) {
+            liList[i].classList.remove("red");
+        }
+    });
         //forEach문.
         // liList.forEach(function(el){
         //     el.classList.add("red");
@@ -618,13 +625,6 @@
         //     // el.classList.add("red");
         // liList[el].classList.add("red");
         // }
-    });
-    jreset1.addEventListener("click", function(){
-        const liList = document.querySelectorAll(".jview1 li");
-        for (let i = 0; i &lt; liList.length; i++) {
-            liList[i].classList.remove("red");
-        }
-    });
 }    
 </code></pre>
                 </div>
@@ -653,6 +653,12 @@
                         liList[i].classList.add("red");
                     }
                 });
+                jreset1.addEventListener("click", function () {
+                    const liList = document.querySelectorAll(".jview1 li");
+                    for (let i = 0; i < liList.length; i++) {
+                        liList[i].classList.remove("red");
+                    }
+                });
                 //forEach문.
                 // liList.forEach(function(el){
                 //     el.classList.add("red");
@@ -668,12 +674,6 @@
                 //     // el.classList.add("red");
                 // liList[el].classList.add("red");
                 // }              
-                jreset1.addEventListener("click", function () {
-                    const liList = document.querySelectorAll(".jview1 li");
-                    for (let i = 0; i < liList.length; i++) {
-                        liList[i].classList.remove("red");
-                    }
-                });
             </script>
             <!-- //sample01j -->
 
@@ -698,7 +698,21 @@
                 </div>
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
-  
+    $(".reset2").click(function(){
+        $(".s2 span").removeClass("blue");
+    })
+    $(".btn2-1").click(function(){
+        $(".s2 span").addClass("blue");
+    })
+    $(".btn2-2").click(function(){
+        $(".s2 > span").addClass("blue");
+    })
+    $(".btn2-3").click(function(){
+        $(".s2 .select + span").addClass("blue");
+    })
+    $(".btn2-4").click(function(){
+        $(".s2 .select ~ span").addClass("blue");
+    })
 }    
 </code></pre>
                 </div>
