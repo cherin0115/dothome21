@@ -1,110 +1,101 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
+          @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
         }
         body {
-            background-color: #ccc;
+            font-family: 'TmonMonsori';
+            background-color: #fce4ec ;
+            color: #fff;
+            font-size: px;
+            text-transform: uppercase;
+            text-align: center;
         }
         #wrap {
             width: 1200px;
             margin: 0 auto;
         }
-        header {
-            width: 100%;
+        #header {
+            width: 1200px;
             height: 100px;
-            background-color: #888;
+            line-height: 100px; 
+            background-color: #880e4f ;
         }
-        main {
-            width: 100%;
-            overflow: hidden;
+        #nav {
+           width: 1200px;
+           height: 100px;
+           line-height: 100px; 
+           background-color: #ad1457; 
         }
-        .aside {
-            width: 30%;
-            height: 900px;
+        #side {
+            width: 400px;
+            height: 800px;
+            line-height: 800px; 
+            background-color: #f06292;
             float: left;
-            background-color: #777;
         }
-        .atricle1 {
-            width: 70%;
+        #content1 {
+            width: 800px;
+            height: 400px;
+            line-height: 400px; 
+            background-color: #ec407a ;
+            float: left;
+            text-align: center;
+        }
+        #content2 {
+            width: 800px;
+            height: 400px;
+            line-height: 400px; 
+            background-color: #f48fb1 ;
+            float: left;
+            
+        }
+        #content2 .cont1{
+            width: 350px;
             height: 300px;
+            line-height: 300px;
+            background-color: #ff4081 ;
             float: left;
-            background-color: #666;
+            margin: 50px 20px 0px 30px;
         }
-        .atricle2 {
-            width: 70%;
+        #content2 .cont2{
+            width: 350px;
             height: 300px;
-            float: left;
-            background-color: #555;
+            line-height: 300px;
+            background-color: #ff4081 ;
+            float: right; 
+            margin: 50px 30px 0px 0px;
         }
-        .atricle3 {
-            width: 70%;
-            height: 300px;
-            float: left;
-            background-color: #444;
-        }
-        footer {
-            width: 100%;
+        #footer {
+            width: 1200px;
             height: 100px;
-            background-color: #666;
-        }
-        @media (max-width: 1220px){
-            #wrap {
-                width: 100%;
-            }
-            .atricle1 {
-                height: 450px;
-            }
-            .atricle2 {
-                height: 450px;
-            }
-            .atricle3 {
-                width: 100%;
-                height: 300px;
-            }
-        }
-        @media (max-width: 800px){
-            .aside {
-                width: 100%;
-                height: 200px;
-            }
-            .atricle1 {
-                width: 50%;
-                height: 450px;
-            }
-            .atricle2 {
-                width: 50%;
-                height: 450px;
-            }
-        }
-        @media (max-width: 600px){
-            .atricle1 {
-                width: 100%;
-                height: 300px;
-            }
-            .atricle2 {
-                width: 100%;
-                height: 300px;
-            }
+            line-height: 100px; 
+            background-color: #c51162  ;
+            clear: both;            
         }
     </style>
 </head>
 <body>
     <div id="wrap">
-        <header></header>
-        <main>
-            <aside class="aside"></aside>
-            <article class="atricle1"></article>
-            <article class="atricle2"></article>
-            <article class="atricle3"></article>
-        </main>
-        <footer></footer>
+        <div id="header">header</div>
+        <div id="nav">nav</div>
+        <div id="side">side</div>
+        <div id="content1">content1</div>
+        <div id="content2">
+            <div class="cont1">cont1</div>
+            <div class="cont2">cont2</div>
+        </div>
+        <div id="footer">footer</div>
     </div>
 </body>
 </html>
