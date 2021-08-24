@@ -7,6 +7,92 @@
     <title>Javascript Reference</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .ex1 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .ex1>div {
+            border: 4px dashed transparent;
+            width: 18%;
+        }
+
+        .ex1>div.active {
+            border: 4px dashed #4779c4;
+            background-color: #4779c4;
+            border-radius: 5px;
+        }
+
+        .ex1>div.active img {
+            opacity: 0.4;
+        }
+
+        .ex1>div img {
+            width: 100%;
+            border-radius: 5px;
+            vertical-align: top;
+        }
+
+        /* ex2 */
+        .ex2 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .ex2>div {
+            border: 4px dashed transparent;
+            width: 18%;
+        }
+
+        .ex2>div.active {
+            border: 4px dashed #4779c4;
+            background-color: #4779c4;
+            border-radius: 5px;
+        }
+
+        .ex2>div.active img {
+            opacity: 0.4;
+        }
+
+        .ex2>div img {
+            width: 100%;
+            border-radius: 5px;
+            vertical-align: top;
+        }
+
+        /* ex3 */
+        .ex3 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .ex3>div {
+            border: 4px dashed transparent;
+            width: 18%;
+        }
+
+        .ex3>div.active {
+            border: 4px dashed #4779c4;
+            background-color: #4779c4;
+            border-radius: 5px;
+        }
+
+        .ex3>div.active img {
+            opacity: 0.4;
+        }
+
+        .ex3>div img {
+            width: 100%;
+            border-radius: 5px;
+            vertical-align: top;
+        }
+
+        .view {
+            padding: 20px;
+            border: 1px solid #f2f2f2;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,12 +124,13 @@
             </nav>
 
             <hr>
-            
+
             <div class="list">
                 <ol>
-                    <li>요소객체: 선택자 : querySelector()</li>
-                    <li>요소객체: 선택자 : querySelectorAll()</li>
-                    <li>요소객체: 선택자 : getElementById() : 아이디 선택자</li>
+                    <li>요소객체 : 클래스 메서드 : .classList.add()</li>
+                    <li>요소객체 : 클래스 메서드 : .classList.remove()</li>
+                    <li>요소객체 : 클래스 메서드 : .classList.toggle()</li>
+                    <li>요소객체 : 클래스 메서드 : .classList.contains()</li>
                 </ol>
             </div>
             <hr>
@@ -51,8 +138,177 @@
     </div>
 
     <!-- sample01 -->
+    <div id="sample1" class="sample">
+        <h2>01.요소객체 : 클래스 메서드 : .classList.add()/.classList.remove() <span class="dot"></span></h2>
+        <div class="view ex1">
+            <div><img src="img/image01.jpg" alt="이미지1"></div>
+            <div><img src="img/image02.jpg" alt="이미지2"></div>
+            <div><img src="img/image03.jpg" alt="이미지3"></div>
+            <div><img src="img/image04.jpg" alt="이미지4"></div>
+            <div><img src="img/image05.jpg" alt="이미지5"></div>
+        </div>
+        <div class="btn">
+            <a href="#c" class="btn1-1">클릭하면 모든 이미지에 클래스(active)를 추가합니다.</a>
+            <a href="#c" class="btn1-2">클릭하면 모든 이미지에 클래스(active)를 삭제합니다.</a>
+        </div>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">{
+    document.querySelector(".btn1-1").addEventListener("click",function(){
+        document.querySelectorAll(".ex1 div").forEach((el)=>{
+            el.classList.add("active");
+        });
+    });
 
-    <!-- sample01 -->
+    document.querySelectorAll(".ex1 div").forEach((el)=>{
+        el.classList.remove("active");
+        });
+    });
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <script>
+        // $(".btn1-1").click(function () {
+        //     $(".ex1 div").addClass("active");
+        // });
+        document.querySelector(".btn1-1").addEventListener("click", function () {
+            document.querySelectorAll(".ex1 div").forEach((el) => {
+                el.classList.add("active");
+            });
+        });
+
+        // $(".btn1-2").click(function () {
+        //     $(".ex1 div").removeClass("active");
+        // });
+        document.querySelector(".btn1-2").addEventListener("click", function () {
+            document.querySelectorAll(".ex1 div").forEach((el) => {
+                el.classList.remove("active");
+            });
+        });
+    </script>
+    <!-- sample01  -->
+
+    <!-- sample02 -->
+    <div id="sample2" class="sample">
+        <h2>02. 요소객체 : 클래스 메서드 : .classList.toggle() <span class="dot"></span></h2>
+        <div class="view ex2">
+            <div><img src="img/image06.jpg" alt="이미지1"></div>
+            <div><img src="img/image07.jpg" alt="이미지2"></div>
+            <div><img src="img/image08.jpg" alt="이미지3"></div>
+            <div><img src="img/image09.jpg" alt="이미지4"></div>
+            <div><img src="img/image10.jpg" alt="이미지5"></div>
+        </div>
+        <div class="btn">
+            <a href="#c" class="btn2-1">이미지를 클릭하면 클래스(active)를 추가 /삭제합니다.</a>
+        </div>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">{
+    //모든 이미지 선택  
+    document.querySelectorAll(".ex2 div").forEach((el) => {
+        el.addEventListener("click", function(){
+            document.querySelectorAll(".ex2 div").forEach((el)=> {
+                el.classList.toggle("active");
+            })
+        });
+    })    
+
+    // 내가 클릭한 이미지만 선택
+    //화살표 함수는 this를 인식하지 못해서 function(){}으로 써야한다.
+    document.querySelectorAll(".ex2 div").forEach((el)=>{
+        el.addEventListener("click", function (){
+            this.classList.toggle("active");
+        });  
+    })
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <script>
+        //모든 이미지 선택
+        // $(".ex2 div").click(function(){
+        //     $(".ex2 div").toggleClass("active");
+        // });
+
+        // document.querySelectorAll(".ex2 div").forEach((el) => {
+        //     el.addEventListener("click", function(){
+        //         document.querySelectorAll(".ex2 div").forEach((el)=> {
+        //             el.classList.toggle("active");
+        //         })
+        //     });
+        // })        
+
+        //내가 클릭한 이미지만 선택
+        // $(".ex2 div").click(function () {
+        //     $(this).toggleClass("active");
+        // });
+        document.querySelectorAll(".ex2 div").forEach((el) => {
+            el.addEventListener("click", function () {
+                this.classList.toggle("active");
+            }); //화살표 함수는 this를 인식하지 못해서 function(){}으로 써야한다.
+        })
+    </script>
+    <!-- sample02  -->
+
+    <!-- sample03 -->
+    <div id="sample3" class="sample">
+        <h2>03. 요소객체 : 클래스 메서드 : .classList.contains() <span class="dot"></span></h2>
+        <div class="view ex3">
+            <div class="active"><img src="img/image11.jpg" alt="이미지1"></div>
+            <div><img src="img/image12.jpg" alt="이미지2"></div>
+            <div><img src="img/image13.jpg" alt="이미지3"></div>
+            <div class="active"><img src="img/image14.jpg" alt="이미지4"></div>
+            <div><img src="img/image15.jpg" alt="이미지5"></div>
+        </div>
+        <div class="btn">
+            <a href="#c" class="btn3-0">리셋</a>
+            <a href="#c" class="btn3-1">클릭하면 .active 클래스를 찾은 후에 클래스를 제거합니다.</a>
+        </div>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">{
+
+    document.querySelector(".btn3-1").addEventListener("click",function(){
+        document.querySelectorAll(".ex3 > div:nth-child(1)").classList.add("active");
+        document.querySelectorAll(".ex3 > div:nth-child(4)").classList.add("active");
+    })
+        
+    document.querySelector(".btn3-1").addEventListener("click", () => {
+        document.querySelectorAll(".ex3 > div").forEach(el => {
+            if (el.classList.contains("active")) {
+                el.classList.remove("active");
+            }
+        })
+    });
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <script>
+        //리셋버튼을 클릭하면 첫번째 네번째 클래스 추가
+        // $(".btn3-0").click(function () {
+        //     $(".ex3 > div:nth-child(1)").addClass("active");
+        //     $(".ex3 > div:nth-child(3)").addClass("active");
+        // });
+        document.querySelector(".btn3-0").addEventListener("click", function(){
+            document.querySelector(".ex3 > div:nth-child(1)").classList.add("active");
+            document.querySelector(".ex3 > div:nth-child(4)").classList.add("active");
+        })
+
+        // $(".btn3-1").click(function () {
+        //     if ($(".ex3 > div").hasClass("active")) {
+        //         $(".ex3 > div.active").removeClass("active");
+        //     }
+        // });
+        document.querySelector(".btn3-1").addEventListener("click", () => {
+            document.querySelectorAll(".ex3 > div").forEach(el => {
+                if (el.classList.contains("active")) {
+                    el.classList.remove("active");
+                }
+            })
+        });
+    </script>
+    <!-- sample03  -->
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

@@ -96,16 +96,10 @@ body {
     font-weight: 500;
     margin-bottom: 10px;
     padding: 4px 17px 3px;
-}
-.imgType02 .img-wrap .img .img-box .img-title.sky {
     background-color: rgba(195, 202, 208, 0.7);
 }
-.imgType02 .img-wrap .img .img-box .img-title.green {
-    background-color: rgba(195, 202, 208, 0.7);
-}
-.imgType02 .img-wrap .img .img-box .img-title.blue {
-    background-color: rgba(195, 202, 208, 0.7);
-}
+
+
 .imgType02 .img-wrap .img .img-box .img-keyword a{
     display: inline-block;
     top: -50%;
@@ -115,4 +109,90 @@ body {
     padding: 4px 16px 3px;
     color: #fff;
     background-color:  rgba(0, 0, 0, 0.7);
+}
+
+/* imgType03 */
+.imgType03 {
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+    line-height: 1.4;
+}
+
+.imgType03 h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.imgType03 .img-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 590px);
+    gap: 20px;
+}
+
+.imgType03 .img-wrap .img {
+    width: 590px;
+    height: 590px;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.imgType03 .img-wrap .img .img-big {
+    position: relative;
+}
+
+.imgType03 .img-wrap .img .img-box1 {
+    position: absolute;
+    left: 18%;
+    top: 80%;
+    width: 375px;
+    height: 110px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.6);
+    padding: 15px 15px;
+    color: #fff;   
+}
+
+.imgType03 .img-wrap .img-box1 .img-title {
+    display: block;
+    font-size: 30px;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 1.5;
+}
+.imgType03 .img-wrap .img .img-box1 .img-desc{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 300px;
+}
+.imgType03 .img-wrap .img .img-box1 .img-keyword a {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    font-style: normal;
+    color: #fff;
+}
+.imgType03 .img-wrap .img .img-box2 div {
+    height: 290px;
+    position: relative;
+    float: left;
+    margin-bottom: 15px;
+}
+.imgType03 .img-wrap .img .img-box2 div:nth-child(2),
+.imgType03 .img-wrap .img .img-box2 div:nth-child(4) {
+    margin-left: 20px;
+}
+.imgType03 .img-wrap .img .img-box2 .img-title {
+    display: block;
+    position: absolute;
+    left: 23%;
+    top: 89%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: 500;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 8px 15px 5px 15px;
+    text-align: center;
+
 }
