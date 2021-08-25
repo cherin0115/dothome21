@@ -63,9 +63,9 @@
     display: block;
     font-size: 20px;
     font-weight: 300;
+        /* 두줄효과 */
     overflow: hidden;
     display: -webkit-box;
-    /* 두줄효과 */
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
