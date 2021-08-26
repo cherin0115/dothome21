@@ -11,6 +11,7 @@
         integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -73,7 +74,7 @@
             <div id="sample1" class="sample">
                 <h2>01. 변수 : 데이터 저장소 <span class="dot"></span></h2>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     var x = 100;              //변수 x에 숫자 100을 저장
     var y = 200;              //변수 y에 숫자 200을 저장  
     var z = "javascript";     //변수 z에 문자 javascript 저장
@@ -85,16 +86,17 @@
 }    
 </code></pre>
                 </div>
+                <div class="result-btn">
+                    <a href="#c" class="result-show">결과보기</a>
+                </div>
             </div>
-
-
             <hr>
 
 
             <div id="sample2" class="sample">
                 <h2>02. 변수 : 데이터 저장소 + 데이터 변경 <span class="dot"></span></h2>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     let x = 100;
     let y = 200;
     let z = "javascript";
@@ -115,7 +117,7 @@
             <div id="sample3" class="sample">
                 <h2>03. 변수 : 데이터 저장소 + 데이터 변경 + 데이터 추가 <span class="dot"></span></h2>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     let x = 100;
     let y = 200;
     let z = "javascript";
@@ -527,6 +529,11 @@
                     document.write(x, "<br>");
                     document.write(y, "<br>");
                     document.write(z, "<br><br>");
+
+                    document.querySelector("#example1 .result-btn").innerHTML = `${x} ${y} ${z}`;
+                    document.querySelector("#example1 .result-btn").addEventListener("click",function(){
+                        document.querySelector(".#example1 .btn2 .btn1-1").classList.toggle("show");
+                    });
                 }
 
                 //sample2
