@@ -243,7 +243,50 @@
     margin-top: 20px;
     text-decoration: underline;
 }
+/* cardtype04 */
+.cardWorkType01 {
+    padding: 100px 0;
+    line-height: 1.24;
+    font-family: 'NEXONLv2Gothic';
+}
+.cardWorkType01 h2 {
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 80px;
+}
 
+.cardWorkType01 .card-wrap{  
+    display: flex;
+    gap: 20px;
+    
+}
+
+.cardWorkType01 .card-wrap .card{
+    position: relative;
+}
+
+.cardWorkType01 .card-wrap .card .card-expln{
+    position: absolute;
+    left: 45px; top: 55px;
+}
+
+.cardWorkType01 .card-wrap .card-expln em{
+    display: block;
+    font-size: 15px;
+    font-weight: 800;
+    color: #A8ABAD;
+    margin-bottom: 19px;
+}
+
+.cardWorkType01 .card-wrap .card-expln strong{
+    color: #000;
+    display: block;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.4;
+}
 
 /* cardType04  내가 했던 css 비교해보기*/
 /* .cardType04 {
