@@ -86,9 +86,27 @@
 }    
 </code></pre>
                 </div>
-                <div class="result-btn">
-                    <a href="#c" class="result-show">결과보기</a>
+                <!-- result -->
+                <style>
+                    .result1 {
+                        display: none;
+                    }
+
+                    .result1.show {
+                        display: block;
+                    }
+                </style>
+                <a href="#c" id="result_btn" class="result_btn1">결과보기</a>
+                <div class="result1">
+                    <pre class="line-numbers"><code class="language-none">100 200 javascript
+            </code></pre>
+                    <script>
+                        document.querySelector(".result_btn1").addEventListener("click", () => {
+                            document.querySelector(".result1").classList.toggle("show");
+                        });
+                    </script>
                 </div>
+                <!-- //result -->
             </div>
             <hr>
 
@@ -518,9 +536,10 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
             <script>
-                //sample1
+                //sample1z
                 //01. 변수 : 데이터 저장소
                 {
+
                     var x = 100; //변수 x에 숫자 100을 저장
                     var y = 200; //변수 y에 숫자 200을 저장  
                     var z = "javascript"; //변수 z에 문자 javascript 저장
@@ -530,10 +549,6 @@
                     document.write(y, "<br>");
                     document.write(z, "<br><br>");
 
-                    document.querySelector("#example1 .result-btn").innerHTML = `${x} ${y} ${z}`;
-                    document.querySelector("#example1 .result-btn").addEventListener("click",function(){
-                        document.querySelector(".#example1 .btn2 .btn1-1").classList.toggle("show");
-                    });
                 }
 
                 //sample2

@@ -276,7 +276,7 @@
     display: block;
     letter-spacing: 1px;
     font-size: 15px;
-    font-weight: 800;
+    font-weight: 700;
     color: #A8ABAD;
     margin-bottom: 19px;
 }
@@ -285,7 +285,8 @@
     letter-spacing: 1px;
     color: #000;
     display: block;
-    font-size: 25px;
-    font-weight: 800;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: bold;
     line-height: 1.4;
 }
