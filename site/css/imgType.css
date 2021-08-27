@@ -57,13 +57,12 @@ body {
     padding-right: 30%;
 }
 
-.imgType01 .img-wrap .img .img-btn.black {
+/* .imgType01 .img-wrap .img .img-btn.black {
     padding: 8px 18px;
     display: inline-block;
-    background-color: #000;
     color: #fff;
     margin-top: 10px;
-}
+} */
 
 .imgType01 .img-wrap .img .img-btn a {
     color: #fff;
