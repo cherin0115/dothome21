@@ -11,6 +11,15 @@
         integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <style>
+        .result1 {
+            display: none;
+        }
+
+        .result1.show {
+            display: block;
+        }
+    </style>
 
 </head>
 
@@ -86,27 +95,18 @@
 }    
 </code></pre>
                 </div>
-                <!-- result -->
-                <style>
-                    .result1 {
-                        display: none;
-                    }
-
-                    .result1.show {
-                        display: block;
-                    }
-                </style>
+                <!-- result1 -->
                 <a href="#c" id="result_btn" class="result_btn1">결과보기</a>
                 <div class="result1">
                     <pre class="line-numbers"><code class="language-none">100 200 javascript
-            </code></pre>
+        </code></pre>
                     <script>
                         document.querySelector(".result_btn1").addEventListener("click", () => {
                             document.querySelector(".result1").classList.toggle("show");
                         });
                     </script>
                 </div>
-                <!-- //result -->
+                <!-- //result1 -->
             </div>
             <hr>
 
