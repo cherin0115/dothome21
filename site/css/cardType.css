@@ -253,15 +253,14 @@
     letter-spacing: 2px;
     font-size: 55px;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.24;
     text-align: center;
     margin-bottom: 75px;
 }
 
 .cardWorkType01 .card-wrap{  
     display: flex;
-    gap: 23px;
-    
+    gap: 23px;    
 }
 .cardWorkType01 .card-wrap .card{
     position: relative;
@@ -274,15 +273,14 @@
 
 .cardWorkType01 .card-wrap .card-expln em{
     display: block;
-    letter-spacing: 1px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
-    color: #A8ABAD;
+    color: #a9a9a9;
     margin-bottom: 19px;
 }
 
 .cardWorkType01 .card-wrap .card-expln strong{
-    letter-spacing: 1px;
+    letter-spacing: 0.75px;
     color: #000;
     display: block;
     font-size: 24px;
