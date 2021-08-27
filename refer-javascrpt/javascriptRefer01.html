@@ -12,12 +12,28 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <style>
-        .result1 {
+        .click-btn {
+            display: inline-block;
+            padding: 5px 15px;
+            margin-top: 10px;
+            text-decoration: none;
+            color: black;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+        }
+
+        .result {
             display: none;
         }
 
-        .result1.show {
+        .result.show {
+            background-color: rgb(27, 27, 27);
+            color: #fff;
+            padding: 20px;
+            font-size: 18px;
             display: block;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
         }
     </style>
 
@@ -95,19 +111,20 @@
 }    
 </code></pre>
                 </div>
-                <!-- result1 -->
-                <a href="#c" id="result_btn" class="result_btn1">결과보기</a>
-                <div class="result1">
-                    <pre class="line-numbers"><code class="language-none">100 200 javascript
-        </code></pre>
-                    <script>
-                        document.querySelector(".result_btn1").addEventListener("click", () => {
-                            document.querySelector(".result1").classList.toggle("show");
-                        });
-                    </script>
-                </div>
-                <!-- //result1 -->
             </div>
+            <!-- result1 -->
+            <div class="click-btn">
+                <a href="#c" class="click-btn1">결과보기</a>
+            </div>
+            <div class="result">
+           <code>100 200 javascript</code>
+            </div>
+            <script>
+                document.querySelector(".click-btn1").addEventListener("click", () => {
+                    document.querySelector(".result").classList.toggle("show");
+                });
+            </script>
+            <!-- //result1 -->
             <hr>
 
 
