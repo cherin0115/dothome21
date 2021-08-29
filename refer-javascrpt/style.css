@@ -144,7 +144,39 @@ hr {
 
 .sample code {
     font-family: 'NEXON Lv1 Gothic OTF';
+
 }
+.sample .result-view {
+    margin-top: 5px;
+  }
+  
+  .sample .result-view strong{
+    background-color: #F2F2F2;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  .sample .result-view strong:hover{
+    cursor: pointer;
+  }
+  .sample .result-view.show strong{
+    border-radius: 5px 5px 0 0; 
+  }
+  .sample .result-view .result{
+    display: none;
+    border-radius: 0 5px 5px 5px;
+    color: #fff;
+    background-color: #272822;
+    font-size: 14px;
+    padding: 16px;
+    line-height: 1.8;
+  }
+  
+  .sample .result-view.show .result{
+    display: block;
+  }
+  
 @media (max-width: 800px) {
     body {
         padding: 5%;

@@ -80,6 +80,10 @@
 }    
 </code></pre>
                 </div>
+                <div class="result-view">
+                    <strong>결과보기</strong>
+                    <div class="result"></div>
+                </div>
             </div>
 
             <hr>
@@ -110,6 +114,10 @@
 }    
 </code></pre>
                 </div>
+                <div class="result-view">
+                    <strong>결과보기</strong>
+                    <div class="result"></div>
+                </div>
             </div>
 
             <hr>
@@ -135,6 +143,10 @@
     }
 }    
 </code></pre>
+                </div>
+                <div class="result-view">
+                    <strong>결과보기</strong>
+                    <div class="result"></div>
                 </div>
             </div>
 
@@ -167,6 +179,10 @@
 }    
 </code></pre>
                 </div>
+                <div class="result-view">
+                    <strong>결과보기</strong>
+                    <div class="result"></div>
+                </div>
             </div>
 
             <hr>
@@ -189,6 +205,10 @@
 }    
 </code></pre>
                 </div>
+                <div class="result-view">
+                    <strong>결과보기</strong>
+                    <div class="result"></div>
+                </div>
             </div>
 
             <hr>
@@ -206,10 +226,13 @@
 }    
 </code></pre>
                 </div>
+                <div class="result-view">
+                    <strong>결과보기</strong>
+                    <div class="result"></div>
+                </div>
             </div>
 
             <hr>
-
             <!-- sample7 -->
             <div id="sample7" class="sample">
                 <h2>07. while문 <span class="dot"></span></h2>
@@ -224,6 +247,10 @@
     } 
 }    
 </code></pre>
+                </div>
+                <div class="result-view">
+                    <strong>결과보기</strong>
+                    <div class="result"></div>
                 </div>
             </div>
 
@@ -243,10 +270,13 @@
 }
 </code></pre>
                 </div>
+                <div class="result-view">
+                    <strong>결과보기</strong>
+                    <div class="result"></div>
+                </div>
             </div>
 
             <hr>
-
             <!-- sample9 -->
             <div id="sample9" class="sample">
                 <h2>09. for문 <span class="dot"></span></h2>
@@ -262,10 +292,13 @@
 }
 </code></pre>
                 </div>
+                <div class="result-view">
+                    <strong>결과보기</strong>
+                    <div class="result"></div>
+                </div>
             </div>
 
             <hr>
-
             <!-- sample10 -->
             <div id="sample10" class="sample">
                 <h2>10. 중첩 for문 <span class="dot"></span></h2>
@@ -282,10 +315,13 @@
 }
 </code></pre>
                 </div>
+                <div class="result-view">
+                    <strong>결과보기</strong>
+                    <div class="result"></div>
+                </div>
             </div>
 
             <hr>
-
             <!-- sample11 -->
             <div id="sample11" class="sample">
                 <h2>11. forEach() <span class="dot"></span></h2>
@@ -320,9 +356,13 @@
 }
 </code></pre>
                 </div>
+                <div class="result-view">
+                    <strong>결과보기</strong>
+                    <div class="result"></div>
+                </div>
             </div>
-            <hr>
 
+            <hr>
             <!-- sample12 -->
             <div id="sample12" class="sample">
                 <h2>12. for of문 <span class="dot"></span></h2>
@@ -337,10 +377,13 @@
 }
 </code></pre>
                 </div>
+                <div class="result-view">
+                    <strong>결과보기</strong>
+                    <div class="result"></div>
+                </div>
             </div>
 
             <hr>
-
             <!-- sample13 -->
             <div id="sample13" class="sample">
                 <h2>13. for in문 <span class="dot"></span></h2>
@@ -369,6 +412,10 @@
     }
 }
 </code></pre>
+                </div>
+                <div class="result-view">
+                    <strong>결과보기</strong>
+                    <div class="result"></div>
                 </div>
             </div>
 
@@ -400,6 +447,10 @@
 }
 </code></pre>
                 </div>
+                <div class="result-view">
+                    <strong>결과보기</strong>
+                    <div class="result"></div>
+                </div>
             </div>
 
             <hr>
@@ -422,10 +473,13 @@
 }
 </code></pre>
                 </div>
+                <div class="result-view">
+                    <strong>결과보기</strong>
+                    <div class="result"></div>
+                </div>
             </div>
 
             <hr>
-
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
             <script>
@@ -434,12 +488,13 @@
                 {
                     // true, false, 1, "1", 0 (false나옴), null (값이 없을때도 false), undefined (값이 아예없을때 false), [] (배열은 true), {} , ""(false)
                     if (true) {
-                        document.write("***01. if문 ***<br>");
-                        document.write("조건문이 실행되었습니다.(true)<br><br>");
+                        document.querySelector("#sample1 .result-view .result").innerHTML = `조건문이 실행되었습니다.(true)`;
                     } else {
-                        document.write("***01. if문 ***<br>");
-                        document.write("조건문이 실행되었습니다.(false)<br><br>");
+                        document.querySelector("#sample1 .result-view .result").innerHTML = `조건문이 실행되었습니다.(false)`;
                     }
+                    document.querySelector("#sample1 .result-view strong").addEventListener("click", function () {
+                        document.querySelector("#sample1 .result-view").classList.toggle("show");
+                    });
                 }
 
                 // sample 2
@@ -448,21 +503,19 @@
                     let num = 100;
 
                     if (num == 90) {
-                        document.write("***02. 다중 if문 ***<br>");
-                        document.write("조건문이 실행되었습니다.(num == 90)<br><br>");
+                        document.querySelector("#sample2 .result-view .result").innerHTML = `조건문이 실행되었습니다.(num == 90)`;
                     } else if (num == 100) {
-                        document.write("***02. 다중 if문 ***<br>");
-                        document.write("조건문이 실행되었습니다.(num == 100)<br><br>");
+                        document.querySelector("#sample2 .result-view .result").innerHTML = `조건문이 실행되었습니다.(num == 100)`;
                     } else if (num == 200) {
-                        document.write("***02. 다중 if문 ***<br>");
-                        document.write("조건문이 실행되었습니다.(num == 2000<br><br>");
+                        document.querySelector("#sample2 .result-view .result").innerHTML = `조건문이 실행되었습니다.(num == 200)`;
                     } else if (num == 300) {
-                        document.write("***02. 다중 if문 ***<br>");
-                        document.write("조건문이 실행되었습니다.(num == 300)<br><br>");
+                        document.querySelector("#sample2 .result-view .result").innerHTML = `조건문이 실행되었습니다.(num == 300)`;
                     } else {
-                        document.write("***02. 다중 if문 ***<br>");
-                        document.write("조건문이 실행되었습니다.(num == XX)<br><br>");
+                        document.querySelector("#sample2 .result-view .result").innerHTML = `조건문이 실행되었습니다.(num == xx)`;
                     }
+                    document.querySelector("#sample2 .result-view strong").addEventListener("click", function () {
+                        document.querySelector("#sample2 .result-view").classList.toggle("show");
+                    });
                 }
 
                 // sample 3
@@ -471,18 +524,19 @@
                     let num = 100;
 
                     if (num == 100) {
-                        document.write("*** 03. 중첩if문 ***<br><br>");
-                        document.write("조건문이 실행되었습니다.(1)<br>");
+                        document.querySelector("#sample3 .result-view .result").innerHTML += `조건문이 실행되었습니다.(1)`;
                         if (num == 100) {
-                            document.write("조건문이 실행되었습니다.(2)<br>");
+                            document.querySelector("#sample3 .result-view .result").innerHTML += `조건문이 실행되었습니다.(2)`;
                             if (num == 100) {
-                                document.write("조건문이 실행되었습니다.(3)<br><br>");
+                                document.querySelector("#sample3 .result-view .result").innerHTML += `조건문이 실행되었습니다.(3)`;
                             }
                         }
                     } else {
-                        document.write("*** 03. 중첩if문 ***<br><br>");
-                        document.write("조건문이 실행되었습니다.(4)<br><br>");
+                        document.querySelector("#sample3 .result-view .result").innerHTML = `조건문이 실행되었습니다.(4)`;
                     }
+                    document.querySelector("#sample3 .result-view strong").addEventListener("click", function () {
+                        document.querySelector("#sample3 .result-view").classList.toggle("show");
+                    });
                 }
 
                 // sample 4
@@ -492,22 +546,25 @@
 
                     switch (num) {
                         case 100:
-                            document.write("*** 04. switch문 ***<br>");
-                            document.write("조건문이 실행되었습니다.(num == 100)<br><br>");
+                            document.querySelector("#sample4 .result-view .result").innerHTML +=
+                                `조건문이 실행되었습니다.(num == 100)`;
                             break;
                         case 200:
-                            document.write("*** 04. switch문 ***<br>");
-                            document.write("조건문이 실행되었습니다.(num == 200)<br><br>");
+                            document.querySelector("#sample4 .result-view .result").innerHTML +=
+                                `조건문이 실행되었습니다.(num == 200)`;
                             break;
                         case 300:
-                            document.write("*** 04. switch문 ***<br>");
-                            document.write("조건문이 실행되었습니다.(num == 300)<br><br>");
+                            document.querySelector("#sample4 .result-view .result").innerHTML +=
+                                `조건문이 실행되었습니다.(num == 300)`;
                             break;
                         default:
-                            document.write("*** 04. switch문 ***<br>");
-                            document.write("조건문이 실행되었습니다.(num == 값이없음)<br><br>");
+                            document.querySelector("#sample4 .result-view .result").innerHTML +=
+                                `조건문이 실행되었습니다.(num == 값없음)`;
                             break;
                     }
+                    document.querySelector("#sample4 .result-view strong").addEventListener("click", function () {
+                        document.querySelector("#sample4 .result-view").classList.toggle("show");
+                    });
                 }
 
                 // sample 5
@@ -520,9 +577,12 @@
                     // } else {
                     //     document.write("false<br><br>");
                     // }
-                    document.write("*** 05. 조건부 연산자 ***<br>");
+                    (num == 100) ? document.querySelector("#sample5 .result-view .result").innerHTML += "true<br>":
+                        document.querySelector("#sample5 .result-view .result").innerHTML += "false<br>";
 
-                    (num == 100) ? document.write("true<br><br>"): document.write("false<br><br>");
+                    document.querySelector("#sample5 .result-view strong").addEventListener("click", function () {
+                        document.querySelector("#sample5 .result-view").classList.toggle("show");
+                    });
                 }
 
                 // sample 6
@@ -530,126 +590,110 @@
                 {
                     let num = 100;
 
-                    document.write("*** 06. if문 생략***<br>");
+                    if (num == 100)
+                        document.querySelector("#sample6 .result-view .result").innerHTML += "true<br>";
+                    else
+                        document.querySelector("#sample6 .result-view .result").innerHTML += "false<br>";
 
-                    if (num == 100) document.write("true<br><br>");
-                    else document.write("false<br><br>");
+                    document.querySelector("#sample6 .result-view strong").addEventListener("click", function () {
+                        document.querySelector("#sample6 .result-view").classList.toggle("show");
+                    });
 
                 }
 
                 // sample 7
                 // while문
                 {
-                    document.write("*** 07. while문 ***<br>");
-
                     let num = 1;
                     while (num <= 10) {
-                        document.write(num + ". 반복문이 실행되었습니다.<br>");
+                        document.querySelector("#sample7 .result-view .result").innerHTML += num +
+                            ". 반복문이 실행되었습니다. <br>";
                         num++;
                     }
-                    document.write("<br>");
+                    document.querySelector("#sample7 .result-view strong").addEventListener("click", function () {
+                        document.querySelector("#sample7 .result-view").classList.toggle("show");
+                    });
                 }
 
                 // sample 8
                 // do while문
                 {
-                    document.write("*** 08. do while문 ***<br>");
-
                     let num = 1;
                     do {
-                        document.write(num + ". 반복문이 실행되었습니다.<br>");
-                        num++
+                        document.querySelector("#sample8 .result-view .result").innerHTML += "반복문이 실행되었습니다. <br>";
+                        num++;
                     } while (num <= 10);
-
-                    document.write("<br>");
+                    document.querySelector("#sample8 .result-view strong").addEventListener("click", function () {
+                        document.querySelector("#sample8 .result-view").classList.toggle("show");
+                    });
                 }
 
                 // sample 9
                 // for문: 반복문
                 {
-                    document.write("*** 09. for문 ***<br>");
-
                     //  for(초기값; 조건식; 증감값){
                     //      실행문
                     //  }
                     for (let i = 1; i <= 10; i++) {
-                        document.write(i + ". 반복문이 실행되었습니다.<br>");
+                        document.querySelector("#sample9 .result-view .result").innerHTML += i + ".반복문이 실행되었습니다. <br>";
                     }
-                    document.write("<br>");
+                    document.querySelector("#sample9 .result-view strong").addEventListener("click", function () {
+                        document.querySelector("#sample9 .result-view").classList.toggle("show");
+                    });
                 }
 
                 // sample 10
                 // 중첩 for문
                 {
-                    document.write("*** 10. 중첩 for문 ***<br>");
 
                     for (var i = 1; i <= 5; i++) {
-                        document.write(i + ".  반복문(아이)이 실행되었습니다.<br>");
+                        document.querySelector("#sample10 .result-view .result").innerHTML += i +
+                            ".반복문(아이)이 실행되었습니다. <br>";
                         for (var j = 1; j <= 5; j++) {
-                            document.write(j + ". 반복문(제이)이 실행되었습니다.<br>");
+                            document.querySelector("#sample10 .result-view .result").innerHTML += j +
+                                ".반복문(제이)이 실행되었습니다. <br>";
                         }
                     }
-                    document.write("<br>");
+                    document.querySelector("#sample10 .result-view strong").addEventListener("click", function () {
+                        document.querySelector("#sample10 .result-view").classList.toggle("show");
+                    });
                 }
 
                 // sample 11
                 // forEach() : 배열에서만 사용 가능
                 {
-                    document.write("*** 11. forEach() ***<br>");
-
                     const num = [100, 200, 300, 400, 500];
 
-                    document.write(num[0], "<br>");
-                    document.write(num[1], "<br>");
-                    document.write(num[2], "<br>");
-                    document.write(num[3], "<br>");
-                    document.write(num[4], "<br><br>");
-
-                    //for문
-                    for (let i = 0; i < num.length; i++) {
-                        document.write(num[i], "<br>");
-                    }
-
-                    document.write("<br>");
-
-                    //forEach()
-                    num.forEach(function (el) {
-                        document.write(el, "<br>");
-                    });
-                    document.write("<br>");
-
-                    //forEach(element, index, array)
                     num.forEach((element, index, array) => {
-                        document.write(element, "<br>");
-                        document.write(index, "<br>");
-                        document.write(array, "<br>");
+                        document.querySelector("#sample11 .result-view .result").innerHTML +=
+                            `${element} ${index} ${array} <br>`;
                     });
-                    document.write("<br>");
+
+                    document.querySelector("#sample11 .result-view strong").addEventListener("click", function () {
+                        document.querySelector("#sample11 .result-view").classList.toggle("show");
+                    });
                 }
                 // sample 12
                 //12.  for of문 : 배열에서 사용
                 {
-                    document.write("*** 12. for of문 ***<br>");
-
                     const num = [100, 200, 300, 400, 500];
 
                     for (let i of num) {
-                        document.write(i + ". 반복문이 실행되었습니다.<br>");
+                        document.querySelector("#sample12 .result-view .result").innerHTML += i + ". 반복문이 실행되었습니다.<br>";
                     }
-                    document.write("<br>");
+                    document.querySelector("#sample12 .result-view strong").addEventListener("click", function () {
+                        document.querySelector("#sample12 .result-view").classList.toggle("show");
+                    });
                 }
 
                 // sample 13
                 //13. for in문 : 객체에서 사용
                 {
-                    document.write("*** 13. for in문 ***<br>");
                     // 배열
                     const num = [100, 200, 300, 400, 500];
-
                     for (let i in num) {
-                        document.write(num[i] + "<br>");
+                        document.querySelector("#sample13 .result-view .result").innerHTML += num[i] + ' ';
                     }
-
                     //객체
                     const obj = {
                         a: 100,
@@ -659,9 +703,11 @@
                         e: 500,
                     }
                     for (let key in obj) {
-                        document.write(key, "<br>");
-                        document.write(obj[key], "<br>");
+                        document.querySelector("#sample13 .result-view .result").innerHTML += `${key} : ${obj[key]} `;
                     }
+                    document.querySelector("#sample13 .result-view strong").addEventListener("click", function () {
+                        document.querySelector("#sample13 .result-view").classList.toggle("show");
+                    });
                 }
                 document.write("<br><br>");
 
@@ -674,29 +720,31 @@
                     let num = 0;
                     while (num < 20) {
                         num++;
-                        document.write(num, "&nbsp");
+                        document.querySelector("#sample14 .result-view .result").innerHTML += `${num} `;
                         if (num == 10) {
                             break;
                         }
                     }
 
-                    document.write("<br>");
+
+                    document.querySelector("#sample14 .result-view .result").innerHTML += "<br>";
                     //for문을 이용해서 1부터 20까지 출력을 해주세요!!
 
                     for (let i = 1; i <= 20; i++) {
-                        document.write(i, "&nbsp");
+                        document.querySelector("#sample14 .result-view .result").innerHTML += `${i} `;
                         if (i == 10) {
                             break;
                         }
                     }
+                    document.querySelector("#sample14 .result-view strong").addEventListener("click", function () {
+                        document.querySelector("#sample14 .result-view").classList.toggle("show");
+                    });
                 }
                 document.write("<br><br>");
 
                 // sample 15
                 //15 continue문
                 {
-                    document.write("*** 15. continue문 ***<br>");
-
                     let num = 0;
                     while (true) {
                         num++;
@@ -706,8 +754,11 @@
                         if (num > 19) {
                             break;
                         }
-                        document.write(num, "&nbsp");
+                        document.querySelector("#sample15 .result-view .result").innerHTML += `${num} `;
                     }
+                    document.querySelector("#sample15 .result-view strong").addEventListener("click", function () {
+                        document.querySelector("#sample15 .result-view").classList.toggle("show");
+                    });
                 }
             </script>
 </body>
