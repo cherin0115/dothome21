@@ -152,7 +152,7 @@ hr {
   
   .sample .result-view strong{
     background-color: #F2F2F2;
-    padding: 10px;
+    padding: 10px 15px;
     display: inline-block;
     border-radius: 5px;
     font-size: 14px;
@@ -169,7 +169,7 @@ hr {
     color: #fff;
     background-color: #272822;
     font-size: 14px;
-    padding: 16px;
+    padding: 15px;
     line-height: 1.8;
   }
   
