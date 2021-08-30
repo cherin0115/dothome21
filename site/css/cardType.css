@@ -3,7 +3,11 @@
     margin: 150px 0;
     background-color: #fff;
     box-shadow: 0 0 50px rgb(0 0 0 / 10%);
-
+}
+#cardType5 {
+    margin: 150px 0;
+    /* background-color: #191919; */
+    box-shadow: 0 0 50px rgb(0 0 0 / 10%);
 }
 
 /* cardType01 */
@@ -280,7 +284,6 @@
 }
 
 .cardWorkType01 .card-wrap .card-expln strong{
-    letter-spacing: 0.75px;
     color: #000;
     display: block;
     font-size: 24px;
@@ -288,3 +291,101 @@
     font-style: bold;
     line-height: 1.4;
 }
+
+/* cardtype05 */
+.cardType05 {
+    font-family: 'NEXONLv2Gothic';
+    padding: 60px 0;
+}
+.cardType05 h2 {
+    width: 208px;
+    text-align: center;
+    line-height: 1.24;
+    margin: 0 auto;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;  
+}
+.cardType05 p {
+    width: 337px;
+    margin: 0 auto;
+    margin-bottom: 75px;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    color: #000;
+}
+.cardType05 .card-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cardType05 .card-inner{
+    margin-bottom: 25px;
+    width: 381px;
+    border-radius: 10px;
+    border: solid 1px rgb(201, 201, 201);
+    background-color: #fff;
+    overflow: hidden;
+}
+.cardType05 .card-inner .card-expln{}
+.cardType05 .card-inner .card-expln strong{
+    display: inline-block;
+    margin-left: 17px;
+    margin-top: 35px;
+    margin-bottom: 11px;
+    font-size: 22px;
+    font-weight: 800;
+    color: #000;
+
+}
+.cardType05 .card-inner .card-expln em{
+    width: 43px;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 8px 3px;
+    border-radius: 25px;
+    background-color: #fa615b;
+    color: #fff;
+}
+.cardType05 .card-inner .card-expln .card-desc{
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-left: 17px;
+    margin-bottom: 20px;
+    letter-spacing: 0.34px;
+    text-align: left;
+    color: #555;
+}
+.cardType05 .card-inner .btn {
+    display: inline-block;
+    margin-bottom: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    font-weight: 500;
+}
+.cardType05 .card-inner .btn .grn{
+    margin-right: 6px;
+    margin-left: 17px;
+    color: #fff;
+    background-color: #05d686;
+    padding: 8px 17px;
+}
+.cardType05 .card-inner .btn .wht{
+    margin-right: 6px;
+    color: #555;
+    border: 1px solid #e3e3e3;
+    background-color: #fff;
+    padding: 8px 17px;
+}
+.cardType05 .card-inner .btn .wht1 {
+    margin-left: 17px;
+    color: #555;
+    border: 1px solid #e3e3e3;
+    background-color: #fff;
+    padding: 8px 17px;
+}
+

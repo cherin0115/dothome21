@@ -430,10 +430,25 @@ hr {
     padding: 10px 15px;
     background: #f1f1f1;
     display: inline-block;
-    border-radius: .3em;
+    border-radius: 4xp;
     color: #000;
 }
 .result div {
+    background: #272822;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 0px 4px 4px 4px ;
+    display: none;
+}
+.result.show div {
+    display: block;
+}
+.result div span {
+    display: block;
+}
+
+/* 내가 만든 버튼 */
+/* .result div {
     background-color: #272822;
     color: #fff;
     padding: 20px;
@@ -453,7 +468,7 @@ hr {
 }
 .sample .result-show .show {
     display: block;
-}
+} */
 @media (max-width: 800px){
     body {
         padding: 5%;
