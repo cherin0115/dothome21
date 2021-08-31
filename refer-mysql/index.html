@@ -176,6 +176,9 @@ Database changed
                 <div class="bs-callout bs-callout-info">
                     drop database 삭제할 데이터베이스 이름;
                 </div>
+<pre class="language-js"><code>mysql> drop database test01;
+Query OK, 0 rows affected (0.01 sec)
+</code></pre>
                 <!-- //Intro3 -->
                 <!-- Intro4 -->
                 <div class="bs-docs-section"></div>
@@ -194,15 +197,15 @@ Database changed
                     생일
                     가입한 시간
                  -->
-                <pre class="language-js"><code>CREATE TABLE myMember (
-    myMemberID int(10) unsigned auto_increment comment "회원의 고유번호",
-    youEmail varchar(40) NOT NULL comment "회원 아이디",
-    youName varchar(12) NOT NULL comment "회원 이름",
-    youPassword varchar(20) NOT NULL comment "회원 비밀번호",
-    youBirth varchar(11) NOT NULL comment "회원 생일",
-    regTime int(11) NOT NULL comment "회원 가입 시간",
-    PRIMARY KEY (myMemberID)) 
-    charset=utf8 comment ="회원 정보 테이블";
+<pre class="language-js"><code>CREATE TABLE myMember (
+myMemberID int(10) unsigned auto_increment comment "회원의 고유번호",
+youEmail varchar(40) NOT NULL comment "회원 아이디",
+youName varchar(12) NOT NULL comment "회원 이름",
+youPassword varchar(20) NOT NULL comment "회원 비밀번호",
+youBirth varchar(11) NOT NULL comment "회원 생일",
+regTime int(11) NOT NULL comment "회원 가입 시간",
+PRIMARY KEY (myMemberID)) 
+charset=utf8 comment ="회원 정보 테이블";
 </code></pre>
                 <h3 id="intro4-2" class="pt30">테이블 보기</h3>
                 <div class="bs-callout bs-callout-info">
@@ -249,16 +252,16 @@ Query OK, 0 rows affected (0.01 sec)
                    ALTER TABLE 테이블명 ADD 추가할 필드명 AFTER 필드 위치
                 </div>
 <pre class="language-js"><code>mysql> ALTER TABLE myMember2 ADD youAge int(3) 
-NOT NULL comment "회원의 나이" AFTER youBirth;
-Query OK, 0 rows affected (0.03 sec)
+not null comment "회원의 나이" after youBirth;
+Query OK, 0 rows affected (0.05 sec)
 </code></pre>
 <pre class="language-js"><code>mysql> ALTER TABLE myMember2 ADD youPhone int(11) 
 NOT NULL comment "회원의 핸드폰 번호" AFTER youAge;
 Query OK, 0 rows affected (0.03 sec)
 </code></pre>
-<pre class="language-js"><code>mysql> ALTER TABLE myMember2 ADD youAge int(3) 
-    NOT NULL comment "회원의 나이" AFTER youBirth;
-    Query OK, 0 rows affected (0.03 sec)
+<pre class="language-js"><code>mysql> ALTER TABLE myMember2 ADD youGender enum('m','w','x') 
+default 'x' comment "남성은 m", "여성은 w" AFTER youPhone;
+Query OK, 0 rows affected (0.04 sec)
 </code></pre>
                 <h3 id="intro5-2" class="pt30">필드 수정하기</h3>
                 <div class="bs-callout bs-callout-info">
