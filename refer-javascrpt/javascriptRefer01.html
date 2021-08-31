@@ -189,12 +189,14 @@
  } 
 </code></pre>
                 </div>
-                <div class="result-view">
-                    <strong>결과보기</strong>
-                    <div class="result"></div>
+                <div class="result">
+                    <h3><a href="#">결과보기</a></h3>
+                    <div>
+                        <span class="result4-1"></span>
+                        <span class="result4-2"></span>
+                        <span class="result4-3"></span>
+                    </div>
                 </div>
-            </div>
-
             <hr>
 
             <div id="sample5" class="sample">
@@ -213,11 +215,14 @@
  } 
 </code></pre>
                 </div>
-                <div class="result-view">
-                    <strong>결과보기</strong>
-                    <div class="result"></div>
+                <div class="result">
+                    <h3><a href="#">결과보기</a></h3>
+                    <div>
+                        <span class="result5-1"></span>
+                        <span class="result5-2"></span>
+                        <span class="result5-3"></span>
+                    </div>
                 </div>
-            </div>
 
             <hr>
 
@@ -234,11 +239,14 @@
 }
 </code></pre>
                 </div>
-                <div class="result-view">
-                    <strong>결과보기</strong>
-                    <div class="result"></div>
+                <div class="result">
+                    <h3><a href="#">결과보기</a></h3>
+                    <div>
+                        <span class="result6-1"></span>
+                        <span class="result6-2"></span>
+                        <span class="result6-3"></span>
+                    </div>
                 </div>
-            </div>
 
             <hr>
 
@@ -258,12 +266,14 @@
 } 
 </code></pre>
                 </div>
-                <div class="result-view">
-                    <strong>결과보기</strong>
-                    <div class="result"></div>
+                <div class="result">
+                    <h3><a href="#">결과보기</a></h3>
+                    <div>
+                        <span class="result7-1"></span>
+                        <span class="result7-2"></span>
+                        <span class="result7-3"></span>
+                    </div>
                 </div>
-            </div>
-
             <hr>
 
             <div id="sample8" class="sample">
@@ -279,12 +289,14 @@
 }
 </code></pre>
                 </div>
-                <div class="result-view">
-                    <strong>결과보기</strong>
-                    <div class="result"></div>
+                <div class="result">
+                    <h3><a href="#">결과보기</a></h3>
+                    <div>
+                        <span class="result8-1"></span>
+                        <span class="result8-2"></span>
+                        <span class="result8-3"></span>
+                    </div>
                 </div>
-            </div>
-
             <hr>
 
             <div id="sample9" class="sample">
@@ -303,12 +315,14 @@
 }
 </code></pre>
                 </div>
-                <div class="result-view">
-                    <strong>결과보기</strong>
-                    <div class="result"></div>
+                <div class="result">
+                    <h3><a href="#">결과보기</a></h3>
+                    <div>
+                        <span class="result9-1"></span>
+                        <span class="result9-2"></span>
+                        <span class="result9-3"></span>
+                    </div>
                 </div>
-            </div>
-
             <hr>
 
             <div id="sample10" class="sample">
@@ -327,10 +341,14 @@
 }
 </code></pre>
                 </div>
-                <div class="result-view">
-                    <strong>결과보기</strong>
-                    <div class="result"></div>
-                </div>
+                <div class="result">
+                    <h3><a href="#">결과보기</a></h3>
+                    <div>
+                        <span class="result10-1"></span>
+                        <span class="result10-2"></span>
+                        <span class="result10-3"></span>
+                    </div>
+                </div>>
             </div>
 
             <hr>
@@ -694,11 +712,10 @@
                     // y = 400;
                     // z = "jquery";
                     //Uncaught TypeError: Assignment to constant variable.
-
-                    document.querySelector("#sample4 .result-view .result").innerHTML = `${x} ${y} ${z}`;
-                    document.querySelector("#sample4 .result-view strong").addEventListener("click", function () {
-                        document.querySelector("#sample4 .result-view").classList.toggle("show");
-                    });
+           
+                    document.querySelector(".result4-1").innerHTML= x;
+                    document.querySelector(".result4-2").innerHTML= y;
+                    document.querySelector(".result4-3").innerHTML= z;
                 }
 
                 //sample5

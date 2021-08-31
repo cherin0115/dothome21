@@ -10,12 +10,62 @@
 
 <body>
     <script>
+        // const num = [100, 200, 300, 400, 500];
+        //for문
+        // for (let i = 0; i < num.length; i++) {
+        //     document.write(num[i], "<br>")
+        // };
+        // num.forEach((element, index, array) => {
+        //     document.write(element, "<br>");
+        //     document.write(index, "<br>");
+        //     document.write(array, "<br>");
+        // });
+        //300만 빼고 나머지값 
+
+        // const result1 = num.splice(2, 1)
+        // document.write(num, "<br>");
+        // map
+        //  num.map((el, index, array) =>{
+        //      document.write(el);
+        //  });
+        // 펼침연산자
+        // document.write(...num);
+
+        // const obj = [
+        //     {a:100},
+        //     {a:200},
+        //     {a:300}
+        // ]
+
+        // document.write(obj[0].a);
+        // document.write(obj[1].a);
+        // document.write(obj[2].a);
+
+        // obj.map(el=>{
+        //     document.write(el.a);
+        // })
+
+        // obj.map(el => 
+        // document.write(el.a));
+
+        function func(num,name, job){
+            this.num = num;
+            this.name = name;
+            this.job = job;
+
+            this.result = function(){
+                document.write(`${num}.내이름은 ${name}이며 직업은 ${job}입니다.`);
+            }
+        }
+        const info = new func("1", "웹스", "웹 퍼블리셔")
+        // 내 이름은 웹스이면 직업은 웹 퍼블리셔입니다.
+
         // const obj = [
         //     {  a: 1000,
         //        b: 2000,
         //        c: 3000 
         //     }
-            
+
         // const obj = {
         //     a: 1000,
         //     b: 2000,
@@ -39,29 +89,29 @@
 
         // document.write(Object.keys(obj));
 
-        const obj2 = [
-                { a : 1000},
-                { b : 2000},
-                { c : 3000}
-            ]
+        // const obj2 = [
+        //         { a : 1000},
+        //         { b : 2000},
+        //         { c : 3000}
+        //     ]
 
-            document.write(obj2[0].a, "<br>");
-            document.write(obj2[1].b, "<br>");
-            document.write(obj2[2].c,"<br>");
-            
-            // a,b,c의 합
+        //     document.write(obj2[0].a, "<br>");
+        //     document.write(obj2[1].b, "<br>");
+        //     document.write(obj2[2].c,"<br>");
 
-            document.write(obj2[0].a + obj2[1].b + obj2[2].c,"<br>");
-            // 1, 2, 3
-            document.write(obj2[0].a / obj2[0].a,"<br>");
-            document.write(obj2[1].b / obj2[0].a,"<br>");
-            document.write(obj2[2].c / obj2[0].a,"<br>");
+        //     // a,b,c의 합
 
-            // a b c 
-            document.write(Object.keys(obj2));
+        //     document.write(obj2[0].a + obj2[1].b + obj2[2].c,"<br>");
+        //     // 1, 2, 3
+        //     document.write(obj2[0].a / obj2[0].a,"<br>");
+        //     document.write(obj2[1].b / obj2[0].a,"<br>");
+        //     document.write(obj2[2].c / obj2[0].a,"<br>");
+
+        //     // a b c 
+        //     document.write(Object.keys(obj2));
 
 
-            const obj3 = [1000,2000, 300, "a","b", "c"]
+        //     const obj3 = [1000,2000, 300, "a","b", "c"]
 
 
         // function f1() {
