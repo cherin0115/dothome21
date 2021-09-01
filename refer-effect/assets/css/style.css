@@ -470,9 +470,14 @@ figcaption {
 }
 
 @media screen and (max-width: 350px) {
-  #main {
-    width: 0;
-    height: auto;
+  #content h1 {
+    font-size: 10vw;
+  }
+  #nav ul li a {
+    font-size: 10px;
+    width: 40px;
+    height: 20px;
+    line-height: 1.5;
   }
 }
 
@@ -487,18 +492,33 @@ figcaption {
     line-height: 2.5;
   }
   #modal {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
-  #modal .modal-cont {
+  #modal .modal-bg {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #modal .modal-bg .modal-cont {
     padding: 20px;
   }
-  #modal .modal-cont h2 {
+  #modal .modal-bg .modal-cont h2 {
     font-size: 25px;
     margin-bottom: 10px;
   }
-  #modal .modal-cont p {
+  #modal .modal-bg .modal-cont p {
     font-size: 12px;
     margin-bottom: 10px;
   }
