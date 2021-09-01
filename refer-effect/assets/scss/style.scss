@@ -337,55 +337,41 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
         display: flex;
         align-items: center;
         justify-content: center;
-    }
 
-    .modal-cont {
-        background: #fff;
-        padding: 3vw;
-        max-width: 50vw;
-        border-radius: 5px;
+        .modal-cont {
+            background: #fff;
+            padding: 3vw;
+            max-width: 50vw;
 
-        h2 {
-            font-weight: 700;
-            font-size: 40px;
-            margin-bottom: 10px;
+            h2 {
+                font-weight: 400;
+                font-size: 40px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-weight: 300;
+                line-height: 1.6;
+            }
+
+            button {
+                float: right;
+                border: 1px solid #000;
+                background: #000;
+                border-radius: 20px;
+                color: #fff;
+                padding: 5px 10px;
+                float: right;
+                font-family: 'NEXONLv2Gothic';
+                cursor: pointer;
+            }
         }
-
-        p {
-            font-weight: 300;
-            line-height: 1.6;
-        }
-
-        button {
-            float: right;
-            border: 1px solid #000;
-            background: #000;
-            border-radius: 20px;
-            color: #fff;
-            padding: 5px 10px;
-            float: right;
-            font-family: 'NEXONLv2Gothic';
-            cursor: pointer;
-        }
     }
+}
 
-    &.show {
-        animation: unfoldIn 1s ease forwards;
-    }
-
-    &.show.hide {
-        animation: unfoldOut 1s ease forwards;
-    }
-
-    &.show .modal-bg .modal-cont {
-        transform: scale(0);
-        animation: zoomIn 0.5s 0.8s ease forwards;
-    }
-
-    &.show.hide .modal-bg .modal-cont {
-        transform: scale(0);
-        animation: zoomOut 0.5s ease forwards;
-    }
+#modal.show {
+    transform: scaley(0.0005) scalex(1);
+    animation: unfoldIn 1s ease forwards;
 }
 
 @keyframes unfoldIn {
@@ -402,6 +388,10 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
     }
 }
 
+#modal.show.hide {
+    animation: unfoldOut 1s ease forwards;
+}
+
 @keyframes unfoldOut {
     0% {
         transform: scaley(1) scalex(1);
@@ -414,6 +404,16 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
     100% {
         transform: scaley(0.005) scalex(0);
     }
+}
+
+#modal.show .modal-bg .modal-cont {
+    transform: scale(0);
+    animation: zoomIn 0.5s 0.8s ease forwards;
+}
+
+#modal.show.hide .modal-bg .modal-cont {
+    transform: scale(0);
+    animation: zoomOut 0.5s ease forwards;
 }
 
 @keyframes zoomIn {

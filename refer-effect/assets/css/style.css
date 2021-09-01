@@ -352,25 +352,24 @@ figcaption {
           justify-content: center;
 }
 
-#modal .modal-cont {
+#modal .modal-bg .modal-cont {
   background: #fff;
   padding: 3vw;
   max-width: 50vw;
-  border-radius: 5px;
 }
 
-#modal .modal-cont h2 {
-  font-weight: 700;
+#modal .modal-bg .modal-cont h2 {
+  font-weight: 400;
   font-size: 40px;
   margin-bottom: 10px;
 }
 
-#modal .modal-cont p {
+#modal .modal-bg .modal-cont p {
   font-weight: 300;
   line-height: 1.6;
 }
 
-#modal .modal-cont button {
+#modal .modal-bg .modal-cont button {
   float: right;
   border: 1px solid #000;
   background: #000;
@@ -383,27 +382,10 @@ figcaption {
 }
 
 #modal.show {
+  -webkit-transform: scaley(0.0005) scalex(1);
+          transform: scaley(0.0005) scalex(1);
   -webkit-animation: unfoldIn 1s ease forwards;
           animation: unfoldIn 1s ease forwards;
-}
-
-#modal.show.hide {
-  -webkit-animation: unfoldOut 1s ease forwards;
-          animation: unfoldOut 1s ease forwards;
-}
-
-#modal.show .modal-bg .modal-cont {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-animation: zoomIn 0.5s 0.8s ease forwards;
-          animation: zoomIn 0.5s 0.8s ease forwards;
-}
-
-#modal.show.hide .modal-bg .modal-cont {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-animation: zoomOut 0.5s ease forwards;
-          animation: zoomOut 0.5s ease forwards;
 }
 
 @-webkit-keyframes unfoldIn {
@@ -436,6 +418,11 @@ figcaption {
   }
 }
 
+#modal.show.hide {
+  -webkit-animation: unfoldOut 1s ease forwards;
+          animation: unfoldOut 1s ease forwards;
+}
+
 @-webkit-keyframes unfoldOut {
   0% {
     -webkit-transform: scaley(1) scalex(1);
@@ -464,6 +451,20 @@ figcaption {
     -webkit-transform: scaley(0.005) scalex(0);
             transform: scaley(0.005) scalex(0);
   }
+}
+
+#modal.show .modal-bg .modal-cont {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation: zoomIn 0.5s 0.8s ease forwards;
+          animation: zoomIn 0.5s 0.8s ease forwards;
+}
+
+#modal.show.hide .modal-bg .modal-cont {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation: zoomOut 0.5s ease forwards;
+          animation: zoomOut 0.5s ease forwards;
 }
 
 @-webkit-keyframes zoomIn {
