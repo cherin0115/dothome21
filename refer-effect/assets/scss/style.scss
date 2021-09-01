@@ -85,9 +85,8 @@ $font-Nexon1: 'NEXONLv1Gothic';
 $font-Nexon2: 'NEXONLv2Gothic';
 
 // Breakpoints
-$breakpoint-mobile: 350px;
 $breakpoint-tablet: 800px;
-$breakpoint-desktop: 1024px;
+
 
 $gradient1: linear-gradient(to bottom, #11e8bb 0%, #8200c9 100%);
 $gradient2: linear-gradient(to bottom, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
@@ -117,24 +116,12 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
     left: 0;
     top: 0;
 }
-
-@mixin mobile {
-    @media screen and (max-width: #{$breakpoint-mobile}) {
-        @content;
-    }
-}
-
 @mixin tablet {
-    @media screen and (max-width: #{$breakpoint-tablet}) {
+    @media (max-width: #{$breakpoint-tablet}) {
         @content;
     }
 }
 
-@mixin desktop {
-    @media screen and (min-width: #{$breakpoint-desktop}) {
-        @content;
-    }
-}
 
 //bg1
 .bg {
@@ -442,14 +429,15 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
 }
 
 //media query@
-@include mobile {
+
+@include tablet {
 
     #content h1 {
+        font-size: 18vw;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        font-size: 18vw;
     }
 
     #nav {
@@ -458,35 +446,14 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
         top: 80%;
         font-size: 18vw;
         transform: translate(-50%, -50%);
-
         ul {
             display: flex;
             gap: 5px;
-
             li a {
                 font-size: 13px;
                 width: 60px;
                 height: 30px;
                 line-height: 30px;
-            }
-        }
-    }
-
-}
-
-@include tablet {
-
-    #content h1 {
-        font-size: 18vw;
-    }
-
-    #nav {
-        ul {
-            li a {
-                font-size: 12px;
-                width: 65px;
-                height: 30px;
-                line-height: 2.5;
             }
         }
     }

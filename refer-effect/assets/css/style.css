@@ -469,14 +469,14 @@ figcaption {
   }
 }
 
-@media screen and (max-width: 350px) {
+@media (max-width: 800px) {
   #content h1 {
+    font-size: 18vw;
     position: absolute;
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    font-size: 18vw;
   }
   #nav {
     position: absolute;
@@ -497,18 +497,6 @@ figcaption {
     width: 60px;
     height: 30px;
     line-height: 30px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  #content h1 {
-    font-size: 18vw;
-  }
-  #nav ul li a {
-    font-size: 12px;
-    width: 65px;
-    height: 30px;
-    line-height: 2.5;
   }
   #modal {
     position: fixed;
