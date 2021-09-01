@@ -400,16 +400,16 @@ figcaption {
 }
 
 #modal.show {
-  -webkit-animation: unfoldIn 1s ease forwards;
-          animation: unfoldIn 1s ease forwards;
+  -webkit-animation: zoomIn 1s ease forwards;
+          animation: zoomIn 1s ease forwards;
 }
 
 #modal.hide {
-  -webkit-animation: unfoldOut 1s ease forwards;
-          animation: unfoldOut 1s ease forwards;
+  -webkit-animation: zoomOut 1s ease forwards;
+          animation: zoomOut 1s ease forwards;
 }
 
-@-webkit-keyframes unfoldIn {
+@-webkit-keyframes zoomIn {
   0% {
     -webkit-transform: scaley(1) scalex(1);
     transform: scaley(1) scalex(1);
@@ -424,7 +424,7 @@ figcaption {
   }
 }
 
-@keyframes unfoldIn {
+@keyframes zoomIn {
   0% {
     -webkit-transform: scaley(1) scalex(1);
     transform: scaley(1) scalex(1);
@@ -439,7 +439,7 @@ figcaption {
   }
 }
 
-@-webkit-keyframes unfoldOUT {
+@-webkit-keyframes zoomOut {
   0% {
     -webkit-transform: scaley(0.005) scalex(0);
     transform: scaley(0.005) scalex(0);
@@ -454,7 +454,7 @@ figcaption {
   }
 }
 
-@keyframes unfoldOUT {
+@keyframes zoomOut {
   0% {
     -webkit-transform: scaley(0.005) scalex(0);
     transform: scaley(0.005) scalex(0);
@@ -471,13 +471,32 @@ figcaption {
 
 @media screen and (max-width: 350px) {
   #content h1 {
-    font-size: 10vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 18vw;
+  }
+  #nav {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    font-size: 18vw;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  #nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5px;
   }
   #nav ul li a {
-    font-size: 10px;
-    width: 40px;
-    height: 20px;
-    line-height: 1.5;
+    font-size: 13px;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
   }
 }
 
