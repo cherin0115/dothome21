@@ -1,0 +1,477 @@
+@charset "UTF-8";
+
+//webfont
+/* 넥슨 폰트 */
+@font-face {
+    font-family: 'NEXONLv1Gothic';
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NEXONLv1Gothic';
+    font-weight: 500;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NEXONLv1Gothic';
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NEXONLv2Gothic';
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff') format('woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NEXONLv2Gothic';
+    font-weight: 500;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NEXONLv2Gothic';
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
+    font-style: normal;
+}
+
+//reset
+/* 여백 초기화 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+//variable 
+$font-Six: 'Six Caps';
+$font-Nexon1: 'NEXONLv1Gothic';
+$font-Nexon2: 'NEXONLv2Gothic';
+
+// Breakpoints
+$breakpoint-mobile: 350px;
+$breakpoint-tablet: 800px;
+$breakpoint-desktop: 1024px;
+
+$gradient1: linear-gradient(to bottom, #11e8bb 0%, #8200c9 100%);
+$gradient2: linear-gradient(to bottom, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+$gradient3: linear-gradient(to bottom, #a18cd1 0%, #fbc2eb 100%);
+$gradient4: linear-gradient(to bottom, #a8edea 0%, #fed6e3 100%);
+$gradient5: linear-gradient(to bottom, #9890e3 0%, #b1f4cf 100%);
+$gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
+
+//mixin
+@mixin positionCenter {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+@mixin content {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@mixin mobile {
+    @media screen and (max-width: #{$breakpoint-mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: #{$breakpoint-tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: #{$breakpoint-desktop}) {
+        @content;
+    }
+}
+
+//bg1
+.bg {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &::before {
+        @include content;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: -1;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bg#{$i} {
+        background-image: url(../img/bg#{$i}@2.jpg);
+
+    }
+}
+
+//main
+#main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #11e8bb;
+    background: $gradient1;
+
+    &.game {
+        background: $gradient2;
+
+        h1 {
+            background-image: linear-gradient(to bottom, #830088 30%, #ff7eb4);
+        }
+    }
+
+    &.menu {
+        background: $gradient3;
+
+        h1 {
+            background-image: linear-gradient(to bottom, #450086 30%, #a466c5);
+        }
+    }
+
+    &.mouse {
+        background: $gradient4;
+
+        h1 {
+            background-image: linear-gradient(to bottom, #00be66 30%, #ff77a0);
+        }
+    }
+
+    &.parallax {
+        background: $gradient5;
+
+        h1 {
+            background-image: linear-gradient(to bottom, #6e00ec 30%, #00dd81);
+        }
+    }
+
+    &.slider {
+        background: $gradient6;
+
+        h1 {
+            background-image: linear-gradient(to bottom, #ffbe0b 30%, hsl(300, 100%, 63%));
+        }
+    }
+}
+
+#contents {
+    h1 {
+        @include positionCenter;
+        font-size: 10vw;
+        white-space: nowrap;
+        font-family: $font-Six, sans-serif;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 1vw;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to bottom, #0c0052 30%, #8200c9);
+    }
+}
+
+#nav {
+    @include positionCenter;
+    bottom: 10px;
+    top: auto;
+
+    li {
+        list-style: none;
+        display: inline;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid #fff;
+            display: inline-block;
+            border-radius: 50px;
+            font-size: 14px;
+            text-align: center;
+            margin: 4px;
+            font-family: $font-Nexon1;
+            box-shadow: inset 0 0 0 #fff;
+            transition: all 0.4s;
+
+            &:hover {
+                box-shadow: inset 0 -100px 0 #fff;
+                color: #6c4a70;
+            }
+        }
+    }
+}
+
+
+//info
+.info {
+    color: #fff;
+    font-family: $font-Nexon1;
+    padding: 20px;
+
+    &.right {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    &.bottom {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    h1 {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.6;
+        border-bottom: 1px dashed #fff;
+        display: inline-block;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    li {
+        list-style: none;
+        display: inline;
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px dashed #fff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        &.active {
+            a {
+                background: #fff;
+                color: #000;
+            }
+        }
+    }
+
+    button {
+        background: transparent;
+        border: 1px solid #fff;
+        padding: 5px 10px;
+        color: #fff;
+        border-radius: 50px;
+        box-shadow: 0 0 0 #fff inset;
+        transition: all 0.4s;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 -50px 0 #fff inset;
+            color: #000;
+        }
+    }
+
+}
+.btn-wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    display: none;
+    button {
+        border: 1px solid #fff;
+        padding: 5px 10px;
+        background: #fff;
+        border-radius: 50px;
+        text-transform: uppercase;
+        -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+}
+#modal {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba (0, 0, 0, 0.4);
+    z-index: 1000;
+    transform: scale(0);
+
+    .modal-bg {
+        background: rgba(0, 0, 0, 0.6);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .modal-cont {
+        background: #fff;
+        padding: 3vw;
+        max-width: 50vw;
+
+        h2 {
+            font-weight: 700;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        button {
+            border: 1px solid #000;
+            background: #000;
+            border-radius: 20px;
+            color: #fff;
+            padding: 5px 10px;
+            float: right;
+            font-family: 'NEXONLv2Gothic';
+        }
+    }    
+    &.show {
+        animation: unfoldIn 1s ease forwards;
+    }
+    &.hide {
+        animation: unfoldOut 1s ease forwards;
+    }
+}
+@keyframes unfoldIn {
+    0% {
+      -webkit-transform: scaley(1) scalex(1);
+              transform: scaley(1) scalex(1);
+    }
+    50% {
+      -webkit-transform: scaley(0.005) scalex(1);
+              transform: scaley(0.005) scalex(1);
+    }
+    100% {
+      -webkit-transform: scaley(0.005) scalex(0);
+              transform: scaley(0.005) scalex(0);
+    }
+  }
+
+@keyframes unfoldOUT {
+    0% {
+      -webkit-transform: scaley(0.005) scalex(0);
+              transform: scaley(0.005) scalex(0);
+    }
+    50% {
+      -webkit-transform: scaley(0.005) scalex(1);
+              transform: scaley(0.005) scalex(1);
+    }
+    100% {
+      -webkit-transform: scaley(1) scalex(1);
+              transform: scaley(1) scalex(1);
+    }
+  }
+//media query@
+@include mobile {
+    #main {
+        width: 0;
+        height: auto;
+    }
+
+}
+
+@include tablet {
+
+    #content h1 {
+        font-size: 18vw;
+    }
+
+    #nav {
+        ul {
+            li a {
+                font-size: 12px;
+                width: 65px;
+                height: 30px;
+                line-height: 2.5;
+            }
+        }
+    }
+
+    #modal {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        .modal-cont {
+            padding: 20px;
+
+            h2 {
+                font-size: 25px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

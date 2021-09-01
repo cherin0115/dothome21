@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Effect</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="bg bg1">
+    <!-- info -->
+    <div class="info">
+        <h1>javascript Menu Effect01</h1>
+        <p>메뉴 이펙트 - 탭메뉴</p>
+    </div>
+
+    <div class="info right">
+        <ul>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+        </ul>
+    </div>
+
+    <div class="info bottom">
+        <button> 소스 보기</button>
+    </div>
+    <!-- //info -->
+    <!-- button -->
+    <div class="btn-wrap">
+        <button>modal</button>
+    </div>
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <h2>레이어 팝업</h2>
+                <p>
+                    신차는 기존 5인승과 7인승 모델에서 2열 독립 시트가 적용된 6인승 모델을 추가했다. 6인승 모델은 2열 시트에 1열과 동일한 가니쉬의 센터 콘솔을 비롯 무선 충전 시스템,
+                    컵홀더, 수납함 등을 적용했다. 동승석에는 에르고 모션 시트를 장착했다
+                </p>
+                <button>닫기</button>
+            </div>
+        </div>
+    </div>
+    <!-- //button -->
+    <!-- script -->
+    <script>
+        $(".bottom button").click(function () {
+            $("#modal").removeClass().addClass("show")
+        });
+
+        $(".modal-cont button").click(function () {
+            $("#modal").addClass("hide")
+        });
+    </script>
+    <!-- //script -->
+
+</body>
+
+</html>
