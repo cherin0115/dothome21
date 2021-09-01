@@ -272,10 +272,11 @@ figcaption {
 
 .info h1 {
   font-weight: 300;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
   border-bottom: 1px dashed #fff;
   display: inline-block;
+  margin-bottom: 10px;
 }
 
 .info p {
@@ -326,40 +327,19 @@ figcaption {
   color: #000;
 }
 
-.btn-wrap {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  display: none;
-}
-
-.btn-wrap button {
-  border: 1px solid #fff;
-  padding: 5px 10px;
-  background: #fff;
-  border-radius: 50px;
-  text-transform: uppercase;
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-
 #modal {
   position: fixed;
   bottom: 0;
   right: 0;
   width: 100%;
   height: 100vh;
-  background: rgba 0, 0, 0, 0.4;
   z-index: 1000;
   -webkit-transform: scale(0);
           transform: scale(0);
 }
 
 #modal .modal-bg {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.2);
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -376,6 +356,7 @@ figcaption {
   background: #fff;
   padding: 3vw;
   max-width: 50vw;
+  border-radius: 5px;
 }
 
 #modal .modal-cont h2 {
@@ -390,6 +371,7 @@ figcaption {
 }
 
 #modal .modal-cont button {
+  float: right;
   border: 1px solid #000;
   background: #000;
   border-radius: 20px;
@@ -397,75 +379,134 @@ figcaption {
   padding: 5px 10px;
   float: right;
   font-family: 'NEXONLv2Gothic';
+  cursor: pointer;
 }
 
 #modal.show {
-  -webkit-animation: zoomIn 1s ease forwards;
-          animation: zoomIn 1s ease forwards;
+  -webkit-animation: unfoldIn 1s ease forwards;
+          animation: unfoldIn 1s ease forwards;
 }
 
-#modal.hide {
-  -webkit-animation: zoomOut 1s ease forwards;
-          animation: zoomOut 1s ease forwards;
+#modal.show.hide {
+  -webkit-animation: unfoldOut 1s ease forwards;
+          animation: unfoldOut 1s ease forwards;
+}
+
+#modal.show .modal-bg .modal-cont {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation: zoomIn 0.5s 0.8s ease forwards;
+          animation: zoomIn 0.5s 0.8s ease forwards;
+}
+
+#modal.show.hide .modal-bg .modal-cont {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation: zoomOut 0.5s ease forwards;
+          animation: zoomOut 0.5s ease forwards;
+}
+
+@-webkit-keyframes unfoldIn {
+  0% {
+    -webkit-transform: scaley(0.005) scalex(0);
+            transform: scaley(0.005) scalex(0);
+  }
+  50% {
+    -webkit-transform: scaley(0.005) scalex(1);
+            transform: scaley(0.005) scalex(1);
+  }
+  100% {
+    -webkit-transform: scaley(1) scalex(1);
+            transform: scaley(1) scalex(1);
+  }
+}
+
+@keyframes unfoldIn {
+  0% {
+    -webkit-transform: scaley(0.005) scalex(0);
+            transform: scaley(0.005) scalex(0);
+  }
+  50% {
+    -webkit-transform: scaley(0.005) scalex(1);
+            transform: scaley(0.005) scalex(1);
+  }
+  100% {
+    -webkit-transform: scaley(1) scalex(1);
+            transform: scaley(1) scalex(1);
+  }
+}
+
+@-webkit-keyframes unfoldOut {
+  0% {
+    -webkit-transform: scaley(1) scalex(1);
+            transform: scaley(1) scalex(1);
+  }
+  50% {
+    -webkit-transform: scaley(0.005) scalex(1);
+            transform: scaley(0.005) scalex(1);
+  }
+  100% {
+    -webkit-transform: scaley(0.005) scalex(0);
+            transform: scaley(0.005) scalex(0);
+  }
+}
+
+@keyframes unfoldOut {
+  0% {
+    -webkit-transform: scaley(1) scalex(1);
+            transform: scaley(1) scalex(1);
+  }
+  50% {
+    -webkit-transform: scaley(0.005) scalex(1);
+            transform: scaley(0.005) scalex(1);
+  }
+  100% {
+    -webkit-transform: scaley(0.005) scalex(0);
+            transform: scaley(0.005) scalex(0);
+  }
 }
 
 @-webkit-keyframes zoomIn {
   0% {
-    -webkit-transform: scaley(1) scalex(1);
-    transform: scaley(1) scalex(1);
-  }
-  50% {
-    -webkit-transform: scaley(0.005) scalex(1);
-    transform: scaley(0.005) scalex(1);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
-    -webkit-transform: scaley(0.005) scalex(0);
-    transform: scaley(0.005) scalex(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @keyframes zoomIn {
   0% {
-    -webkit-transform: scaley(1) scalex(1);
-    transform: scaley(1) scalex(1);
-  }
-  50% {
-    -webkit-transform: scaley(0.005) scalex(1);
-    transform: scaley(0.005) scalex(1);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
-    -webkit-transform: scaley(0.005) scalex(0);
-    transform: scaley(0.005) scalex(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @-webkit-keyframes zoomOut {
   0% {
-    -webkit-transform: scaley(0.005) scalex(0);
-    transform: scaley(0.005) scalex(0);
-  }
-  50% {
-    -webkit-transform: scaley(0.005) scalex(1);
-    transform: scaley(0.005) scalex(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
-    -webkit-transform: scaley(1) scalex(1);
-    transform: scaley(1) scalex(1);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 
 @keyframes zoomOut {
   0% {
-    -webkit-transform: scaley(0.005) scalex(0);
-    transform: scaley(0.005) scalex(0);
-  }
-  50% {
-    -webkit-transform: scaley(0.005) scalex(1);
-    transform: scaley(0.005) scalex(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
-    -webkit-transform: scaley(1) scalex(1);
-    transform: scaley(1) scalex(1);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 
@@ -494,39 +535,8 @@ figcaption {
   }
   #nav ul li a {
     font-size: 13px;
-    width: 60px;
-    height: 30px;
-    line-height: 30px;
-  }
-  #modal {
-    position: fixed;
-    left: 0;
-    top: 0;
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  #modal .modal-bg {
-    background: rgba(0, 0, 0, 0.6);
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  #modal .modal-bg .modal-cont {
-    padding: 20px;
-  }
-  #modal .modal-bg .modal-cont h2 {
-    font-size: 25px;
-    margin-bottom: 10px;
-  }
-  #modal .modal-bg .modal-cont p {
-    font-size: 12px;
-    margin-bottom: 10px;
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
   }
 }

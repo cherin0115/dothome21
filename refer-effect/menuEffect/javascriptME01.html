@@ -33,9 +33,6 @@
     </div>
     <!-- //info -->
     <!-- button -->
-    <div class="btn-wrap">
-        <button>modal</button>
-    </div>
     <div id="modal">
         <div class="modal-bg">
             <div class="modal-cont">
@@ -51,16 +48,15 @@
     <!-- //button -->
     <!-- script -->
     <script>
-        $(".bottom button").click(function () {
-            $("#modal").removeClass().addClass("show")
+        $(".info.bottom button").click(function () {
+            $("#modal").removeClass().addClass("show");
         });
 
         $(".modal-cont button").click(function () {
-            $("#modal").addClass("hide")
-        });
+            $("#modal").addClass("hide");
+        })
     </script>
     <!-- //script -->
-
 </body>
 
 </html>

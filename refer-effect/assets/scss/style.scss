@@ -116,6 +116,7 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
     left: 0;
     top: 0;
 }
+
 @mixin tablet {
     @media (max-width: #{$breakpoint-tablet}) {
         @content;
@@ -265,10 +266,11 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
 
     h1 {
         font-weight: 300;
-        font-size: 18px;
+        font-size: 20px;
         line-height: 1.6;
         border-bottom: 1px dashed #fff;
         display: inline-block;
+        margin-bottom: 10px;
     }
 
     p {
@@ -320,38 +322,17 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
 
 }
 
-.btn-wrap {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    display: none;
-
-    button {
-        border: 1px solid #fff;
-        padding: 5px 10px;
-        background: #fff;
-        border-radius: 50px;
-        text-transform: uppercase;
-        -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        cursor: pointer;
-    }
-}
-
 #modal {
     position: fixed;
     bottom: 0;
     right: 0;
     width: 100%;
     height: 100vh;
-    background: rgba (0, 0, 0, 0.4);
     z-index: 1000;
     transform: scale(0);
 
     .modal-bg {
-        background: rgba(0, 0, 0, 0.6);
+        background: rgba(0, 0, 0, 0.2);
         height: 100vh;
         display: flex;
         align-items: center;
@@ -362,6 +343,7 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
         background: #fff;
         padding: 3vw;
         max-width: 50vw;
+        border-radius: 5px;
 
         h2 {
             font-weight: 700;
@@ -375,6 +357,7 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
         }
 
         button {
+            float: right;
             border: 1px solid #000;
             background: #000;
             border-radius: 20px;
@@ -382,49 +365,74 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
             padding: 5px 10px;
             float: right;
             font-family: 'NEXONLv2Gothic';
+            cursor: pointer;
         }
     }
 
     &.show {
-        animation: zoomIn 1s ease forwards;
+        animation: unfoldIn 1s ease forwards;
     }
 
-    &.hide {
-        animation: zoomOut 1s ease forwards;
+    &.show.hide {
+        animation: unfoldOut 1s ease forwards;
+    }
+
+    &.show .modal-bg .modal-cont {
+        transform: scale(0);
+        animation: zoomIn 0.5s 0.8s ease forwards;
+    }
+
+    &.show.hide .modal-bg .modal-cont {
+        transform: scale(0);
+        animation: zoomOut 0.5s ease forwards;
+    }
+}
+
+@keyframes unfoldIn {
+    0% {
+        transform: scaley(0.005) scalex(0);
+    }
+
+    50% {
+        transform: scaley(0.005) scalex(1);
+    }
+
+    100% {
+        transform: scaley(1) scalex(1);
+    }
+}
+
+@keyframes unfoldOut {
+    0% {
+        transform: scaley(1) scalex(1);
+    }
+
+    50% {
+        transform: scaley(0.005) scalex(1);
+    }
+
+    100% {
+        transform: scaley(0.005) scalex(0);
     }
 }
 
 @keyframes zoomIn {
     0% {
-        -webkit-transform: scaley(1) scalex(1);
-        transform: scaley(1) scalex(1);
-    }
-
-    50% {
-        -webkit-transform: scaley(0.005) scalex(1);
-        transform: scaley(0.005) scalex(1);
+        transform: scale(0)
     }
 
     100% {
-        -webkit-transform: scaley(0.005) scalex(0);
-        transform: scaley(0.005) scalex(0);
+        transform: scale(1)
     }
 }
 
 @keyframes zoomOut {
     0% {
-        -webkit-transform: scaley(0.005) scalex(0);
-        transform: scaley(0.005) scalex(0);
-    }
-
-    50% {
-        -webkit-transform: scaley(0.005) scalex(1);
-        transform: scaley(0.005) scalex(1);
+        transform: scale(1)
     }
 
     100% {
-        -webkit-transform: scaley(1) scalex(1);
-        transform: scaley(1) scalex(1);
+        transform: scale(0)
     }
 }
 
@@ -446,43 +454,16 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
         top: 80%;
         font-size: 18vw;
         transform: translate(-50%, -50%);
+
         ul {
             display: flex;
             gap: 5px;
+
             li a {
                 font-size: 13px;
-                width: 60px;
-                height: 30px;
-                line-height: 30px;
-            }
-        }
-    }
-
-    #modal {
-        position: fixed;
-        left: 0;
-        top: 0;
-        transform: scale(0);
-
-        .modal-bg {
-            background: rgba(0, 0, 0, 0.6);
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .modal-cont {
-                padding: 20px;
-
-                h2 {
-                    font-size: 25px;
-                    margin-bottom: 10px;
-                }
-
-                p {
-                    font-size: 12px;
-                    margin-bottom: 10px;
-                }
+                width: 40px;
+                height: 20px;
+                line-height: 20px;
             }
         }
     }
