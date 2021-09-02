@@ -494,6 +494,7 @@ figcaption {
     top: 80%;
     font-size: 15vw;
     transform: translate(-50%, -50%);
+    overflow: hidden;
   }
   #nav ul {
     display: flex;
