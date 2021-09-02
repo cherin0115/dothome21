@@ -1,104 +1,88 @@
-<!DOCTYPE html>
+<pre><code class="language-html">&lt;!doctype javascript&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot; /&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+        &lt;link href=&quot;/path/to/tailwind.css&quot; rel=&quot;stylesheet&quot;&gt;
+        &lt;style&gt;
+        //code-view
+        .code-view {
+            background: #fff;
+            width: 60vw;
+            border: 1px solid #f2f2f2;
+            border-radius: 10px;
+            overflow: hidden;
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+            .view-header {
+                border-bottom: 1px solid #f2f2f2;
 
-<body>
-    <h2>UI/UX 콘셉트 도출</h2>
-    <div class="well">
-        도출된 아이디에이션(Ideation)의 프로토타입 검증 결과에 따라서 확정된 UI/UX 콘셉<br>
-        트를 결정할 수 있다.<br>
-        도출된 UI/UX 콘셉트를 반영하여 목표 고객인 페르소나(persona)를 추출할 수 있다.<br>
-        UI 설계를 위하여 UI/UX 콘셉트에 적합한 시나리오(scenario)를 작성할 수 있다.
-    </div>
+                .dot {
+                    padding: 13px 10px 10px 15px;
 
-    <h3>페르소나(persona)</h3>
-    <p>
-        페르소나는 사용자의 목적(goals)과 행동(behaviors)을 대표하는실제 타깃 사용자 그룹을<br>
-        가상의 캐릭터(artificial person and archetypical users)로 형상화하는 목적 지향적인<br>
-        (goal-directed) 인터랙션 디자인의 방법이다. 핵심적인 캐릭터의 구성요소는 니즈<br>
-        (motivations and needs), 목적, 환경(contexts), 행동패턴, 숙련 수준(skills), 태도(attitudes),<br>
-        문제점(pain points) 등이다. 이러한 구성요소는 사용자 리서치의 데이터 기반으로 기술<br>
-        한다. 또한 인터랙션 디자인, 인포메이션 아키텍쳐 디자인(IA), 비주얼 디자인 등을 수행할<br>
-        때 주요한 의사결저으이 준거점으로 활용하는 전략 산출물이다.또한, 개발자와 이해관계자들이<br>
-        복작합 데이터나 통계자로에 의존하여 사용자를 포함한 핵심 사항을 어렵게 이해하는 대신 사람의<br>
-        얼굴을 가진 개인적인 인격체로 접근하여 보다 더 인지적으로 가깝게 느낄 수 있게 한것이다.(Pruitt and Adlin, 2006)
+                    span {
+                        width: 12px;
+                        height: 12px;
+                        display: inline-block;
+                        border-radius: 50%;
+                        margin: 0 2px;
+                    }
 
-    </p>
+                    span:nth-child(1) {
+                        background-color: #f56565;
+                    }
 
-    <h3>시나리오 디자인(scenario design)</h3>
-    <p>
-        시나리오 디자인은 일련의 사건에서 언제, 어디서, 어떻게 페르소나가 행동하는지 묘사하<br>
-        는 이야기이다. 이 이야기는 특정한 환경(particular contexts)에서 페르소나의 목적을 달성<br>
-        하기 위해서 미디어와의 인터랙션을 어떻게 하는 지 묘사한다. 또한 이야기는 페르소나의 관점에서 <br>
-        기술하며, 미래에 발생할 사용 용례(activities)를 서술한다.
-    </p>
+                    span:nth-child(2) {
+                        background-color: #f6e05e;
+                    }
+
+                    span:nth-child(3) {
+                        background-color: #48bb78;
+                    }
+                }
+            }
+
+            .view-title {
+                border-bottom: 1px solid #f2f2f2;
+                padding: 0 11px;
+                $font-Nexon2: 'NEXONLv2Gothic';
 
 
+                li {
+                    display: inline;
+                    list-style: none;
 
-</body>
+                    a {
+                        text-decoration: none;
+                        color: #ccc;
+                        padding: 10px 10px 12px;
+                        margin: 0 5px;
+                        display: inline-block;
 
-</html>
+                    }
 
-<!-- <section id="cardType">
-    <div class="container">
-        <div class="cardType01">
-            <h2>홈 인테리어 사이트</h2>
-            <p>셀프 인테리어, 소품, 홈 패브릭 관련 사이트 입니다. <br>최근 업데이트 된 소품들을 확인해보세요. </p>
-            <div class="card-wrap">
-                <div class="card">
-                    <a href="#">
-                        <img src="img/card01.jpg" alt="인테리어 관련 사이트입니다." class="card-img">
-                        <strong class="card-title">지금 뜨는 아이템</strong>
-                        <span class="card-desc">셀프 인테리어, 소품, 홈 패브릭, 빈티지 가구를 위한 사이트...</span>
-                        <span class="card-keyword">
-                            <span>#셀프인테리어</span>
-                            <span>#홈스타그램</span>
-                            <span>#소품</span>
-                        </span>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="#">
-                        <img src="img/card02.jpg" alt="인테리어 관련 사이트입니다." class="card-img">
-                        <strong class="card-title">믹스 앤 매치 인테리어</strong>
-                        <span class="card-desc">셀프 인테리어, 소품, 홈 패브릭, 빈티지 가구를 위한 사이트...</span>
-                        <span class="card-keyword">
-                            <span>#셀프인테리어</span>
-                            <span>#홈스타그램</span>
-                            <span>#소품</span>
-                        </span>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="#">
-                        <img src="img/card03.jpg" alt="인테리어 관련 사이트입니다." class="card-img">
-                        <strong class="card-title">MUST HAVE ITEM</strong>
-                        <span class="card-desc">셀프 인테리어, 소품, 홈 패브릭, 빈티지 가구를 위한 사이트...</span>
-                        <span class="card-keyword">
-                            <span>#셀프인테리어</span>
-                            <span>#홈스타그램</span>
-                            <span>#소품</span>
-                        </span>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="#">
-                        <img src="img/card04.jpg" alt="인테리어 관련 사이트입니다." class="card-img">
-                        <strong class="card-title">MUST HAVE ITEM</strong>
-                        <span class="card-desc">셀프 인테리어, 소품, 홈 패브릭, 빈티지 가구를 위한 사이트...</span>
-                        <span class="card-keyword">
-                            <span>#셀프인테리어</span>
-                            <span>#홈스타그램</span>
-                            <span>#소품</span>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
+                    &.active a {
+                        border-top: 2px solid #667eea;
+                        color: #4a5568;
+                    }
+                }
+            }
+
+            .view-cont {
+                height: 500px;
+                overflow-y: scroll;
+                
+                > div {
+                    display: none;
+                }
+                > div:nth-child(1) {
+                    display: block;
+                }
+            }
+}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- ... --&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>

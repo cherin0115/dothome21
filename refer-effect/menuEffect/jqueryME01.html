@@ -23,6 +23,8 @@
             overflow: hidden;
         }
 
+        .tab-btn {}
+
         .tab-btn ul {
             display: flex;
         }
@@ -109,19 +111,20 @@
     <!-- //contents -->
     <!-- info -->
     <div class="info">
-        <h1>javascript Menu Effect01</h1>
+        <h1>jquery Menu Effect01</h1>
         <p>메뉴 이펙트 - 탭메뉴</p>
     </div>
+
     <div class="info right">
         <ul>
-            <li class="active"><a href="javascriptME01.html">1</a></li>
+            <li><a href="javascriptME01.html">1</a></li>
             <li><a href="javascriptME02.html">2</a></li>
             <li><a href="javascriptME03.html">3</a></li>
             <li><a href="javascriptME04.html">4</a></li>
             <li><a href="javascriptME05.html">5</a></li>
         </ul>
         <ul>
-            <li><a href="jqueryME01.html">1</a></li>
+            <li class="active"><a href="jqueryME01.html">1</a></li>
             <li><a href="jqueryME02.html">2</a></li>
             <li><a href="jqueryME03.html">3</a></li>
             <li><a href="jqueryME04.html">4</a></li>
@@ -149,12 +152,12 @@
                         <ul>
                             <li class="active"><a href="#">Html</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">Javascript</a></li>
+                            <li><a href="#">jquery</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">&lt;div id="tab-menu"&GT;
+                            <pre><code class="language-html">&lt;div id="tab-menu"&GT;
     &lt;div class="tab-btn"&GT;
         &lt;ul&GT;
             &LT;li class="active"&GT;&LT;a href="#"&GT;레퍼런스1&LT;/a&GT;&LT;/li&GT;
@@ -187,10 +190,10 @@
         &LT;/div&GT;
     &LT;/div&GT;
 &LT;/div&GT;
-</code></pre> 
+</code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">#tab-menu {
+                            <pre><code class="language-css">#tab-menu {
     max-width: 600px;
     background: rgb(199, 199, 199);
     position: absolute;
@@ -244,56 +247,54 @@
 </pre></code>
                         </div>
                         <div class="javascript">
-<pre><code class="language-js">{
-    const tabBtn1 = document.querySelectorAll(".view-title ul li");
-    const tabCont1 = document.querySelectorAll(".view-cont > div");
+                            <pre><code class="language-js">{
+    const tabBtn = $(".tab-btn ul li");  
+    const tabCont = $(".tab-cont > div");  
 
-    tabBtn1.forEach((element, index) => {
-        element.addEventListener("click", function () {
-            tabBtn1.forEach(el => {
-                el.classList.remove("active");
-            })
-            element.classList.add("active");
+    tabBtn.click(function(){
+       let target = $(this);
+       tabBtn.removeClass("active");
+       target.addClass("active");
 
-            tabCont1.forEach(el => {
-                el.style.display = "none";
-            })
+       let index = target.index();
+       tabCont.css("display", "none");
+       tabCont.eq(index).css("display","block");
 
-            tabCont1[index].style.display = "block";
-        })
-    })
+    });
 }
 </pre></code>
                         </div>
                     </div>
                 </div>
-                
                 <button>닫기</button>
             </div>
         </div>
     </div>
     <!-- //modal -->
     <!-- script -->
+    <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        const tabBtn = document.querySelectorAll(".tab-btn ul li");
-        const tabCont = document.querySelectorAll(".tab-cont > div");
+        const tabBtn = $(".tab-btn ul li"); //5개의 버튼을 변수에 할당
+        const tabCont = $(".tab-cont > div"); //5개의 컨텐츠를 변수에 할당
 
-        tabBtn.forEach((element, index) => {
-            element.addEventListener("click", function () {
-                tabBtn.forEach(el => {
-                    el.classList.remove("active");
-                })
-                element.classList.add("active");
+        //1.버튼을 클릭하면 클릭한 버튼한테 active 추가
+        //2. 버튼을 클릭하지 않은 다른 버튼은 active 제거
+        //3. 버튼 인텍스 설정
+        //4. 1번째 버튼은  1번째 컨텐츠랑 연결
+        //5. 모든 컨텐츠를 안보이게 설정
+        //6.클릭한 버튼의 해당 컨텐츠만 보이게 설정
+        tabBtn.click(function () {
+            let target = $(this);
+            tabBtn.removeClass("active");
+            target.addClass("active");
 
-                tabCont.forEach(el => {
-                    el.style.display = "none";
-                })
+            let index = target.index();
+            tabCont.css("display", "none");
+            tabCont.eq(index).css("display", "block");
 
-                tabCont[index].style.display = "block";
-            })
-        })
+        });
     </script>
 </body>
 

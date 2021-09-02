@@ -250,16 +250,18 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
 .info {
     color: #fff;
     font-family: $font-Nexon1;
+    position: absolute;
     padding: 20px;
+    left: 0; top: 0;
 
     &.right {
-        position: absolute;
+        left: auto;
         right: 0px;
-        top: 0px;
     }
 
     &.bottom {
-        position: absolute;
+        top: auto;
+        left: auto;   // 초기화, 기본값 자동
         bottom: 0;
         right: 0;
     }
@@ -324,28 +326,25 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
 
 #modal {
     position: fixed;
-    bottom: 0;
-    right: 0;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100vh;
     z-index: 1000;
     transform: scale(0);
 
     .modal-bg {
-        background: rgba(0, 0, 0, 0.2);
+        background: rgba(0, 0, 0, 0.6);
         height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
 
         .modal-cont {
-            background: #fff;
-            padding: 3vw;
-            max-width: 50vw;
 
             h2 {
                 font-weight: 400;
-                font-size: 40px;
+                font-size: 30px;
                 margin-bottom: 10px;
             }
 
@@ -355,15 +354,15 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
             }
 
             button {
-                float: right;
                 border: 1px solid #000;
                 background: #000;
                 border-radius: 20px;
                 color: #fff;
                 padding: 5px 10px;
                 float: right;
-                font-family: 'NEXONLv2Gothic';
                 cursor: pointer;
+                font-family: 'NEXONLv2Gothic';
+                margin-top: 10px;
             }
         }
     }
@@ -436,6 +435,81 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
     }
 }
 
+//code-view
+.code-view {
+    background: #fff;
+    width: 60vw;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .view-header {
+        border-bottom: 1px solid #f2f2f2;
+
+        .dot {
+            padding: 13px 10px 10px 15px;
+
+            span {
+                width: 12px;
+                height: 12px;
+                display: inline-block;
+                border-radius: 50%;
+                margin: 0 2px;
+            }
+
+            span:nth-child(1) {
+                background-color: #f56565;
+            }
+
+            span:nth-child(2) {
+                background-color: #f6e05e;
+            }
+
+            span:nth-child(3) {
+                background-color: #48bb78;
+            }
+        }
+    }
+
+    .view-title {
+        border-bottom: 1px solid #f2f2f2;
+        padding: 0 11px;
+        $font-Nexon2: 'NEXONLv2Gothic';
+
+
+        li {
+            display: inline;
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: #ccc;
+                padding: 10px 10px 12px;
+                margin: 0 5px;
+                display: inline-block;
+
+            }
+
+            &.active a {
+                border-top: 2px solid #667eea;
+                color: #4a5568;
+            }
+        }
+    }
+
+    .view-cont {
+        height: 500px;
+        overflow-y: scroll;
+        
+        > div {
+            display: none;
+        }
+        > div:nth-child(1) {
+            display: block;
+        }
+    }
+}
+
 //media query@
 
 @include tablet {
@@ -461,9 +535,9 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
 
             li a {
                 font-size: 13px;
-                width: 40px;
-                height: 20px;
-                line-height: 20px;
+                width: 50px;
+                height: 30px;
+                line-height: 30px;
             }
         }
     }
