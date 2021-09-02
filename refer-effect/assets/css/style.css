@@ -480,14 +480,6 @@ figcaption {
 }
 
 @media (max-width: 800px) {
-  #content h1 {
-    font-size: 15vw;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
   #nav {
     position: absolute;
     left: 50%;
@@ -509,7 +501,7 @@ figcaption {
 
   .info h1 {
     font-weight: 300;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.6;
     border-bottom: 1px dashed #fff;
     display: inline-block;
@@ -517,43 +509,24 @@ figcaption {
   }
 
   .code-view {
-    background: #fff;
-    width: 70vw;
-    height: 80vh;
-    border: 1px solid #978f8f;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .code-view .view-header {
-    border-bottom: 1px solid #f2f2f2;
+    width: 90vw;
   }
   .code-view .view-header .dot {
-    padding: 13px 10px 10px 15px;
+    padding: 10px 8px 8px 13px;
   }
   .code-view .view-header .dot span {
-    width: 12px;
-    height: 12px;
-    display: inline-block;
-    border-radius: 50%;
-    margin: 0 2px;
+    width: 9px;
+    height: 9px;
   }
-  .code-view .view-header .dot span:nth-child(1) {
-    background-color: #f56565;
-  }
-  .code-view .view-header .dot span:nth-child(2) {
-    background-color: #f6e05e;
-  }
-  .code-view .view-header .dot span:nth-child(3) {
-    background-color: #48bb78;
+  .code-view .view-title {
+    font-size: 10px;
   }
   .code-view .view-title li a {
-    font-size: 15px;
-  }
-  .code-view .view-title li.active a {
-    border-top: 2px solid #667eea;
-    color: #4a5568;
+    padding: 8px 10px;
+    margin: 0 5px;
   }
   .code-view .view-cont {
-    font-size: 13px;
+    font-size: 10px;
+    height: 300px;
   }
 }
