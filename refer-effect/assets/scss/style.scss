@@ -520,7 +520,6 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
         top: 80%;
         font-size: 15vw;
         transform: translate(-50%, -50%);
-        overflow: hidden;
 
         ul {
             display: flex;
@@ -542,7 +541,23 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
         display: inline-block;
         margin-bottom: 10px; 
     }
-
+    #tab-menu {
+        .tab-btn {
+            ul {
+               a{
+                font-size: 14px;
+               } 
+            }
+        }
+        .tab-cont{
+            h2 {
+                font-size: 18px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    }
     .code-view {
         width: 90vw;
     

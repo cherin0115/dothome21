@@ -486,7 +486,6 @@ figcaption {
     top: 80%;
     font-size: 15vw;
     transform: translate(-50%, -50%);
-    overflow: hidden;
   }
   #nav ul {
     display: flex;
@@ -506,6 +505,16 @@ figcaption {
     border-bottom: 1px dashed #fff;
     display: inline-block;
     margin-bottom: 10px;
+  }
+
+  #tab-menu .tab-btn ul a {
+    font-size: 14px;
+  }
+  #tab-menu .tab-cont h2 {
+    font-size: 18px;
+  }
+  #tab-menu .tab-cont p {
+    font-size: 14px;
   }
 
   .code-view {
