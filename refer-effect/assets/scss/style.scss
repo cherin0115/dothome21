@@ -439,7 +439,7 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
 .code-view {
     background: #fff;
     width: 60vw;
-    border: 1px solid #f2f2f2;
+    border: 1px solid #978f8f;
     border-radius: 10px;
     overflow: hidden;
 
@@ -515,7 +515,7 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
 @include tablet {
 
     #content h1 {
-        font-size: 18vw;
+        font-size: 15vw;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -526,7 +526,7 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
         position: absolute;
         left: 50%;
         top: 80%;
-        font-size: 18vw;
+        font-size: 15vw;
         transform: translate(-50%, -50%);
 
         ul {
@@ -535,10 +535,70 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
 
             li a {
                 font-size: 13px;
-                width: 50px;
+                width: 60px;
                 height: 30px;
                 line-height: 30px;
             }
+        }
+    }
+    .info h1 {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.6;
+        border-bottom: 1px dashed #fff;
+        display: inline-block;
+        margin-bottom: 10px; 
+    }
+
+    .code-view {
+        background: #fff;
+        width: 70vw;
+        height: 80vh;
+        border: 1px solid #978f8f;
+        border-radius: 10px;
+        overflow: hidden;
+    
+        .view-header {
+            border-bottom: 1px solid #f2f2f2;
+    
+            .dot {
+                padding: 13px 10px 10px 15px;
+    
+                span {
+                    width: 12px;
+                    height: 12px;
+                    display: inline-block;
+                    border-radius: 50%;
+                    margin: 0 2px;
+                }
+    
+                span:nth-child(1) {
+                    background-color: #f56565;
+                }
+    
+                span:nth-child(2) {
+                    background-color: #f6e05e;
+                }
+    
+                span:nth-child(3) {
+                    background-color: #48bb78;
+                }
+            }
+        }
+    
+        .view-title {        
+            li {
+                a {
+                    font-size: 15px;    
+                }    
+                &.active a {
+                    border-top: 2px solid #667eea;
+                    color: #4a5568;
+                }
+            }
+        }
+        .view-cont {
+            font-size: 13px;
         }
     }
 }
