@@ -526,12 +526,11 @@ figcaption {
     width: 80vw;
   }
   #tab-menu .tab-btn ul li {
-    justify-content: space-between;
     list-style: none;
-    text-align: center;
   }
   #tab-menu .tab-btn ul li a {
     font-size: 14px;
+    padding: 14px 10px 10px 10px;
   }
   #tab-menu .tab-cont h2 {
     font-size: 18px;
