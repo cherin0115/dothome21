@@ -480,6 +480,10 @@ figcaption {
 }
 
 @media (max-width: 800px) {
+  #contents h1 {
+    font-size: 17vw;
+  }
+
   #nav {
     position: absolute;
     left: 50%;
@@ -490,21 +494,32 @@ figcaption {
   #nav ul {
     display: flex;
     gap: 5px;
+    justify-content: space-between;
   }
   #nav ul li a {
-    font-size: 13px;
+    font-size: 14px;
     width: 60px;
     height: 30px;
     line-height: 30px;
   }
 
+  .info {
+    padding: 8px;
+  }
   .info h1 {
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 1.6;
-    border-bottom: 1px dashed #fff;
-    display: inline-block;
-    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .info p {
+    font-size: 13px;
+  }
+  .info.bottom {
+    padding: 20px 10px;
+  }
+  .info li a {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 9px;
   }
 
   #tab-menu .tab-btn ul a {
@@ -528,14 +543,15 @@ figcaption {
     height: 9px;
   }
   .code-view .view-title {
-    font-size: 10px;
+    padding: 0 8px;
+    font-size: 12px;
   }
   .code-view .view-title li a {
-    padding: 8px 10px;
-    margin: 0 5px;
+    padding: 8px 8px 10px;
   }
   .code-view .view-cont {
     font-size: 10px;
     height: 300px;
+    border-radius: 10px;
   }
 }

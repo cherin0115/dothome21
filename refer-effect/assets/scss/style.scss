@@ -513,7 +513,9 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
 //media query@
 
 @include tablet {
-
+    #contents h1 {
+        font-size: 17vw;
+    }
     #nav {
         position: absolute;
         left: 50%;
@@ -524,23 +526,37 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
         ul {
             display: flex;
             gap: 5px;
+            justify-content: space-between;
 
             li a {
-                font-size: 13px;
+                font-size: 14px;
                 width: 60px;
                 height: 30px;
                 line-height: 30px;
             }
         }
     }
-    .info h1 {
-        font-weight: 300;
-        font-size: 15px;
-        line-height: 1.6;
-        border-bottom: 1px dashed #fff;
-        display: inline-block;
-        margin-bottom: 10px; 
+    .info {
+        padding: 8px;
+        h1 {
+            font-size: 16px;     
+        }
+        p {
+            font-size: 13px;
+        }
+        &.bottom {
+            padding: 20px 10px;
+        }
+        li{
+            a{
+                width: 18px;
+                height: 18px;
+                line-height: 18px;
+                font-size: 9px;
+            }
+        }
     }
+ 
     #tab-menu {
         .tab-btn {
             ul {
@@ -573,17 +589,19 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
         }
     
         .view-title {
-            font-size: 10px;    
+            padding: 0 8px;
+            font-size: 12px;    
             li {
                 a {
-                   padding: 8px 10px;
-                   margin: 0 5px;
+                    padding: 8px 8px 10px;
+
                 }    
             }
         }
         .view-cont {
             font-size: 10px;
             height: 300px;
+            border-radius: 10px;
         }
     }
 }
