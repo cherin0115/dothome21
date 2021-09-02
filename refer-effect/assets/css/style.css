@@ -507,19 +507,19 @@ figcaption {
     padding: 8px;
   }
   .info h1 {
-    font-size: 16px;
+    font-size: 14px;
   }
   .info p {
-    font-size: 13px;
+    font-size: 12px;
   }
   .info.bottom {
-    padding: 20px 10px;
+    padding: 70px 10px;
   }
   .info li a {
     width: 18px;
     height: 18px;
     line-height: 18px;
-    font-size: 9px;
+    font-size: 10px;
   }
 
   #tab-menu .tab-btn ul a {
