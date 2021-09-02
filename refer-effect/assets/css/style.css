@@ -522,6 +522,9 @@ figcaption {
     font-size: 10px;
   }
 
+  #tab-menu {
+    width: 80vw;
+  }
   #tab-menu .tab-btn ul a {
     font-size: 14px;
   }
@@ -533,7 +536,7 @@ figcaption {
   }
 
   .code-view {
-    width: 90vw;
+    width: 80vw;
   }
   .code-view .view-header .dot {
     padding: 10px 8px 8px 13px;
