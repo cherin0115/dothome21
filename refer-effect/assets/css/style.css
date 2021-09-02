@@ -525,7 +525,12 @@ figcaption {
   #tab-menu {
     width: 80vw;
   }
-  #tab-menu .tab-btn ul a {
+  #tab-menu .tab-btn ul li {
+    justify-content: space-between;
+    list-style: none;
+    text-align: center;
+  }
+  #tab-menu .tab-btn ul li a {
     font-size: 14px;
   }
   #tab-menu .tab-cont h2 {

@@ -561,9 +561,15 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
         width: 80vw;
         .tab-btn {
             ul {
-               a{
-                font-size: 14px;
-               } 
+                li{
+                    justify-content: space-between;
+                    list-style: none;
+                    text-align: center;
+                    a{
+                        font-size: 14px;
+                       } 
+                }
+        
             }
         }
         .tab-cont{
