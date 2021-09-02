@@ -513,7 +513,7 @@ figcaption {
     font-size: 12px;
   }
   .info.bottom {
-    padding: 70px 10px;
+    padding: 0px 10px 70px 0px;
   }
   .info li a {
     width: 18px;
