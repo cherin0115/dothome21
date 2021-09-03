@@ -1,14 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Reference</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="wrap">
         <main id="contents">
@@ -50,6 +51,7 @@
                     <li><a href="#sample05">문자열 메서드 : indexOf() : 문자열 검색하기 : 반환(숫자) </a></li>
                     <li><a href="#sample05">문자열 메서드 : lastIndexOf() : 문자열 검색하기 : 반환(숫자) </a></li>
                     <li><a href="#sample05">문자열 메서드 : search() : 문자열 검색하기 : 반환(숫자) </a></li>
+                    <li><a href="#sample05">문자열 메서드 : match() : 문자열 검색하기 : 반환(배열) </a></li>
                     <li><a href="#sample05">문자열 메서드 : includes() : 문자열 포함 여부 : 반환(불린) </a></li>
                     <li><a href="#sample05">문자열 메서드 : startsWith() : 문자열 포함 여부 : 반환(불린) </a></li>
                     <li><a href="#sample05">문자열 메서드 : endsWith() : 문자열 포함 여부 : 반환(불린) </a></li>
@@ -394,6 +396,18 @@
                                 <td class="sample05_M11"></td>
                                 <td class="sample05_R11 result"></td>
                             </tr>
+                            <tr>
+                                <td class="sample05_N12"></td>
+                                <td class="sample05_Q12"></td>
+                                <td class="sample05_M12"></td>
+                                <td class="sample05_R12 result"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample05_N13"></td>
+                                <td class="sample05_Q13"></td>
+                                <td class="sample05_M13"></td>
+                                <td class="sample05_R13 result"></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -428,21 +442,29 @@
 
     document.querySelector(".sample05_R7").innerHTML = text7;
 
-    const text8 = str.includes("javascript");
+    const text8 = str.match(/javascript/);
 
     document.querySelector(".sample05_R8").innerHTML = text8;
 
-    const text9 = str.includes("jquery");
+    const text9 = str.match(/jquery/);
 
     document.querySelector(".sample05_R9").innerHTML = text9;
 
-    const text10 = str.startsWith("자바스크립트");
+    const text10 = str.includes("javascript");
 
     document.querySelector(".sample05_R10").innerHTML = text10;
 
-    const text11 = str.endsWith("javascript");
+    const text11 = str.includes("jquery");
 
     document.querySelector(".sample05_R11").innerHTML = text11;
+
+    const text12 = str.startsWith("자바스크립트");
+
+    document.querySelector(".sample05_R12").innerHTML = text12;
+
+    const text13 = str.endsWith("javascript");
+
+    document.querySelector(".sample05_R13").innerHTML = text13;
 }    
 </code></pre>
                 </div>
@@ -1145,33 +1167,48 @@
                     document.querySelector(".sample05_M7").innerHTML = "search(/jquery/)";
                     document.querySelector(".sample05_R7").innerHTML = text7;
 
-                    const text8 = str.includes("javascript");
+                    const text8 = str.match(/javascript/);
 
                     document.querySelector(".sample05_N8").innerHTML = "8";
                     document.querySelector(".sample05_Q8").innerHTML = str;
-                    document.querySelector(".sample05_M8").innerHTML = "includes(`javascript`)";
+                    document.querySelector(".sample05_M8").innerHTML = "match(/javascript/)";
                     document.querySelector(".sample05_R8").innerHTML = text8;
-
-                    const text9 = str.includes("jquery");
+                    console.log(text8)
+                    const text9 = str.match(/jquery/);
 
                     document.querySelector(".sample05_N9").innerHTML = "9";
                     document.querySelector(".sample05_Q9").innerHTML = str;
-                    document.querySelector(".sample05_M9").innerHTML = "includes(`jquery`)";
+                    document.querySelector(".sample05_M9").innerHTML = "match(/jquery/)";
                     document.querySelector(".sample05_R9").innerHTML = text9;
 
-                    const text10 = str.startsWith("자바스크립트");
+                    const text10 = str.includes("javascript");
 
                     document.querySelector(".sample05_N10").innerHTML = "10";
                     document.querySelector(".sample05_Q10").innerHTML = str;
-                    document.querySelector(".sample05_M10").innerHTML = "startsWith(`자바스크립트`)";
+                    document.querySelector(".sample05_M10").innerHTML = "includes(`javascript`)";
                     document.querySelector(".sample05_R10").innerHTML = text10;
 
-                    const text11 = str.endsWith("javascript");
+
+                    const text11 = str.includes("jquery");
 
                     document.querySelector(".sample05_N11").innerHTML = "11";
                     document.querySelector(".sample05_Q11").innerHTML = str;
-                    document.querySelector(".sample05_M11").innerHTML = "endsWith(`javascript`)";
+                    document.querySelector(".sample05_M11").innerHTML = "includes(`jquery`)";
                     document.querySelector(".sample05_R11").innerHTML = text11;
+
+                    const text12 = str.startsWith("자바스크립트");
+
+                    document.querySelector(".sample05_N12").innerHTML = "12";
+                    document.querySelector(".sample05_Q12").innerHTML = str;
+                    document.querySelector(".sample05_M12").innerHTML = "startsWith(`자바스크립트`)";
+                    document.querySelector(".sample05_R12").innerHTML = text12;
+
+                    const text13 = str.endsWith("javascript");
+
+                    document.querySelector(".sample05_N13").innerHTML = "13";
+                    document.querySelector(".sample05_Q13").innerHTML = str;
+                    document.querySelector(".sample05_M13").innerHTML = "endsWith(`javascript`)";
+                    document.querySelector(".sample05_R13").innerHTML = text13;
                 }
 
                 //sample06
