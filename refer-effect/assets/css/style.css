@@ -1,41 +1,47 @@
 @charset "UTF-8";
 /* 넥슨 폰트 */
 @font-face {
-  font-family: "NEXONLv1Gothic";
+  font-family: 'NEXONLv1Gothic';
   font-weight: 300;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff") format("woff");
   font-style: normal;
 }
+
 @font-face {
-  font-family: "NEXONLv1Gothic";
+  font-family: 'NEXONLv1Gothic';
   font-weight: 500;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff");
   font-style: normal;
 }
+
 @font-face {
-  font-family: "NEXONLv1Gothic";
+  font-family: 'NEXONLv1Gothic';
   font-weight: 700;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff") format("woff");
   font-style: normal;
 }
+
 @font-face {
-  font-family: "NEXONLv2Gothic";
+  font-family: 'NEXONLv2Gothic';
   font-weight: 300;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff") format("woff");
   font-style: normal;
 }
+
 @font-face {
-  font-family: "NEXONLv2Gothic";
+  font-family: 'NEXONLv2Gothic';
   font-weight: 500;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff") format("woff");
   font-style: normal;
 }
+
 @font-face {
-  font-family: "NEXONLv2Gothic";
+  font-family: 'NEXONLv2Gothic';
   font-weight: 700;
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff") format("woff");
   font-style: normal;
 }
+
 /* 여백 초기화 */
 body,
 div,
@@ -70,6 +76,14 @@ figcaption {
   padding: 0;
 }
 
+.iphone main {
+  padding: 10px;
+}
+
+.android main {
+  padding: 10px;
+}
+
 .bg {
   position: relative;
   height: 100vh;
@@ -77,8 +91,9 @@ figcaption {
   background-position: center center;
   background-repeat: no-repeat;
 }
+
 .bg::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -133,36 +148,57 @@ figcaption {
   height: 100vh;
   overflow: hidden;
   background: #11e8bb;
+  background: -webkit-gradient(linear, left top, left bottom, from(#11e8bb), to(#8200c9));
   background: linear-gradient(to bottom, #11e8bb 0%, #8200c9 100%);
 }
+
 #main.game {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff9a9e), color-stop(99%, #fecfef), to(#fecfef));
   background: linear-gradient(to bottom, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
 }
+
 #main.game h1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #830088), to(#ff7eb4));
   background-image: linear-gradient(to bottom, #830088 30%, #ff7eb4);
 }
+
 #main.menu {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a18cd1), to(#fbc2eb));
   background: linear-gradient(to bottom, #a18cd1 0%, #fbc2eb 100%);
 }
+
 #main.menu h1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #450086), to(#a466c5));
   background-image: linear-gradient(to bottom, #450086 30%, #a466c5);
 }
+
 #main.mouse {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a8edea), to(#fed6e3));
   background: linear-gradient(to bottom, #a8edea 0%, #fed6e3 100%);
 }
+
 #main.mouse h1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #00be66), to(#ff77a0));
   background-image: linear-gradient(to bottom, #00be66 30%, #ff77a0);
 }
+
 #main.parallax {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9890e3), to(#b1f4cf));
   background: linear-gradient(to bottom, #9890e3 0%, #b1f4cf 100%);
 }
+
 #main.parallax h1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #6e00ec), to(#00dd81));
   background-image: linear-gradient(to bottom, #6e00ec 30%, #00dd81);
 }
+
 #main.slider {
+  background: -webkit-gradient(linear, left top, left bottom, from(#74ebd5), to(#9face6));
   background: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
 }
+
 #main.slider h1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #ffbe0b), to(#ff42ff));
   background-image: linear-gradient(to bottom, #ffbe0b 30%, #ff42ff);
 }
 
@@ -170,7 +206,8 @@ figcaption {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-size: 10vw;
   white-space: nowrap;
   font-family: "Six Caps", sans-serif;
@@ -179,6 +216,7 @@ figcaption {
   letter-spacing: 1vw;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #0c0052), to(#8200c9));
   background-image: linear-gradient(to bottom, #0c0052 30%, #8200c9);
 }
 
@@ -186,14 +224,17 @@ figcaption {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   bottom: 10px;
   top: auto;
 }
+
 #nav li {
   list-style: none;
   display: inline;
 }
+
 #nav li a {
   color: #fff;
   text-decoration: none;
@@ -207,11 +248,15 @@ figcaption {
   text-align: center;
   margin: 4px;
   font-family: "NEXONLv1Gothic";
-  box-shadow: inset 0 0 0 #fff;
+  -webkit-box-shadow: inset 0 0 0 #fff;
+          box-shadow: inset 0 0 0 #fff;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
+
 #nav li a:hover {
-  box-shadow: inset 0 -100px 0 #fff;
+  -webkit-box-shadow: inset 0 -100px 0 #fff;
+          box-shadow: inset 0 -100px 0 #fff;
   color: #6c4a70;
 }
 
@@ -223,16 +268,19 @@ figcaption {
   left: 0;
   top: 0;
 }
+
 .info.right {
   left: auto;
   right: 0px;
 }
+
 .info.bottom {
   top: auto;
   left: auto;
   bottom: 0;
   right: 0;
 }
+
 .info h1 {
   font-weight: 300;
   font-size: 20px;
@@ -241,14 +289,17 @@ figcaption {
   display: inline-block;
   margin-bottom: 10px;
 }
+
 .info p {
   font-size: 16px;
   font-weight: 300;
 }
+
 .info li {
   list-style: none;
   display: inline;
 }
+
 .info li a {
   display: inline-block;
   text-decoration: none;
@@ -262,22 +313,28 @@ figcaption {
   font-size: 12px;
   margin-bottom: 5px;
 }
+
 .info li.active a {
   background: #fff;
   color: #000;
 }
+
 .info button {
   background: transparent;
   border: 1px solid #fff;
   padding: 5px 10px;
   color: #fff;
   border-radius: 50px;
-  box-shadow: 0 0 0 #fff inset;
+  -webkit-box-shadow: 0 0 0 #fff inset;
+          box-shadow: 0 0 0 #fff inset;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   cursor: pointer;
 }
+
 .info button:hover {
-  box-shadow: 0 -50px 0 #fff inset;
+  -webkit-box-shadow: 0 -50px 0 #fff inset;
+          box-shadow: 0 -50px 0 #fff inset;
   color: #000;
 }
 
@@ -288,24 +345,35 @@ figcaption {
   width: 100%;
   height: 100vh;
   z-index: 1000;
-  transform: scale(0);
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
+
 #modal .modal-bg {
   background: rgba(0, 0, 0, 0.6);
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 #modal .modal-bg .modal-cont h2 {
   font-weight: 400;
   font-size: 30px;
   margin-bottom: 10px;
 }
+
 #modal .modal-bg .modal-cont p {
   font-weight: 300;
   line-height: 1.6;
 }
+
 #modal .modal-bg .modal-cont button {
   border: 1px solid #000;
   background: #000;
@@ -314,39 +382,47 @@ figcaption {
   padding: 5px 10px;
   float: right;
   cursor: pointer;
-  font-family: "NEXONLv2Gothic";
+  font-family: 'NEXONLv2Gothic';
   margin-top: 10px;
 }
 
 #modal.show {
-  transform: scaley(0.0005) scalex(1);
+  -webkit-transform: scaley(0.0005) scalex(1);
+          transform: scaley(0.0005) scalex(1);
   -webkit-animation: unfoldIn 1s ease forwards;
           animation: unfoldIn 1s ease forwards;
 }
 
 @-webkit-keyframes unfoldIn {
   0% {
-    transform: scaley(0.005) scalex(0);
+    -webkit-transform: scaley(0.005) scalex(0);
+            transform: scaley(0.005) scalex(0);
   }
   50% {
-    transform: scaley(0.005) scalex(1);
+    -webkit-transform: scaley(0.005) scalex(1);
+            transform: scaley(0.005) scalex(1);
   }
   100% {
-    transform: scaley(1) scalex(1);
+    -webkit-transform: scaley(1) scalex(1);
+            transform: scaley(1) scalex(1);
   }
 }
 
 @keyframes unfoldIn {
   0% {
-    transform: scaley(0.005) scalex(0);
+    -webkit-transform: scaley(0.005) scalex(0);
+            transform: scaley(0.005) scalex(0);
   }
   50% {
-    transform: scaley(0.005) scalex(1);
+    -webkit-transform: scaley(0.005) scalex(1);
+            transform: scaley(0.005) scalex(1);
   }
   100% {
-    transform: scaley(1) scalex(1);
+    -webkit-transform: scaley(1) scalex(1);
+            transform: scaley(1) scalex(1);
   }
 }
+
 #modal.show.hide {
   -webkit-animation: unfoldOut 1s ease forwards;
           animation: unfoldOut 1s ease forwards;
@@ -354,72 +430,92 @@ figcaption {
 
 @-webkit-keyframes unfoldOut {
   0% {
-    transform: scaley(1) scalex(1);
+    -webkit-transform: scaley(1) scalex(1);
+            transform: scaley(1) scalex(1);
   }
   50% {
-    transform: scaley(0.005) scalex(1);
+    -webkit-transform: scaley(0.005) scalex(1);
+            transform: scaley(0.005) scalex(1);
   }
   100% {
-    transform: scaley(0.005) scalex(0);
+    -webkit-transform: scaley(0.005) scalex(0);
+            transform: scaley(0.005) scalex(0);
   }
 }
 
 @keyframes unfoldOut {
   0% {
-    transform: scaley(1) scalex(1);
+    -webkit-transform: scaley(1) scalex(1);
+            transform: scaley(1) scalex(1);
   }
   50% {
-    transform: scaley(0.005) scalex(1);
+    -webkit-transform: scaley(0.005) scalex(1);
+            transform: scaley(0.005) scalex(1);
   }
   100% {
-    transform: scaley(0.005) scalex(0);
+    -webkit-transform: scaley(0.005) scalex(0);
+            transform: scaley(0.005) scalex(0);
   }
 }
+
 #modal.show .modal-bg .modal-cont {
-  transform: scale(0);
+  -webkit-transform: scale(0);
+          transform: scale(0);
   -webkit-animation: zoomIn 0.5s 0.8s ease forwards;
           animation: zoomIn 0.5s 0.8s ease forwards;
 }
 
 #modal.show.hide .modal-bg .modal-cont {
-  transform: scale(0);
+  -webkit-transform: scale(0);
+          transform: scale(0);
   -webkit-animation: zoomOut 0.5s ease forwards;
           animation: zoomOut 0.5s ease forwards;
 }
 
 @-webkit-keyframes zoomIn {
   0% {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @keyframes zoomIn {
   0% {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
+
 @-webkit-keyframes zoomOut {
   0% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
+
 @keyframes zoomOut {
   0% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
+
 .code-view {
   background: #fff;
   width: 60vw;
@@ -427,12 +523,15 @@ figcaption {
   border-radius: 10px;
   overflow: hidden;
 }
+
 .code-view .view-header {
   border-bottom: 1px solid #f2f2f2;
 }
+
 .code-view .view-header .dot {
   padding: 13px 10px 10px 15px;
 }
+
 .code-view .view-header .dot span {
   width: 12px;
   height: 12px;
@@ -440,23 +539,29 @@ figcaption {
   border-radius: 50%;
   margin: 0 2px;
 }
+
 .code-view .view-header .dot span:nth-child(1) {
   background-color: #f56565;
 }
+
 .code-view .view-header .dot span:nth-child(2) {
   background-color: #f6e05e;
 }
+
 .code-view .view-header .dot span:nth-child(3) {
   background-color: #48bb78;
 }
+
 .code-view .view-title {
   border-bottom: 1px solid #f2f2f2;
   padding: 0 11px;
 }
+
 .code-view .view-title li {
   display: inline;
   list-style: none;
 }
+
 .code-view .view-title li a {
   text-decoration: none;
   color: #ccc;
@@ -464,17 +569,21 @@ figcaption {
   margin: 0 5px;
   display: inline-block;
 }
+
 .code-view .view-title li.active a {
   border-top: 2px solid #667eea;
   color: #4a5568;
 }
+
 .code-view .view-cont {
   height: 500px;
   overflow-y: scroll;
 }
+
 .code-view .view-cont > div {
   display: none;
 }
+
 .code-view .view-cont > div:nth-child(1) {
   display: block;
 }
@@ -483,18 +592,22 @@ figcaption {
   #contents h1 {
     font-size: 17vw;
   }
-
   #nav {
     position: absolute;
     left: 50%;
     top: 80%;
     font-size: 15vw;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   #nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 5px;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   #nav ul li a {
     font-size: 14px;
@@ -502,7 +615,6 @@ figcaption {
     height: 30px;
     line-height: 30px;
   }
-
   .info {
     padding: 8px;
   }
@@ -521,7 +633,6 @@ figcaption {
     line-height: 18px;
     font-size: 10px;
   }
-
   #tab-menu {
     width: 80vw;
   }
@@ -538,7 +649,6 @@ figcaption {
   #tab-menu .tab-cont p {
     font-size: 14px;
   }
-
   .code-view {
     width: 80vw;
   }
