@@ -545,12 +545,16 @@
                 const name = [nowAppCodeName, nowAppName, nowAppVersion, nowCookieEnabled, nowLanguage, nowOnLine,
                     nowPlatform, nowProduct, nowUserAgent
                 ]
-
-                name.forEach((el), i => {
-                    document.querySelector(".btn6-" + (i + 1)).addEventListener("click", () => {
-                        document.querySelector(".text6-" + (i + 1)).innerHTML = name[i];
+                for (let i = 1; i <= name.length; i++) {
+                    document.querySelector(".btn6-" + i).addEventListener("click", () => {
+                        document.querySelector(".text6-" + i).innerHTML = name[i - 1];
                     });
-                });
+                };
+                // name.forEach((element, i) => {
+                //     document.querySelector(".btn6-" + (i + 1)).addEventListener("click", () => {
+                //         document.querySelector(".text6-" + (i + 1)).innerHTML = name[i];
+                //     });
+                // });
 
                 //for 문
                 // for (let i = 1; i <= name.length; i++) {

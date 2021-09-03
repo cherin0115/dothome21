@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexis">
+    <meta name="description" content="웹 사이트 제작을 위한 사이트입니다.">
+    <meta name="keywords" content="알렉시스, 사이트, 웹퍼블리셔, 프론트엔드개발자">
+    <title>Site</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/var.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/samplesite.css">
+    <!-- 나눔 스퀘어 폰트 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+    <!-- Swiper CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+</head>
+
+<body id="bg">
+    <!-- header -->
+    <div id="sitesample">
+        <section class="container">
+            <div class="header">
+                <div class="header-three">
+                    <h1><a href="#">NAVER<br> INFLUENCER CENTER</a></h1>
+                    <nav class="menu">
+                        <ul>
+                            <li><a href="#">인플루언서 안내</a></li>
+                            <li><a href="#">광고 수익 혜택</a></li>
+                            <li><a href="#">성장 지원 프로그램</a></li>
+                            <li><a href="#">브랜드커넥트</a></li>
+                            <li><a href="#">공지</a></li>
+                        </ul>
+                    </nav>
+                    <div class="member">
+                        <a href="#" class="naver-btn">인플루언서 로그인</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //header -->
+        <!-- content -->
+        <section class="container cont1">
+            <div class="contents">
+                <h2>NAVER<br>INFLUENCER CENTER</h2>
+                <strong>인플루언서에게 필요한 모든 것</strong>
+                <p>네이버 인플루언서 센터는 여러분들에게 다양한 지원 프로그램을 운영하고 있습니다.<br>
+                    더 큰 수익과 성장을 위한 다양한 혜택과 지원 프로그램을 지금 경험해보세요.</p>
+            </div>
+        </section>
+        <!-- //content -->
+        <!--  slider -->
+        <section class="container">
+            <div class="sliderType">
+                <div class="swiper3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider-inner">
+                                <em>로고전문가 최은빈과 함께하는</em>
+                                <h3>세상에서 제일 쉬운<br>나만의 로고 만들기</h3>
+                                <p>지금 만나보세요</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner">
+                                <em>로고전문가 최은빈과 함께하는</em>
+                                <h3>세상에서 제일 쉬운<br>나만의 로고 만들기</h3>
+                                <p>지금 만나보세요</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner">
+                                <em>광고표시,어떻게 하지?</em>
+                                <h3>정정 당당하게 광고하자!<br>추천보증광고 표시법</h3>
+                                <p>지금 만나보세요</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner">
+                                <em>@여행작가 박은하의</em>
+                                <h3>클릭을 부르는<br>포스팅 방법</h3>
+                                <p>지금 만나보세요</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner">
+                                <em>세남자와 해결해요!</em>
+                                <h3>세금신고의 꽃<br>절세 노하우!</h3>
+                                <p>지금 만나보세요</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner">
+                                <em>세남자와 해결해요!</em>
+                                <h3>세금 신고<br>FAQ</h3>
+                                <p>지금 만나보세요</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="cardtype">
+                <div class="card-wrap">
+                    <div class="card card1">1</div>
+                    <div class="card card2">2</div>
+                    <div class="card card3">3</div>
+                    <div class="card card4">4</div>
+                </div>
+
+            </div>
+        </section>
+        <!-- slider -->
+    </div>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper3 = new Swiper('.swiper3', {
+            direction: 'horizontal',
+
+            autoplay: {
+                delay: 5000,
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>

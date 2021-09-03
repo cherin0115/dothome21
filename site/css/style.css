@@ -76,19 +76,3 @@
     margin-left: 10px;
 }
 
-/* header dark-mode */
-.dark #header {
-    background-color: #2e2e2e;
-}
-.dark #header h1 a{
-    color: #fff;
-}
-.dark .member h1 {
-    color: #fff;
-}
-.dark .member a {
-    color: #fff;
-}
-.dark .menu a {
-    color: #fff;
-}
