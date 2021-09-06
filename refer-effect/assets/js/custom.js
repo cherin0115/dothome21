@@ -45,9 +45,9 @@
             opera: agent.match(/opera/i),
             whale: agent.match(/whale/i),
         }
-        for (prop in browserList){
+        for (prop in browserList) {
 
-            if (browserList[prop]){
+            if (browserList[prop]) {
                 // console.log(prop)
                 document.querySelector("body").classList.add(prop);
             }
@@ -80,10 +80,24 @@
     })
 
     //Modal
-    document.querySelector(".info button").addEventListener("click", function () {
-        document.querySelector("#modal").classList.add("show");
-        document.querySelector("#modal").classList.remove("hide");
-    });
-    document.querySelector(".modal-cont button").addEventListener("click", function () {
-        document.querySelector("#modal").classList.add("hide");
-    });
+    function modal() {
+        document.querySelector(".info button").addEventListener("click", function () {
+            document.querySelector("#modal").classList.add("show");
+            document.querySelector("#modal").classList.remove("hide");
+        });
+        document.querySelector(".modal-cont button").addEventListener("click", function () {
+            document.querySelector("#modal").classList.add("hide");
+        });
+    }
+
+    
+    //para-Modal
+    function modal() {
+        document.querySelector(".source button").addEventListener("click", function () {
+            document.querySelector("#modal").classList.add("show");
+            document.querySelector("#modal").classList.remove("hide");
+        });
+        document.querySelector(".modal-cont button").addEventListener("click", function () {
+            document.querySelector("#modal").classList.add("hide");
+        });
+    }

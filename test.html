@@ -1,88 +1,119 @@
-<pre><code class="language-html">&lt;!doctype javascript&gt;
-    &lt;html&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;UTF-8&quot; /&gt;
-        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-        &lt;link href=&quot;/path/to/tailwind.css&quot; rel=&quot;stylesheet&quot;&gt;
-        &lt;style&gt;
-        //code-view
-        .code-view {
-            background: #fff;
-            width: 60vw;
-            border: 1px solid #f2f2f2;
-            border-radius: 10px;
-            overflow: hidden;
-
-            .view-header {
-                border-bottom: 1px solid #f2f2f2;
-
-                .dot {
-                    padding: 13px 10px 10px 15px;
-
-                    span {
-                        width: 12px;
-                        height: 12px;
-                        display: inline-block;
-                        border-radius: 50%;
-                        margin: 0 2px;
-                    }
-
-                    span:nth-child(1) {
-                        background-color: #f56565;
-                    }
-
-                    span:nth-child(2) {
-                        background-color: #f6e05e;
-                    }
-
-                    span:nth-child(3) {
-                        background-color: #48bb78;
-                    }
-                }
-            }
-
-            .view-title {
-                border-bottom: 1px solid #f2f2f2;
-                padding: 0 11px;
-                $font-Nexon2: 'NEXONLv2Gothic';
-
-
-                li {
-                    display: inline;
-                    list-style: none;
-
-                    a {
-                        text-decoration: none;
-                        color: #ccc;
-                        padding: 10px 10px 12px;
-                        margin: 0 5px;
-                        display: inline-block;
-
-                    }
-
-                    &.active a {
-                        border-top: 2px solid #667eea;
-                        color: #4a5568;
-                    }
-                }
-            }
-
-            .view-cont {
-                height: 500px;
-                overflow-y: scroll;
-                
-                > div {
-                    display: none;
-                }
-                > div:nth-child(1) {
-                    display: block;
-                }
-            }
-}
-        &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;!-- ... --&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-</code></pre>
+&lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;&lt;/div&gt; &lt;!-- scroll--&gt;
+&lt;div class="paraInfo2"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;section1 offset() : &lt;span class="offset1"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;section2 offset() : &lt;span class="offset2"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;section3 offset() : &lt;span class="offset3"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;section4 offset() : &lt;span class="offset4"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;section5 offset() : &lt;span class="offset5"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;section6 offset() : &lt;span class="offset6"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;section7 offset() : &lt;span class="offset7"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;section8 offset() : &lt;span class="offset8"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;section9 offset() : &lt;span class="offset9"&gt;0&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;nav class="paraNav"&gt;
+    &lt;ul&gt;
+        &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt; &lt;!-- emmt li*9&lt;a[href="section$"]{s$}--&gt;
+        &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;div class="paraCont"&gt;
+    &lt;section id="section1" class="content-item"&gt;
+        &lt;span class="num"&gt;01&lt;/span&gt;
+        &lt;h2 class="title"&gt;Section1&lt;/h2&gt;
+        &lt;figure class="img-Wrap"&gt;
+            &lt;div class="img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="desc"&gt;삶이 있는 한 희망은 있다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!-- //section1 --&gt;
+    ​
+    &lt;section id="section2" class="content-item"&gt;
+        &lt;span class="num"&gt;02&lt;/span&gt;
+        &lt;h2 class="title"&gt;Section2&lt;/h2&gt;
+        &lt;figure class="img-Wrap"&gt;
+            &lt;div class="img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="desc"&gt;산다는 것 그것은 치열한 전투이다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!-- //section2 --&gt;
+    ​
+    &lt;section id="section3" class="content-item"&gt;
+        &lt;span class="num"&gt;03&lt;/span&gt;
+        &lt;h2 class="title"&gt;Section3&lt;/h2&gt;
+        &lt;figure class="img-Wrap"&gt;
+            &lt;div class="img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="desc"&gt;1퍼센트의 가능성, 그것이 나의 길이다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!-- //section3 --&gt;
+    ​
+    &lt;section id="section4" class="content-item"&gt;
+        &lt;span class="num"&gt;04&lt;/span&gt;
+        &lt;h2 class="title"&gt;Section4&lt;/h2&gt;
+        &lt;figure class="img-Wrap"&gt;
+            &lt;div class="img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="desc"&gt;현재에 집중할 수 있다면 행복할 것이다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!-- //section4 --&gt;
+    ​
+    &lt;section id="section5" class="content-item"&gt;
+        &lt;span class="num"&gt;05&lt;/span&gt;
+        &lt;h2 class="title"&gt;Section5&lt;/h2&gt;
+        &lt;figure class="img-Wrap"&gt;
+            &lt;div class="img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="desc"&gt;진정으로 웃으려면, 고통을 즐길줄 알아야 한다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!-- //section5 --&gt;
+    ​
+    &lt;section id="section6" class="content-item"&gt;
+        &lt;span class="num"&gt;06&lt;/span&gt;
+        &lt;h2 class="title"&gt;Section6&lt;/h2&gt;
+        &lt;figure class="img-Wrap"&gt;
+            &lt;div class="img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="desc"&gt;절대 어제를 후회하지 마라.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!-- //section6 --&gt;
+    ​
+    &lt;section id="section7" class="content-item"&gt;
+        &lt;span class="num"&gt;07&lt;/span&gt;
+        &lt;h2 class="title"&gt;Section7&lt;/h2&gt;
+        &lt;figure class="img-Wrap"&gt;
+            &lt;div class="img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="desc"&gt;높은 목표를 세우고, 스스로 채찍질 한다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!-- //section7 --&gt;
+    ​
+    &lt;section id="section8" class="content-item"&gt;
+        &lt;span class="num"&gt;08&lt;/span&gt;
+        &lt;h2 class="title"&gt;Section8&lt;/h2&gt;
+        &lt;figure class="img-Wrap"&gt;
+            &lt;div class="img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="desc"&gt;실패를 두려워하지 마라.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!-- //section8 --&gt;
+    ​
+    &lt;section id="section9" class="content-item"&gt;
+        &lt;span class="num"&gt;09&lt;/span&gt;
+        &lt;h2 class="title"&gt;Section9&lt;/h2&gt;
+        &lt;figure class="img-Wrap"&gt;
+            &lt;div class="img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="desc"&gt;피할수 없으면 즐겨라.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!-- //section9 --&gt;
+&lt;/div&gt;
+&lt;!-- //contents --&gt;
