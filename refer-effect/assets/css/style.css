@@ -76,6 +76,31 @@ figcaption {
   padding: 0;
 }
 
+/* a링크 초기화 */
+/* a {
+  color: inherit;
+  text-decoration: none;
+} */
+
+/* 목록 초기화 ol이거나 ul일때*/
+/* ol,
+ul {
+  list-style: none;
+} */
+
+/* 스타일 초기화*/
+/* strong {
+  font-weight: normal;
+} */
+/* 
+em {
+  font-style: normal;
+} */
+
+/* img {
+  width: 100%;
+} */
+
 .iphone main {
   padding: 10px;
 }
@@ -261,12 +286,12 @@ figcaption {
 }
 
 .info {
-  color: #fff;
-  font-family: "NEXONLv1Gothic";
   position: absolute;
-  padding: 20px;
   left: 0;
   top: 0;
+  font-family: "NEXONLv1Gothic";
+  color: #fff;
+  padding: 20px;
 }
 
 .info.right {
@@ -277,8 +302,9 @@ figcaption {
 .info.bottom {
   top: auto;
   left: auto;
-  bottom: 0;
-  right: 0;
+  bottom: 0px;
+  right: 0px;
+  position: fixed;
 }
 
 .info h1 {
@@ -311,7 +337,7 @@ figcaption {
   line-height: 20px;
   text-align: center;
   font-size: 12px;
-  margin-bottom: 5px;
+  margin: 3px;
 }
 
 .info li.active a {
@@ -322,7 +348,7 @@ figcaption {
 .info button {
   background: transparent;
   border: 1px solid #fff;
-  padding: 5px 10px;
+  padding: 5px 20px;
   color: #fff;
   border-radius: 50px;
   -webkit-box-shadow: 0 0 0 #fff inset;
@@ -366,7 +392,7 @@ figcaption {
 #modal .modal-bg .modal-cont h2 {
   font-weight: 400;
   font-size: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 #modal .modal-bg .modal-cont p {
@@ -382,8 +408,6 @@ figcaption {
   padding: 5px 10px;
   float: right;
   cursor: pointer;
-  font-family: 'NEXONLv2Gothic';
-  margin-top: 10px;
 }
 
 #modal.show {
@@ -392,6 +416,7 @@ figcaption {
   -webkit-animation: unfoldIn 1s ease forwards;
           animation: unfoldIn 1s ease forwards;
 }
+
 
 @-webkit-keyframes unfoldIn {
   0% {
@@ -880,3 +905,5 @@ figcaption {
 .content-item:nth-child(9) .img {
   background-image: url(../img/bg9.jpg);
 }
+
+

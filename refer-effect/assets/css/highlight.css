@@ -1,20 +1,21 @@
+
 /*!
-  Theme: Default
-  Description: Original highlight.js style
-  Author: (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
-  Maintainer: @highlightjs/core-team
-  Website: https://highlightjs.org/
-  License: see project LICENSE
-  Touched: 2021
+    Theme: Default
+    Description: Original highlight.js style
+    Author: (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
+    Maintainer: @highlightjs/core-team
+    Website: https://highlightjs.org/
+    License: see project LICENSE
+    Touched: 2021
 */
 .hljs {
   display: block;
   overflow-x: auto;
-  font-family: 'NEXONLv1Gothic';
-  line-height: 1.6;
   padding: 20px;
   color: #333;
-  background: #f8f8f8
+  background: #f8f8f8;
+  font-family: 'NEXONLv1Gothic';
+  line-height: 1.7;
 }
 
 .hljs-comment,

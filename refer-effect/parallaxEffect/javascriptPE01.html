@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallax Effect</title>
     ​
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/highlight.css">
     ​
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body class="parallax">
@@ -24,7 +25,7 @@
     ​
     <!-- main -->
     <main>
-        <div class="paraScroll">scrollTop() : <span>0</span></div> <!-- scroll-->
+        <div class="paraScroll">>window.scrollY : <span>0</span></div> <!-- scroll-->
         <div class="paraInfo2">
             <ul>
                 <li>section1 offset() : <span class="offset1">0</span></li>
@@ -153,7 +154,7 @@
     <!-- //footer -->
     ​
     <!-- source -->
-    <div class="source">
+    <div class="info bottom">
         <button>소스 보기</button>
     </div>
     <!-- //source -->
@@ -172,172 +173,437 @@
                     </div>
                     <div class="view-title">
                         <ul>
-                            <li class="active"><a href="#">Html</a></li>
+                            <li class="active"><a href="#">HTML</a></li>
                             <li><a href="#">CSS</a></li>
                             <li><a href="#">Javascript</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
                         <div class="html">
-                            <pre><code class="language-html"> &lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;&lt;/div&gt; &lt;!-- scroll--&gt;
-&lt;div class="paraInfo2"&gt;
-    &lt;ul&gt;
-        &lt;li&gt;section1 offset() : &lt;span class="offset1"&gt;0&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt;section2 offset() : &lt;span class="offset2"&gt;0&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt;section3 offset() : &lt;span class="offset3"&gt;0&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt;section4 offset() : &lt;span class="offset4"&gt;0&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt;section5 offset() : &lt;span class="offset5"&gt;0&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt;section6 offset() : &lt;span class="offset6"&gt;0&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt;section7 offset() : &lt;span class="offset7"&gt;0&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt;section8 offset() : &lt;span class="offset8"&gt;0&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt;section9 offset() : &lt;span class="offset9"&gt;0&lt;/span&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;
-&lt;nav class="paraNav"&gt;
-    &lt;ul&gt;
-        &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt; &lt;!-- emmt li*9&lt;a[href="section$"]{s$}--&gt;
-        &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/nav&gt;
-&lt;div class="paraCont"&gt;
-    &lt;section id="section1" class="content-item"&gt;
-        &lt;span class="num"&gt;01&lt;/span&gt;
-        &lt;h2 class="title"&gt;Section1&lt;/h2&gt;
-        &lt;figure class="img-Wrap"&gt;
-            &lt;div class="img"&gt;&lt;/div&gt;
-        &lt;/figure&gt;
-        &lt;p class="desc"&gt;삶이 있는 한 희망은 있다.&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;!-- //section1 --&gt;
-    ​
-    &lt;section id="section2" class="content-item"&gt;
-        &lt;span class="num"&gt;02&lt;/span&gt;
-        &lt;h2 class="title"&gt;Section2&lt;/h2&gt;
-        &lt;figure class="img-Wrap"&gt;
-            &lt;div class="img"&gt;&lt;/div&gt;
-        &lt;/figure&gt;
-        &lt;p class="desc"&gt;산다는 것 그것은 치열한 전투이다.&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;!-- //section2 --&gt;
-    ​
-    &lt;section id="section3" class="content-item"&gt;
-        &lt;span class="num"&gt;03&lt;/span&gt;
-        &lt;h2 class="title"&gt;Section3&lt;/h2&gt;
-        &lt;figure class="img-Wrap"&gt;
-            &lt;div class="img"&gt;&lt;/div&gt;
-        &lt;/figure&gt;
-        &lt;p class="desc"&gt;1퍼센트의 가능성, 그것이 나의 길이다.&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;!-- //section3 --&gt;
-    ​
-    &lt;section id="section4" class="content-item"&gt;
-        &lt;span class="num"&gt;04&lt;/span&gt;
-        &lt;h2 class="title"&gt;Section4&lt;/h2&gt;
-        &lt;figure class="img-Wrap"&gt;
-            &lt;div class="img"&gt;&lt;/div&gt;
-        &lt;/figure&gt;
-        &lt;p class="desc"&gt;현재에 집중할 수 있다면 행복할 것이다.&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;!-- //section4 --&gt;
-    ​
-    &lt;section id="section5" class="content-item"&gt;
-        &lt;span class="num"&gt;05&lt;/span&gt;
-        &lt;h2 class="title"&gt;Section5&lt;/h2&gt;
-        &lt;figure class="img-Wrap"&gt;
-            &lt;div class="img"&gt;&lt;/div&gt;
-        &lt;/figure&gt;
-        &lt;p class="desc"&gt;진정으로 웃으려면, 고통을 즐길줄 알아야 한다.&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;!-- //section5 --&gt;
-    ​
-    &lt;section id="section6" class="content-item"&gt;
-        &lt;span class="num"&gt;06&lt;/span&gt;
-        &lt;h2 class="title"&gt;Section6&lt;/h2&gt;
-        &lt;figure class="img-Wrap"&gt;
-            &lt;div class="img"&gt;&lt;/div&gt;
-        &lt;/figure&gt;
-        &lt;p class="desc"&gt;절대 어제를 후회하지 마라.&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;!-- //section6 --&gt;
-    ​
-    &lt;section id="section7" class="content-item"&gt;
-        &lt;span class="num"&gt;07&lt;/span&gt;
-        &lt;h2 class="title"&gt;Section7&lt;/h2&gt;
-        &lt;figure class="img-Wrap"&gt;
-            &lt;div class="img"&gt;&lt;/div&gt;
-        &lt;/figure&gt;
-        &lt;p class="desc"&gt;높은 목표를 세우고, 스스로 채찍질 한다.&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;!-- //section7 --&gt;
-    ​
-    &lt;section id="section8" class="content-item"&gt;
-        &lt;span class="num"&gt;08&lt;/span&gt;
-        &lt;h2 class="title"&gt;Section8&lt;/h2&gt;
-        &lt;figure class="img-Wrap"&gt;
-            &lt;div class="img"&gt;&lt;/div&gt;
-        &lt;/figure&gt;
-        &lt;p class="desc"&gt;실패를 두려워하지 마라.&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;!-- //section8 --&gt;
-    ​
-    &lt;section id="section9" class="content-item"&gt;
-        &lt;span class="num"&gt;09&lt;/span&gt;
-        &lt;h2 class="title"&gt;Section9&lt;/h2&gt;
-        &lt;figure class="img-Wrap"&gt;
-            &lt;div class="img"&gt;&lt;/div&gt;
-        &lt;/figure&gt;
-        &lt;p class="desc"&gt;피할수 없으면 즐겨라.&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;!-- //section9 --&gt;
-&lt;/div&gt;   
+                            <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Parallax Effect&lt;/title&gt;
+
+    &lt;link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet"&gt;
+
+    &lt;link rel="stylesheet" href="../assets/css/style.css"&gt;
+    &lt;link rel="stylesheet" href="../assets/css/highlight.css"&gt;
+&lt;/head&gt;
+
+&lt;body class="parallax"&gt;
+
+    &lt;!-- header --&gt;
+    &lt;header class="paraInfo"&gt;
+        &lt;h1&gt;&lt;a href="index.html"&gt;Parallax Effect01 - javascript&lt;/a&gt;&lt;/h1&gt;
+        &lt;p&gt;패랠랙스 스크로링 효과 - 메뉴 이동&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;!-- //header --&gt;
+
+
+    &lt;!-- main --&gt;
+    &lt;main&gt;
+        &lt;div class="paraScroll"&gt;window.scrollY : &lt;span&gt;0&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="paraInfo2"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;section1 offset(): &lt;span class="offset1"&gt;0&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;section2 offset(): &lt;span class="offset2"&gt;0&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;section3 offset(): &lt;span class="offset3"&gt;0&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;section4 offset(): &lt;span class="offset4"&gt;0&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;section5 offset(): &lt;span class="offset5"&gt;0&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;section6 offset(): &lt;span class="offset6"&gt;0&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;section7 offset(): &lt;span class="offset7"&gt;0&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;section8 offset(): &lt;span class="offset8"&gt;0&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;section9 offset(): &lt;span class="offset9"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+
+        &lt;!--//scroll--&gt;
+        &lt;div class="paraNav"&gt;
+            &lt;ul&gt;
+                &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;!-- //nav --&gt;
+
+        &lt;div class="paraCont"&gt;
+            &lt;section id="section1" class="content-item"&gt;
+                &lt;span class="num"&gt;01&lt;/span&gt;
+                &lt;h2 class="title"&gt;Section1&lt;/h2&gt;
+                &lt;figure class="img-Wrap"&gt;
+                    &lt;div class="img"&gt;&lt;/div&gt;
+                &lt;/figure&gt;
+                &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;!-- section1 --&gt;
+
+            &lt;section id="section2" class="content-item"&gt;
+                &lt;span class="num"&gt;02&lt;/span&gt;
+                &lt;h2 class="title"&gt;Section2&lt;/h2&gt;
+                &lt;figure class="img-Wrap"&gt;
+                    &lt;div class="img"&gt;&lt;/div&gt;
+                &lt;/figure&gt;
+                &lt;p class="desc"&gt;Pain past is pleasure&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;!-- section2 --&gt;
+
+            &lt;section id="section3" class="content-item"&gt;
+                &lt;span class="num"&gt;03&lt;/span&gt;
+                &lt;h2 class="title"&gt;Section3&lt;/h2&gt;
+                &lt;figure class="img-Wrap"&gt;
+                    &lt;div class="img"&gt;&lt;/div&gt;
+                &lt;/figure&gt;
+                &lt;p class="desc"&gt;Don't give up easily even if you failed&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;!-- section3 --&gt;
+
+            &lt;section id="section4" class="content-item"&gt;
+                &lt;span class="num"&gt;04&lt;/span&gt;
+                &lt;h2 class="title"&gt;Section4&lt;/h2&gt;
+                &lt;figure class="img-Wrap"&gt;
+                    &lt;div class="img"&gt;&lt;/div&gt;
+                &lt;/figure&gt;
+                &lt;p class="desc"&gt;Love what you do&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;!-- section4 --&gt;
+
+            &lt;section id="section5" class="content-item"&gt;
+                &lt;span class="num"&gt;05&lt;/span&gt;
+                &lt;h2 class="title"&gt;Section5&lt;/h2&gt;
+                &lt;figure class="img-Wrap"&gt;
+                    &lt;div class="img"&gt;&lt;/div&gt;
+                &lt;/figure&gt;
+                &lt;p class="desc"&gt;This too shall pass away&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;!-- section5 --&gt;
+
+            &lt;section id="section6" class="content-item"&gt;
+                &lt;span class="num"&gt;06&lt;/span&gt;
+                &lt;h2 class="title"&gt;Section6&lt;/h2&gt;
+                &lt;figure class="img-Wrap"&gt;
+                    &lt;div class="img"&gt;&lt;/div&gt;
+                &lt;/figure&gt;
+                &lt;p class="desc"&gt;If not now, then when?&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;!-- section6 --&gt;
+
+            &lt;section id="section7" class="content-item"&gt;
+                &lt;span class="num"&gt;07&lt;/span&gt;
+                &lt;h2 class="title"&gt;Section7&lt;/h2&gt;
+                &lt;figure class="img-Wrap"&gt;
+                    &lt;div class="img"&gt;&lt;/div&gt;
+                &lt;/figure&gt;
+                &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;!-- section7 --&gt;
+
+            &lt;section id="section8" class="content-item"&gt;
+                &lt;span class="num"&gt;08&lt;/span&gt;
+                &lt;h2 class="title"&gt;Section8&lt;/h2&gt;
+                &lt;figure class="img-Wrap"&gt;
+                    &lt;div class="img"&gt;&lt;/div&gt;
+                &lt;/figure&gt;
+                &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;!-- section8 --&gt;
+
+            &lt;section id="section9" class="content-item"&gt;
+                &lt;span class="num"&gt;09&lt;/span&gt;
+                &lt;h2 class="title"&gt;Section9&lt;/h2&gt;
+                &lt;figure class="img-Wrap"&gt;
+                    &lt;div class="img"&gt;&lt;/div&gt;
+                &lt;/figure&gt;
+                &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;!-- section9 --&gt;
+        &lt;/div&gt;
+        &lt;!-- //contents --&gt;
+    &lt;/main&gt;
+    &lt;!-- //main --&gt;
+
+    &lt;!-- footer --&gt;
+    &lt;footer class="paraFooter"&gt;
+    &lt;/footer&gt;
+    &lt;!-- //footer --&gt;
+
+    &lt;!-- source --&gt;
+    &lt;div class="source"&gt;
+        &lt;button onclick="modal()"&gt;소스보기&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;!-- //source --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
                         </div>
                         <div class="css">
-                            <pre><code class="language-css"></code></pre>
+                            <pre><code class="language-css">.parallax {
+    background: #222;
+    color: #fff;
+    font-family: "S-CoreDream";
+    position: relative;
+}
+.parallax .source {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.parallax .source button {
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 0 0 #fff inset;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+.parallax .source button:hover {
+    box-shadow: 0 -50px 0 #fff inset;
+    color: #000;
+}
+
+.paraScroll {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 12px;
+    padding: 0 20px;
+}
+
+.paraInfo2 {
+    position: fixed;
+    left: 20px;
+    bottom: 70px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-size: 12px;
+    border-radius: 10px;
+    line-height: 1.8;
+    padding: 20px;
+    z-index: 1000;
+}
+.paraInfo2 li {
+    list-style: none;
+}
+
+.paraNav {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px 20px;
+    border-radius: 50px;
+}
+.paraNav li {
+    display: inline-block;
+    list-style: none;
+}
+.paraNav li a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.paraNav li.active a {
+    background: #fff;
+    color: #000;
+    border-radius: 50%;
+}
+
+.paraInfo {
+    padding: 20px;
+}
+.paraInfo h1 {
+    display: inline-block;
+    font-size: 20px;
+    border-bottom: 1px dashed #fff;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+.paraInfo h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+.paraInfo p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.paraCont {
+    width: 100%;
+    overflow: hidden;
+}
+.paraCont .content-item {
+    width: 1000px;
+    max-width: 70vw;
+    margin: 30vw 0;
+    padding-top: 10vw;
+    text-align: right;
+    position: relative;
+}
+.paraCont .content-item .num {
+    font-family: "Lato";
+    font-weight: 100;
+    font-size: 25vw;
+    opacity: 0.07;
+    position: absolute;
+    right: -5vw;
+    top: -10vw;
+}
+.paraCont .content-item .title {
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+.paraCont .content-item .img-Wrap {
+    width: 100%;
+    padding-bottom: 56%;
+    background: #000;
+    position: relative;
+}
+.paraCont .content-item .img-Wrap .img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: saturate(0%);
+    transition: all 0.8s;
+}
+.paraCont .content-item .img-Wrap .img:hover {
+    filter: saturate(100%);
+}
+.paraCont .content-item .desc {
+    font-size: 6vw;
+    line-height: 1.4;
+    margin-top: -6vw;
+    margin-right: -3vw;
+    position: relative;
+    z-index: 100;
+    word-break: keep-all;
+}
+.paraCont .content-item:nth-child(even) {
+    margin-left: auto;
+    text-align: left;
+}
+.paraCont .content-item:nth-child(even) .num {
+    right: auto;
+    left: -5vw;
+}
+.paraCont .content-item:nth-child(even) .desc {
+    margin-right: auto;
+    margin-left: -3vw;
+}
+
+.content-item:nth-child(1) .img {
+    background: url(../img/bg01.jpg);
+}
+
+.content-item:nth-child(2) .img {
+    background: url(../img/bg02.jpg);
+}
+
+.content-item:nth-child(3) .img {
+    background: url(../img/bg03.jpg);
+}
+
+.content-item:nth-child(4) .img {
+    background: url(../img/bg04.jpg);
+}
+
+.content-item:nth-child(5) .img {
+    background: url(../img/bg05.jpg);
+}
+
+.content-item:nth-child(6) .img {
+    background: url(../img/bg06.jpg);
+}
+
+.content-item:nth-child(7) .img {
+    background: url(../img/bg07.jpg);
+}
+
+.content-item:nth-child(8) .img {
+    background: url(../img/bg08.jpg);
+}
+
+.content-item:nth-child(9) .img {
+    background: url(../img/bg09.jpg);
+}
+
+.content-item:nth-child(10) .img {
+    background: url(../img/bg10.jpg);
+}
+</code></pre>
                         </div>
                         <div class="javascript">
-                            <pre><code class="language-javascript"></code></pre>
+                            <pre><code class="language-javascript">document.querySelectorAll('.paraNav ul li a').forEach((el, idx) => {
+    el.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(el.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+window.addEventListener('scroll', function () {
+    let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset; 
+
+    document.querySelectorAll('.paraNav ul li').forEach((el, idx) =&gt; {
+        if (scrollTop &gt;= document.getElementById('section' + (idx + 1)).offsetTop - 2) {
+            document.querySelectorAll('.paraNav ul li').forEach(el =&gt; el.classList.remove('active'));
+            document.querySelector('.paraNav ul li:nth-child(' + (idx + 1) + ')').classList.add('active');
+        }
+    });
+
+
+    //info
+    document.querySelector('.paraScroll span').innerText = parseInt(scrollTop) + 'px';
+
+    document.querySelectorAll('.content-item').forEach((el, idx) =&gt; {
+        document.querySelector('.offset' + (idx + 1)).innerText = parseInt(document.querySelector('#section' + (idx + 1)).offsetTop) + 'px';
+    });
+});
+</code></pre>
                         </div>
                     </div>
                 </div>
-
                 <button>닫기</button>
             </div>
         </div>
     </div>
     <!-- //modal -->
-    ​
+
+    <!-- script -->
+    ​ <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-           window.onload = function (){
-            agentCheck(); //호환성 체크
-        }
-        const tabBtn = document.querySelectorAll(".tab-btn ul li");
-        const tabCont = document.querySelectorAll(".tab-cont > div");
-
-        tabBtn.forEach((element, index) => {
-            element.addEventListener("click", function () {
-                tabBtn.forEach(el => {
-                    el.classList.remove("active");
-                })
-                element.classList.add("active");
-
-                tabCont.forEach(el => {
-                    el.style.display = "none";
-                })
-
-                tabCont[index].style.display = "block";
-            })
-        })
         //  $(".paraNav ul li").click(function (e) {
         //     e.preventDefault();
         //     let target = $(this);
@@ -348,101 +614,50 @@
         //         scrollTop: offset
         //     }, 600);
         // });
+        document.querySelectorAll('.paraNav ul li a').forEach((el, idx) => {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(el.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        })
+      })
+    });
 
-        document.querySelectorAll(".paraNav ul li a").forEach(el => {
-            el.addEventListener("click", e => {
-                e.preventDefault();
-                document.querySelector(el.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                });
+    window.addEventListener('scroll', function () {
+      let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset; //구버전
+
+
+      document.querySelectorAll('.paraNav ul li').forEach((el, idx) => {
+        if (scrollTop >= document.getElementById('section' + (idx + 1)).offsetTop - 2) {
+          document.querySelectorAll('.paraNav ul li').forEach(el => el.classList.remove('active'));
+          document.querySelector('.paraNav ul li:nth-child(' + (idx + 1) + ')').classList.add('active');
+        }
+      });
+             
+            //info
+            document.querySelector('.paraScroll span').innerText = parseInt(scrollTop) + 'px';
+  
+  
+            // forEach문문
+            document.querySelectorAll('.content-item').forEach((el, idx) => {
+                document.querySelector('.offset' + (idx + 1)).innerText = parseInt(document
+                    .querySelector('#section' + (
+                        idx + 1)).offsetTop) + 'px';
             });
         });
 
-        window.addEventListener("scroll", function () {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-            if (scrollTop >= document.getElementById("section1").offsetTop) {
-                document.querySelectorAll(".paraNav ul li").forEach(el => {
-                    el.classList.remove("active")
-                });
-                document.querySelector(".paraNav ul li:nth-child(1)").classList.add("active");
-
-            }
-            if (scrollTop >= document.getElementById("section2").offsetTop) {
-                document.querySelectorAll(".paraNav ul li").forEach(el => {
-                    el.classList.remove("active")
-                });
-                document.querySelector(".paraNav ul li:nth-child(2)").classList.add("active");
-
-            }
-            if (scrollTop >= document.getElementById("section3").offsetTop) {
-                document.querySelectorAll(".paraNav ul li").forEach(el => {
-                    el.classList.remove("active")
-                });
-                document.querySelector(".paraNav ul li:nth-child(3)").classList.add("active");
-
-            }
-            if (scrollTop >= document.getElementById("section4").offsetTop) {
-                document.querySelectorAll(".paraNav ul li").forEach(el => {
-                    el.classList.remove("active")
-                });
-                document.querySelector(".paraNav ul li:nth-child(4)").classList.add("active");
-
-            }
-            if (scrollTop >= document.getElementById("section5").offsetTop) {
-                document.querySelectorAll(".paraNav ul li").forEach(el => {
-                    el.classList.remove("active")
-                });
-                document.querySelector(".paraNav ul li:nth-child(5)").classList.add("active");
-
-            }
-            if (scrollTop >= document.getElementById("section6").offsetTop) {
-                document.querySelectorAll(".paraNav ul li").forEach(el => {
-                    el.classList.remove("active")
-                });
-                document.querySelector(".paraNav ul li:nth-child(6)").classList.add("active");
-
-            }
-            if (scrollTop >= document.getElementById("section7").offsetTop) {
-                document.querySelectorAll(".paraNav ul li").forEach(el => {
-                    el.classList.remove("active")
-                });
-                document.querySelector(".paraNav ul li:nth-child(7)").classList.add("active");
-
-            }
-            if (scrollTop >= document.getElementById("section8").offsetTop) {
-                document.querySelectorAll(".paraNav ul li").forEach(el => {
-                    el.classList.remove("active")
-                });
-                document.querySelector(".paraNav ul li:nth-child(8)").classList.add("active");
-
-            }
-            if (scrollTop >= document.getElementById("section9").offsetTop) {
-                document.querySelectorAll(".paraNav ul li").forEach(el => {
-                    el.classList.remove("active")
-                });
-                document.querySelector(".paraNav ul li:nth-child(9)").classList.add("active");
-
-            }
-            // info
-            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop) + "px";
-
-            // document.querySelector(".offset1").innerText = parseInt(document.getElementById("section1").offsetTop) + "px";
-            // document.querySelector(".offset2").innerText = parseInt(document.getElementById("section2").offsetTop) + "px";
-            // document.querySelector(".offset3").innerText = parseInt(document.getElementById("section3").offsetTop) + "px";
-            // document.querySelector(".offset4").innerText = parseInt(document.getElementById("section4").offsetTop) + "px";
-            // document.querySelector(".offset5").innerText = parseInt(document.getElementById("section5").offsetTop) + "px";
-            // document.querySelector(".offset6").innerText = parseInt(document.getElementById("section6").offsetTop) + "px";
-            // document.querySelector(".offset7").innerText = parseInt(document.getElementById("section7").offsetTop) + "px";
-            // document.querySelector(".offset8").innerText = parseInt(document.getElementById("section8").offsetTop) + "px";
-            // document.querySelector(".offset9").innerText = parseInt(document.getElementById("section9").offsetTop) + "px";
+        // document.querySelector(".offset1").innerText = parseInt(document.getElementById("section1").offsetTop) + "px";
+        // document.querySelector(".offset2").innerText = parseInt(document.getElementById("section2").offsetTop) + "px";
+        // document.querySelector(".offset3").innerText = parseInt(document.getElementById("section3").offsetTop) + "px";
+        // document.querySelector(".offset4").innerText = parseInt(document.getElementById("section4").offsetTop) + "px";
+        // document.querySelector(".offset5").innerText = parseInt(document.getElementById("section5").offsetTop) + "px";
+        // document.querySelector(".offset6").innerText = parseInt(document.getElementById("section6").offsetTop) + "px";
+        // document.querySelector(".offset7").innerText = parseInt(document.getElementById("section7").offsetTop) + "px";
+        // document.querySelector(".offset8").innerText = parseInt(document.getElementById("section8").offsetTop) + "px";
+        // document.querySelector(".offset9").innerText = parseInt(document.getElementById("section9").offsetTop) + "px";
 
 
-            // for문
-            for (let i = 1; i < 10; i++) {
-                document.querySelector(".offset" + i).innerText = parseInt(document.getElementById("section" +
-                    i).offsetTop) + "px";
-            }
-        });
+    
     </script>
 </body>
 
