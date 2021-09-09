@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Effect</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.css">
+    <style>
+        .mouseCont {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            font-family: ‘NEXONLv1Gothic’;
+            cursor: none;
+        }
+
+        .mouseCont p {
+            font-size: 2.5vw;
+            line-height: 2.3;
+            font-weight: 300;
+        }
+
+        .mouseCont h2 {
+            font-size: 3vw;
+            font-weight: normal;
+            font-weight: 400;
+        }
+
+        .mouseCont span {
+            font-style: normal;
+            border-bottom: 0.2vw dashed #fff;
+        }
+
+        .cursor {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            z-index: 9999;
+            background-color: rgba(255, 255, 255, 0.1);
+            user-select: none;
+            pointer-events: none;
+            transition:
+                background-color .2s,
+                border-color .2s,
+                border-radius .2s,
+                transform .6s
+        }
+
+        .cursor.style1 {
+            background-color: rgba(255, 165, 0, 0.4);
+            border-color: orange
+        }
+
+        .cursor.style2 {
+            /* background-color: rgb(140, 0, 255, 0.4);
+            border-color: rgb(140, 0, 255); */
+            background-image: url(../assets/img/images.jpg);
+            background-position: center;
+            background-size: cover;
+            transform: rotateY(720deg) scale(1.5);
+        }
+
+        .cursor.style3 {
+            background-color: rgba(136, 255, 0, 0.4);
+            border-color: rgb(156, 255, 43);
+            transform: rotateX(360deg) scale(1);
+        }
+
+        .cursor.style4 {
+            background-color: rgba(0, 153, 255, 0.4);
+            border-color: rgba(0, 153, 255, 0.747);
+            transform: rotate(180deg) scale(2);
+        }
+
+        .cursor.style5 {
+            background-image: url(../assets/img/never2.png);
+            width: 10vw;
+            background-position: center;
+            background-size: cover;
+            transform: rotateY(720deg) scale(1);
+        }
+
+        .cursor.style6 {
+            background-image: url(../assets/img/bulb-icon.png);
+            background-position: center;
+            background-size: cover;
+            transform: scale(1.5);
+            border-color: rgb(255, 217, 0);
+        }
+    </style>
+</head>
+
+<body class="bg bg1 blue">
+    <!-- contents -->
+    <main>
+        <div class="cursor"></div>
+        <article class="mouseCont">
+            <p>I <span class="style1">never</span> <span class="style2">dreamed</span> about <span
+                    class="style3">success</span>, I <span class="style4">worked</span> for it.</p>
+            <h2>나는 <span class="style5">결코</span> 성공에 대해 꿈꾸지 않았다, 나는 꿈을 위해 <span class="style6">행동</span> 했다.</h2>
+        </article>
+    </main>
+    <!-- //contents -->
+    <!-- info -->
+    <div class="info">
+        <h1><a href="index.html">javascript Mouse Effect01</a></h1>
+        <p>마우스 이펙트 - 마우스 따라다니기</p>
+    </div>
+
+    <div class="info right">
+        <ul>
+            <li><a href="javascriptME01.html">1</a></li>
+            <li><a href="javascriptME02.html">2</a></li>
+            <li><a href="javascriptME03.html">3</a></li>
+            <li><a href="javascriptME04.html">4</a></li>
+            <li><a href="javascriptME05.html">5</a></li>
+        </ul>
+        <ul>
+            <li class="active"><a href="jqueryME01.html">1</a></li>
+            <li><a href="jqueryME02.html">2</a></li>
+            <li><a href="jqueryME03.html">3</a></li>
+            <li><a href="jqueryME04.html">4</a></li>
+            <li><a href="jqueryME05.html">5</a></li>
+        </ul>
+    </div>
+    <div class="info left list">
+        <ul>
+            <li>clientX : <span class="clientX">0</span></li>
+            <li>clientY : <span class="clientY">0</span></li>
+            <li>offsetX : <span class="offsetX">0</span></li>
+            <li>offsetY : <span class="offsetY">0</span></li>
+            <li>pageX: <span class="pageX">0</span></li>
+            <li>pageY : <span class="pageY">0</span></li>
+            <li>screenX : <span class="screenX">0</span></li>
+            <li>screenY : <span class="screenY">0</span></li>
+        </ul>
+    </div>
+
+    <div class="info bottom">
+        <button> 소스 보기</button>
+    </div>
+    <!-- //info -->
+    <!-- modal -->
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class="active"><a href="#">Html</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">Jquery</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div class="html">
+                            <pre><code class="language-html">&lt;div id="tab-menu"&GT;
+
+</code></pre>
+                        </div>
+                        <div class="css">
+                            <pre><code class="language-css">#tab-menu {
+
+</pre></code>
+                        </div>
+                        <div class="javascript">
+                            <pre><code class="language-js">
+
+</pre></code>
+                        </div>
+                    </div>
+                </div>
+                <button>닫기</button>
+            </div>
+        </div>
+    </div>
+    <!-- //modal -->
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        //출력용
+        window.addEventListener("mousemove", function(e){
+            document.querySelector(".clientX").innerText = e.clientX + "px";   
+            document.querySelector(".clientY").innerText = e.clientY + "px";  
+            document.querySelector(".offsetX").innerText = e.offsetX + "px";  
+            document.querySelector(".offsetY").innerText = e.offsetY + "px";   
+            document.querySelector(".pageX").innerText = e.pageX + "px";     
+            document.querySelector(".pageY").innerText = e.pageY + "px";      
+            document.querySelector(".screenX").innerText = e.screenX + "px";   
+            document.querySelector(".screenY").innerText = e.screenY + "px";   
+        });
+        //마우스 움직익
+        window.addEventListener("mousemove", function(e){
+            // document.querySelector(".cursor").style.left = e.clientX - 25 + "px";
+            // document.querySelector(".cursor").style.top = e.clientY - 25 + "px";
+            let x = e.clientX - 25 + "px";
+            let y = e.clientY - 25 + "px";
+            document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y;
+        });
+        // document.querySelector(".mouseCont .style1").addEventListener("mouseover", function(){
+        //     document.querySelector(".cursor").classList.add("style1");
+        // });
+        // document.querySelector(".mouseCont .style1").addEventListener("mouseout", function(){
+        //     document.querySelector(".cursor").classList.remove("style1");
+        // });
+        // document.querySelector(".mouseCont .style2").addEventListener("mouseover", function(){
+        //     document.querySelector(".cursor").classList.add("style2");
+        // });
+        // document.querySelector(".mouseCont .style2").addEventListener("mouseout", function(){
+        //     document.querySelector(".cursor").classList.remove("style2");
+        // });
+        // document.querySelector(".mouseCont .style3").addEventListener("mouseover", function(){
+        //     document.querySelector(".cursor").classList.add("style3");
+        // });
+        // document.querySelector(".mouseCont .style3").addEventListener("mouseout", function(){
+        //     document.querySelector(".cursor").classList.remove("style3");
+        // });
+        // document.querySelector(".mouseCont .style4").addEventListener("mouseover", function(){
+        //     document.querySelector(".cursor").classList.add("style4");
+        // });
+        // document.querySelector(".mouseCont .style4").addEventListener("mouseout", function(){
+        //     document.querySelector(".cursor").classList.remove("style4");
+        // });
+        // document.querySelector(".mouseCont .style5").addEventListener("mouseover", function(){
+        //     document.querySelector(".cursor").classList.add("style5");
+        // });
+        // document.querySelector(".mouseCont .style5").addEventListener("mouseout", function(){
+        //     document.querySelector(".cursor").classList.remove("style5");
+        // });
+        // document.querySelector(".mouseCont .style6").addEventListener("mouseover", function(){
+        //     document.querySelector(".cursor").classList.add("style6");
+        // });
+        // document.querySelector(".mouseCont .style6").addEventListener("mouseout", function(){
+        //     document.querySelector(".cursor").classList.remove("style6");
+        // });
+        //for문
+        // for( let i=1; i<=6; i++ ){
+        //     document.querySelector(".mouseCont .style"+i).addEventListener("mouseover", function(){
+        //         document.querySelector(".cursor").classList.add("style"+i);
+        //     });
+        //     document.querySelector(".mouseCont .style"+i).addEventListener("mouseout", function(){
+        //         document.querySelector(".cursor").classList.remove("style"+i);
+        //     });
+        // }
+        //forEach
+        // document.querySelectorAll(".mouseCont span").forEach((element, index) => {
+        //     element.addEventListener("mouseover", () => {
+        //         document.querySelector(".cursor").classList.add("style"+ (index+1));
+        //     });
+        //     element.addEventListener("mouseout", () => {
+        //         document.querySelector(".cursor").classList.remove("style"+ (index+1));
+        //     });
+        // })
+        //getAtrribute()
+        document.querySelectorAll(".mouseCont span").forEach((element) => {
+            let style = element.getAttribute("class");
+            element.addEventListener("mouseover", () => {
+                document.querySelector(".cursor").classList.add(style);
+            });
+            element.addEventListener("mouseout", () => {
+                document.querySelector(".cursor").classList.remove(style);
+            });
+        })
+        
+    </script>
+</body>
+
+</html>

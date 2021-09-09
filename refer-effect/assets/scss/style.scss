@@ -1,6 +1,62 @@
 @charset "UTF-8";
 
 //webfont
+/* 에스코어 드림 */
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 100;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 200;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 500;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 600;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 800;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 900;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff');
+    font-style: normal;
+}
+
 /* 넥슨 폰트 */
 @font-face {
     font-family: 'NEXONLv1Gothic';
@@ -8,41 +64,90 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
     font-style: normal;
 }
-
 @font-face {
     font-family: 'NEXONLv1Gothic';
     font-weight: 500;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
     font-style: normal;
 }
-
 @font-face {
     font-family: 'NEXONLv1Gothic';
     font-weight: 700;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
     font-style: normal;
 }
-
 @font-face {
     font-family: 'NEXONLv2Gothic';
     font-weight: 300;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff') format('woff');
     font-style: normal;
 }
-
 @font-face {
     font-family: 'NEXONLv2Gothic';
     font-weight: 500;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
     font-style: normal;
 }
-
 @font-face {
     font-family: 'NEXONLv2Gothic';
     font-weight: 700;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
     font-style: normal;
 }
+
+/* 지마켓 산스 폰트 */
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 500;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-style: normal;
+}
+
+/* 나눔 스퀘어 폰트 */
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    src: url(NanumSquareR.eot);
+    src: url(NanumSquareR.eot?#iefix) format('embedded-opentype'),
+         url(NanumSquareR.woff) format('woff'),
+         url(NanumSquareR.ttf) format('truetype');
+   }
+   @font-face {
+    font-family: 'NanumSquare';
+    font-weight: 700;
+    src: url(NanumSquareB.eot);
+    src: url(NanumSquareB.eot?#iefix) format('embedded-opentype'),
+         url(NanumSquareB.woff) format('woff'),
+         url(NanumSquareB.ttf) format('truetype');
+   }
+   @font-face {
+    font-family: 'NanumSquare';
+    font-weight: 800;
+    src: url(NanumSquareEB.eot);
+    src: url(NanumSquareEB.eot?#iefix) format('embedded-opentype'),
+         url(NanumSquareEB.woff) format('woff'),
+         url(NanumSquareEB.ttf) format('truetype');
+   }
+   @font-face {
+    font-family: 'NanumSquare';
+    font-weight: 300;
+    src: url(NanumSquareL.eot);
+    src: url(NanumSquareL.eot?#iefix) format('embedded-opentype'),
+         url(NanumSquareL.woff) format('woff'),
+         url(NanumSquareL.ttf) format('truetype');
+   }
 
 //reset
 /* 여백 초기화 */
@@ -147,6 +252,12 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
         height: 100vh;
         background: rgba(0, 0, 0, 0.2);
         z-index: -1;
+    }
+
+    &.blue {
+        &::before {
+            background: rgba(25, 0, 65, 0.493);
+        }
     }
 }
 
@@ -256,27 +367,27 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
     }
 }
 
-
-//info
 .info {
+    color: #fff;
+    font-family: $font-Nexon1;
+    padding: 20px;
     position: absolute;
     left: 0;
     top: 0;
-    font-family: "NEXONLv1Gothic";
-    color: #fff;
-    padding: 20px;
-
     &.right {
         left: auto;
         right: 0px;
     }
-
     &.bottom {
         top: auto;
-        left: auto; // 초기화, 기본값 자동
-        bottom: 0;
+        left: auto;
+        bottom: 0; 
         right: 0;
-        position: fixed;
+    }
+    &.left {
+        top: auto;
+        left: 0;
+        bottom: 0;
     }
     h1 {
         font-weight: 300;
@@ -285,31 +396,31 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
         border-bottom: 1px dashed #fff;
         display: inline-block;
         margin-bottom: 10px;
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
     }
-    
     p {
-        font-size: 16px;
         font-weight: 300;
+        font-size: 16px;
     }
-    
     li {
         list-style: none;
-        display: inline-block;
+        display: inline;
         a {
             display: inline-block;
             text-decoration: none;
             color: #fff;
             border: 1px dashed #fff;
             border-radius: 50%;
-            width: 20px;
+            width: 20px; 
             height: 20px;
             line-height: 20px;
             text-align: center;
             font-size: 12px;
-            margin: 3px;
-    
+            margin-bottom: 5px;
         }
-    
         &.active {
             a {
                 background: #fff;
@@ -317,25 +428,35 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
             }
         }
     }
-}
+    &.list {
+        background: rgba(0,0,0,.4);
+        color: #fff;
+        padding: 20px;
+        font-size: 12px;
+        line-height: 1.8;
+        border-radius: 10px;
+        margin: 20px;
+        li {
+            display: block;
+        }
+    }
 
-
-
-button {
-    background: transparent;
-    border: 1px solid #fff;
-    padding: 5px 20px;
-    color: #fff;
-    border-radius: 50px;
-    box-shadow: 0 0 0 #fff inset;
-    transition: all 0.4s;
-    cursor: pointer;
-
-    &:hover {
-        box-shadow: 0 -50px 0 #fff inset;
-        color: #000;
+    button {
+        background: transparent;
+        border: 1px solid #fff;
+        padding: 5px 20px;
+        color: #fff;
+        border-radius: 50px;
+        box-shadow: 0 0 0 #fff inset;
+        transition: all 0.4s;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0 -50px 0 #fff inset;
+            color: #000;
+        }
     }
 }
+
 
 
 #modal {
@@ -903,9 +1024,10 @@ button {
         padding: 10vw 8vw 0 8vw;
         text-transform: uppercase;
         margin-bottom: 3vw;
+
         em {
             display: block;
-            font-family:'Lato';
+            font-family: 'Lato';
             font-weight: 100;
             padding-left: 18vw;
         }
@@ -924,6 +1046,7 @@ button {
         h2 {
             padding-right: 20px;
         }
+
         li {
             list-style: none;
             display: inline-block;
@@ -938,6 +1061,7 @@ button {
                 line-height: 30px;
                 text-decoration: none;
             }
+
             &.active a {
                 background: #fff;
                 color: #000;
@@ -945,3 +1069,4 @@ button {
         }
     }
 }
+
