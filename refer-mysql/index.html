@@ -411,6 +411,145 @@ SELECT  * FROM mymember WHERE youEmail LIKE 'cherin%';
                 <pre class="language-js"><code>mysql> DELETE FROM mymember WHERE myMemberID IN(4,5,6);
 </code></pre>
                 <!-- //Intro6 -->
+                <!-- Intro7 -->
+                <div class="bs-docs-section"></div>
+                <h2 id="intro7" class="page-header">테이블 Join</h2>
+                <pre class="language-js"><code>
+create table myMember(
+    myMemberID int(10) unsigned auto_increment,
+    youID varchar(15) not null,
+    youName varchar(10) not null,
+    youPass varchar(30) not null,
+    youEmail varchar(30) not null,
+    regTIme int(11) not null,
+    PRIMARY KEY (myMemberID)
+    ) charset=utf8;
+
+create table myReview(
+    myReviewID int(10) unsigned auto_increment,
+    myMemberID int(10) unsigned,
+    youCont tinytext not null,
+    regTIme int(11) not null,
+    PRIMARY KEY (myReviewID) 
+    ) charset=utf8 ;
+    mysql> show tables;
++------------------+
+| Tables_in_test01 |
++------------------+
+| mymember         |
+| myreview         |
++------------------+
+2 rows in set (0.00 sec)
+
+mysql> DESC mymember;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| myMemberID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| youID      | varchar(15)      | NO   |     | NULL    |                |
+| youName    | varchar(10)      | NO   |     | NULL    |                |
+| youPass    | varchar(30)      | NO   |     | NULL    |                |
+| youEmail   | varchar(30)      | NO   |     | NULL    |                |
+| regTIme    | int(11)          | NO   |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
+mysql> DESC myreview;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| myReviewID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| myMemberID | int(10) unsigned | YES  |     | NULL    |                |
+| youCont    | tinytext         | NO   |     | NULL    |                |
+| regTIme    | int(11)          | NO   |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTIme ) VALUES('cherin0115', '김채린', '1234', 'chrein0115@gmail.com', '1122');
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTIme ) VALUES('evan88', '김에반', '1234', 'evan88@gmail.com', '1122');
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTIme ) VALUES('adelyn04', '애들린', '4321', 'adelynzz@gmail.com', '1122');
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTIme ) VALUES('cherin01', '이채린', '0115', 'chrein00@naver.com', '1122');
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTIme ) VALUES('cherin89', '김경훈', '4567', 'rudgns@naver.com', '1122');
+
+INSERT INTO myreview(myMemberID, youCont, regTIme ) VALUES(3,'이거 진짜 좋아여', '1122');
+INSERT INTO myreview(myMemberID, youCont, regTIme ) VALUES(2,'하나 더 살예정임', '1122');
+INSERT INTO myreview(myMemberID, youCont, regTIme ) VALUES(1, '지인이 추천해줬어요', '1122');
+INSERT INTO myreview(myMemberID, youCont, regTIme ) VALUES(3, '진짜 필수템입니당', '1122');
+
+mysql> SELECT * from mymember;
++------------+------------+---------+---------+----------------------+---------+
+| myMemberID | youID      | youName | youPass | youEmail             | regTime |
++------------+------------+---------+---------+----------------------+---------+
+|          1 | cherin0115 | 김채린  | 1234    | chrein0115@gmail.com |    1122 |
+|          2 | evan88     | 김에반  | 1234    | evan88@gmail.com     |    1122 |
+|          3 | adelyn04   | 애들린  | 4321    | adelynzz@gmail.com   |    1122 |
+|          4 | cherin01   | 이채린  | 0115    | chrein00@naver.com   |    1122 |
+|          5 | cherin89   | 김경훈  | 4567    | rudgns@naver.com     |    1122 |
++------------+------------+---------+---------+----------------------+---------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * from myreview;
++------------+------------+---------------------+--------+
+| myReviewID | myMemberID | youCont             | reTime |
++------------+------------+---------------------+--------+
+|          1 |          3 | 이거 진짜 좋아여    |   1122 |
+|          2 |          2 | 하나 더 살예정임    |   1122 |
+|          3 |          1 | 지인이 추천해줬어요 |   1122 |
+|          4 |          3 | 진짜 필수템입니당   |   1122 |
++------------+------------+---------------------+--------+
+4 rows in set (0.00 sec)
+</code></pre>
+
+                <h3 id="intro7-1" class="pt30">Join문 사용하기</h3>
+                <div class="bs-callout bs-callout-info">
+                   SELECT 필드명 FROM 테이블명 앨리어스 JOIN 연결할 테이블명 앨리어스 ON(조건문)
+                </div>
+                <h4>두개의 테이블 JOIN하기</h4>
+<pre class="language-js"><code>SELECT m.youName, r.youCont, r.regTime FROM mymember m JOIN myreview r ON (m.myMemberID = r.myMemberID);
++---------+---------------------+---------+
+| youName | youCont             | regTime |
++---------+---------------------+---------+
+| 애들린  | 이거 진짜 좋아여      |    1122 |
+| 김에반  | 하나 더 살예정임      |    1122 |
+| 김채린  | 지인이 추천해줬어요   |    1122 |
+| 애들린  | 진짜 필수템입니당     |    1122 |
++---------+---------------------+---------+
+4 rows in set (0.00 sec)
+ </code></pre>
+
+                <h4 class="pt20">필드명을 변경하여 표시하는 방법</h4>
+   <pre class="language-js"><code>
+    SELECT m.youName, r.youCont, r.regTime AS reviewTime FROM mymember m JOIN myreview r ON (m.myMemberID = r.myReviewID);
++---------+---------------------+------------+
+| youName | youCont             | reviewTime |
++---------+---------------------+------------+
+| 김채린  | 이거 진짜 좋아여      |       1122 |
+| 김에반  | 하나 더 살예정임      |       1122 |
+| 애들린  | 지인이 추천해줬어요   |       1122 |
+| 이채린  | 진짜 필수템입니당     |       1122 |
++---------+---------------------+------------+
+4 rows in set (0.00 sec)
+</code></pre>
+                <h4 class="pt20">필드명을 내용이 없는 경우 표시하는 방법</h4>
+                <pre class="language-js"><code> SELECT m.youName, r.youCont, r.regTime FROM mymember m LEFT JOIN myreview r ON (m.myMemberID = r.myMemberID);
++---------+---------------------+---------+
+| youName | youCont             | regTime |
++---------+---------------------+---------+
+| 애들린  | 이거 진짜 좋아여      |    1122 |
+| 김에반  | 하나 더 살예정임      |    1122 |
+| 김채린  | 지인이 추천해줬어요   |    1122 |
+| 애들린  | 진짜 필수템입니당     |    1122 |
+| 이채린  | NULL                 |    NULL |
+| 김경훈  | NULL                 |    NULL |
++---------+---------------------+---------+
+6 rows in set (0.00 sec)
+</code></pre>
+                
+                <h3 id="intro7-3" class="pt30">필드 삭제하기</h3>
+                <div class="bs-callout bs-callout-info">
+                    ALTER TABLE 테이블명 DROP 삭제할 필드명;
+                </div>
+                <!-- //Intro7 -->
             </div>
             <!-- //col-md-9 -->
 
@@ -446,6 +585,14 @@ SELECT  * FROM mymember WHERE youEmail LIKE 'cherin%';
                         <li><a href="#intro6">테이블 데이터 </a>
                             <ul class="nav bs-sidenav">
                                 <li><a href="#intro6-1">데이터 입력하기</a></li>
+                                <li><a href="#intro6-2">데이터 불러오기</a></li>
+                                <li><a href="#intro6-3">데이터 수정하기</a></li>
+                                <li><a href="#intro6-3">데이터 삭제하기</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#intr7">테이블 JOIN </a>
+                            <ul class="nav bs-sidenav">
+                                <li><a href="#intro6-1">JOIN문 사용하기</a></li>
                                 <li><a href="#intro6-2">데이터 불러오기</a></li>
                                 <li><a href="#intro6-3">데이터 수정하기</a></li>
                                 <li><a href="#intro6-3">데이터 삭제하기</a></li>
