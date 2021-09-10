@@ -1,5 +1,43 @@
 /* skip */
-#skip {display: none;}
+#skip {
+    position: relative;
+    z-index: 10000;
+}
+
+#skip a {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    background: #000;
+    color: #fff;
+    padding: 20px 30px;
+    display: inline-block;
+}
+
+#skip a:active,
+#skip a:focus {
+    top: 0;
+}
+
+/* layout */
+#contents {}
+
+#mainCont{
+    padding-top: 80px;
+}
+
+#mainCont.gray {
+    background-color: #f4f4f4;
+
+}
+/* container */
+.content-article {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0;
+    /* background: rgba(0,0,0,0.3); */
+}
 
 /* header */
 #header {
@@ -8,10 +46,71 @@
     width: 100%;
     top: 0;
     left: 0;
-    height: 90px;
     z-index: 9999;
-    background: #f1f1f1;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f2f2f2;
+    background-color: #fff;
 }
+
+#header h1 {
+    text-transform: uppercase;
+}
+#header h1 a {
+    padding: 10px;
+    margin: 10px;
+}
+
+#header h1 em {
+    font-size: 16px;
+}
+#header nav li {
+    display: inline;
+}
+
+#header nav li a {
+    padding: 10px 20px;
+    margin: 15px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#header .member {
+    padding: 20px;
+}
+
+#header .member a {
+    border: 1px solid #222;
+    padding: 7px 20px 5px;
+    border-radius: 50px;
+    transition: background 0.3s color 0.3s;
+}
+#header .member a:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* member-form */
+.member-form {
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid #dfdfdf;
+    height: 1000px;
+    background: #fff;
+    padding: 60px 40px;
+}
+.member-form h3{
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.member-form .join-info{
+    margin-bottom: 20px;
+}
+.member-form .join-info li {
+ 
+}
+
+.member-form .join-privacy{}
+.member-form .join{}

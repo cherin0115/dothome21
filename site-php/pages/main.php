@@ -16,15 +16,13 @@
 
     <div id="skip">
         <a href="#contents">컨텐츠 바로가기</a>
+        <a href="#footer">풋터 바로가기</a>
     </div>
     <!--//skip-->
-    
-
-    <div id="wrap">
         <header id="header">
             <h1><a href="#">php <em>class</em></a></h1>
             <nav>
-                <h2 class="screen_out">메인 메뉴</h2>
+                <h2 class="ir_so">메인 메뉴</h2>
                 <ul>
                     <li><a href="#">댓글</a></li>
                     <li><a href="#">회원가입</a></li>
@@ -34,9 +32,9 @@
                 </ul>
             </nav>
             <div class="member">
-                <strong class="screen_out">회원 정보 영역</strong>
-                <a href="#">로그인</a>
-                <a href="#">회원가입</a>
+                <strong class="ir_so">회원 정보 영역</strong>
+                <a href="../login/login.php">로그인</a>
+                <a href="../login/join.php">회원가입</a>
             </div>
         </header>
         <!--//header-->
@@ -50,7 +48,6 @@
             footer
         </footer>
         <!--//footer-->
-    </div>
-    <!--wrap-->
+
 </body>
 </html>

@@ -30,6 +30,7 @@ figure,
 figcaption {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* 폰트 초기화 */
@@ -65,12 +66,38 @@ em {
     font-style: normal;
 }
 
+img {
+    width: 100%;
+}
+
+/* 제목초기화 */
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+/* 리스트 스타일 유형 */
+ul.list li,
+ol.list li,
+dl.list li {
+    position: relative;
+    padding-left: 10px;
+}
+ul.list li::before,
+ol.list li::before,
+dl.list li::before {
+    content: '';
+    width: 3px; height: 3px;
+    background: #000;
+    position: absolute;
+    left: 0; top: 7px;
+} 
+
 /* 이미지 표현 방법 */
 /* 
     img 태그 --> 이미지에 의미가 있을 경우 --> alt(대체 문자)
     background 속성 --> 이미지에 의미가 없을 경우(장식용)
     이미지 스프라이트 표현 --> 이미지를 효율적(의미가 있음)으로 쓰기 위한 방법(background)
-                               =>css로 대체 문자를 만들어 줌 --> IR 효과
+    =>css로 대체 문자를 만들어 줌 --> IR 효과
 */
 
 /* ir 효과 */
