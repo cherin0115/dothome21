@@ -259,6 +259,11 @@ $gradient6: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
             background: rgba(25, 0, 65, 0.493);
         }
     }
+    &.brown {
+        &::before {
+            background-color: #53280b81;
+        }
+    }
 }
 
 @for $i from 1 through 10 {

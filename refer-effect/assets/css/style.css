@@ -222,6 +222,10 @@ figcaption {
   background: rgba(25, 0, 65, 0.493);
 }
 
+.bg.brown::before {
+  background-color: #53280b81;
+}
+
 .bg1 {
   background-image: url(../img/bg1@2.jpg);
 }
