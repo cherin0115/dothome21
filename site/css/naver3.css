@@ -37,13 +37,6 @@ body {
     font-size: 15px;
 }
 
-#header h1 em {
-    font-size: 25px;
-    font-weight: 800;
-}
-#header nav li {
-    display: inline;
-}
 
 #header nav li a {
     padding: 10px 20px;
@@ -98,8 +91,7 @@ body {
     margin-top: 35px;
 }
 /* cardtype */
-#cardType {
-}
+
 .cardType01 {
     font-family: 'NEXONLv2Gothic';
     width: 1203px;

@@ -1,0 +1,179 @@
+/*  */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'NanumSquare';
+}
+
+/* header */
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f2f2f2;
+    background-color: #fff;
+}
+
+#header .img {
+    background-repeat: no-repeat;
+    width: 20%;
+    height: 22px;
+    display: block;
+    background: url(../img/logo_whale.svg) no-repeat center;
+}
+#header .container {
+    width: 1220px;
+    text-align: center;
+    margin: 0 auto;
+}
+#header nav li {
+    display: inline-block;
+
+}
+
+#header nav li a {
+    color: #2d1d1d;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 90px;
+    width: 12%;
+    text-align: center;
+    padding: 20px 20px 20px 40px;
+}
+
+#header .member {
+    padding: 40px;
+    margin-right: 5%;
+}
+
+#header .member a {
+    position: absolute;
+    top: 20px;
+    right: 4%;
+    width: 125px;
+    height: 50px;
+    color: #15c5aa;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #15c5aa;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+#header .member a:hover {
+    background-color: #12ca8f;
+    color: #fff;
+}
+
+/* header-bar */
+.container {
+    width: 100%;
+}
+
+.header_bar {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    width: 100%;
+    height: 160px;
+    text-align: center;
+}
+
+.header_bar li a {
+    color: #838383;
+    font-size: 18px;
+    padding: 20px 30px;
+    cursor: pointer;
+    background-position: bottom 24px left;
+    background-size: 20px auto;
+    background-repeat: no-repeat;
+}
+
+/* banner */
+#banner {
+    background-image: url(../img/top_tasking_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 75vh;
+}
+
+#banner .container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#banner .container h2 {
+    padding: 150px 0 0;
+    font-size: 50px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#banner .container p {
+    padding: 10px 0px;
+    font-size: 30px;
+    color: #fff;
+}
+
+#banner .container .banner-btn {
+    width: 200px;
+    font-size: 24px;
+    border-radius: 32px;
+    height: 64px;
+    line-height: 64px;
+    margin-top: 30px;
+}
+
+#banner .container .banner-btn a {
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 45px;
+    height: 77px;
+    line-height: 77px;
+    position: relative;
+    background: #05d6b4;
+}
+
+/* cardType */
+#cardType {
+    width: 100%;
+    height: 50vh;
+    background-color: #ecedf1;
+}
+#cardType .cardType{
+    width: 1220px;
+    margin: 0 auto;
+}
+#cardType .cardType .card-left{}
+#cardType .cardType .card-left h3{
+    padding-top: 100px;
+    height: 70px;
+    line-height: 70px;
+    padding-left: 80px;
+    font-size: 50px;
+    color: #000;
+    font-weight: bold;
+}
+#cardType .card-left h3:before {
+    background: url(../img/icon_why_tab1_05.png) no-repeat top center;
+}
+#cardType .cardType .card-left h4{}
+#cardType .cardType .card-left p{}
+#cardType .cardType .card-left .btn{}
+
+
