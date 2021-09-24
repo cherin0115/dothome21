@@ -13,13 +13,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
     <style>
-        .praNav {
-            top: -200px;
+        .paraNav {
+            top: 20px;
             transition: top 0.4s ease;
         }
-        .praNav.show {
-            top: 20px;
+
+        .paraNav.show {
+            top: -200px;
         }
+
         .paraNav li a {
             width: auto;
             padding: 5px 20px;
@@ -36,7 +38,7 @@
     ​
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect03 - jquery</a></h1>
+        <h1><a href="index.html">Parallax Effect03 - javascript</a></h1>
         <p>패랠랙스 스크로링 효과 - 숨김 메뉴</p>
     </header>
     <!-- //header -->
@@ -44,8 +46,8 @@
     <!-- main -->
     <main>
         <div class="paraScroll">scrollTop() : <span>0</span>px</div> <!-- scroll-->
-            <ul>
-            </ul>
+        <ul>
+        </ul>
         </div>
         <nav class="paraNav">
             <ul>
@@ -163,7 +165,7 @@
             <ul>
                 <li><a href="javascriptPE01.html">1</a></li>
                 <li><a href="javascriptPE02.html">2</a></li>
-                <li><a href="javascriptPE03.html">3</a></li>
+                <li class="active"><a href="javascriptPE03.html">3</a></li>
                 <li><a href="javascriptPE04.html">4</a></li>
                 <li><a href="javascriptPE05.html">5</a></li>
                 <li><a href="javascriptPE06.html">6</a></li>
@@ -174,10 +176,10 @@
         </div>
         <div class="FooterInfo">
             <h2>제이쿼리</h2>
-            <ul> 
+            <ul>
                 <li><a href="jqueryPE01.html">1</a></li>
                 <li><a href="jqueryPE02.html">2</a></li>
-                <li class="active"><a href="jqueryPE03.html">3</a></li>
+                <li><a href="jqueryPE03.html">3</a></li>
                 <li><a href="jqueryPE04.html">4</a></li>
                 <li><a href="jqueryPE05.html">5</a></li>
                 <li><a href="jqueryPE06.html">6</a></li>
@@ -244,67 +246,80 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
-              document.querySelectorAll('.paraNav ul li ').forEach((el, idx) => {
-      el.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(el.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        })
-      })
-    });
-    window.addEventListener('scroll', function () {
-      let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset; //구버전
-
-
-      document.querySelectorAll('.paraNav ul li').forEach((el, idx) => {
-        if (scrollTop >= document.getElementById('section' + (idx + 1)).offsetTop - 2) {
-          document.querySelectorAll('.paraNav ul li').forEach(el => el.classList.remove('active'));
-          document.querySelector('.paraNav ul li:nth-child(' + (idx + 1) + ')').classList.add('active');
-        }
-      });
-             
+        document.querySelectorAll('.paraNav ul li ').forEach((el, idx) => {
+            el.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(el.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                })
+            })
+        });
+        
+        window.addEventListener('scroll', function () {
+            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset; //구버전
+            
             //info
-            document.querySelector('.paraScroll span').innerText = parseInt(scrollTop) + 'px';
-  
-  
-            // forEach문문
-            document.querySelectorAll('.content-item').forEach((el, idx) => {
-                document.querySelector('.offset' + (idx + 1)).innerText = parseInt(document
-                    .querySelector('#section' + (
-                        idx + 1)).offsetTop) + 'px';
+            document.querySelector('.paraScroll span').innerText = parseInt(scrollTop);
+
+
+            document.querySelectorAll('.paraNav ul li').forEach((el, idx) => {
+                if (scrollTop > 10) {
+                    document.querySelector(".paraNav").classList.add("show");
+                    document.querySelector(".paraNav").classList.remove("show");
+                }
             });
+
+
+
+
+            // 버튼용
+            // document.querySelectorAll('.content-item').forEach((el, idx) => {
+            //     document.querySelector('.offset' + (idx + 1)).innerText = parseInt(document
+            //         .querySelector('#section' + (
+            //             idx + 1)).offsetTop) + 'px';
+            // });
+
+            document.querySelectorAll(".content-item").forEach((el, idx) => {
+                if (scrollTop >= item.offsetTop - 2) {
+                    document.querySelectorAll("paraNav ul li").forEach(li => {
+                        li.classList.remove("active");
+                    })
+                    document.querySelector(".paraNav ul li:nth-child(" + (indx + 1) + ")").classList
+                        .add("active");
+                }
+            })
         });
 
-    //   $(".paraNav ul li").click(function(e){
-    //       e.preventDefault();
-    //       let target = $(this);
-    //       let index = target.index();
-    //       let section = $(".content-item").eq(index);
-    //       let offset = section.offset().top;
-    //       $("html, body").animate({scrollTop : offset}, 600);
-    //   });
+        //   $(".paraNav ul li").click(function(e){
+        //       e.preventDefault();
+        //       let target = $(this);
+        //       let index = target.index();
+        //       let section = $(".content-item").eq(index);
+        //       let offset = section.offset().top;
+        //       $("html, body").animate({scrollTop : offset}, 600);
+        //   });
 
-    // $(window).scroll(function(){
-    //     let scrollTop = $(this).scrollTop();
+        // $(window).scroll(function(){
+        //     let scrollTop = $(this).scrollTop();
 
-    //     //숨김 메뉴
-    //     // if (scrollTop > 10){
-    //     //     $(".paraNav").addClass("show");
-    //     // } else {
-    //     //     $(".paraNav").removeClass("show");
-    //     // };
-    //     (scrollTop > 10) ? $(".paraNav").addClass("show") : $(".paraNav").removeClass("show");
+        //     //숨김 메뉴
+        //     // if (scrollTop > 10){
+        //     //     $(".paraNav").addClass("show");
+        //     // } else {
+        //     //     $(".paraNav").removeClass("show");
+        //     // };
+        //     (scrollTop > 10) ? $(".paraNav").addClass("show") : $(".paraNav").removeClass("show");
 
-    //     //버튼용
-    //     $(".content-item").each(function(index){
-    //         if( scrollTop >= $(this).offset().top-2){
-    //            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active"); 
-    //         }
-    //     });
+        //     //버튼용
+        //     $(".content-item").each(function(index){
+        //         if( scrollTop >= $(this).offset().top-2){
+        //            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active"); 
+        //         }
+        //     });
 
-    //     //출력용
-    //     $(".paraSroll span").text(scrollTop);
-    // })
+        //     //출력용
+        //     $(".paraSroll span").text(scrollTop);
+        // })
     </script>
 </body>
 
