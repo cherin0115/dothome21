@@ -253,6 +253,23 @@
     background-size: cover;
     background-position: center center;
 }
+.slider .swiper-slide {}
+.slider .swiper-slide h2 {
+    color: #fff;
+    font-size: 62px;
+    line-height: 65px;
+    margin-top: 200px;
+}
+.slider .swiper-slide h2 em {
+    display: block;
+    font-size: 59px;
+    font-weight: 100;
+}
+.slider .swiper-slide p {
+    font-size: 27px;
+    color: #fff;
+    padding-top: 25px;
+}
 
 /* 미디어쿼리 */
 @media (max-width:1290px) {
@@ -299,7 +316,12 @@
     .header h1 strong {
         left: 24px;
     }
-
+    .banner_menu .bm_left ul {
+        display: none;
+    }
+    .banner_menu .bm_right ul:first-child {
+        display: none;
+    }
     .nav {
         display: none;
     }
