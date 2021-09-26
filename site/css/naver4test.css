@@ -1,181 +1,260 @@
-/*  */
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: 'NanumSquare';
+    font-family: 'NanumSquare'
 }
 
-/* common */
 .container {
-    width: 1280px;
-    margin: 0 auto;}
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    height: 670px;
+}
 
-/* header */
+.banner-br {
+    display: none;
+}
+
 #header {
     position: fixed;
-    width: 100%;
+    z-index: 90;
     top: 0;
-    left: 0;
-    z-index: 9999;
-    box-sizing: border-box;
-    border-bottom: 1px solid #f2f2f2;
+    width: 100%;
+    height: 90px;
     background-color: #fff;
+    box-shadow: 0px 5px 10px 2px rgb(0 0 0 / 10%);
 }
 
-#header .img {
-    background-repeat: no-repeat;
-    width: 20%;
-    height: 22px;
-    display: block;
-    background: url(../img/logo_whale.svg) no-repeat center;
-}
-#header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 1220px;
-    text-align: center;
+.header-inner {
+    max-width: 1920px;
     margin: 0 auto;
+    position: relative;
 }
-#header ul {
-    width: 1220px;
-} 
-#header li {
+
+.logo {
+    position: absolute;
+    top: 23px;
+    left: 6%;
+    width: 200px;
+    height: 40px;
+    z-index: 5;
+}
+
+.logo a {
+    background: url(https://whale.naver.com/_resource/img/main/logo_whale.svg) no-repeat center;
+    text-align: center;
+    line-height: 40px;
+    text-indent: -9999em;
+    display: block;
+    height: 40px;
+}
+
+.menu-wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.menu {
+    padding: 0;
+    margin: 0 auto;
+    font: inherit;
+    border: 0;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: inherit;
+    width: 80%;
+}
+
+.menu ul {
+    text-align: center;
+    overflow: hidden;
+}
+
+.menu li {
     display: inline-block;
     width: 12%;
+    text-align: center;
 }
 
-#header nav li a {
+.menu li a {
+    line-height: 120%;
     color: #2d1d1d;
     font-size: 18px;
-    font-weight: 500;
-    line-height: 80px;
-    width: 12%;
-    text-align: center;
-    padding: 20px 20px 20px 40px;
+    font-weight: 800;
+    line-height: 90px;
+    letter-spacing: -0.9px;
 }
 
-#header .member {
-    padding: 40px;
-    margin-right: 5%;
+.menu li a:hover {
+    color: #05c3a7;
 }
 
-#header .member a {   
+.mobile {
+    display: none;
+    position: relative;
+}
+
+.mobile .btn {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.mobile .btn span {
+    display: block;
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+    width: 28px;
+    height: 2px;
+    background-color: #333;
+}
+
+.mobile .btn span::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -9.09090909px;
+    width: 28px;
+    height: 2px;
+    background-color: #333;
+}
+
+.mobile .btn span::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 9.09090909px;
+    width: 28px;
+    height: 2px;
+    background-color: #333;
+}
+
+.download {
     position: absolute;
     top: 20px;
-    right: 10%;
+    right: 4%;
     width: 125px;
     height: 50px;
     color: #15c5aa;
     font-size: 18px;
+    font-weight: 800;
     text-align: center;
     line-height: 50px;
     border: 1px solid #15c5aa;
     border-radius: 5px;
-    transition: all 0.3s;
+    transition: all .5s;
 }
 
-#header .member a:hover {
-    background-color: #12ca8f;
+.download:hover {
+    background-color: #15c5aa;
     color: #fff;
 }
 
-/* header-bar */
-.tabwrap{
-    margin-top: 80px;
+
+/* main */
+#main {
+    margin-top: 90px;
+    width: 100%;
 }
 
-.tabwrap {
-    display: inline-block;
-    background: #333;
+#bar {
+    background-color: #333;
     color: #fff;
     width: 100%;
     text-align: center;
 }
-.header_bar li {
+
+.bar-contents {
     display: inline-block;
-    width: 20%;
+    width: 32%;
     text-align: center;
-    height: 60px;
-}
-.header_bar li:nth-child(1) a{
-    color: #05d6b4;
-}
-.header_bar li:nth-child(2) {
-    border-right: 1px solid #eee;
-    border-left: 1px solid #eee;
+    max-width: 330px;
+    height: 70px;
+    line-height: 70px;
 }
 
-.header_bar li a {
-    display: inline-block;
-    color: #838383;
-    font-size: 15px;
-    font-weight: 400;
-    padding: 20px 30px;
-    cursor: pointer;
+.bar2 {
+    border-right: 1px solid #838383;
+    border-left: 1px solid #838383;
+}
+
+.bar1 .bar-content {
+    background: url(https://whale.naver.com/_resource/img/whywhale/top_check.png);
+    background-position: top 23px left;
+    background-repeat: no-repeat;
+    color: #05d6b4;
+}
+
+.bar2 .bar-content {
+    background-image: url(https://whale.naver.com/_resource/img/whywhale/top_check_2.png);
+    background-repeat: no-repeat;
+}
+
+.bar3 .bar-content {
+    background-image: url(https://whale.naver.com/_resource/img/whywhale/top_check_3.png);
+    background-repeat: no-repeat;
+}
+
+.bar-content {
     background-position: bottom 24px left;
     background-size: 20px auto;
     background-repeat: no-repeat;
-}
-.header_bar li:nth-child(1) a {
-    background-position: top 23px left;
-    background-size: 20px auto;
-    background-image: url(https://whale.naver.com/_resource/img/whywhale/top_check.png);
-}
-.header_bar li:nth-child(2) a {
-    background-image: url(https://whale.naver.com/_resource/img/whywhale/top_check_2.png);
-}
-.header_bar li:nth-child(3) a {
-    background-image: url(https://whale.naver.com/_resource/img/whywhale/top_check_2.png);
+    display: inline-block;
+    color: #838383;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    padding: 20px 30px;
+    cursor: pointer;
 }
 
-/* banner */
-#banner {
-    background-image: url(../img/top_tasking_bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+/* content1 */
+#content1 {
+    display: block;
+    background: url(https://whale.naver.com/_resource/img/whywhale/top_tasking_bg.jpg) no-repeat top center/ cover;
     width: 100%;
-    height: 75vh;
+    height: 670px;
+    text-align: left;
 }
-#banner .container h2 {
-    padding: 150px 0 0;
-    font-size: 40px;
+
+#content1 .container {
+    display: table;
+    width: 100%;
+    padding-top: 180px;
+}
+
+#content1 h3 {
+    font-size: 50px;
+    line-height: 120%;
     color: #fff;
     font-weight: bold;
 }
 
-#banner .container p {
-    padding: 30px 0 ;
-    font-size: 25px;
+#content1 p {
+    font-size: 30px;
     color: #fff;
+    padding: 30px 0 50px;
 }
 
-#banner .container .banner-btn {
-    width: 200px;
-    font-size: 24px;
-    border-radius: 32px;
-    height: 64px;
-    line-height: 64px;
-    margin-top: 30px;
-}
-
-.banner-btn a {
+.download-btn a {
     display: inline-block;
-    width: 230px;
+    width: 250px;
     text-align: center;
-    font-size: 28px;
+    font-size: 30px;
     color: #fff;
     border-radius: 45px;
-    height: 70px;
-    line-height: 70px;
+    height: 77px;
+    line-height: 77px;
     position: relative;
     background: #05d6b4;
 }
-.banner-btn a::after{
+
+.download-btn a::after {
     content: "";
     display: inline-block;
     width: 30px;
@@ -186,71 +265,92 @@ body {
     vertical-align: top;
 }
 
-/* cardType */
-.cardType:nth-child(even) {
+/* content2 */
+#content2 .text h3::before {
+    background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_05.png) no-repeat top center;
+}
+
+#content3 .text h3::before {
+    background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_01.png) no-repeat top center;
+}
+
+#content4 .text h3::before {
+    background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_02.png) no-repeat top center;
+}
+
+#content5 .text h3::before {
+    background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_03.png) no-repeat top center;
+}
+
+#content6 .text h3::before {
+    background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_04.png) no-repeat top center;
+}
+
+#main section:nth-child(odd) {
     background-color: #ecedf1;
 }
 
-.card-left{
-    display: table-cell;
-    vertical-align: middle;
+#main section:nth-child(even) {
+    background-color: #fff;
 }
 
-.cardType:nth-child(odd) .card-left {
+#main section:nth-child(even) .text {
     padding-left: 5%;
 }
 
-.card-left h3{
+.text {
+    display: table-cell;
+    vertical-align: middle;
+    height: 670px;
+}
+
+.text h3 {
+    color: #000;
+    position: relative;
+    padding-left: 80px;
     height: 70px;
     line-height: 70px;
-    padding-left: 80px;
-    font-size: 40px;
-    color: #000;
+    font-size: 50px;
     font-weight: bold;
-    position: relative;
 }
-.card-left h3:before {
+
+.text h3::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     display: inline-block;
-    content: "";
     clear: both;
     width: 70px;
     height: 70px;
-    background-size: 100%;
+    background-size: 100% !important;
 }
-#cardType01 .card-left h3:before {
-    background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_05.png) no-repeat top center;
-}
-#cardType02 .card-left h3:before {
-    background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_01.png) no-repeat top center;
-}
-#cardType03 .card-left h3:before {
-    background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_02.png) no-repeat top center;
-}
-#cardType04 .card-left h3:before {
-    background: url(	https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_03.png) no-repeat top center;
-}
-#cardType05 .card-left h3:before {
-    background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_04.png) no-repeat top center;
-}
-.card-left h4{
+
+.text p {
     color: #333130;
-    font-size: 23px;
-    font-weight: 400;
+    font-size: 26px;
     margin: 30px 0 50px;
 }
-.card-left p{
-    display: block;
+
+.text ul {
+    width: 100%;
+}
+
+.text li {
+    width: 100%;
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.text li a {
+    display: inline-block;
     color: #2d68d2;
     line-height: 20px;
     font-size: 18px;
-    padding-left: 40px;
-    position: relative;
-    margin-top: 20px;
 }
-.card-left p::before {
+
+.text li a::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -262,83 +362,126 @@ body {
     background: url(https://whale.naver.com/_resource/img/whywhale/icon_function_detailgo.png) no-repeat top center;
     background-size: 100%;
 }
-.card-left .btnPc{
+
+.text .btn {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.text .btn2 {
+    display: inline-block;
+    padding-top: 20px;
+    position: relative;
+    width: 118px;
+    height: 76px;
+    margin-top: 30px;
+}
+
+.text .btn2 .tx {
+    position: absolute;
+    line-height: 1em;
+    font-size: 16px;
+    color: #919191;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.text .pcBtn {
+    display: inline-block;
     background: url(https://whale.naver.com/_resource/img/whywhale/icon_pc.png) no-repeat bottom center;
     background-size: 100%;
     width: 118px;
     height: 76px;
-    display: inline-block;
-    margin-top: 20px;
 }
-.card-left .btnM {
+
+.text .mBtn {
+    display: inline-block;
     background: url(https://whale.naver.com/_resource/img/whywhale/icon_m.png) no-repeat bottom center;
     background-size: 100%;
-    width: 100%;
     width: 118px;
     height: 76px;
-    display: inline-block;
 }
-.card-right {
+
+.text .btn2 .pcBtn,
+.text .btn2 .mBtn {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.video {
     display: table-cell;
     width: 50%;
+    height: 670px;
     vertical-align: middle;
 }
-.card-right img {
+
+.video img {
     display: block;
     width: 100%;
+    border-style: none;
 }
 
-.cardType .container {
-    display: table;
-    height: 670px;
-    max-width: 1280px;
-    width: 100%;
-}
-
-/* footer-banner */
-.footer-banner{ 
+#content7 {
     width: 100%;
     background-color: #fff;
     padding: 10% 0;
     text-align: center;
 }
-.footer-banner .img_www {
-    display: block;
+
+#content7 .container {
+    height: auto;
+}
+
+#content7 img {
+    display: inline-block;
+    margin-bottom: 3%;
     max-width: 560px;
-    margin: 0 auto;
 }
-.footer-banner .banner-btn{
-    margin-top: 20px;
-}
+
 /* footer */
-.footer{
+#footer {
     padding: 50px 0;
     width: 100%;
     text-align: center;
     background-color: #f9f9f9;
 }
-.footer .container .img {
-    align-items: center;
-    justify-content: center;
-    background-repeat: no-repeat;
-    height: 15px;
-    display: block;
-    background: url(../img/logo_whale_gray.svg) no-repeat center;
-    margin-bottom: 20px;
+
+#footer .container {
+    position: relative;
+    vertical-align: middle;
+    height: auto;
 }
-.footer .container li{
+
+#footer h2 {
+    display: inline-block;
+    margin: 0 0 20px;
+    max-width: 141px;
+}
+
+#footer h2 a {}
+
+#footer h2 a img {
+    display: block;
+    width: 100%;
+}
+
+#footer ul li {
     display: inline-block;
     position: relative;
     margin: 10px 20px 0;
     text-align: center;
 }
-.footer .container li a{
-    font-size: 13px;
-    font-weight: 500;
+
+#footer li a {
+    font-size: 16px;
+    font-weight: 400;
     color: #c0c0c0;
-    font-weight: 300;
 }
-.footer .container li a::after {
+
+#footer li a::after {
     content: '';
     display: block;
     position: absolute;
@@ -348,6 +491,265 @@ body {
     height: 18px;
     background: #dadada;
 }
-.footer .container li:last-child a::after{
-    display: none;
+
+#footer p {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    text-align: center;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+}
+
+#footer p a {
+    padding: 0 15px 0 45px;
+    height: 43px;
+    color: #c0c0c0;
+    font-size: 16px;
+    line-height: 43px;
+}
+
+#footer p a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 55px);
+    width: 20px;
+    height: 20px;
+    background: url(https://whale.naver.com/_resource/img/main/beta.svg) no-repeat;
+}
+
+/* Mobile 800px */
+@media (max-width: 800px) {
+    .banner-br {
+        display: block;
+    }
+
+    #header {
+        height: 60px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .logo {
+        top: 10px;
+        left: 4%;
+        width: 140px;
+    }
+
+    .menu-wrap,
+    .download {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    #main {
+        margin-top: 60px;
+    }
+
+    .bar-contents {
+        max-width: 330px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .bar1 .bar-content {
+        background-size: 14px auto;
+        background-position: top 17px left;
+    }
+
+    .bar2 .bar-content {
+        background-size: 14px auto;
+        background-position: bottom 17px left;
+    }
+
+    .bar3 .bar-content {
+        background-size: 14px auto;
+        background-position: bottom 17px left;
+    }
+
+    .bar-content {
+        font-size: 12px;
+        padding: 15px 20px;
+    }
+
+    #content1 {
+        background: url(https://whale.naver.com/_resource/img/whywhale/top_tasking_bg_m.jpg) no-repeat top right calc(50% - 35%);
+    }
+
+    #content1 .container {
+        margin: 0 auto;
+        width: 100%;
+        padding-top: 0;
+    }
+
+    #content1 .banner {
+        display: block;
+        padding: 0 5%;
+        height: 85%;
+        background: url(https://whale.naver.com/_resource/img/whywhale/top_object_tasking.png) no-repeat bottom right;
+        background-size: 80%;
+    }
+
+    #content1 h3 {
+        font-size: 25px;
+        padding-top: 50px;
+    }
+
+    #content1 p {
+        font-size: 18px;
+        padding: 20px 0 50px;
+    }
+
+    .download-btn a {
+        width: 130px;
+        font-size: 15px;
+        border-radius: 32px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .download-btn a::after {
+        height: 40px;
+        width: 15%;
+    }
+
+    #main section:nth-child(even) {
+        position: relative;
+        padding-top: 80px;
+    }
+
+    #main section:nth-child(odd) .text {
+        padding-top: 80px;
+        height: auto;
+    }
+
+    #main section:nth-child(even) .text {
+        padding-left: 0;
+    }
+
+    #main section:nth-child(even) .video {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75%;
+    }
+
+    .text {
+        display: block;
+        width: 100%;
+    }
+
+    .text h3 {
+        height: 50px;
+        line-height: 50px;
+        padding-left: 60px;
+        font-size: 32px;
+    }
+
+    .text h3::before {
+        width: 50px;
+        height: 50px;
+    }
+
+    .text p {
+        font-size: 18px;
+        color: #333130;
+        margin: 25px 0 40px;
+    }
+
+    .text li {
+        margin-bottom: 12px;
+        padding-left: 22px;
+    }
+
+    .text li a {
+        line-height: 18px;
+        font-size: 16px;
+    }
+
+    .text li a::before {
+        width: 16px;
+        height: 16px;
+    }
+
+    .text .btn2 {
+        display: inline-block;
+        padding-top: 20px;
+        position: relative;
+        width: 90px;
+        height: 56px;
+    }
+
+    .text .btn2 .tx {
+        font-size: 12px;
+        top: -18px;
+    }
+
+    .text .pcBtn {
+        width: 90px;
+        height: 40px;
+    }
+
+    .text .mBtn {
+        width: 90px;
+        height: 40px;
+    }
+
+    .video {
+        padding-bottom: 80px;
+        display: block;
+        width: 82.8%;
+        text-align: center;
+        margin: 10% auto 0;
+    }
+
+    #content7 img {
+        max-width: 300px;
+    }
+
+
+    #footer {
+        padding: 40px 0;
+    }
+
+    #footer h2 {
+        max-width: 120px;
+    }
+    #footer li a {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+
+    #footer li a::after {}
+
+    #footer p {
+        position: relative;
+        top: inherit;
+        right: inherit;
+        margin: 30px 0 0;
+    }
+
+    #footer p a {
+        padding: 0 15px 0 35px;
+        height: 38px;
+        font-size: 14px;
+        line-height: 38px;
+    }
+
+    #footer p a::before {
+        top: calc(50% - 8px);
+        left: calc(50% - 47px);
+        width: 16px;
+        height: 16px;
+    }
 }

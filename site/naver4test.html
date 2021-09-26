@@ -9,158 +9,207 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/naver4test.css">
 
     <!-- 나눔 스퀘어 웹폰트 -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
 </head>
 
 <body>
-    <!-- header -->
-    <div id="wrap">
-        <header id="header">
-            <div class="container">
-                <a href="#" class="img"></a>
-                <ul>
-                    <li><a href="#">Why We Whale</a></li>
-                    <li><a href="#">가이드</a></li>
-                    <li><a href="#">스토어</a></li>
-                    <li><a href="#">연구소</a></li>
-                    <li><a href="#">웨일 스페이스</a></li>
-                    <li><a href="#">웨일북</a></li>
+    <header id="header">
+        <div class="header-inner">
+            <h1 class="logo">
+                <a href="#">logo</a>
+            </h1>
+            <nav class="menu-wrap">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Why We Whale</a></li>
+                        <li><a href="#">가이드</a></li>
+                        <li><a href="#">스토어</a></li>
+                        <li><a href="#">연구소</a></li>
+                        <li><a href="#">웨일 스페이스</a></li>
+                        <li><a href="#">웨일북</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="submenu">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div> -->
+            </nav>
+            <div class="mobile">
+                <p class="btn">
+                    <span></span>
+                </p>
+            </div>
+            <a href="#" class="download">다운로드</a>
+        </div>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <article id="bar">
+            <div class="bar-wrap">
+                <ul class="bar">
+                    <li class="bar-contents bar1">
+                        <div class="bar-content">옴니태스킹</div>
+                    </li>
+                    <li class="bar-contents bar2">
+                        <div class="bar-content">강력한 보안</div>
+                    </li>
+                    <li class="bar-contents bar3">
+                        <div class="bar-content">커스터마이징</div>
+                    </li>
                 </ul>
-                <div class="member">
-                    <a href="#">다운로드</a>
+            </div>
+        </article>
+        <!-- //tab -->
+        <seciton id="content1">
+            <div class="container">
+                <div class="banner">
+                    <h3>하고 싶은 일들, <br class="banner-br">해야 할 일들 <br>네이버 웨일로 한 번에!</h3>
+                    <p>네이버 웨일의 다양한 기능을 만나보세요!</p>
+                    <div class="download-btn">
+                        <a href="#">다운로드</a>
+                    </div>
                 </div>
             </div>
-        </header>
-        <section class="tabwrap">
+        </seciton>
+        <!-- section1 -->
+        <section id="content2">
             <div class="container">
-                <ul class="header_bar">
-                    <li><a href="#">옴니태스킹</a></li>
-                    <li><a href="#">강력한 보안</a></li>
-                    <li><a href="#">커스터마이징</a></li>
-                </ul>
-            </div>
-        </section>
-        <!-- //header -->
-        <!-- banner -->
-        <section id="banner">
-            <div class="container">
-                <h2>하고싶은 일들, 해야할 일들<br>
-                    네이버 웨일로 한 번에!
-                </h2>
-                <p>네이버 웨일의 다양한 기능을 만나보세요!</p>
-                <div class="banner-btn"><a href="#">다운로드</a></div>
-            </div>
-        </section>
-        <!-- //banner -->
-        <!-- cardType1 -->
-        <section id="cardType01" class="cardType">
-            <div class="container">
-                <div class="card-left">
+                <div class="text">
                     <h3>웨일온(Whale ON)</h3>
-                    <h4>시간제한 없는 무료 화상회의!</h4>
-                    <p>웨일온, 어떻게 사용하시나요?</p>
-                    <div class="btnPc"></div>
-                    <div class="btnM"></div>
+                    <p>시간제한 없는 무료 화상회의!</p>
+                    <ul>
+                        <li><a href="#">웨일온,어떻게 사용하나요?</a></li>
+                    </ul>
+                    <div class="btn">
+                        <span class="pcBtn"></span>
+                        <span class="mBtn"></span>
+                    </div>
                 </div>
-                <div class="card-right">
-                    <img src="https://whale.naver.com/_resource/img/gif/ww_01_on.gif" alt="이미지1">
+                <div class="video">
+                    <img src="https://whale.naver.com/_resource/img/gif/ww_01_on.gif" alt="웨일온(Whale ON)">
                 </div>
             </div>
         </section>
-        <!-- cardType2 -->
-        <section id="cardType02" class="cardType">
+        <!-- section2 -->
+        <section id="content3">
             <div class="container">
-                <div class="card-right">
-                    <img src="https://whale.naver.com/_resource/img/gif/ww_01_sidebar.gif" alt="이미지1">
+                <div class="video">
+                    <img src="https://whale.naver.com/_resource/img/gif/ww_01_sidebar.gif" alt="사이드바">
                 </div>
-                <div class="card-left">
+                <div class="text">
                     <h3>사이드바</h3>
-                    <h4>휴대폰 열지 말고 웨일에서 보세요!</h4>
-                    <p>사이드바, 어떻게 사용하나요?</p>
-                    <p>어떤 확장앱이 있는지 궁금하다면?</p>
-                    <div class="btnPc"></div>
-                    <div class="btnM"></div>
+                    <p>휴대폰 열지 말고 웨일에서 보세요!</p>
+                    <ul>
+                        <li><a href="#">사이드바, 어떻게 사용하나요?</a></li>
+                        <li><a href="#">어떤 확장앱이 있는지 궁금하다면?</a></li>
+                    </ul>
+                    <div class="btn">
+                        <span class="pcBtn"></span>
+                        <span class="mBtn"></span>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- cardType3 -->
-        <section id="cardType03" class="cardType">
+        <!-- section3 -->
+        <section id="content4">
             <div class="container">
-                <div class="card-left">
+                <div class="text">
                     <h3>퀵서치 & 번역</h3>
-                    <h4>퀵서치, 어떤 기능까지 지원하나요?</h4>
-                    <p>번역의 자세한 기능이 궁금하다면?</p>
-                    <div class="btnPc"></div>
-                    <div class="btnM"></div>
+                    <p>궁금한 부분? 드래그해서 바로 확인!</p>
+                    <ul>
+                        <li><a href="#">퀵서치, 어떤 기능까지 지원하나요?</a></li>
+                        <li><a href="#">번역의 자세한 기능이 궁금하다면?</a></li>
+                    </ul>
+                    <div class="btn">
+                        <span class="pcBtn"></span>
+                        <span class="mBtn"></span>
+                    </div>
                 </div>
-                <div class="card-right">
-                    <img src="https://whale.naver.com/_resource/img/gif/ww_01_quick.gif" alt="이미지1">
+                <div class="video">
+                    <img src="https://whale.naver.com/_resource/img/gif/ww_01_quick.gif" alt="퀵서치&번역">
                 </div>
             </div>
         </section>
-        <!-- cardType4 -->
-        <section id="cardType04" class="cardType">
+        <!-- section4 -->
+        <section id="content5">
             <div class="container">
-                <div class="card-right">
-                    <img src="	https://whale.naver.com/_resource/img/gif/ww_02_duletab.gif" alt="이미지4">
+                <div class="video">
+                    <img src="https://whale.naver.com/_resource/img/gif/ww_02_duletab.gif" alt="듀얼 탭 & 한글뷰어">
                 </div>
-                <div class="card-left">
+                <div class="text">
                     <h3>듀얼 탭 & 한글뷰어</h3>
-                    <h4>뒤로 가기는 이제 그만!</h4>
-                    <p>듀얼 탭의 자세한 기능이 궁금하다면?</p>
-                    <p>한글 문서, 웨일에서 어떻게 볼 수 있나요?</p>
-                    <div class="btnPc"></div>
-                    <div class="btnPc"></div>
-                    <div class="btnM"></div>
-
+                    <p>뒤로 가기는 이제 그만!</p>
+                    <ul>
+                        <li><a href="#">듀얼 탭의 자세한 기능이 궁금하다면?</a></li>
+                        <li><a href="#">한글 문서, 웨일에서 어떻게 볼 수 있나요?</a></li>
+                    </ul>
+                    <div class="btn2">
+                        <span class="tx">듀얼 탭</span>
+                        <span class="pcBtn"></span>
+                    </div>
+                    <div class="btn2">
+                        <span class="tx">한글뷰어</span>
+                        <span class="pcBtn"></span>
+                    </div>
+                    <div class="btn2">
+                        <span class="mBtn"></span>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- cardType5 -->
-        <section id="cardType05" class="cardType">
+        <!-- section5 -->
+        <section id="content6">
             <div class="container">
-                <div class="card-left">
+                <div class="text">
                     <h3>편리한 캡처</h3>
-                    <h4>클릭 한 번으로 원하는 영역을 깔끔하게!</h4>
-                    <p>캡처의 자세한 기능이 궁금하다면?</p>
-                    <div class="btnPc"></div>
-                    <div class="btnM"></div>
+                    <p>클릭 한 번으로 원하는 영역을 깔끔하게!</p>
+                    <ul>
+                        <li><a href="#">캡처의 자세한 기능이 궁금하다면?</a></li>
+                    </ul>
+                    <div class="btn">
+                        <span class="pcBtn"></span>
+                        <span class="mBtn"></span>
+                    </div>
                 </div>
-                <div class="card-right">
-                    <img src="https://whale.naver.com/_resource/img/gif/ww_01_capture.gif" alt="이미지5">
+                <div class="video">
+                    <img src="https://whale.naver.com/_resource/img/gif/ww_01_capture.gif" alt="편리한 캡처">
                 </div>
             </div>
         </section>
-        <!-- //cardType -->
-        <!-- footer-banner -->
-        <section class="footer-banner">
+        <!-- section6 -->
+
+        <section id="content7">
             <div class="container">
-                <img class="img_www" src="https://whale.naver.com/_resource/img/gif/whywewhale.gif" alt="www">
-                <div class="banner-btn">
+                <img src="	https://whale.naver.com/_resource/img/gif/whywewhale.gif" alt="why we whale"
+                    class="download2">
+                <div class="download-btn">
                     <a href="#">다운로드</a>
                 </div>
             </div>
         </section>
-        <!--  //footer-banner-->
-        <!--  footer-->
-        <footer class="footer">
-            <div class="container">
-                <a href="#" class="img"></a>
-                <ul>
-                    <li><a href="#">이용약관</a></li>
-                    <li><a href="#">개인정보 처리방침</a></li>
-                    <li><a href="#">Naver Whale 개인정보 보호를 위한 백서</a></li>
-                    <li><a href="#">제휴 제안</a></li>
-                    <li><a href="#">고객센터</a></li>
-                    <li><a href="#">© NAVER Corp.</a></li>
-                </ul>
-            </div>
-        </footer>
-        <!-- // footer-->
-    </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <div class="container">
+            <h2><a href="#"><img src="	https://whale.naver.com/_resource/img/main/logo_whale_gray.svg"
+                        alt="whale logo"></a></h2>
+            <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">Naver Whale 개인정보 보호를 위한 백서</a></li>
+                <li><a href="#">제휴 제안</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">© NAVER Corp.</a></li>
+            </ul>
+            <p><a href="#">베타 다운로드</a></p>
+        </div>
+    </footer>
+    <!-- footer -->
 </body>
 
 </html>
