@@ -162,7 +162,7 @@
     .banner_menu .bm_right li.white a {font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba(0,0,0,0.6); border-color:#fff;}
     .banner_menu .bm_right li.purple a {font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba(0,0,0,0.6); border-color:#fff;}
     .swiper-pagination-bullet {width: 13px !important; height: 13px !important;}
-    
+
     #movie .container {}
     #movie .container:after {content: ''; position: absolute; z-index: 20; top: 0; right: 0; width: 8px; height: 100%; background: #d9d7e0;}
     #movie .row {position: relative; margin: 8px; padding: 16px; margin-right: 0; padding-right: 0;}
@@ -188,6 +188,17 @@
 @media (max-width: 320px){
     .movie_title li a {margin-right: 9px;}
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
