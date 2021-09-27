@@ -1,3 +1,21 @@
 {
-    "liveServer.settings.port": 5501
-}
+
+    "workbench.editor.untitled.hint": "hidden",
+    
+    "workbench.iconTheme": "material-icon-theme",
+    
+    "window.zoomLevel": 1,
+    
+    "liveSassCompile.settings.formats": [
+    
+    {
+    "format": "expanded",
+    "extensionName": ".css",
+    "savePath": "~/../css",
+    }
+
+    ],
+    
+    "liveSassCompile.settings.generateMap": false,
+    
+    }
