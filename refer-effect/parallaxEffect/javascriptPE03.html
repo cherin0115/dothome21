@@ -192,7 +192,7 @@
     <!-- //footer -->
     ​
     <!-- source -->
-    <div class="info bottom">
+    <div class="source">
         <button>소스 보기</button>
     </div>
     <!-- //source -->
@@ -246,7 +246,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
-        document.querySelectorAll('.paraNav ul li ').forEach((el, idx) => {
+        document.querySelectorAll('.paraNav ul li a').forEach((el, idx) => {
             el.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(el.getAttribute('href')).scrollIntoView({
@@ -279,12 +279,12 @@
             //             idx + 1)).offsetTop) + 'px';
             // });
 
-            document.querySelectorAll(".content-item").forEach((el, idx) => {
+            document.querySelectorAll(".content-item").forEach((item, idx) => {
                 if (scrollTop >= item.offsetTop - 2) {
                     document.querySelectorAll("paraNav ul li").forEach(li => {
                         li.classList.remove("active");
                     })
-                    document.querySelector(".paraNav ul li:nth-child(" + (indx + 1) + ")").classList
+                    document.querySelector(".paraNav ul li:nth-child(" + (idx + 1) + ")").classList
                         .add("active");
                 }
             })

@@ -896,7 +896,32 @@ figcaption {
 .parallax {
   background: #222;
   color: #fff;
-  font-family: 'NEXONLv1Gothic';
+  font-family: 'S-CoreDream';
+}
+
+.parallax .source {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.parallax .source button {
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 0 #fff inset;
+          box-shadow: 0 0 0 #fff inset;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.parallax .source button:hover {
+  -webkit-box-shadow: 0 -50px 0 #fff inset;
+          box-shadow: 0 -50px 0 #fff inset;
+  color: #000;
 }
 
 .paraScroll {

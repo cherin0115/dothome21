@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect</title>
+    ​
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.css">
+    ​
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        .paraNav {
+            top: 20px;
+            transition: top 0.4s ease;
+        }
+
+        .paraNav.hide {
+            top: -200px;
+        }
+
+        .paraNav li a {
+            width: auto;
+            padding: 5px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .paraNav li.active a {
+            border-radius: 30px;
+        }
+
+        /* 한번에 나타나기 */
+        /* .content-item {
+            opacity: 0;
+            transform:  translateY(100px);
+            transition: all 1s;
+        }
+
+        .content-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        } */
+
+        /* 개별적으로 나타나기 */
+        .content-item .num {
+            opacity: 0 !important;
+            transform: translateY(200px);
+            transition: all 1s 0.1s cubic-bezier(0, 0.66, 0.38, 1.01);
+        }
+
+        .content-item .title {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 1s 0.3s cubic-bezier(0, 0.66, 0.38, 1.01);
+        }
+
+        .content-item .img-Wrap {
+            opacity: 0;
+            transform: translateY(200px) rotate(30deg);
+            transition: all 1s 0.6s cubic-bezier(0, 0.66, 0.38, 1.01);
+        }
+
+        .content-item .desc {
+            opacity: 0;
+            transform: translateX(-200px);
+            transition: all 1s 0.9s cubic-bezier(0, 0.66, 0.38, 1.01);
+        }
+
+        .content-item.show .num {
+            opacity: 0.07 !important;
+            transform: translateY(0);
+
+        }
+
+        .content-item.show .title {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .content-item.show .img-Wrap {
+            opacity: 1;
+            transform: translateY(0) rotate(0);
+        }
+
+        .content-item.show .desc {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+
+</head>
+
+<body class="parallax">
+    ​
+    <!-- header -->
+    <header class="paraInfo">
+        <h1><a href="index.html">Parallax Effect05 - jquery</a></h1>
+        <p>패랠랙스 스크로링 효과 - 나타나기</p>
+    </header>
+    <!-- //header -->
+    ​
+    <!-- main -->
+    <main>
+        <div class="paraScroll">scrollTop() : <span>0</span>px</div> <!-- scroll-->
+        <ul>
+        </ul>
+        </div>
+        <nav class="paraNav">
+            <ul>
+                <li class="active"><a href="#section1">s1</a></li> <!-- emmt li*9<a[href="section$"]{s$}-->
+                <li><a href="#section2">s2</a></li>
+                <li><a href="#section3">s3</a></li>
+                <li><a href="#section4">s4</a></li>
+                <li><a href="#section5">s5</a></li>
+                <li><a href="#section6">s6</a></li>
+                <li><a href="#section7">s7</a></li>
+                <li><a href="#section8">s8</a></li>
+                <li><a href="#section9">s9</a></li>
+            </ul>
+        </nav>
+        <div class="paraCont">
+            <section id="section1" class="content-item">
+                <span class="num">01</span>
+                <h2 class="title">Section1</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">삶이 있는 한 희망은 있다.</p>
+            </section>
+            <!-- //section1 -->
+            ​
+            <section id="section2" class="content-item">
+                <span class="num">02</span>
+                <h2 class="title">Section2</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">산다는 것 그것은 치열한 전투이다.</p>
+            </section>
+            <!-- //section2 -->
+            ​
+            <section id="section3" class="content-item">
+                <span class="num">03</span>
+                <h2 class="title">Section3</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">1퍼센트의 가능성, 그것이 나의 길이다.</p>
+            </section>
+            <!-- //section3 -->
+            ​
+            <section id="section4" class="content-item">
+                <span class="num">04</span>
+                <h2 class="title">Section4</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">현재에 집중할 수 있다면 행복할 것이다.</p>
+            </section>
+            <!-- //section4 -->
+            ​
+            <section id="section5" class="content-item">
+                <span class="num">05</span>
+                <h2 class="title">Section5</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">진정으로 웃으려면, 고통을 즐길줄 알아야 한다.</p>
+            </section>
+            <!-- //section5 -->
+            ​
+            <section id="section6" class="content-item">
+                <span class="num">06</span>
+                <h2 class="title">Section6</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">절대 어제를 후회하지 마라.</p>
+            </section>
+            <!-- //section6 -->
+            ​
+            <section id="section7" class="content-item">
+                <span class="num">07</span>
+                <h2 class="title">Section7</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">높은 목표를 세우고, 스스로 채찍질 한다.</p>
+            </section>
+            <!-- //section7 -->
+            ​
+            <section id="section8" class="content-item">
+                <span class="num">08</span>
+                <h2 class="title">Section8</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">실패를 두려워하지 마라.</p>
+            </section>
+            <!-- //section8 -->
+            ​
+            <section id="section9" class="content-item">
+                <span class="num">09</span>
+                <h2 class="title">Section9</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">피할수 없으면 즐겨라.</p>
+            </section>
+            <!-- //section9 -->
+        </div>
+        <!-- //contents -->
+    </main>
+    <!-- //main -->
+    ​
+    <!-- footer -->
+    <footer class="paraFooter">
+        <h1>Parallax <em>Scrolling</em></h1>
+        <div class="FooterInfo">
+            <h2>자바스크립트</h2>
+            <ul>
+                <li><a href="javascriptPE01.html">1</a></li>
+                <li><a href="javascriptPE02.html">2</a></li>
+                <li><a href="javascriptPE03.html">3</a></li>
+                <li><a href="javascriptPE04.html">4</a></li>
+                <li><a href="javascriptPE05.html">5</a></li>
+                <li><a href="javascriptPE06.html">6</a></li>
+                <li><a href="javascriptPE07.html">7</a></li>
+                <li><a href="javascriptPE08.html">8</a></li>
+                <li><a href="javascriptPE09.html">8</a></li>
+            </ul>
+        </div>
+        <div class="FooterInfo">
+            <h2>제이쿼리</h2>
+            <ul>
+                <li><a href="jqueryPE01.html">1</a></li>
+                <li><a href="jqueryPE02.html">2</a></li>
+                <li><a href="jqueryPE03.html">3</a></li>
+                <li><a href="jqueryPE04.html">4</a></li>
+                <li class="active"><a href="jqueryPE05.html">5</a></li>
+                <li><a href="jqueryPE06.html">6</a></li>
+                <li><a href="jqueryPE07.html">7</a></li>
+                <li><a href="jqueryPE08.html">8</a></li>
+                <li><a href="jqueryPE09.html">8</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //footer -->
+    ​
+    <!-- source -->
+    <div class="info bottom">
+        <button>소스 보기</button>
+    </div>
+    <!-- //source -->
+    ​
+    <!-- modal -->
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class="active"><a href="#">Html</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">Javascript</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div class="html">
+                            <pre><code class="language-html">
+</code></pre>
+                        </div>
+                        <div class="css">
+                            <pre><code class="language-css">
+
+                        </code></pre>
+                        </div>
+                        <div class="javascript">
+                            <pre><code class="language-javascript">
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <button>닫기</button>
+            </div>
+        </div>
+    </div>
+    <!-- //modal -->
+    ​
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+    $(window).scroll(function () {
+            let scrollTop = $(window).scrollTop() + $(window).height() / 2;
+
+            // if(scrollTop >= $('#section1').offset().top){
+            //     $('#section1').addClass('show');
+            // }
+            // if(scrollTop >= $('#section2').offset().top){
+            //     $('#section2').addClass('show');
+            // }
+            // if(scrollTop >= $('#section3').offset().top){
+            //     $('#section3').addClass('show');
+            // }
+            // if(scrollTop >= $('#section4').offset().top){
+            //     $('#section4').addClass('show');
+            // }
+            // if(scrollTop >= $('#section5').offset().top){
+            //     $('#section5').addClass('show');
+            // }
+            // if(scrollTop >= $('#section6').offset().top){
+            //     $('#section6').addClass('show');
+            // }
+            // if(scrollTop >= $('#section7').offset().top){
+            //     $('#section7').addClass('show');
+            // }
+            // if(scrollTop >= $('#section8').offset().top){
+            //     $('#section8').addClass('show');
+            // }
+            // if(scrollTop >= $('#section9').offset().top){
+            //     $('#section9').addClass('show');
+            // }
+
+            // for(let i = 1; i <= $('.content-item').length; i++){
+            //     if(scrollTop >= $('#section'+i).offset().top){
+            //         $('#section'+i).addClass('show');
+            //     } else {
+            //         $('#section'+i).removeClass('show');
+            //     }
+            // }
+
+            $('.content-item').each(function (idx) {
+                if (scrollTop >= $(this).offset().top) {
+                    $(this).addClass('show');
+                    $('.paraNav ul li').eq(idx).addClass('active').siblings().removeClass('active');
+                } else {
+                    $(this).removeClass('show');
+                }
+            });
+
+            $('.paraNav ul li').click(function (e) {
+                e.preventDefault();
+                let target = $(this);
+                let index = target.index();
+                let section = $('.content-item').eq(index);
+                let offset = section.offset().top;
+
+                //화면 이동
+                $('html, body').animate({
+                    scrollTop: offset
+                }, 600);
+            });
+
+            //출력
+            $('.paraScroll span').text(parseInt(scrollTop));
+        });
+    </script>
+</body>
+
+</html>
