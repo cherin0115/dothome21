@@ -32,64 +32,6 @@
         .paraNav li.active a {
             border-radius: 30px;
         }
-
-        /* 한번에 나타나기 */
-        /* .content-item {
-            opacity: 0;
-            transform:  translateY(100px);
-            transition: all 1s;
-        }
-
-        .content-item.show {
-            opacity: 1;
-            transform: translateY(0);
-        } */
-
-        /* 개별적으로 나타나기 */
-        .content-item .num {
-            opacity: 0 !important;
-            transform: translateY(200px);
-            transition: all 1s 0.1s cubic-bezier(0, 0.66, 0.38, 1.01);
-        }
-
-        .content-item .title {
-            opacity: 0;
-            transform: translateX(-100px);
-            transition: all 1s 0.3s cubic-bezier(0, 0.66, 0.38, 1.01);
-        }
-
-        .content-item .img-Wrap {
-            opacity: 0;
-            transform: translateY(200px) rotate(30deg);
-            transition: all 1s 0.6s cubic-bezier(0, 0.66, 0.38, 1.01);
-        }
-
-        .content-item .desc {
-            opacity: 0;
-            transform: translateX(-200px);
-            transition: all 1s 0.9s cubic-bezier(0, 0.66, 0.38, 1.01);
-        }
-
-        .content-item.show .num {
-            opacity: 0.07 !important;
-            transform: translateY(0);
-
-        }
-
-        .content-item.show .title {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .content-item.show .img-Wrap {
-            opacity: 1;
-            transform: translateY(0) rotate(0);
-        }
-
-        .content-item.show .desc {
-            opacity: 1;
-            transform: translateX(0);
-        }
     </style>
 
 </head>
@@ -98,8 +40,8 @@
     ​
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect05 - javascript</a></h1>
-        <p>패랠랙스 스크로링 효과 - 나타나기</p>
+        <h1><a href="index.html">Parallax Effect06 - javascript</a></h1>
+        <p>패랠랙스 스크로링 효과 - 이질감</p>
     </header>
     <!-- //header -->
     ​
@@ -227,8 +169,8 @@
                 <li><a href="javascriptPE02.html">2</a></li>
                 <li><a href="javascriptPE03.html">3</a></li>
                 <li><a href="javascriptPE04.html">4</a></li>
-                <li class="active"><a href="javascriptPE05.html">5</a></li>
-                <li><a href="javascriptPE06.html">6</a></li>
+                <li><a href="javascriptPE05.html">5</a></li>
+                <li class="active"><a href="javascriptPE06.html">6</a></li>
                 <li><a href="javascriptPE07.html">7</a></li>
                 <li><a href="javascriptPE08.html">8</a></li>
             </ul>
@@ -250,7 +192,7 @@
     <!-- //footer -->
     ​
     <!-- source -->
-    <div class="info bottom">
+    <div class="source">
         <button>소스 보기</button>
     </div>
     <!-- //source -->
@@ -298,78 +240,64 @@
     <!-- //modal -->
     ​
     <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        document.querySelectorAll('.paraNav ul li a').forEach((el, idx) => {
-            el.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(el.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+        const scrollMenu = function(){
+            document.querySelectorAll(".paraNav ul li a").forEach(li => {
+                li.addEventListener("click", e => {
+                    e.preventDefault();
+                    document.querySelector(li.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth"
+                    })
                 })
-            })
-        });
-
-        function scrollProgress() {
-            let scrollTop = (document.documentElement.scrollTop || window.scrollY || window.pageYOffset) + window
-                .innerHeight / 2;
-            //출력
-
-            //    if (scrollTop > document.getElementById("section1").offsetTop){
-            //        document.getElementById("section1").classList.add("show");
-            //    }
-            //    if (scrollTop > document.getElementById("section2").offsetTop){
-            //        document.getElementById("section2").classList.add("show");
-            //    }
-            //    if (scrollTop > document.getElementById("section3").offsetTop){
-            //        document.getElementById("section3").classList.add("show");
-            //    }
-            //    if (scrollTop > document.getElementById("section4").offsetTop){
-            //        document.getElementById("section4").classList.add("show");
-            //    }
-            //    if (scrollTop > document.getElementById("section5").offsetTop){
-            //        document.getElementById("section5").classList.add("show");
-            //    }
-            //    if (scrollTop > document.getElementById("section6").offsetTop){
-            //        document.getElementById("section6").classList.add("show");
-            //    }
-            //    if (scrollTop > document.getElementById("section7").offsetTop){
-            //        document.getElementById("section7").classList.add("show");
-            //    }
-            //    if (scrollTop > document.getElementById("section8").offsetTop){
-            //        document.getElementById("section8").classList.add("show");
-            //    }
-            //    if (scrollTop > document.getElementById("section9").offsetTop){
-            //        document.getElementById("section9").classList.add("show");
-            //    }
-
-            // for (i = 1; i < 10; i++) {
-            //     if (scrollTop > document.getElementById("section" + i).offsetTop) {
-            //         document.getElementById("section" + i).classList.add("show");
-            //     }
-            // }
-
+            });
+        }
+        const scrollProgress = function(){
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+            // let offset1 = scrollTop - document.getElementById("section1").offsetTop;
+            // let offset2 = scrollTop - document.getElementById("section2").offsetTop;
+            // let offset3 = scrollTop - document.getElementById("section3").offsetTop;
+            // let offset4 = scrollTop - document.getElementById("section4").offsetTop;
+            // let offset5 = scrollTop - document.getElementById("section5").offsetTop;
+            // let offset6 = scrollTop - document.getElementById("section6").offsetTop;
+            // let offset7 = scrollTop - document.getElementById("section7").offsetTop;
+            // let offset8 = scrollTop - document.getElementById("section8").offsetTop;
+            // let offset9 = scrollTop - document.getElementById("section9").offsetTop;
+            // document.getElementById("section1").style.transform = "translateX("+offset1+"px)";
+            // document.getElementById("section2").style.transform = "translateX("+offset2+"px)";
+            // document.getElementById("section3").style.transform = "translateX("+offset3+"px)";
+            // document.getElementById("section4").style.transform = "translateX("+offset4+"px)";
+            // document.getElementById("section5").style.transform = "translateX("+offset5+"px)";
+            // document.getElementById("section6").style.transform = "translateX("+offset6+"px)";
+            // document.getElementById("section7").style.transform = "translateX("+offset7+"px)";
+            // document.getElementById("section8").style.transform = "translateX("+offset8+"px)";
+            // document.getElementById("section9").style.transform = "translateX("+offset9+"px)";
+            //forEach()
             document.querySelectorAll(".content-item").forEach(item => {
-                scrollTop > item.offsetTop ? item.classList.add("show") : item.classList.remove("show");
-            })
-
-
-            //출력
-            document.querySelector(".scroll").innerText = parseInt(scrollTop);
-
-            //메뉴 
+                let offset1 = (scrollTop - item.offsetTop) * 0.1;
+                let offset2 = (scrollTop - item.offsetTop) * 0.2;
+                item.querySelector(".img").style.transform = "translateX("+ offset1 +"px)";
+                item.querySelector(".desc").style.transform = "translateX("+ -offset2 +"px)";
+            });
+            //메뉴
             document.querySelectorAll(".content-item").forEach((item, index) => {
-                if (scrollTop >= item.offsetTop) {
+                if( scrollTop >= item.offsetTop - 2){
                     document.querySelectorAll(".paraNav ul li").forEach(li => {
                         li.classList.remove("active");
                     });
-                    document.querySelector(".paraNav ul li:nth-child("(index + i) + ")").classList.add(
-                        "active");
+                    document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
                 }
-            })
+            });
+            //출력
+            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
         }
+        
         window.addEventListener("scroll", scrollProgress);
+        scrollMenu();
     </script>
 </body>
 
