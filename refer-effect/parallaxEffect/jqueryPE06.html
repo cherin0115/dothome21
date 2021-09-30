@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallax Effect</title>
-    ​
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/highlight.css">
-    ​
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
     <style>
         .paraNav {
             top: 20px;
-            transition: top 0.4s ease;
+            transition: top .5s ease;
         }
 
         .paraNav.hide {
@@ -33,27 +33,26 @@
             border-radius: 30px;
         }
     </style>
-
 </head>
 
 <body class="parallax">
-    ​
+
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect06 - jquery</a></h1>
+        <h1><a href="index.html">Parallax Effect06 - jQuery</a></h1>
         <p>패랠랙스 스크로링 효과 - 이질감</p>
     </header>
     <!-- //header -->
-    ​
+
+
     <!-- main -->
     <main>
-        <div class="paraScroll">scrollTop() : <span>0</span>px</div> <!-- scroll-->
-        <ul>
-        </ul>
-        </div>
-        <nav class="paraNav">
+        <div class="paraScroll">scrollTop() : <span>0</span>px</div>
+
+        <!--//scroll-->
+        <div class="paraNav">
             <ul>
-                <li class="active"><a href="#section1">s1</a></li> <!-- emmt li*9<a[href="section$"]{s$}-->
+                <li class="active"><a href="#section1">s1</a></li>
                 <li><a href="#section2">s2</a></li>
                 <li><a href="#section3">s3</a></li>
                 <li><a href="#section4">s4</a></li>
@@ -63,106 +62,110 @@
                 <li><a href="#section8">s8</a></li>
                 <li><a href="#section9">s9</a></li>
             </ul>
-        </nav>
+        </div>
+        <!-- //nav -->
+
         <div class="paraCont">
+
             <section id="section1" class="content-item">
                 <span class="num">01</span>
                 <h2 class="title">Section1</h2>
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">삶이 있는 한 희망은 있다.</p>
+                <p class="desc">Don't dwell on the past</p>
             </section>
-            <!-- //section1 -->
-            ​
+            <!-- section1 -->
+
             <section id="section2" class="content-item">
                 <span class="num">02</span>
                 <h2 class="title">Section2</h2>
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">산다는 것 그것은 치열한 전투이다.</p>
+                <p class="desc">Pain past is pleasure</p>
             </section>
-            <!-- //section2 -->
-            ​
+            <!-- section2 -->
+
             <section id="section3" class="content-item">
                 <span class="num">03</span>
                 <h2 class="title">Section3</h2>
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">1퍼센트의 가능성, 그것이 나의 길이다.</p>
+                <p class="desc">Don't give up easily even if you failed</p>
             </section>
-            <!-- //section3 -->
-            ​
+            <!-- section3 -->
+
             <section id="section4" class="content-item">
                 <span class="num">04</span>
                 <h2 class="title">Section4</h2>
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">현재에 집중할 수 있다면 행복할 것이다.</p>
+                <p class="desc">Love what you do</p>
             </section>
-            <!-- //section4 -->
-            ​
+            <!-- section4 -->
+
             <section id="section5" class="content-item">
                 <span class="num">05</span>
                 <h2 class="title">Section5</h2>
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">진정으로 웃으려면, 고통을 즐길줄 알아야 한다.</p>
+                <p class="desc">This too shall pass away</p>
             </section>
-            <!-- //section5 -->
-            ​
+            <!-- section5 -->
+
             <section id="section6" class="content-item">
                 <span class="num">06</span>
                 <h2 class="title">Section6</h2>
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">절대 어제를 후회하지 마라.</p>
+                <p class="desc">If not now, then when?</p>
             </section>
-            <!-- //section6 -->
-            ​
+            <!-- section6 -->
+
             <section id="section7" class="content-item">
                 <span class="num">07</span>
                 <h2 class="title">Section7</h2>
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">높은 목표를 세우고, 스스로 채찍질 한다.</p>
+                <p class="desc">Don't dwell on the past</p>
             </section>
-            <!-- //section7 -->
-            ​
+            <!-- section7 -->
+
             <section id="section8" class="content-item">
                 <span class="num">08</span>
                 <h2 class="title">Section8</h2>
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">실패를 두려워하지 마라.</p>
+                <p class="desc">Don't dwell on the past</p>
             </section>
-            <!-- //section8 -->
-            ​
+            <!-- section8 -->
+
             <section id="section9" class="content-item">
                 <span class="num">09</span>
                 <h2 class="title">Section9</h2>
                 <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">피할수 없으면 즐겨라.</p>
+                <p class="desc">Don't dwell on the past</p>
             </section>
-            <!-- //section9 -->
+            <!-- section9 -->
+
         </div>
         <!-- //contents -->
     </main>
     <!-- //main -->
-    ​
+
     <!-- footer -->
     <footer class="paraFooter">
-        <h1>Parallax <em>Scrolling</em></h1>
-        <div class="FooterInfo">
+        <h1>Parallax <em>Srolling</em></h1>
+        <div class="footerInfo">
             <h2>자바스크립트</h2>
             <ul>
                 <li><a href="javascriptPE01.html">1</a></li>
@@ -175,7 +178,7 @@
                 <li><a href="javascriptPE08.html">8</a></li>
             </ul>
         </div>
-        <div class="FooterInfo">
+        <div class="footerInfo">
             <h2>제이쿼리</h2>
             <ul>
                 <li><a href="jqueryPE01.html">1</a></li>
@@ -190,19 +193,20 @@
         </div>
     </footer>
     <!-- //footer -->
-    ​
+
     <!-- source -->
     <div class="source">
-        <button>소스 보기</button>
+        <button>소스보기</button>
     </div>
     <!-- //source -->
-    ​
+
     <!-- modal -->
     <div id="modal">
         <div class="modal-bg">
             <div class="modal-cont">
                 <div class="code-view">
                     <div class="view-header">
+                        <!-- aria : 접근성 / aria-hidden=true : 빈칸을 읽지 않음 -->
                         <div class="dot" aria-hidden="true">
                             <span></span>
                             <span></span>
@@ -211,9 +215,9 @@
                     </div>
                     <div class="view-title">
                         <ul>
-                            <li class="active"><a href="#">Html</a></li>
+                            <li class="active"><a href="#">HTML</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">Javascript</a></li>
+                            <li><a href="#">jQuery</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
@@ -223,49 +227,54 @@
                         </div>
                         <div class="css">
                             <pre><code class="language-css">
-
-                        </code></pre>
+ 
+</code></pre>
                         </div>
                         <div class="javascript">
-                            <pre><code class="language-javascript">
-                            </code></pre>
+                            <pre><code class="language-js">
+</code></pre>
                         </div>
                     </div>
                 </div>
-
                 <button>닫기</button>
             </div>
         </div>
     </div>
     <!-- //modal -->
-    ​
+
+
     <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="../assets/js/custom.js"></script>
-    <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-          $(".paraNav ul li").click(function(e){
+        //클릭이벤트
+        $(".paraNav ul li").click(function (e) {
             e.preventDefault();
             let target = $(this);
             let index = target.index();
             let section = $(".content-item").eq(index);
             let offset = section.offset().top;
-            $("html, body").animate({ scrollTop : offset }, 600);
+            $("html, body").animate({
+                scrollTop: offset
+            }, 600);
         });
+
         $(window).scroll(function () {
             let scrollTop = $(window).scrollTop();
+            // scrollTop - scrollTop 대신 (오차가 생기지 않아 변하지 않는 오프셋값을 빼줌)
 
-            // let offset1 = scrollTop - $("#section1").offset().top;    //offset은 고정값 이기때문에 scrolltop에서 빼면 100,200 남게됨
+
+            // let offset1 = scrollTop - $("#section1").offset().top;
             // let offset2 = scrollTop - $("#section2").offset().top;
-            // let offset3 = scrollTop - $("#section3").offset().top;  
-            // let offset4 = scrollTop - $("#section4").offset().top;  
-            // let offset5 = scrollTop - $("#section5").offset().top;   
-            // let offset6 = scrollTop - $("#section6").offset().top;  
-            // let offset7 = scrollTop - $("#section7").offset().top;  
-            // let offset8 = scrollTop - $("#section8").offset().top;  
-            // let offset9 = scrollTop - $("#section9").offset().top;  
+            // let offset3 = scrollTop - $("#section3").offset().top;
+            // let offset4 = scrollTop - $("#section4").offset().top;
+            // let offset5 = scrollTop - $("#section5").offset().top;
+            // let offset6 = scrollTop - $("#section6").offset().top;
+            // let offset7 = scrollTop - $("#section7").offset().top;
+            // let offset8 = scrollTop - $("#section8").offset().top;
+            // let offset9 = scrollTop - $("#section9").offset().top;
 
 
             // $("#section1").css({transform: "translateX("+offset1+"px)"});
@@ -276,17 +285,20 @@
             // $("#section6").css({transform: "translateX("+offset6+"px)"});
             // $("#section7").css({transform: "translateX("+offset7+"px)"});
             // $("#section8").css({transform: "translateX("+offset8+"px)"});
-            // c
+            // $("#section9").css({transform: "translateX("+offset9+"px)"});
 
-            // for(i=1; i<=9; i++){
-            //    let offset = scrollTop - $("#section"+ i).offset().top;
-            //    $("#section"+i+".desc").css({transform: "translateX("+offset+"px)"});
+            // //for문
+            // for (let i=1; i<=9; i++){
+            //     let offset = scrollTop - $("#section1"+1).offset().top;
+            //     $("#section1"+i+".desc").css({transform: "translateX("+offset+"px)"});
             // }
 
-            // each
+            //each()
             $(".content-item").each(function (index) {
                 let offset1 = (scrollTop - $(this).offset().top) * 0.1;
                 let offset2 = (scrollTop - $(this).offset().top) * 0.2;
+                //console.log(offset)
+                //각섹션(this)에서 오프셋값을 뺀다
 
                 $(this).find(".img").css({
                     transform: "translateY(" + offset2 + "px)"
@@ -294,6 +306,7 @@
                 $(this).find(".desc").css({
                     transform: "translateY(" + offset1 + "px)"
                 });
+                //여기서 this는 content-item
 
                 //메뉴
                 if (scrollTop > $(this).offset().top - 2) {
@@ -302,9 +315,14 @@
             });
 
 
-            //출력용
 
+
+
+            //출력
             $(".paraScroll span").text(scrollTop);
+
+            // 10정도가 내려간다고 가정할때 (전체 섹션/텍스트)
+            // 이미지만 5정도를 끌어 올려서 이질감이 느껴지도록 함 (페이지가 느려지는것이 단점)
         });
     </script>
 </body>
