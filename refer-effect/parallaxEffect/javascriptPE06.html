@@ -218,16 +218,216 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-                            <pre><code class="language-html">
+                            <pre><code class="language-html">&lt;body class="parallax"&gt;
+&lt;!-- header --&gt;
+&lt;header class="paraInfo"&gt;
+    &lt;h1&gt;&lt;a href="index.html"&gt;Parallax Effect05 - javascript&lt;/a&gt;&lt;/h1&gt;
+    &lt;p&gt;패랠랙스 스크로링 효과 - 나타나기&lt;/p&gt;
+&lt;/header&gt;
+&lt;!-- //header --&gt;
+​
+&lt;!-- main --&gt;
+&lt;main&gt;
+    &lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;px&lt;/div&gt; &lt;!-- scroll--&gt;
+    &lt;ul&gt;
+    &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;nav class="paraNav"&gt;
+        &lt;ul&gt;
+            &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt; &lt;!-- emmt li*9&lt;a[href="section$"]{s$}--&gt;
+            &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;div class="paraCont"&gt;
+        &lt;section id="section1" class="content-item"&gt;
+            &lt;span class="num"&gt;01&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section1&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;삶이 있는 한 희망은 있다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section1 --&gt;
+        ​
+        &lt;section id="section2" class="content-item"&gt;
+            &lt;span class="num"&gt;02&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section2&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;산다는 것 그것은 치열한 전투이다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section2 --&gt;
+        ​
+        &lt;section id="section3" class="content-item"&gt;
+            &lt;span class="num"&gt;03&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section3&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;1퍼센트의 가능성, 그것이 나의 길이다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section3 --&gt;
+        ​
+        &lt;section id="section4" class="content-item"&gt;
+            &lt;span class="num"&gt;04&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section4&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;현재에 집중할 수 있다면 행복할 것이다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section4 --&gt;
+        ​
+        &lt;section id="section5" class="content-item"&gt;
+            &lt;span class="num"&gt;05&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section5&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;진정으로 웃으려면, 고통을 즐길줄 알아야 한다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section5 --&gt;
+        ​
+        &lt;section id="section6" class="content-item"&gt;
+            &lt;span class="num"&gt;06&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section6&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;절대 어제를 후회하지 마라.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section6 --&gt;
+        ​
+        &lt;section id="section7" class="content-item"&gt;
+            &lt;span class="num"&gt;07&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section7&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;높은 목표를 세우고, 스스로 채찍질 한다.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section7 --&gt;
+        ​
+        &lt;section id="section8" class="content-item"&gt;
+            &lt;span class="num"&gt;08&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section8&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;실패를 두려워하지 마라.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section8 --&gt;
+        ​
+        &lt;section id="section9" class="content-item"&gt;
+            &lt;span class="num"&gt;09&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section9&lt;/h2&gt;
+            &lt;figure class="img-Wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;피할수 없으면 즐겨라.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section9 --&gt;
+    &lt;/div&gt;
+    &lt;!-- //contents --&gt;
+&lt;/main&gt;
+&lt;!-- //main --&gt;
+​
+&lt;!-- footer --&gt;
+&lt;footer class="paraFooter"&gt;
+    &lt;h1&gt;Parallax &lt;em&gt;Scrolling&lt;/em&gt;&lt;/h1&gt;
+    &lt;div class="FooterInfo"&gt;
+        &lt;h2&gt;자바스크립트&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="javascriptPE01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascriptPE02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascriptPE03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascriptPE04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="active"&gt;&lt;a href="javascriptPE05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascriptPE06.html"&gt;6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascriptPE07.html"&gt;7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascriptPE08.html"&gt;8&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="FooterInfo"&gt;
+        &lt;h2&gt;제이쿼리&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="jqueryPE01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="jqueryPE02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="jqueryPE03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="jqueryPE04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="jqueryPE05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="jqueryPE06.html"&gt;6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="jqueryPE07.html"&gt;7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="jqueryPE08.html"&gt;8&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;
 </code></pre>
                         </div>
                         <div class="css">
-                            <pre><code class="language-css">
+                            <pre><code class="language-css"> .paraNav {
+    top: 20px;
+    transition: top 0.4s ease;
+}
 
+.paraNav.hide {
+    top: -200px;
+}
+
+.paraNav li a {
+    width: auto;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.paraNav li.active a {
+    border-radius: 30px;
+}
                         </code></pre>
                         </div>
                         <div class="javascript">
-                            <pre><code class="language-javascript">
+                            <pre><code class="language-javascript">const scrollMenu = function(){
+                                    document.querySelectorAll(".paraNav ul li a").forEach(li => {
+                                        li.addEventListener("click", e => {
+                                            e.preventDefault();
+                                            document.querySelector(li.getAttribute("href")).scrollIntoView({
+                                                behavior: "smooth"
+                                            })
+                                        })
+                                    });
+                                }
+                                const scrollProgress = function(){
+                                    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+                                    document.querySelectorAll(".content-item").forEach(item => {
+                                        let offset1 = (scrollTop - item.offsetTop) * 0.1;
+                                        let offset2 = (scrollTop - item.offsetTop) * 0.2;
+                                        item.querySelector(".img").style.transform = "translateX("+ offset1 +"px)";
+                                        item.querySelector(".desc").style.transform = "translateX("+ -offset2 +"px)";
+                                    });
+                                    //메뉴
+                                    document.querySelectorAll(".content-item").forEach((item, index) => {
+                                        if( scrollTop >= item.offsetTop - 2){
+                                            document.querySelectorAll(".paraNav ul li").forEach(li => {
+                                                li.classList.remove("active");
+                                            });
+                                            document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
+                                        }
+                                    });
+                                    //출력
+                                    document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+                                }
+                                
+                                window.addEventListener("scroll", scrollProgress);
+                                scrollMenu();
                             </code></pre>
                         </div>
                     </div>
