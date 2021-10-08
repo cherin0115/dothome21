@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOTTE WORLD</title>
+    <style>
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        ol,
+        ul {
+            list-style: none;
+        }
+
+
+/*나눔스퀘어 */
+        @font-face {
+            font-family: 'NanumSquare';
+            font-weight: 400;
+            src: url(NanumSquareR.eot);
+            src: url(NanumSquareR.eot?#iefix) format('embedded-opentype'),
+                url(NanumSquareR.woff) format('woff'),
+                url(NanumSquareR.ttf) format('truetype');
+            }
+            @font-face {
+            font-family: 'NanumSquare';
+            font-weight: 700;
+            src: url(NanumSquareB.eot);
+            src: url(NanumSquareB.eot?#iefix) format('embedded-opentype'),
+                url(NanumSquareB.woff) format('woff'),
+                url(NanumSquareB.ttf) format('truetype');
+            }
+            @font-face {
+            font-family: 'NanumSquare';
+            font-weight: 800;
+            src: url(NanumSquareEB.eot);
+            src: url(NanumSquareEB.eot?#iefix) format('embedded-opentype'),
+                url(NanumSquareEB.woff) format('woff'),
+                url(NanumSquareEB.ttf) format('truetype');
+            }
+            @font-face {
+            font-family: 'NanumSquare';
+            font-weight: 300;
+            src: url(NanumSquareL.eot);
+            src: url(NanumSquareL.eot?#iefix) format('embedded-opentype'),
+                url(NanumSquareL.woff) format('woff'),
+                url(NanumSquareL.ttf) format('truetype');
+            }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            
+            font-family: 'NanumSquare';
+            font-size: 18px;
+            width: 960px;
+            margin: 0 auto;
+        }
+        header{
+            position: relative;
+            padding-top: 50px;
+            width: 100%;
+        }
+        header .headerInner{
+            height: 100px;
+            font-weight: 800;
+        }
+        .headerInner .logo {}
+        .headerInner .logo img{
+            width: 110px;
+            float: left;
+        }
+        .headerInner .desc{
+            float: right;
+        }
+        .headerInner .desc span{
+            margin-top: 43px;
+            display: inline-block;
+            padding: 0 15px;
+            cursor: pointer;
+        }
+        .desc span:last-child {
+            padding-right: 0;
+        }
+        nav {
+            width: 100%;
+        }
+        nav img {
+            width: 960px;
+        }
+        article {
+            width: 960px;
+            margin-top: 10px;
+            height: 210px;
+            margin-bottom: 15px;
+        }
+        article .news{
+            width: 40%;
+            height: 148px;
+            float: left;
+            border:1px solid #cfcfcf;
+            margin-right: 10px;
+            padding: 30px 45px;
+            overflow: hidden;
+        }
+        article .news .newsTitle{
+            margin-bottom: 10px;
+        }
+        article .news .newsTitle h2{
+            font-size: 18px;
+            display: inline-block;
+            font-weight: 800;
+            padding-right: 20px;
+            position: relative;
+        }
+        article .news .newsTitle h2:after {
+            display: inline-block;
+            content: '';
+            width: 2px; height: 18px;
+            background: #000;
+            vertical-align: middle;
+            position: absolute;
+            left: 115px;
+
+        }
+        article .news .newsTitle h3{
+            font-weight: 800;
+            color: #919191;
+            font-size: 18px;
+            display: inline-block;
+        }
+        article .news .newsTitle p{
+            float: right;
+            font-size: 13px;
+            color: #919191;
+            
+        }
+        .newsTitle p:after{
+            display: inline-block;
+            width: 25px; height: 25px;
+            background: url('img/lotterworld/plus.jpg');
+            content: "";
+            background-size: 100%;
+            vertical-align: middle;
+            
+        }
+        article .news .newsDesc{
+            
+        }
+        .spanDesc {
+            display: inline-block;
+            padding: 10px 0;
+            float: left;
+
+        }
+        .spanDesc p {
+            font-size: 15px;
+            padding: 5px 0 7px 0;
+        }
+        .day {
+            display: inline-block;
+            float: right;
+            font-size: 13px;
+            
+        }
+        .day p {
+            padding: 7px 0 12px;
+        }
+        article .benefit{
+
+            width: 49%;
+            float: right
+        }
+        article .benefit img{
+            width: 470px;
+            height: 210px;
+        }
+        main {
+            width: 960px; 
+            height: 370px;  
+            border-bottom: 1px solid #cfcfcf;
+        }
+        main .mainInner{
+            width: 100%;
+            
+        }
+        main .mainInner h2{
+
+            margin-top: 40px;
+            font-weight: 800;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: block;
+            
+        }
+        main .mainInner .mainDesc{
+            float: left;
+            margin-right: 20px;
+            
+        }
+        main .mainInner .mainDesc:last-child {
+            margin-right: 0;
+        }
+        .mainDesc img{
+            width: 225px;
+            height: 225px;
+        }
+        .mainDesc p{
+            
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        footer {
+            color: #707070;
+            font-weight: 600;
+            font-size: 13px;
+            
+        }
+        footer .footerInner{
+            margin-top: 30px;
+        }
+        .footerInner p{
+            padding: 5px 0;
+        }
+        .footerInner span{
+            display: inline-block;
+            margin: 30px 0 100px;
+            letter-spacing: -1px
+        
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header>
+                <div class="headerInner">
+                    <div class="logo">
+                        <img src="img/Coding_img1-sliced_01_03.jpg" alt="롯데월드로고">
+                    </div>
+                    <div class="desc">
+                        <span>즐길거리</span>
+                        <span>요금/우대혜택</span>
+                        <span>참여프로그램</span>
+                        <span>이용가이드</span>
+                        <span>소통서비스</span>
+                    </div>
+                </div>
+            </header>
+            <nav>
+                <img src="img/Coding_img1-sliced_01_07.gif" alt="미라클있수마수">
+            </nav>
+            <article>
+                <div class="news">
+                    <div class="newsTitle">
+                            <h2>롯데월드 소식</h2>
+                            <h3>뉴스.공지</h3>
+                        <p>더보기</p>
+                    </div>
+                        <div class="newsDesc">
+                            <div class="spanDesc">
+                                <p><a href="#c">그럴싸진관 미라클</a> </p>
+                                <p><a href="#c">드림스테이지 '힘내 소중한 너'</a> </p>
+                                <p><a href="#c">'힘내 소중한 너'음원 발매</a> </p>
+                                <p><a href="#c">이용 요금 조정 안내</a> </p>
+                            </div>
+                            <div class="day">
+                                <p>2018.11.19</p>
+                                <p>2018.11.20</p>
+                                <p>2018.11.13</p>
+                                <p>2018.11.12</p>
+                            </div>
+                        </div>
+                    
+                </div>
+                <div class="benefit">
+                    <a href="https://adventure.lotteworld.com/kor/price/ticket/contentsid/282/index.do"> <img src="img/Coding_img1-sliced_01_11.gif" alt="온종일혜택ON"></a>
+            </article>
+            <main>
+                <div class="mainInner">
+                    <h2>특별한 경험</h2>
+                    <div class="mainDesc">
+                        <img src="img/Coding_img1-sliced_01_14.gif" alt="롯데월드">
+                        <p>연간 회원 안내</p>
+                    </div>
+                    <div class="mainDesc">
+                        <img src="img/Coding_img1-sliced_01_16.gif" alt="롯데월드">
+                        <p>프리미엄투어</p>
+                    </div>
+                    <div class="mainDesc">
+                        <img src="img/Coding_img1-sliced_01_18.gif" alt="롯데월드">
+                        <p>공연참여 프로그램</p>
+                    </div>
+                    <div class="mainDesc">
+                        <img src="img/Coding_img1-sliced_01_20.gif" alt="롯데월드">
+                        <p>단체프로그램</p>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="footerInner">
+                    <p>서울특별시 송파구 올림픽로 240 호텔롯데 롯데월드 | 대표자:박동기</p>
+                    <p>사업자등록번호:219-85-00014 | 통신판매업신고번호:송파 제 5513호 | 전화: 1661-2000</p>
+                    <span>COPYRIGHT 2018 LOTTEWORLD ALL RIGHTS RESERVED.</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
