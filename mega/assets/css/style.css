@@ -3,7 +3,9 @@
 /* 레이아웃 */
 #mNav {display: none; position: absolute; top: 10px; right: 14px;}
 #header {width: 100%; background-color: #fff; border-bottom: 1px solid #c6c6c6;}
-#banner {position: relative;}
+#banner {position: relative;  background-color: #fff}
+#movie {background-color: #fff;}
+#event {}
 
 /* 가운데 영역 */
 .container {position: relative; width: 1280px; margin: 0 auto; background: rgba(0,0,0,0); }
@@ -97,6 +99,14 @@
 .movie_chart > div > div > div .infor .infor_btn a {float: left; width: 49%; margin-right: 2%; text-align: center; background: #f2f2f2; font-size: 18px; padding: 15px 0; box-sizing: border-box;}
 .movie_chart > div > div > div .infor .infor_btn a:last-child {margin-right: 0;}
 
+
+/* 이벤트 */
+.event {overflow: hidden; padding: 100px 0;}
+.event h2 {font-size: 30px; font-weight: 500; margin-bottom: 20px;}
+.event .event_left {overflow: hidden; float: left; width: 66%; margin-right: 2%;}
+.event .event_left .event_box1 {float: left; width: 50%;}
+.event .event_left .event_box2 {float: left; width: 50%;}
+.event .event_right {float: left; width: 32%; }
 
 /* 미디어쿼리 */
 @media (max-width: 1290px){
