@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Effect</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.css">
+    <style>
+        /* reset */
+        @font-face { 
+            font-family: 'NEXON Lv1 Gothic OTF'; 
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+            font-weight: normal; 
+            font-style: normal; 
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box; 
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.2s;
+        }
+
+        a:hover {
+            border-bottom: 1px dashed #fff;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            background: url(../assets/img/su10.jpg) no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            height: 100vh;
+            transition: all 0.2s;
+            overflow: hidden;
+            font-size: 16px;
+            line-height: 1.5;
+            font-family: 'NEXON Lv1 Gothic OTF'; 
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(18, 6, 29, 0.9);
+            z-index: -1;
+        }
+
+        /* info */
+        .info {
+            position: absolute;
+            z-index: 1000;
+        }
+
+        .info h1 {
+            font-size: 20px;
+            border-bottom: 1px dashed #fff;
+            margin-bottom: 8px;
+        }
+
+        .info p, .info li {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 3px;
+        }
+
+        .info ul {
+            position: relative;
+            margin-bottom: 3px;
+        }
+
+        .info ul:first-child::before {
+            content: 'jQuery';
+            position: absolute;
+            right: 108%; top: 0;
+        }
+        .info ul:last-child::before {
+            content: 'JavaScript';
+            position: absolute;
+            right: 108%; top: 0;
+        }
+
+        .info li {
+            display: inline;
+        }
+
+        .info li.active a:first-child {
+            background: #fff;
+            color: #000;
+        }
+
+        .info.left {
+            left: 20px;
+            top: 20px;
+        }
+
+        .info.right {
+            right: 20px;
+            top: 20px;
+        }
+
+        .info.right a {
+            display: inline-block;
+            width: 20px; height: 20px;
+            border: 1px dashed #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            transition: all 0.2s;
+        }
+
+        .info.right a:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .info.bottom {
+            left: 10px;
+            bottom: 10px;
+        }
+
+        .info.view {
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .info.view a {
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 30px;
+            padding: 5px 30px;
+        }
+
+        @media (max-width: 800px){
+            .info.bottom {display: none;}
+            .info.right {display: none;}
+        }
+
+        /* slide */
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .slider-wrap {
+            width: 600px;
+            height: 360px;
+            overflow: hidden;
+            margin: 10px;
+        }
+        .slider-img {
+            position: relative;
+            width: 600px;
+            height: 1800px;
+            overflow: hidden;
+        }
+        .slider-img .slider {
+            width: 600px;
+            height: 360px;
+            position: relative;
+        }
+        .slider-img .slider span {
+            position: absolute;
+            left: 5px; top: 5px;
+            background: rgba(0,0,0,.4);
+            color: #fff;
+            padding: 5px 10px;
+            line-height: 1;
+        }
+        @media (max-width: 800px){
+            main {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head> 
+<body class="bg bg6 brown">
+    <!-- main -->
+    <main>
+        <div class="slider-wrap slider-wrap1">
+            <div class="slider-img slider-img1">
+                <div class="slider slider1"><img src="../assets/img/bg5.jpg" alt="이미지1"><span>이미지1</span></div>
+                <div class="slider slider1"><img src="../assets/img/bg6.jpg" alt="이미지2"><span>이미지2</span></div>
+                <div class="slider slider1"><img src="../assets/img/bg7.jpg" alt="이미지3"><span>이미지3</span></div>
+                <div class="slider slider1"><img src="../assets/img/bg8.jpg" alt="이미지4"><span>이미지4</span></div>
+                <div class="slider slider1"><img src="../assets/img/bg9.jpg" alt="이미지5"><span>이미지5</span></div>
+            </div>
+        </div>
+        <div class="slider-wrap slider-wrap2">
+            <div class="slider-img slider-img2">
+                <div class="slider slider2"><img src="../assets/img/bg5.jpg" alt="이미지1"><span>이미지1</span></div>
+                <div class="slider slider2"><img src="../assets/img/bg6.jpg" alt="이미지2"><span>이미지2</span></div>
+                <div class="slider slider2"><img src="../assets/img/bg7.jpg" alt="이미지3"><span>이미지3</span></div>
+                <div class="slider slider2"><img src="../assets/img/bg8.jpg" alt="이미지4"><span>이미지4</span></div>
+                <div class="slider slider2"><img src="../assets/img/bg9.jpg" alt="이미지5"><span>이미지5</span></div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    
+    <!-- info -->
+    <div class="info left">
+        <h1><a href="sliderEffect-cover.html">jquery Slider Effect04</a></h1>
+        <p>이미지 슬라이드 - 위로 넘기기</p>
+    </div>
+
+    <div class="info right">
+        <ul>
+            <li><a href="javascriptSE01.html">1</a></li>
+            <li><a href="javascriptSE02.html">2</a></li>
+            <li><a href="javascriptSE03.html">3</a></li>
+            <li><a href="javascriptSE04.html">4</a></li>
+            <li><a href="javascriptSE05.html">5</a></li>
+        </ul>
+        <ul>
+            <li><a href="jquerySE01.html">1</a></li>
+            <li><a href="jquerySE02.html">2</a></li>
+            <li><a href="jquerySE03.html">3</a></li>
+            <li class="active"><a href="jquerySE04.html">4</a></li>
+            <li><a href="jquerySE05.html">5</a></li>
+        </ul>
+    </div>
+
+    <div class="info bottom">
+        <button> 소스 보기</button>
+    </div>
+    <!-- //info -->
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        //sample1
+        const sliderWrap1 = $(".slider-wrap1");
+        const sliderImg1 = $(".slider-img1");
+        const slider1 = $(".slider1");
+
+        let currentIndex1 = 0;
+        let sliderHeight1 = slider1.height();
+
+        setInterval(function(){
+            currentIndex1 < 4 ? currentIndex1++ : currentIndex1 = 0;
+            
+            let sliderPosition = currentIndex1 * -sliderHeight1;
+            sliderImg1.animate({ top: sliderPosition }, 600, "easeOutExpo");
+        }, 3000);
+
+        //sample2
+        const sliderWrap2 = $(".slider-wrap2");
+        const sliderImg2 = $(".slider-img2");
+        const slider2 = $(".slider2");
+
+        let currentIndex2 = 0;
+        let sliderHeight2 = slider2.height();
+
+        setInterval(function(){
+            sliderImg2.animate({ top: -sliderHeight2 }, 600, "easeOutExpo", function(){
+                $(".slider2:first-child").appendTo(sliderImg2);
+                sliderImg2.css("top","");
+            })
+        }, 3000);
+    </script>
+</body>
+</html>
