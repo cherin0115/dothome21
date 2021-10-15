@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website test02</title>
+
+    <style>
+        /* 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        ol,
+        ul,
+        li {
+            list-style: none;
+        }
+
+        /* font */
+       
+
+        /* container */
+        #wrap {
+            width: 1000px;
+            margin: 0 auto;
+            font-family: 'NanumSquare';
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        /* header */
+        #header {
+            height: 115px;
+            background: rgb(255, 255, 255);
+            border-bottom: 1px solid rgb(224, 224, 224);
+            padding-bottom: 20px;
+        }
+
+        .logo {
+            margin-top: 70px;
+            float: left;
+        }
+
+        .menu {
+            margin-top: 80px;
+            float: right;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 25px;
+        }
+
+        .menu ul {}
+
+        .menu li {
+            display: inline-block;
+            padding-left: 50px;
+            font-weight: 800;
+        }
+
+        /* main */
+        /* banner */
+        .banner {
+            margin-bottom: 27px;
+        }
+
+        /* content */
+        .content {
+            width: 100%;
+            height: 140px;
+            margin-bottom: 43px;
+        }
+
+        .content .innerCont {
+            background: #F2F2F2;
+            width: 488px;
+            height: 140px;
+            float: left;
+        }
+
+        .content .innerCont:first-child {
+            margin-right: 23px;
+        }
+
+        .innerCont .inner_left {
+            display: inline-block;
+            padding: 26px 0px 0px 26px
+        }
+
+        .innerCont .inner_left h2 {
+            font-size: 25px;
+            font-weight: 900;
+        }
+
+        .innerCont .inner_left p {
+            padding-top: 8px;
+            padding-bottom: 15px;
+            font-weight: normal;
+            font-size: 16px;
+        }
+
+        .innerCont .inner_left strong {
+            padding-left: 24px;
+            font-size: 20px;
+            font-weight: 900;
+            position: relative;
+        }
+
+        .innerCont .inner_left strong::before {
+            content: '';
+            width: 12px;
+            height: 18px;
+            bottom: 3px;
+            left: 0;
+            background: url(img/Coding_img2_18.jpg);
+            position: absolute;
+        }
+
+        .innerCont .inner_left.sec strong::before {
+            content: '';
+            width: 18px;
+            height: 18px;
+            bottom: 5px;
+            left: 0;
+            background: url(img/Coding_img2_15.jpg);
+            position: absolute;
+        }
+
+        .innerCont .inner_right {
+            float: right;
+
+        }
+
+        .innerCont .inner_right img {
+            padding-top: 45px;
+            padding-right: 20px;
+        }
+
+        /* main - Best & Review*/
+        .review .title ul {
+            display: flex;
+            font-size: 30px;
+            font-weight: 900;
+            padding-bottom: 30px;
+        }
+
+        .review .title li {
+            padding-right: 10px;
+        }
+
+        .review .title li:last-child {
+            color: #b3b3b3;
+        }
+
+        .review .innerDesc {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .review .innercont {
+            width: 310px;
+            height: 310px;
+            background: #777;
+        }
+
+        .review .innercont .inner {
+            display: inline-block;
+            width: 150px;
+        }
+
+        .review .innercont .inner.right img {
+            margin-left: 115px;
+        }
+
+        .review .innercont .inner.left h3 {
+            padding-top: 17px;
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .review .innercont .inner.left p {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: 900;
+        }
+
+        .review .innercont .inner.left p:last-child {
+            padding-left: 3px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #555555;
+        }
+
+        footer {
+            margin-top: 150px;
+            height: 195px;
+            background: #202020;
+        }
+        .footer {
+        }
+        .footer .logo {   
+            margin-top: 32px;
+            float: left;     
+        }
+        .footer .footerInfo {
+            float: right;
+        }
+        .footer .footerInfo .desc {
+            display: block;
+
+        }
+        .footer .footerInfo .desc.first {
+            margin-top: 32px;
+            display: inline-flex;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            padding-bottom: 20px;
+        }
+        .footer .footerInfo .desc.first li {
+            padding-right: 25px;
+        }
+        .footer .footerInfo .desc.first li::after {
+            content: '|';
+            color: #555555;
+            margin-left: 25px;
+        }
+        .footer .footerInfo .desc.first li:last-child::after {
+            display: none;
+        }
+        .footer .footerInfo .desc.sec li{
+            padding-top: 10px;
+            color: #777;
+            font-size: 15px;
+            font-weight: 700;
+        } 
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header id="header">
+                <div class="logo">
+                    <img src="img/Coding_img2_03.jpg" alt="Cookit">
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">COOKIT소개</a></li>
+                        <li><a href="#">COOKIT 메뉴</a></li>
+                        <li><a href="#">리뷰</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">MY쿡킷</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <div class="container">
+            <main>
+                <div class="banner">
+                    <div class="slider-img">
+                        <div class="slider" data-name="slideimg1"><img src="img/Coding_img2_06.jpg" alt="이미지1"></div>
+                        <div class="slider" data-name="slideimg2"><img src="img/Coding_img2_06.jpg" alt="이미지2"></div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="innerCont">
+                        <div class="inner_left">
+                            <h2>우리집도 COOKIT 배송이 되나요?</h2>
+                            <p>배송이 가능한지 알려드려요.</p>
+                            <strong>배송지 검색</strong>
+                        </div>
+                        <div class="inner_right">
+                            <img src="img/Coding_img2_10.jpg" alt="저울계이미지">
+                        </div>
+                    </div>
+                    <div class="innerCont">
+                        <div class="inner_left sec">
+                            <h2>7월 30일(화)에 받을 수 있어요</h2>
+                            <p>오전 7시까지 주문하시면 다음날 배송됩니다.</p>
+                            <strong>63:28:32</strong>
+                        </div>
+                        <div class="inner_right">
+                            <img src="img/Coding_img2_12.jpg" alt="트럭이미지">
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="title">
+                        <ul>
+                            <li><a href="#">실시간 베스트 |</a></li>
+                            <li><a href="#">생생한 리뷰</a></li>
+                        </ul>
+                    </div>
+                    <div class="innerDesc">
+                        <div class="innercont">
+                            <img src="img/Coding_img2_24.jpg" alt="어복쟁반">
+                            <div class="inner left">
+                                <h3>평양식 어복쟁반</h3>
+                                <p>33,800원</p>
+                                <p>/ 3인분</p>
+                            </div>
+                            <div class="inner right">
+                                <img src="img/Coding_img2_33.jpg" alt="장바구니">
+                            </div>
+                        </div>
+                        <div class="innercont">
+                            <img src="img/Coding_img2_26.jpg" alt="쭈삼">
+                            <div class="inner left">
+                                <h3>새우쭈꾸미삼겹살</h3>
+                                <p>29,800원</p>
+                                <p>/ 3인분</p>
+                            </div>
+                            <div class="inner right">
+                                <img src="img/Coding_img2_33.jpg" alt="장바구니">
+                            </div>
+                        </div>
+                        <div class="innercont">
+                            <img src="img/Coding_img2_28.jpg" alt="어복쟁반">
+                            <div class="inner left">
+                                <h3>방풍나물 아귀찜</h3>
+                                <p>32,800원</p>
+                                <p>/ 3인분</p>
+                            </div>
+                            <div class="inner right">
+                                <img src="img/Coding_img2_33.jpg" alt="장바구니">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <footer>
+        <div id="wrap">
+            <div class="container">
+                <div class="footer">
+                    <div class="logo">
+                        <img src="img/Coding_img2_35.jpg" alt="logo">
+                    </div>
+                    <div class="footerInfo">
+                        <ul class="desc first">
+                            <li>이용약관</li>
+                            <li>개인정보처리 방침</li>
+                            <li>법적고지</li>
+                            <li>사용자정보 확인</li>
+                        </ul>
+                        <ul class="desc sec">
+                            <li>씨제이제일제당(주) | 대표자: 신현재</li>
+                            <li>주소: 서울 중구 동호로330 CJ제일제당 센터(우)04560 | 사업자등록번호 : 104-86-09535</li>
+                            <li>통신판매업신고 중구 제 07767호 | 개인정보보호책임자 : 류화정</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
