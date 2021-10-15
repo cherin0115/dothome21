@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* 여백 초기화 */
 body,
 div,
@@ -45,9 +47,9 @@ textarea {
     color: #222;
     font-family: 'NEXONLv1Gothic', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
 }
-
+/*  */
 /* 링크 초기화 */
-a {
+a { 
     color: #222;
     text-decoration: none
 }
@@ -65,12 +67,24 @@ strong {
 em {
     font-style: normal;
 }
-
 img {
     width: 100%;
 }
 
-/* 제목초기화 */
+fieldset {
+    border: 0 none;
+}
+button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+/* 테이블 초기화 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* 제목 초기화 */
 h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
 }
@@ -90,26 +104,84 @@ dl.list li::before {
     background: #000;
     position: absolute;
     left: 0; top: 7px;
-} 
+}
+/* 인풋 스타일 유형 */
+.input_write {  
+    width: 100%;
+    display: block;
+    border: 1px solid #dfdfdf;
+    padding: 13px;
+    height: 56px;
+    font-size: 16px;
+    line-height: 22px;
+    box-sizing: border-box;
+}
+.input_write2 {  
+    border: 2px solid #e7b4ff;
+    padding: 15px 30px;
+    margin: 5px;
+    border-radius: 50px;
+    outline: none;
+    background: rgb(254, 238, 255);
+    color: #7808ac;
+}
+.input_write2.w100 {
+    min-width: 300px;
+}
+.input_write2::-webkit-input-placeholder {
+    color: #7808ac;
+}
+.input_write2:-ms-input-placeholder {
+    color: #7808ac;
+}
+.input_write2::placeholder{
+    color: #7808ac;
+}
+/* 버튼 스타일 유형 */
+.btn_submit {
+    width: 100%;
+    padding: 16px;
+    background-color: #eee;
+    transition: box-shadow 0.3s, background-color 0.3s;
 
+}
+.btn_submit:hover {
+    box-shadow: inset 0 0 0 2px #000;
+    background-color: #fff;
+}
+.btn_submit2{
+  background: #e7b4ff;
+  color: #fff;
+  border-radius: 50px;
+  width: 58px;
+  height: 58px;
+  margin-top: 4px;
+  margin-left: 4px;
+  transition: box-shadow 0.3s;
+}
+.btn_submit2:hover {
+    box-shadow: inset 0 0 0 6px #c956ff;
+}
 /* 이미지 표현 방법 */
 /* 
-    img 태그 --> 이미지에 의미가 있을 경우 --> alt(대체 문자)
-    background 속성 --> 이미지에 의미가 없을 경우(장식용)
-    이미지 스프라이트 표현 --> 이미지를 효율적(의미가 있음)으로 쓰기 위한 방법(background)
-    =>css로 대체 문자를 만들어 줌 --> IR 효과
+    img 태그를 이용해서 표현 --> 이미지에 의미가 있을 때 --> alt(대체 문자)
+    background 속성을 이용해서 표현 --> 이미지에 의미가 없을 때(장식용)
+
+    이미지 스프라이트 표현 --> 이미지를 효율적(의미가 있음)으로 쓰기 위한 방법(background) 
+    CSS로 대체 문자를 만들어 줌  --> IR 효과
 */
 
 /* ir 효과 */
+/* (ir_pm) 의미있는 이미지의 대체 텍스트를 제공하는 경우 */
+/* (ir_wa) 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때 */
+/* (ir_so) 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
 .ir_pm {
     display: block; 
     overflow: hidden; 
     font-size: 0; 
     line-height: 0; 
     text-indent: -9999px;
-}
-/* 의미있는 이미지의 대체 텍스트를 제공하는 경우 */
-
+} 
 .ir_wa {
     display: block; 
     overflow: hidden; 
@@ -118,8 +190,6 @@ dl.list li::before {
     width: 100%; 
     height: 100%;
 }
-/* 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때 */
-
 .ir_so {
     overflow: hidden; 
     position: absolute; 
@@ -127,5 +197,4 @@ dl.list li::before {
     height: 0; 
     line-height: 0; 
     text-indent: -9999px;
-}
-/* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
+} 
