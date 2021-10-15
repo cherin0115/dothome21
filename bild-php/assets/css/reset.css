@@ -1,0 +1,282 @@
+@charset "utf-8";
+
+/* 여백 초기화 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 폰트 초기화 */
+body,
+button,
+input,
+select,
+table,
+textarea {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #222;
+    font-family: 'Lexend';
+}
+
+/* 링크 초기화 */
+a {
+    color: #222;
+    text-decoration: none
+}
+
+/* 목록 초기화 */
+ol,
+ul {
+    list-style: none
+}
+
+/* 스타일 초기화 */
+strong {
+    font-weight: normal;
+}
+em {
+    font-style: normal;
+}
+fieldset {
+    border: 0 none;
+}
+button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* 테이블 초기화 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 제목 초기화 */
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+/* 리스트 스타일 유형 */
+ul.list li,
+ol.list li,
+dl.list li {
+    position: relative;
+    padding-left: 10px;
+}
+ul.list li::before,
+ol.list li::before,
+dl.list li::before {
+    content: '';
+    width: 3px; height: 3px;
+    background: #000;
+    position: absolute;
+    left: 0; top: 7px;
+} 
+ul.list2 li,
+ol.list2 li,
+dl.list2 li {
+    position: relative;
+    padding-left: 10px;
+}
+ul.list2 li::before,
+ol.list2 li::before,
+dl.list2 li::before {
+    content: '';
+    width: 7px; height: 7px;
+    background: #000;
+    position: absolute;
+    border-radius: 50%;
+    left: 0; top: 7px;
+} 
+
+/* 인풋 스타일 유형 */
+.input_write {
+    display: block;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
+    width: 850px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 22px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    font-size: 20px;
+}
+.input_write2 {
+    display: block;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: transparent;
+    width: 465px;
+    height: 50px;
+    font-weight: 300;
+    box-sizing: border-box;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+input::-webkit-input-placeholder {
+    color: #767676;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 300;
+}
+input:-ms-input-placeholder {
+    color: #767676;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 300;
+}
+input::placeholder {
+    color: #767676;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 300;
+}
+
+/* 버튼 스타일 유형 */
+.btn_submit1 {
+    font-family: 'Lexend';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    width: 850px;
+    height: 60px;
+    border-radius: 5px;
+    padding: 16px;
+    background-color: #AB9280;
+    color: #fff;
+    transition: box-shadow .3s, background-color .3s;
+    margin-bottom: 43px;
+}
+.btn_submit1:hover {
+    box-shadow: inset 0 0 0 2px #AB9280;
+    background-color: #fff;
+    color: #AB9280;
+}
+.btn_submit2 {
+    font-family: 'Lexend';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    width: 465px;
+    height: 60px;
+    border-radius: 5px;
+    padding: 16px;
+    background-color: #AB9280;
+    color: #fff;
+    transition: box-shadow .3s, background-color .3s;
+}
+.btn_submit2:hover {
+    box-shadow: inset 0 0 0 2px #AB9280;
+    background-color: #fff;
+    color: #AB9280;
+}
+.btn_submit3 {
+    font-family: 'Lexend';
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+    background-color: #ab9280;
+    color: #fff;
+    float: right;
+    margin-left: 10px;
+}
+.btn_submit3 a {
+    color: #fff;
+}
+.btn_submit3:hover {
+    border: 1px solid #ab9280;
+    background: #fff;
+    color: #ab9280;
+}
+.btn_submit3:hover a {
+    color: #ab9280;
+}
+
+
+/* 간격 */
+.mt0 {margin-top: 0;}
+.mt10 {margin-top: 10px;}
+.mt20 {margin-top: 20px;}
+.mt30 {margin-top: 30px;}
+.mt40 {margin-top: 40px;}
+.mt50 {margin-top: 50px;}
+.mt60 {margin-top: 60px;}
+.mt70 {margin-top: 70px;}
+.mt80 {margin-top: 80px;}
+.mt90 {margin-top: 90px;}
+.mt100 {margin-top: 100px;}
+
+/* 이미지 표현 방법 */
+/* 
+    img 태그를 이용해서 표헌 --> 이미지에 의미가 있을 때  --> alt(대체 문자)
+    background 속성을 이용해서 표현 --> 이미지에 의미가 없을 때 (장식용)
+
+    이미지 스플라이트 표현 --> 이미지를 효율적(의미가 있음)으로 쓰기 위한 방법(background) --> 대체문자가 없음
+    CSS로 대체 문자를 만들어줌 --> IR 효과
+*/
+
+/* ir 효과 */
+/* (.ir_pm)의미있는 이미지의 대체 텍스트를 제공하는 경우 */
+/* (.ir_wa)의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때 */
+/* (.ir_so)대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
+.ir_pm {
+    display: block; 
+    overflow: hidden; 
+    font-size: 0; 
+    line-height: 0; 
+    text-indent: -9999px;
+} 
+.ir_wa {
+    display: block; 
+    overflow: hidden; 
+    position: relative; 
+    z-index: -1; 
+    width: 100%; height: 100%;
+} 
+.ir_so {
+    overflow: hidden; 
+    position: absolute; 
+    width: 0; height: 0; 
+    line-height: 0; 
+    text-indent: -9999px;
+} 
