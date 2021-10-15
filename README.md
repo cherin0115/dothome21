@@ -4,7 +4,8 @@
 메인 <a href="https://cherin0115.github.io/dothome21/"> 바로가기</a>
 
 팀프로젝트 <a href="http://calidreams.dothome.co.kr/bild-php/pages/main.php"> 바로가기</a> 
-FIGMA <a href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FA6Ri88GV43LgjVHj7GiCLo%2FJquery-javascript-ex%3Fnode-id%3D0%253A1"> 바로가기</a> 
+
+FIGMA<a href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FA6Ri88GV43LgjVHj7GiCLo%2FJquery-javascript-ex%3Fnode-id%3D0%253A1"> 바로가기</a> 
  
 자바스크립트 <a href="https://cherin0115.github.io/dothome21/javascript/index.html"> 바로가기</a>
 
