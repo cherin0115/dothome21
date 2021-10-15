@@ -273,7 +273,7 @@ setInterval(function () {
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        //sample1
+        // sample1
         const sliderImg1 = document.querySelector(".slider-img1");
         const sliderInner1 = document.querySelector(".slider-inner1");
         const slider1 = document.querySelector(".slider1");
@@ -281,42 +281,45 @@ setInterval(function () {
         let currentIndex1 = 0;
         let sliderHeight1 = slider1.offsetHeight;
 
-        sliderInner1.style.transition = " all 0.3s"
+        sliderInner1.style.transition = "all 0.3s";
         sliderInner1.style.top = "0px";
 
+        // 이미지 하나씩 나오게 하기
         setInterval(() => {
             currentIndex1 < 4 ? currentIndex1++ : currentIndex1 = 0;
             let sliderPosition = currentIndex1 * -sliderHeight1 + "px";
 
-            sliderInner1.style.transition = " all 0.3s"
+            sliderInner1.style.transition = "all 0.3s";
             sliderInner1.style.top = sliderPosition;
         }, 3000);
 
-        //sample2
+
+        // sample2
         const sliderImg2 = document.querySelector(".slider-img2");
         const sliderInner2 = document.querySelector(".slider-inner2");
-        const slider2 = document.querySelectorAll(".slider2");
-    
+        const slider2 = document.querySelector(".slider2");
+
         let currentIndex2 = 0;
-        let sliderHeight2 = slider2.offsetHeight;
         let sliderCount = document.querySelectorAll(".slider2").length;
+        let sliderHeight2 = slider2.offsetHeight;
 
         let sliderClone = sliderInner2.firstElementChild.cloneNode(true);
         sliderInner2.appendChild(sliderClone);
 
+        // // 이미지 연속으로 나오게 하기
         setInterval(() => {
             currentIndex2++;
-            sliderInner2.style.transition = "all 0.3s"
-            sliderInner2.style.stransform = "translateY(" + -sliderHeight2 * currentIndex2 + "px)";
+            sliderInner2.style.transition = "all 0.3s";
+            sliderInner2.style.transform = "translateY(" + -sliderHeight2 * currentIndex2 + "px)";
 
             if (currentIndex2 == sliderCount) {
                 setTimeout(() => {
-                    sliderInner2.style.transition = "0"
-                    sliderInner2.style.stransform = "translateY(0)"
+                    sliderInner2.style.transition = "0s";
+                    sliderInner2.style.transform = "translateY(0)";
                 }, 300);
                 currentIndex2 = 0;
             }
-        }, 3000)
+        }, 3000);
     </script>
     </script>
 </body>
