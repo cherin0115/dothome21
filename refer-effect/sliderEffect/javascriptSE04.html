@@ -172,11 +172,12 @@
 </code></pre>
                         </div>
                         <div class="css">
-                            <pre><code class="language-css">.slider-wrap {
+                            <pre><code class="language-css">/* slider */
+.slider-wrap {
     display: flex;
+    height: 100vh;
     align-items: center;
     justify-content: center;
-    height: 100vh;
 }
 
 .slider-img img {
@@ -184,79 +185,108 @@
 }
 
 .slider-img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 800px;
-    height: 480px;
+    width: 600px;
+    height: 360px;
     overflow: hidden;
+    margin: 10px;
 }
 
 .slider-inner {
     position: relative;
-    width: 4000px;
-    height: 480px;
+    width: 600PX;
+    height: 2160px;
     overflow: hidden;
-    transition: all .6s;
-    left: 0;
 }
 
 .slider-inner .slider {
     float: left;
-    width: 800px;
-    height: 480px;
+    width: 600px;
+    height: 360px;
     position: relative;
 }
 
-.slider::before {
+.slider-inner .slider::before {
     position: absolute;
     left: 5px;
     top: 5px;
-    background: rgba(0, 0, 0, .4);
+    background: rgba(0, 0, 0, 0.4);
     color: #fff;
     padding: 5px 10px 3px;
-    line-height: 1.3;
     font-family: "NEXONLv1Gothic";
+}
+
+.slider-inner .slider::before {
     content: attr(data-name);
 }
 
-.slider:nth-child(1) {
+.slider-inner .slider:nth-child(1) {
     z-index: 5;
 }
 
-.slider:nth-child(2) {
+.slider-inner .slider:nth-child(2) {
     z-index: 4;
 }
 
-.slider:nth-child(3) {
+.slider-inner .slider:nth-child(3) {
     z-index: 3;
 }
 
-.slider:nth-child(4) {
+.slider-inner .slider:nth-child(4) {
     z-index: 2;
 }
 
-.slider:nth-child(5) {
+.slider-inner .slider:nth-child(5) {
     z-index: 1;
 }
 </code></pre>
                         </div>
                         <div class="javascript">
-                            <pre><code class="language-js">const sliderWrap = $('.slider-wrap');
-const sliderImg = $('.slider-img');
-const sliderInner = $('.slider-inner');
-const slider = $('.slider');
+                            <pre><code class="language-js">// sample1
+const sliderImg1 = document.querySelector(".slider-img1");
+const sliderInner1 = document.querySelector(".slider-inner1");
+const slider1 = document.querySelector(".slider1");
 
-let currentIndex = 0;
-let sliderCount = slider.length;
-let sliderWidth = slider.width();
-let sliderDuration = 600;
+let currentIndex1 = 0;
+let sliderHeight1 = slider1.offsetHeight;
 
-setInterval(function () {
-    (currentIndex &lt; sliderCount - 1) ? currentIndex++ : currentIndex = 0;
-    let sliderPosition = currentIndex * -sliderWidth;
-    sliderInner.animate({ left: sliderPosition }, sliderDuration, "easeOutExpo");
+sliderInner1.style.transition = "all 0.3s";
+sliderInner1.style.top = "0px";
+
+// 이미지 하나씩 나오게 하기
+setInterval(() => {
+    currentIndex1 &lt; 4 ? currentIndex1++ : currentIndex1 = 0;
+    let sliderPosition = currentIndex1 * -sliderHeight1 + "px";
+
+    sliderInner1.style.transition = "all 0.3s";
+    sliderInner1.style.top = sliderPosition;
+}, 3000);
+
+
+// sample2
+const sliderImg2 = document.querySelector(".slider-img2");
+const sliderInner2 = document.querySelector(".slider-inner2");
+const slider2 = document.querySelector(".slider2");
+
+let currentIndex2 = 0;
+let sliderCount = document.querySelectorAll(".slider2").length;
+let sliderHeight2 = slider2.offsetHeight;
+
+let sliderClone = sliderInner2.firstElementChild.cloneNode(true);
+sliderInner2.appendChild(sliderClone);
+
+// // 이미지 연속으로 나오게 하기
+setInterval(() => {
+    currentIndex2++;
+    sliderInner2.style.transition = "all 0.3s";
+    sliderInner2.style.transform = "translateY(" + -sliderHeight2 * currentIndex2 + "px)";
+
+    if (currentIndex2 == sliderCount) {
+        setTimeout(() => {
+            sliderInner2.style.transition = "0s";
+            sliderInner2.style.transform = "translateY(0)";
+        }, 300);
+        currentIndex2 = 0;
+    }
 }, 3000);
 </code></pre>
                         </div>
