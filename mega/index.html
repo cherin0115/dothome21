@@ -35,6 +35,14 @@
 </head>
 
 <body>
+    <!-- 스킵메뉴 -->
+    <div id="skip">
+        <a rel="bookmark" href="#movie">최신 영화 소식</a>
+        <a rel="bookmark" href="#event">새로운 이벤트</a>
+        <a rel="bookmark" href="#new">새로운 영화</a>
+    </div>
+    <!-- 스킵메뉴 -->
+
     <header id="header">
         <div class="container">
             <div class="row">
@@ -732,7 +740,7 @@
                 <div class="new">
                     <h2>새로운 영화</h2>
                     <div class="new_left">
-                        <div class="play">
+                        <div class="play" id="showTrailer" data-youtube="F1239ZePXfM">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120"
                                 style="enable-background:new 0 0 120 120;" xml:space="preserve">
@@ -1518,11 +1526,25 @@
     </footer>
     <!-- //footer -->
 
+
+<!-- 트레일러 -->
+<aside id="blackout" class="overlay">
+    <div id="trailerModal" class="modal">
+        <div id="trailer"></div>     <!-- YouTube 플레이어로 대체되는 부분 -->
+    </div>
+    <button id="hideTrailer" class="modal_close">닫기</button>
+</aside>
+<!-- //트레일러 -->
+
+
     <!-- 자바스크립트 라이브러리 -->
     <script src="assets/js/jquery.min_1.12.4.js"></script>
     <script src="assets/js/modernizr-custom.js"></script>
     <script src="assets/js/ie-checker.js"></script>
     <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/iframe_api.js"></script>
+    <script src="assets/js/movie.js"></script>
+    <script src="assets/js/custom.js"></script>
     <script>
         //배너 이미지 슬라이드
         var swiper = new Swiper('.swiper-container', {
@@ -1586,7 +1608,19 @@
 
         //공지사항 탭메뉴 
         var tabMenu = $(".notice");
-        //
+        
+        //컨텐츠 내용을 숨겨주세요!!
+        tabMenu.find("ul > li > ul").hide();
+        tabMenu.find("li.active > ul").show();
+
+        function tabList(e){
+            e.preventDefault();     //#의 기능 차단
+            var target = $(this);
+            target.next().show().parent("li").addClass("active").siblings("li").removeClass("active").find("ul").hide();
+            //버튼을 클릭하면 ~ul을 보여주고, 부모의 li태그를 찾아서 클래서 추가 
+            //형제의 li태그에 클래스를 제거하고 제거한 자식의 ul태그를 숨겨줌
+        }
+        tabMenu.find("ul > li > a").click(tabList).focus(tabList);
     </script>
 </body>
 
