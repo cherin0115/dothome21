@@ -1,72 +1,21 @@
-//글씨 쪼개기
-//   let text = document.querySelector("#seciton1 .desc").innerText;
-//   let split = text.split('').join("&lt;/span&gt;&lt;span&gt;");
-//     split = "&lt;span&gt;" +  split + "&lt;/span&gt;";
-//     document.querySelector("#section1 .desc").innerHTML = split;
-
-document.querySelectorAll(".split").forEach(el =&gt; {
-    let text = el.innerText;
-    let split = text.split('').join("&lt;/span&gt;&lt;span aria-hidden='true'&gt;");
-    split = "&lt;span aria-hidden='true'&gt;" + split + "&lt;/span&gt;";
-    el.innerHTML = split;
-    el.setAttribute("aria-label", text);
-})
-
-//스크롤 이펙트 
-window.addEventListener("scroll", () =&gt; {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-
-    // if(scrollTop &gt;= document.getElementById("section1").offsetTop - window.innerHeight/3){
-    //     document.querySelectorAll("#section1 .split span").forEach((elem, index) =&gt; {
-    //         setTimeout(() =&gt; {
-    //             elem.classList.add("show");
-    //         }, 50 * index)
-    //     })
-    // }
-
-    // if(scrollTop &gt;= document.getElementById("section2").offsetTop - window.innerHeight/3){
-    //     document.querySelectorAll("#section2 .split span").forEach((elem, index) =&gt; {
-    //         setTimeout(() =&gt; {
-    //             elem.classList.add("show");
-    //         }, 50 * index)
-    //     })
-    // }
-    // let count = document.querySelectorAll('.content-item').length;
-    // for (i = 1; i &lt;= count; i++) {
-    //     if (scrollTop &gt;= document.getElementById('section' + i).offsetTop) {
-    //         document.querySelectorAll('#section' + i + ' .split span').forEach((elem, index) =&gt; {
-    //             setTimeout(() =&gt; {
-    //                 elem.classList.add('show');
-    //             }, 50*index);
-    //         });
-    //     }
-    // }
-    
-     //forEach()
-    document.querySelectorAll('.content-item').forEach(function(item){
-        if(scrollTop &gt;= item.offsetTop){
-            item.querySelectorAll('.split span').forEach((elem, index)=&gt;{
-                setTimeout(() =&gt; {
-                    elem.classList.add('show');
-                }, 50 *index);
-            });
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       {
+        for (let i =0; i <5; i++){
+            for(let j=0; j<=i; j++){
+                document.write("*")
+            }
+            document.write("<br>");
         }
-    });
-    //gsap
-
-    document.querySelectorAll('.content-item').forEach(function(el,idx){
-        if(scrollTop &gt;= el.offsetTop){
-            gsap.to(el.querySelectorAll(".desc span"),{
-                duration: .5,
-                opacity: 1,
-                stagger: .05,
-                y: 0,
-                scale: 1,
-                ease: "power2.out",
-                rotation: 0,
-            });
-        }
-        //메뉴
-        $("paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-    });
-})
+       }
+    </script>
+</body>
+</html>
