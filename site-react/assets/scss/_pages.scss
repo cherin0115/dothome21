@@ -1,0 +1,124 @@
+//#mainCont
+
+//#aboutCont
+//#ReferCont
+//#ScriptCont
+//#portCont
+
+//#mainCont
+
+#mainCont {
+    background-color: #F2D0B5;
+    margin: 0 auto;
+    height: 100vh;
+    color: #E44F00;
+    font-size: 8vw;
+    line-height: .8;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $font-main;
+
+    .container {
+        max-width: 1520px;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+        padding: 100px 0;
+
+        .contWrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 1;
+
+            .img-wrap {
+                p {
+                    padding-top: 5px;
+                    font-size: 1vw;
+                }
+            }
+
+            .desc-wrap {
+                padding-left: 30px;
+                text-align: right;
+
+                .descText {
+                    img {
+                        width: 10%;
+                        float: left;
+                    }
+
+                    div {
+                        font-size: 7vw;
+                    }
+
+                    div:last-child {
+                        font-family: $font-kor1;
+                        font-size: 7vw;
+                        font-weight: normal;
+                    }
+                }
+
+                .circle {
+                    display: inline-block;
+                    border-radius: 50%;
+                    border: 2px solid #E44F00;
+                    padding: 45px 25px;
+                    transform: rotate(20deg);
+                    font-size: 1.5vw;
+                    letter-spacing: 0.2vw;
+
+                    p {
+                        transform: rotate(-20deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:800px) {
+    #mainCont {
+        display: block;
+        margin: 0 auto;
+
+        .container {
+            max-width: 800px;
+            height: 100vh;
+
+            .contWrap {
+                display: block;
+                .img-wrap {
+                    img {
+                        width: 100%;
+                    }
+
+                    p {
+                        padding-left: 10px;
+                        font-size: 3vw;
+                    }
+                }
+
+                .desc-wrap {
+                    .descText {
+                        padding-top: 10px;
+                        padding-right: 10px;
+                        div{
+                            font-size: 9vw;
+                            line-height: 1;
+                        }
+                        img {
+                            top: 0;
+                            left: 30;
+                        }
+                    }
+                    .circle {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
