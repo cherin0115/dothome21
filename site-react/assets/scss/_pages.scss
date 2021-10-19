@@ -25,7 +25,6 @@
         margin: 0 auto;
         width: 100%;
         height: auto;
-        padding: 100px 0;
 
         .contWrap {
             display: flex;
@@ -35,7 +34,7 @@
 
             .img-wrap {
                 p {
-                    padding-top: 5px;
+                    padding-top: 2px;
                     font-size: 1vw;
                 }
             }
@@ -81,11 +80,11 @@
 
 @media (max-width:800px) {
     #mainCont {
-        display: block;
+        
         margin: 0 auto;
 
         .container {
-            max-width: 800px;
+           
             height: 100vh;
 
             .contWrap {
@@ -116,6 +115,161 @@
                     }
                     .circle {
                         display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// About me
+#aboutMain {
+
+    .container{
+        width: 75vw;
+        margin: 0 auto;
+
+        .aboutTitle{
+            font-family: $font-logo;
+            font-size: 7vw;
+            line-height: 1;
+            color: #E44F00;
+            text-transform: uppercase;
+            padding: 260px 0;
+        }
+        .aboutCont{
+            font-family: $font-kor1;
+            margin-bottom: 370px;
+            img{
+                width: 100%;
+            }
+            .aboutTxt {
+                h3{
+                    padding-bottom: 35px;
+                    font-size: 1.1vw;  
+                }
+                p {
+                    font-size: 1.1vw;
+                    text-align: justify;
+                }
+            }
+            &.about1{
+                img {
+                    margin-bottom: 60px;
+                }
+                .aboutTxt {
+                    width: 70%;
+                    text-align: justify;
+                }
+            }
+            &.about2 {
+                overflow: hidden;
+
+                img{
+                    float: left;
+                    width: 70%;
+                }
+
+                .aboutTxt {
+                    float: left;
+                    width: 27%;
+                    margin-left: 3%;
+                }
+            }
+            &.about3 {
+                overflow: hidden;
+
+                img{
+                    float: right;
+                    width: 57%;
+                    margin-left: 3%;
+                }
+                .aboutTxt {
+                    float: left;
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1100px) {
+    #aboutMain {
+        .container {
+            width: 80vw;
+            .aboutCont {
+                font-family: "Chosunilbo_myungjo";
+                margin-bottom: 320px;
+    
+                img {
+                    width: 100%;
+                }
+    
+                h3 {
+                    padding-bottom: 32px;
+                    font-size: 1.2vw;
+                }
+                p {
+                    font-size: 1vw;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 800px) {
+    #aboutMain {
+        .container {
+            width: 95%;
+            .aboutTitle {
+                font-size: 13vw;
+                text-align: center;
+                padding: 200px 0;
+            }
+            .aboutCont {
+                font-family: $font-kor1;
+                margin-bottom: 200px;
+                img {
+                    width: 100%;
+                }
+                h3 {
+                    padding-bottom: 20px;
+                    font-size: 2.5vw;
+                }
+                p {
+                    font-size: 2.2vw;
+                }
+                img {
+                    margin-bottom: 320x;
+                }
+                
+                &.about1 {
+                    
+                    img {
+                        margin-bottom: 30px;
+                    }
+                }
+                &.about2 {
+                    img {
+                        float: none;
+                        width: 100%;
+                        margin-bottom: 30px;
+                    }
+                    .aboutTxt {
+                        float: none;
+                        width: 100%;
+                        margin-left: 0;
+                    }
+                }
+                &.about3 {
+                    
+                    img {
+                        float: none;
+                        width: 100%;
+                        margin-left: 0;
+                        margin-bottom: 40px;
+                    }
+                    .aboutTxt {
+                        float: none;
+                        width: 100%;
                     }
                 }
             }
