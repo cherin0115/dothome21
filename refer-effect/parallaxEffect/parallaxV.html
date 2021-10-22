@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,42 +15,50 @@
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
             font-style: normal;
         }
+
         @font-face {
             font-family: 'NEXONLv1Gothic';
             font-weight: 400;
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
             font-style: normal;
         }
+
         * {
-            margin: 0; padding: 0;
+            margin: 0;
+            padding: 0;
         }
+
         .parallax {
             background: #f9f7f2;
             color: #fff;
             font-family: 'NEXONLv1Gothic';
             font-weight: 400;
         }
+
         #paraHeader {
             position: fixed;
-            left: 0; top: 0;
+            left: 0;
+            top: 0;
             padding: 20px;
             z-index: 10000;
         }
+
         #paraHeader h1 {
             display: inline-block;
             font-size: 20px;
             border-bottom: 1px dashed #fff;
             margin-bottom: 8px;
         }
-        #paraCont {
-            
-        }
+
+        #paraCont {}
+
         .contentWrap {
             position: fixed;
             left: 0;
             top: 0;
             display: flex;
         }
+
         .content__item {
             width: 100vw;
             height: 100vh;
@@ -59,24 +69,29 @@
             position: relative;
             box-sizing: border-box;
         }
-        .content__item:nth-child(even){
+
+        .content__item:nth-child(even) {
             background: #f9f7f2;
         }
+
         .content__item__num {
             font-family: 'Lato';
             font-size: 25vw;
             line-height: 1;
             /* opacity: 0.07; */
             position: absolute;
-            right: 5vw; top: 0vw;
-            color: #555;
+            right: 5vw;
+            top: 0vw;
+            color: #fff;
         }
+
         .content__item__title {
             font-size: 2vw;
             text-align: left;
             max-width: 1000px;
             width: 50vw;
         }
+
         .content__item__imgWrap {
             width: 50vw;
             height: 60vh;
@@ -84,15 +99,18 @@
             overflow: hidden;
             background: #000;
         }
+
         .content__item__img {
             position: absolute;
-            left: -10%; top: -10%;
+            left: -10%;
+            top: -10%;
             width: 120%;
             height: 120%;
             background-repeat: no-repeat;
             background-size: cover;
             filter: saturate(0%);
         }
+
         .content__item__desc {
             font-size: 4vw;
             line-height: 1.4;
@@ -104,47 +122,60 @@
             padding-left: 30vw;
             padding-right: 10vw;
         }
+
         .content__item:nth-child(1) .content__item__img {
             background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg1.jpg);
         }
+
         .content__item:nth-child(2) .content__item__img {
             background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg2.jpg);
         }
+
         .content__item:nth-child(3) .content__item__img {
             background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg3.jpg);
         }
+
         .content__item:nth-child(4) .content__item__img {
             background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg4.jpg);
         }
+
         .content__item:nth-child(5) .content__item__img {
             background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg5.jpg);
         }
+
         .content__item:nth-child(6) .content__item__img {
             background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg6.jpg);
         }
+
         .content__item:nth-child(7) .content__item__img {
             background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg7.jpg);
         }
+
         .content__item:nth-child(8) .content__item__img {
             background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg8.jpg);
         }
+
         .content__item:nth-child(9) .content__item__img {
             background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg9.jpg);
         }
+
         /* nav */
         .paraNav {
             position: fixed;
-            right: 20px; top: 20px;
+            right: 20px;
+            top: 20px;
             z-index: 1000;
-            background: rgba(0,0,0,.4);
+            background: rgba(0, 0, 0, .4);
             padding: 15px 20px;
             border-radius: 50px;
             transition: top 0.4s ease;
         }
+
         .paraNav li {
             display: inline-block;
             list-style: none;
         }
+
         .paraNav li a {
             color: #fff;
             text-decoration: none;
@@ -156,65 +187,110 @@
             line-height: 30px;
             border-radius: 30px;
         }
+
         .paraNav li.active a {
             background: #fff;
             color: #000;
         }
+
         /* info */
         .info {
             position: fixed;
             left: 20px;
             bottom: 20px;
             z-index: 1000;
-            background: rgba(0,0,0,.4);
+            background: rgba(0, 0, 0, .4);
             border-radius: 5px;
             padding: 10px 20px;
         }
+
         .info li {
-            list-style: none;
             font-size: 12px;
-            padding: 2px;
+            padding: 5px;
             color: #fff;
+            list-style: none;
         }
-        .character{
-            width: 400px; height: 300px;
+
+        .character {
+            width: 400px;
+            height: 300px;
             position: fixed;
             left: 50%;
             transform: translateX(-50%);
             bottom: 0;
             z-index: 1000;
-            background-image: url(../assets/img/ImageEdit.jpg);
+            background-image: url("../assets/img/ImageEdit.jpg");
         }
+
         .character.walking {
-            animation: walk 1.2s steps(12, start) infinite;
+            animation: walk 1.2s steps(13, start) infinite;
         }
-        .character.left {
-            background-position: 0 0;
-        }
-        .character.left.walking {
-            animation: backWalk 1.2s steps(12, start) infinite;
-        }
+
         .character.left {
             background-position: 0 -300px;
         }
-        @keyframes walk {
-            0% {background-position: 0 0;}
-            100% {background-position: 4800px 0;}
+
+        .character.left.walking {
+            animation: backWalk 1.2s steps(13, start) infinite;
         }
+
+        @keyframes walk {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 5200px 0;
+            }
+        }
+
         @keyframes backWalk {
-            0% {background-position: 0 -300px;}
-            100% {background-position: -4800px -300px;}
+            0% {
+                background-position: 0 -300px;
+            }
+
+            100% {
+                background-position: -5200px -300px;
+            }
+        }
+
+        /* info */
+        .paraScroll {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, .4);
+            color: #fff;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 12px;
+            padding: 0px 20px;
+        }
+
+        .paraInfo {
+            position: fixed;
+            left: 20px;
+            bottom: 70px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, .4);
+            color: #fff;
+            padding: 20px;
+            font-size: 12px;
+            line-height: 1.8;
+            border-radius: 10px;
+        }
+
+        .paraInfo li {
+            list-style: none;
         }
     </style>
 </head>
+
 <body class="parallax">
-    <div class="info">
-        <ul>
-            <li class="scrollTop">scrollTop() : <span>0</span>px</li>
-            <li class="contentWrapWidth">가로 전체 길이 : <span>0</span>px</li>
-            <li class="paraScrollLeft">scrollLeft()  :<span>0</span>px</li>
-        </ul>
-    </div>
+    <div class="paraScroll">scrollTop() : <span>0</span>px</div>
     <!-- //info -->
     <header id="paraHeader">
         <h1>Parallax Effect01</h1>
@@ -224,6 +300,7 @@
 
     <div class="character"></div>
 
+
     <main id="paraCont">
         <div class="contentWrap">
             <section id="section1" class="content__item">
@@ -232,7 +309,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">Don't dwell on the past.</p> -->
+                <p class="content__item__desc">높은 목표를 세우고, 스스로 채찍질 한다.</p> -->
             </section>
             <!-- //section1 -->
             <section id="section2" class="content__item">
@@ -241,7 +318,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">Pain past is pleasure.</p> -->
+                <p class="content__item__desc">결과도 중요하지만, 과정을 더 중요하게 생각한다.</p> -->
             </section>
             <!-- //section2 -->
             <section id="section3" class="content__item">
@@ -250,7 +327,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">Don't give up easily even if you failed.</p> -->
+                <p class="content__item__desc">매 순간에 최선을 다하고, 끊임없이 변화한다.</p> -->
             </section>
             <!-- //section3 -->
             <section id="section4" class="content__item">
@@ -259,7 +336,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">Love what you do.</p> -->
+                <p class="content__item__desc">모든지 기본을 중요하게 생각하고 행동한다.</p> -->
             </section>
             <!-- //section4 -->
             <section id="section5" class="content__item">
@@ -268,7 +345,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">This too shall pass away.</p> -->
+                <p class="content__item__desc">열정을 잃지 않고 실패에서 실패로 걸어가는 것이 성공이다.</p> -->
             </section>
             <!-- //section5 -->
             <section id="section6" class="content__item">
@@ -277,7 +354,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">If not now, then when?</p> -->
+                <p class="content__item__desc">천 마디 말보단 하나의 행동이 더 값지다.</p> -->
             </section>
             <!-- //section6 -->
             <section id="section7" class="content__item">
@@ -286,7 +363,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc"> All we have is now.</p> -->
+                <p class="content__item__desc">조그만 성공에 만족하지 않으며, 방심을 경계한다.</p> -->
             </section>
             <!-- //section7 -->
             <section id="section8" class="content__item">
@@ -295,7 +372,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">Only I can change my life.</p> -->
+                <p class="content__item__desc">나는 내가 더 노력할수록 운이 더 좋아진다는 걸 발견했다</p> -->
             </section>
             <!-- //section8 -->
             <section id="section9" class="content__item">
@@ -304,7 +381,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">No one can do it for me.</p> -->
+                <p class="content__item__desc">꿈이 있다면, 그 꿈을 잡고 절대 놓아주지마라.</p> -->
             </section>
             <!-- //section9 -->
         </div>
@@ -316,35 +393,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script>
         const contentWrap = $(".contentWrap").width();
-        $("body").css("height", contentWrap);   //scroll 생기게 해주기 너비값 구해서
+        $("body").css("height", contentWrap);
+
         const scrollHeight = $(window).height();
+
         let lastScrollTop = 0;
 
-        $(window).scroll(function(){
-            let scrollTop = $(window).scrollTop() -scrollHeight;   //scrollTop값 구하기
+        $(window).scroll(function () {
+            let scrollTop = $(window).scrollTop();
 
-            $(".contentWrap").css({"transform": "translateX("+ -scrollTop+"px)"});
+            $(".contentWrap").css({
+                "transform": "translateX(" + -scrollTop + "px)"
+            });
 
-            clearTimeout($.data(this,"scrollCheck"));
+            clearTimeout($.data(this, "scrollCheck"));
 
-            $.data(this, "scrollCheck", setTimeout(function(){
+            $.data(this, "scrollCheck", setTimeout(function () {
                 $(".character").removeClass("walking");
-            },100))
-
-            if(scrollTop > lastScrollTop){
+            }, 100))
+            if (scrollTop > lastScrollTop) {
                 $(".character").removeClass("left");
                 $(".character").addClass("walking");
             } else {
                 $(".character").addClass("left");
                 $(".character").addClass("walking");
-
             }
+
             lastScrollTop = scrollTop;
 
             //출력
-            $(".scrollTop span").text(parseInt(scrollTop));
-            $(".contentWrapWidth span").text(parseInt(contentWrap));
+            $(".paraScroll span").text(scrollTop);
+
+
+            //출력
         });
     </script>
 </body>
+
 </html>
