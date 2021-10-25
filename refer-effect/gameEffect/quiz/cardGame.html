@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardEffect- Jquery </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            background: #fef7e5;
+        }
+
+        /* audio */
+        .audio {
+            position: absolute;
+            right: 20;
+            top: 20px;
+        }
+
+        .audio .btn-sound {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: #ffe194;
+            text-align: center;
+            line-height: 43px;
+            color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /* card */
+        .cardWrap{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1vw;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%,-50%);
+            perspective: 600px;
+        }
+        .cardWrap .card{
+            width: 8vw;
+            height: 20vh;
+            border-radius: .4vw;
+            background: #ccc;
+            transform-style: preserve-3d;
+            transition: all 0.6s;
+        }
+        .cardWrap .card:hover {
+            
+        }
+        .cardWrap .card .front {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            transform: translateY(0deg);
+        }
+        .cardWrap .card .back {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            transform: translateY(-180deg);
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <article class="audio">
+            <span class="btn-sound">
+                <strong class="sr-only">볼륨 버튼</strong>
+                <!-- <i class="fa fa-volume-up" aria-hidden="true"></i> -->
+                <i class="fa fa-volume-off" aria-hidden="true"></i>
+            </span>
+            <audio id="theme-song" src="../assets/audio/Jeremy_Black.mp3" loop="loop"></audio>
+        </article>
+
+        <section class="cardWrap">
+            <div class="card" data-type="img1">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img1">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img2">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img2">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img3">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img3">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img4">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img4">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img5">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img5">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img6">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img6">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img7">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img7">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img8">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img8">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img9">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img9">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </section>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        const $btnSound = $(".btn-sound"),
+            $themeSong = $("#theme-song")[0];
+
+        let sound = [
+                "../assets/audio/match2.mp3",
+                "../assets/audio/match.mp3",
+                "../assets/audio/up.mp3",],
+            soundMatch = new Audio(sound[0]),
+            soundNoMatch = new Audio(sound[1]),
+            soundSuccess = new Audio(sound[2]);
+        //음악 
+        //audio 버튼을 클릭하면 꺼지고/ 클릭하면 켜지고
+        $btnSound.on("click", function () {
+            $(this).find("i").toggleClass("fa-volume-up fa-volume-off");
+            $(this).toggleClass("is-playing");
+
+            //play
+            if ($(this).hasClass("is-playing")) {
+                $themeSong.play();
+            } else {
+                $themeSong.pause();
+            }
+
+            //icon 
+            // if($(this).find("i").attr("class") == "fa fa-volume-up"){
+            //     $(this).find("i").attr("class","fa fa-volume-off");
+            // } else {
+            //     $(this).find("i").attr("class","fa fa-volume-up");
+            // }
+        });
+    </script>
+</body>
+
+</html>
