@@ -46,29 +46,35 @@
             font-size: 20px;
         }
 
-       /* card */
-       .cardWrap {
+        /* card */
+        .cardWrap {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             grid-gap: 1vw;
             position: absolute;
-            left: 50%; top: 50%;
+            left: 50%;
+            top: 50%;
             transform: translate(-50%, -50%);
-            perspective:  600px;
+            perspective: 600px;
         }
+
         .cardWrap .card {
             width: 8vw;
             height: 20vh;
             transform-style: preserve-3d;
             transition: all 0.6s;
         }
+
         .cardWrap .card:hover {
             transform: rotateY(-180deg);
         }
-        .cardWrap .card > div {
+
+        .cardWrap .card>div {
             position: absolute;
-            left: 0; top: 0;
-            width: 100%; height: 100%;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
             border-radius: .4vw;
             background-color: #bee2d7;
             backface-visibility: hidden;
@@ -76,17 +82,21 @@
             background-repeat: no-repeat;
             background-size: 90%;
         }
+
         .cardWrap .card .front {
             transform: rotateY(0deg);
         }
+
         .cardWrap .card .back {
             transform: rotateY(-180deg);
         }
+
         /* card img */
         .cardWrap .card .front {
             background-image: url(http://silvery92.dothome.co.kr/assets/img/desert.svg);
-            
+
         }
+
         .card[data-type=img1] .back {
             background-image: url(http://silvery92.dothome.co.kr/assets/img/rhinoceros.svg);
         }
@@ -183,12 +193,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
         const $btnSound = $(".btn-sound"),
-            $themeSong = $("#theme-song")[0];
+            $themeSong = $("#theme-song")[0],
+
+            dataType = "data-type",
+            selectedClass = "is-selected"
 
         let sound = [
                 "../assets/audio/match2.mp3",
                 "../assets/audio/match.mp3",
-                "../assets/audio/up.mp3",],
+                "../assets/audio/up.mp3",
+            ],
             soundMatch = new Audio(sound[0]),
             soundNoMatch = new Audio(sound[1]),
             soundSuccess = new Audio(sound[2]);
@@ -204,13 +218,6 @@
             } else {
                 $themeSong.pause();
             }
-
-            //icon 
-            // if($(this).find("i").attr("class") == "fa fa-volume-up"){
-            //     $(this).find("i").attr("class","fa fa-volume-off");
-            // } else {
-            //     $(this).find("i").attr("class","fa fa-volume-up");
-            // }
         });
     </script>
 </body>
