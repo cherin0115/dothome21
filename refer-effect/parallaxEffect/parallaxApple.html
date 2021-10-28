@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -79,6 +78,10 @@
       list-style: none;
     }
 
+    iframe {
+      border: 0;
+    }
+
     body {
       height: 10000px;
     }
@@ -115,15 +118,21 @@
 
     #section3 {
       /* background: blue; */
-      height: 3000px;
+      height: 17000px;
       z-index: 3000;
     }
 
-    #section4 {}
+    #section4 {
+      background: rgb(17, 18, 20);
+      height: 13000px;
+      z-index: 3000;
+    }
 
-    #section5 {}
+    #section5 {
+      height: 5000px;
+      z-index: 3000;
+    }
 
-    #section6 {}
 
     #section7 {}
 
@@ -356,61 +365,379 @@
     <style>
       .s3Text1 {
         font-size: 8vw;
-        font-weight: 300;
+        font-weight: 100;
         font-family: 'NEXONLv1Gothic';
         text-transform: uppercase;
+        white-space: nowrap;
       }
 
       .s3Text1 span {
         display: inline-block;
-      }
-
-      .s3Text1 .s1 {
-        /* transform: translate(-20vw, -10vw); */
-      }
-
-      .s3Text1 .s2 {
-        /* transform: translate(-20vw, 20vw); */
-      }
-
-      .s3Text1 .s3 {
-        /* transform: translate(-10vw, -20vw); */
-      }
-
-      .s3Text1 .s4 {
-        /* transform: translate(10vw, -20vw); */
-      }
-
-      .s3Text1 .s5 {
-        /* transform: translate(10vw, 20vw); */
-      }
-
-      .s3Text1 .s6 {
-        /* transform: translate(30vw, 10vw); */
-      }
-
-      .s3Text1 .s7 {
-        width: 100vw;
-        height: 1px;
         background: #000;
+        color: #fff;
+        margin: 0 2px;
+        min-width: 1vw;
+        height: 100vh;
+        overflow: hidden;
+        padding-top: 1vw;
+      }
+
+      .s3Text1 span em {
+        font-style: normal;
+        position: relative;
+        left: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+      }
+
+      .s3Text2 {
+        perspective: 500px;
+      }
+
+      .s3Text2 iframe {
+        width: 60vw;
+        height: 60vh;
+        transform-style: preserve-3d;
+        transform: translate3d(0, 0, 0);
+      }
+
+      .s3Text2 .il-text {
+        width: 60vw;
+        height: 60vh;
+        transform-style: preserve-3d;
+        transform: translate3d(0, 0, 0);
+      }
+
+      .s3Text2 .i1 {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .s3Text2 .i2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .s3Text2 .i3 {
+        position: absolute;
+        left: 0;
+        top: 0;
       }
     </style>
     <section id="section3">
-      <div class="s3Text1 fixed">
-        <span class="s1" data-27000="font-size: 0vw " ; data-27500="font-size: 8vw;">s</span><span class="s2"
-          data-27000="font-size: 0vw; " data-27500="font-size: 8vw;">c</span><span class="s3"
-          data-27000="font-size: 0vw; 5" data-27500="font-size: 8vw;">r</span><span class="s4"
-          data-27000="font-size: 0vw;" data-27500="font-size: 8vw;">i</span><span class="s5"
-          data-27000="font-size: 0vw;" data-27500="font-size: 8vw;">p</span><span class="s6"
-          data-27000="font-size: 0vw;" data-27500="font-size: 8vw;">t</span>
-        <span class="s7 fixed" data-26000="width: 0vw; height: 1px" data-26500="width: 50vw; height: 1px"
-          data-27000="width:100vw; height: 1px"></span>
+      <div class="s3Text1 fixed" data-25000="top:150%; height: 0vh;" data-27000="top:50%; height: 100vh;"
+        data-40000="top:50%; height: 100vh;" data-41000="top:-50%; height: 100vh;">
+        <span class="s1" data-27000="width: 1vw" data-27300="width: 5vw" data-31600="width: 5vw; height: 100vh;"
+          data-32600="width: 5vw; height: 16vh;"><em data-31000="left: 10vw" data-31300="left: 0vw"
+            data-31600="left: 0vw; top: 50%" data-32600="left: 0vw; top: 50%">s</em></span><span class="s2"
+          data-27500="width: 1vw" data-28000="width: 5.3vw" data-31600="width: 5.3vw; height: 100vh"
+          data-32600="width: 5.3vw; height: 16vh"><em data-31000="left: 10vw" data-31300="left: 0vw"
+            data-31600="left: 0vw; top: 50%" data-32600="left: 0vw; top: 50%">c</em></span><span class="s3"
+          data-28500="width: 1vw" data-29000="width: 5.2vw" data-31600="width: 5.2vw; height: 100vh"
+          data-32600="width: 5.2vw; height: 16vh"><em data-31000="left: 10vw" data-31300="left: 0vw"
+            data-31600="left: 0vw; top: 50%" data-32600="left: 0vw; top: 50%">r</em></span><span class="s4"
+          data-29500="width: 1vw" data-30000="width: 2vw" data-31600="width: 2vw; height: 100vh"
+          data-32600="width: 2vw; height: 16vh"><em data-31000="left: 10vw" data-31300="left: 0vw"
+            data-31600="left: 0vw; top: 50%" data-32600="left: 0vw; top: 50%">i</em></span><span class="s5"
+          data-30000="width: 1vw" data-30500="width: 5.3vw" data-31600="width: 5.3vw; height: 100vh"
+          data-32600="width: 5.3vw; height: 16vh"><em data-31000="left: 10vw" data-31300="left: 0vw"
+            data-31600="left: 0vw; top: 50%" data-32600="left: 0vw; top: 50%">p</em></span><span class="s6"
+          data-30500="width: 1vw" data-31000="width: 5vw" data-31600="width: 5vw; height: 100vh"
+          data-32600="width: 5vw; height: 16vh"><em data-31000="left: 10vw" data-31300="left: 0vw"
+            data-31600="left: 0vw; top: 50%" data-32600="left: 0vw; top: 50%">t</em></span>
       </div>
-    </section> <!-- //section3-->
-    <section id="section4"></section> <!-- //section4-->
-    <section id="section5"></section> <!-- //section5-->
-    <section id="section6"></section> <!-- //section6-->
-    <section id="section7"></section> <!-- //section7-->
+      <div class="s3Text2 fixed">
+        <iframe class="i1" src="../mouseEffect/javascriptME01.html" alt="mouse"
+          data-33000="transform: translate3d(-80%, -50%, -10000px); opacity:0"
+          data-34000="transform: translate3d(-80%, -50%, 0px); opacity:1"
+          data-39000="transform: translate3d(-80%, -50%, 0px); opacity:1"
+          data-40000="transform: translate3d(-80%, -50%, 1000px); opacity:0"></iframe>
+        <iframe class="i2" src="../parallaxEffect/javascriptPE01.html" alt="mouse"
+          data-34000="transform: translate3d(-50%, -80%, -10000px); opacity:0"
+          data-35000="transform: translate3d(-50%, -80%, 0px); opacity:1"
+          data-38500="transform: translate3d(-50%, -80%, 0px); opacity:1"
+          data-39500="transform: translate3d(-50%, -80%, 1000px); opacity:0"></iframe>
+        <iframe class="i3" src="../mouseEffect/jqueryME04.html" alt="mouse"
+          data-36000="transform: translate3d(-30%, -30%, -10000px); opacity:0"
+          data-37000="transform: translate3d(-30%, -30%, 0px); opacity:1"
+          data-38000="transform: translate3d(-30%, -30%, 0px); opacity:1"
+          data-39000="transform: translate3d(-30%, -30%, 1000px); opacity:0"></iframe>
+      </div>
+    </section>
+    <!-- //section3 -->
+
+    <style>
+      .s4Text1>div {
+        width: 10vw;
+        height: 10vw;
+        background: #000;
+        border-radius: 50%;
+      }
+
+      .s4Text1 .circle1 {
+        left: 50%;
+        top: 50%;
+      }
+
+      .s4Text1 .circle2 {
+        left: 20%;
+        top: 20%;
+      }
+
+      .s4Text1 .circle3 {
+        left: 60%;
+        top: 60%;
+      }
+
+      .s4Text1 .circle4 {
+        left: 30%;
+        top: 80%;
+      }
+
+      .s4Text1 .circle5 {
+        left: 80%;
+        top: 0%;
+      }
+
+      .s4Text1 .circle6 {
+        left: 10%;
+        top: 60%;
+
+      }
+
+
+      .s4Text2 {
+        perspective: 800px;
+      }
+
+      .s4Text2 iframe {
+        width: 80vw;
+        height: 80vh;
+        transform-style: preserve-3d;
+        transform: translate3d(0, 0, 0);
+      }
+
+      .s4Text2 .i4Text {
+        color: #fff;
+        font-size: 8vw;
+      }
+
+      .s4Text2 .i4 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+      }
+    </style>
+    <section id="section4">
+      <div class="s4Text1" data-39999="display: none" data-40000="display: block" data-43000="display: block"
+        data-43001="display: none">
+        <div class="circle1 fixed" data-40000="width: 0vw; height: 0vw" data-43000=" width: 200vw; height: 200vw"></div>
+        <div class="circle2 fixed" data-40050="width: 0vw; height: 0vw" data-42000=" width: 200vw; height: 200vw"></div>
+        <div class="circle3 fixed" data-40100="width: 0vw; height: 0vw" data-43000=" width: 200vw; height: 200vw"></div>
+        <div class="circle4 fixed" data-40150="width: 0vw; height: 0vw" data-43000=" width: 200vw; height: 200vw"></div>
+        <div class="circle5 fixed" data-40200="width: 0vw; height: 0vw" data-43000=" width: 200vw; height: 200vw"></div>
+        <div class="circle6 fixed" data-40250="width: 0vw; height: 0vw" data-43000=" width: 200vw; height: 200vw"></div>
+      </div>
+      <div class="s4Text2 fixed" data-42000="display: none" data-42001="display: block; " data-43000="display: block;"
+        data-46000="display: none">
+        <div class="i4Text">Animation</div>
+        <iframe class="i4" src="../parallaxEffect/parallaxAppleAnimation.html" alt="animation"
+          data-43000="transform: translate3d(-50%, -50%, -10000px); opacity:0"
+          data-44000="transform: translate3d(-50%, -50%, 0px); opacity:1"
+          data-45000="transform: translate3d(-50%, -50%, 0px); opacity:1"
+          data-46000="transform: translate3d(-50%, -50%, 500px); opacity:0">
+        </iframe>
+      </div>
+    </section> <!-- //section4-->
+
+    <style>
+      .s5Tex1 {
+        color: rgb(255, 104, 4);
+        font-size: 10vw;
+        text-align: center;
+      }
+
+      .s5Tex1 .i5 {
+        color: rgba(255, 123, 0, 0.246);
+        position: relative;
+
+      }
+
+      .s5Tex1 .i5.shadow {
+        color: rgb(255, 104, 4);
+        position: absolute;
+        top: 4%;
+        left: 4%;
+      }
+
+      .s5Tex1 .i6 {
+        color: rgb(250, 125, 41);
+      }
+
+      .s5Tex1 .i7 {
+        position: relative;
+        color: rgba(255, 176, 103, 0.233);
+      }
+
+      .s5Tex1 .i7.shadow {
+        color: rgb(253, 141, 66);
+        position: absolute;
+        top: 4%;
+        left: 4%;
+      }
+
+      .s5Tex1 .i8 {
+        color: rgb(255, 156, 91);
+      }
+
+      .s5Text2 {
+        color: #fff;
+        font-weight: 200;
+        font-size: 1.5vw;
+        text-align: center;
+        line-height: 1.8;
+      }
+
+      .s5Text2 .t1 h2 {
+        line-height: 3;
+      }
+
+      /* 
+      .s5Text2 .t1 button {
+        width: 13vw;
+        background: rgb(255, 104, 4);
+        height: 6vh;
+        border-radius: 2vw;
+        border: none;
+        font-size: 1.5vw;
+        line-height: 1.8;
+        color: #fff;
+      } */
+
+      .s5Text2 .Words {
+        margin: 0 auto;
+        padding: 80px 0;
+        font-size: 60px;
+        font-weight: 900;
+        letter-spacing: -2px;
+        text-transform: uppercase;
+        transform: translate3d(0, 0, 0);
+        -webkit-text-size-adjust: 100%;
+      }
+
+      /*
+** Apply common styles to each line of text
+*/
+      .s5Text2 .Words-line {
+        height: 50px;
+        overflow: hidden;
+        position: relative;
+        left: 50%;
+        top: 50%
+      }
+
+      .s5Text2 .Words-line:nth-child(odd) {
+        transform: skew(60deg, -30deg) scaleY(0.66667);
+      }
+
+      .s5Text2 .Words-line:nth-child(even) {
+        transform: skew(0deg, -30deg) scaleY(1.33333);
+      }
+
+      .s5Text2 .Words-line:nth-child(1) {
+        left: 29px;
+      }
+
+      .s5Text2 .Words-line:nth-child(2) {
+        left: 58px;
+      }
+
+      .s5Text2 .Words-line:nth-child(3) {
+        left: 87px;
+      }
+
+      .s5Text2 .Words-line:nth-child(4) {
+        left: 116px;
+      }
+
+      .s5Text2 .Words-line:nth-child(5) {
+        left: 145px;
+      }
+
+      .s5Text2 .Words-line:nth-child(6) {
+        left: 174px;
+      }
+
+      .s5Text2 .Words-line:nth-child(7) {
+        left: 203px;
+      }
+
+      /*
+** Fine-grained text styles
+*/
+      .s5Text2 p {
+        height: 55px;
+        line-height: 50px;
+        padding: 0 100px;
+        transition: all 0.4s ease-in-out;
+        transform: translate3d(0, 0, 0);
+        vertical-align: top;
+        white-space: nowrap;
+      }
+
+      /*
+** The hover interaction
+*/
+      .s5Text2 .Words:hover p {
+        transform: translate3d(-50px, -50px, 0);
+      }
+    </style>
+    <section id="section5">
+      <div class="s5Tex1 fixed" data-45000="display:none; opacity:0;"
+        data-45100="display:block; opacity:1; font-size:10vw;" data-45200="display:block; opacity:1; font-size:8vw;"
+        data-45300="display:block; opacity:1; font-size:7vw;" data-45400="display:block; opacity:1; font-size:6vw;"
+        data-45500="top:30%;">
+      </div>
+      <div class="s5Text2 fixed" data-45000="display:block">
+        <div class="t1 fixed" data-48000="opacity: 0; top: 50%;" data-50000="opacity: 1; top: 30%;">
+          <!-- <h2>cherin0115@gmail.com</h2> -->
+          <ul class="Words">
+            <li class="Words-line">
+              <p>&nbsp;</p>
+              <p>EMAIL :</p>
+            </li>
+            <li class="Words-line">
+              <p>HOW</p>
+              <p>CHERIN0115</p>
+            </li>
+            <li class="Words-line">
+              <p>To</p>
+              <p>GMAIL.COM</p>
+            </li>
+            <li class="Words-line">
+              <p>REACH</p>
+              <p>-</p>
+            </li>
+            <li class="Words-line">
+              <p>ME</p>
+              <p>KAKAO</p>
+            </li>
+            <li class="Words-line">
+              <p>CHERIN</p>
+              <p>CHERIN0115</p>
+            </li>
+            <li class="Words-line">
+              <p>KIM</p>
+              <p>&nbsp;</p>
+            </li>
+          </ul>
+          <!-- <button class="t1 btn"><a href="https://cherin0115.github.io/dothome21">click here</a></button> -->
+        </div>
+      </div>
+    </section> <!-- //section5-->
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
