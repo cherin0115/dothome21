@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -5,316 +6,524 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>layoutTest04</title>
+    <title>정부24</title>
     <style>
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 500;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 600;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 700;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 800;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 900;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff');
+            font-style: normal;
+        }
+
         * {
             margin: 0;
             padding: 0;
-            list-style: none;
+            box-sizing: border-box;
+        }
+
+        a {
             text-decoration: none;
         }
 
-        body {
-            background-color: #fff;
+        li {
+            list-style: none;
         }
 
-        #wrap {
-            width: 1000px;
-            margin: 0 auto;
-            margin-top: 58px;
-        }
-
-        .conatiner {
+        img {
             width: 100%;
         }
 
-        .contents.menu {
-            width: 286px;
-            height: 100vh;
+        .ir_so {
+            overflow: hidden;
+            position: absolute;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        body {
+            font-family: 'S-CoreDream';
+            font-weight: 400;
+        }
+
+        .container {
+            width: 1000px;
+            margin: 60px auto 0;
+            overflow: hidden;
+        }
+
+        #aside {
+            float: left;
+            width: 30%;
+        }
+
+        #main {
+            float: left;
+            width: 70%;
+        }
+
+        .logo {
+            margin-bottom: 70px;
+        }
+
+        .logo a {
+            color: #6C6C6C;
+            font-size: 24px;
+            font-weight: 700;
+            padding-top: 8px;
+            padding-left: 50px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .logo a::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-image: url("./img/Coding_img3_06.gif");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+        }
+
+        nav {}
+
+        nav ul {}
+
+        nav .mainMenu {
+            font-size: 20px;
+            font-weight: 700;
+            color: #252525;
+            cursor: pointer;
+            margin: 15px 0 35px;
+        }
+
+        nav .mainMenu.active,
+        nav .mainMenu:hover {
+            color: #0062CC;
+        }
+
+        nav .mainMenu>ul {
+            display: none;
+            margin-top: 15px;
+            margin-left: 15px;
+            transition: all .3s;
+        }
+
+        nav .mainMenu.active>ul {
+            display: block;
+        }
+
+        nav .mainMenu .subMenu {
+            padding: 15px 0;
+            border-bottom: 1px solid #E5E5E5;
+            margin-right: 70px;
+        }
+
+        nav .mainMenu .subMenu a {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 600;
+            color: #252525;
+            cursor: pointer;
+        }
+
+        /* main */
+        .bannerWrap {
+            width: 700px;
+            height: 384px;
+            overflow: hidden;
+        }
+
+        .bannerInner {
+            position: relative;
+            width: 700px;
+            height: 1536px;
+            overflow: hidden;
+            transition: all .3s;
+        }
+
+        .bannerInner .img {
+            float: left;
+            position: relative;
+            width: 700px;
+            height: 384px;
+        }
+
+        .bannerInner .img:nth-child(1) {
+            z-index: 3;
+        }
+
+        .bannerInner .img:nth-child(2) {
+            z-index: 2;
+        }
+
+        .bannerInner .img:nth-child(3) {
+            z-index: 1;
+        }
+
+        #section1 {
+            text-align: center;
+            margin-top: 60px;
+        }
+        .tabMenu li {
+            display: inline-block;
+            font-size: 25px;
+            font-weight: 700;
+            color: #ACACAC;
+            line-height: 1;
+            padding: 0 15px;
+            cursor: pointer;
+        }
+        .tabMenu li.active {
+            color: #303030;
+        }
+
+        .tabMenu li:first-child {
+            border-right: 3px solid #202020;
+        }
+        .tabMenuSub {
+            margin-top: 55px;
+            display: none;
+        }
+        .tabMenuSub.show {
+            display: block;
+        }
+        .tabMenuSub > div {
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 23px;
+        }
+        .tabMenuSub > div:first-child {
+            padding-left: 0;
+        }
+        .tabMenuSub >div img {
+            width: 95px;
+        }
+        .tabMenuSub >div p {
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1.5;
+            color: #202020;
+        }
+
+        #section2 {
+            background-color: #F7F7F7;
+            margin-top: 60px;
+            overflow: hidden;
+        }
+
+        .cardWrap {
+            text-align: center;
+            background-color: #fff;
+            border: 1px solid #D0D7E1;
+            position: relative;
+            margin: 20px 0 20px 20px;
+            float: left;
+            padding: 20px;
+            width: 29.5%;
+        }
+        .cardWrap:last-child {
+            margin-right: 20px;
+        }
+
+        .cardWrap .plus {
+            width: 28px;
+            position: absolute;
+            right: 13px;
+            top: 13px;
+        }
+
+        .cardWrap h2 {
+            font-size: 20px;
+            font-weight: 800;
+            margin: 30px 0 20px;
+        }
+
+        .cardWrap .img {
+            width: 90px;
+            margin-bottom: 30px;
+        }
+        .cardWrap ul {
+            text-align-last: left;
+        }
+        .cardWrap li { 
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .cardWrap li a {
+            font-size: 12px;
+            color: #303030;
+            white-space: nowrap;
+        }
+
+        /* footer */
+        footer .container {
+            background-color: #EDF2F8;
+            padding: 20px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        footer .container > div {
             float: left;
         }
 
-        .contents.menu .logo {
-            display: flex;
-            padding-top: 10px;
+        .footerLogo {
+            width: 7%;
+            margin-right: 20px;
+            position: relative;
+            text-align: center;
+            vertical-align: top;
+            color: #6C6C6C;
+            font-size: 18px;
+            font-weight: 700;
         }
 
-        .contents.menu .logo img {
-            width: 40px;
-        }
-
-        .contents.menu .logo h2 {
-            padding-left: 10px;
-            padding-top: 5px;
-            color: #6C6C6E;
-            font-size: 30px;
+        .textarea {
+            width: 65%;
+            font-size: 15px;
+            color: #343839;
+            line-height: 1.5;
             font-weight: 500;
         }
 
-        .contents.menu .menuBar {
-            padding-top: 65px;
+        .sns {
+            width: 25%;
+            overflow: hidden;
         }
 
-        .contents.menu .menuBar ul {}
-
-        .contents.menu .menuBar li {
-            padding: 20px 0px;
-            font-size: 25px;
-            font-weight: 800;
-        }
-
-        .contents.menu .menuBar a {
-            color: #000;
-        }
-
-        .contents.desc {
-            width: 714px;
+        .sns > a {
             float: left;
+            width: 75px;
+            height: 50px;
         }
 
-        .contents.desc img {
-            width: 100%;
-        }
-
-        .contents.desc .tapMenu .tap {
-            padding: 60px;
-            font-size: 25px;
-            font-weight: 700;
-            text-align: center;
-        }
-
-        .contents.desc .tapMenu li {
-            display: inline;
-
-        }
-
-        .contents.desc .tapMenu .tap li:last-child {
-            color: #6C6C6E;
-
-        }
-
-        .contents.desc .tapMenu {}
-
-        .contents.desc .tapMenu .tapInner {
-            width: 100%;
-            float: left;
-            padding: 0 30px;
-        }
-
-        .contents.desc .tapMenu .tapInner .tapCont {
-            width: 120px;
-            float: left;
-            padding-right: 20px;
-            font-size: 15px;
-            font-weight: 700;
-            text-align: center;
-
-        }
-
-        .contents.desc .tapMenu .tapInner .tapCont img {
-            width: 96px;
-        }
-
-        .contents.desc .tapMenu .tapInner .tapCont p {
-            padding-top: 10px;
-        }
-        .contents.desc.grey {
-            margin-top: 60px;
-            height: 330px;
-            background: #E5E5E5;
-            text-align: center;
-        }
-      
-        .contents.desc.grey .boxInner {
-            padding-top: 16px;
-        }
-
-        .contents.desc.grey .boxInner li {
-            white-space: nowrap;
-            font-size: 13px;
-            margin-bottom: 10px;
-        }
-        .contents.desc.grey .cont {
-            margin-right: 9px;
-            border: 1px solid #dadfe6;
-            background: #fff;
-            float: left;
-        }
-        .contents.desc.grey .cont h3 {
-            font-size: 20px;
-            margin-top: 30px;
-            margin-bottom: 19px;
-        }
-        .contents.desc.grey .cont img {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 25px;
-        }
-        .contents.desc.grey .cont.box1 {
-            width: 220px;
-            border: 1px solid #dadfe6;
-            background: #fff;
-            float: left;
-            margin-left: 16px;
-        }
-        .contents.desc.grey .cont.box2 {
-            width: 220px;
-        }
-        .contents.desc.grey .cont.box3 {
-            width: 220px;  
-        }
-     /* footer */
-
-     /* footer */
-#footer {
-    width: 100%;
-    margin-top: 100px;
-    background: #EDF2F8;
-}
-#footer .footerWrap {
-    overflow: hidden;
-    padding: 10px;
-}
-#footer .footerWrap .footer__logo {
-    float: left;
-    width: 50px;
-}
-#footer .footerWrap .footer__logo img {
-    width: 100%;
-    margin-top: 4px;
-}
-#footer .footerWrap .address {
-    float: left;
-    margin-top: 5px;
-    margin-left: 10px;
-}
-#footer .footerWrap .address p {
-    font-size: 12px;
-    font-weight: 500;
-    padding: 2px 0;
-    color: #2F2E2C;
-}
-#footer .footerWrap .footer__sns {
-    float: right;
-    width: 200px;
-    height: 60px;
-    margin-top: 20px;
-    background-image: url(../img/test07/footer__sns.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
     </style>
+
 </head>
 
 <body>
-    <div id="wrap">
-        <main>
-            <section class="conatainer">
-                <article class="contents menu">
-                    <div class="logo">
-                        <img src="img/Coding_img3_06.gif" alt="logo">
-                        <h2>정부24</h2>
-                    </div>
-                    <nav class="menuBar">
+    <div class="container">
+        <aside id="aside">
+            <h1 class="ir_so">메뉴</h1>
+            <div class="logo">
+                <a href="#">정부24</a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="mainMenu">서비스
                         <ul>
-                            <li><a href="#">서비스</a></li>
-                            <li><a href="#">정책정보</a></li>
-                            <li><a href="#">기관정보</a></li>
-                            <li><a href="#">고객센터</a></li>
+                            <li class="subMenu"><a href="#">분야별 정책정보</a></li>
+                            <li class="subMenu"><a href="#">정책뉴스</a></li>
+                            <li class="subMenu"><a href="#">연구보고서</a></li>
+                            <li class="subMenu"><a href="#">간행물</a></li>
+                            <li class="subMenu"><a href="#">정책자료</a></li>
                         </ul>
-                    </nav>
-                </article>
-                <article class="contents desc">
-                    <div class="imgSlide">
-                        <img src="img/Coding_img3_03.gif" alt="img">
-                    </div>
-                </article>
-                <article class="contents desc">
-                    <div class="tapMenu">
-                        <span class="tap">
-                            <ul>
-                                <li>자주 찾는 서비스</li>
-                                <li>| 키워드 서비스</li>
-                            </ul>
-                        </span>
-                        <span class="tapInner">
-                            <ul>
-                                <li class="tapCont">
-                                    <img src="img/Coding_img3_12.gif" alt="주민등록표등본">
-                                    <p>주민등록표등본<br>(초본)교부</p>
-                                </li>
-                                <li class="tapCont">
-                                    <img src="img/Coding_img3_14.gif" alt="토지대장">
-                                    <p>토지(임야)대장<br>열람/등본 발급신청</p>
-                                </li>
-                                <li class="tapCont">
-                                    <img src="img/Coding_img3_16.gif" alt="건축물대장">
-                                    <p>건축물대장 등/초본<br>발급(열람)신청</p>
-                                </li>
-                                <li class="tapCont">
-                                    <img src="img/Coding_img3_18.gif" alt="지방세">
-                                    <p>지방세 납세증명서</p>
-                                </li>
-                                <li class="tapCont">
-                                    <img src="img/Coding_img3_20.gif" alt="지적도">
-                                    <p>지적도(임야도)등본<br>발급 및 열람</p>
-                                </li>
-                            </ul>
-                        </span>
-                    </div>
-                </article>
-                <article class="contents desc grey">
-                    <div class="boxInner">
-                        <div class="cont box1">
-                            <h3>공지사항</h3>
-                            <img src="img/Coding_img3_32.gif" alt="notice">
-                            <ul>
-                                <li>[어디서나 대학민원]호서대학교 팩스</li>
-                                <li>[전라북도 고창군]새올행정시스템 D</li>
-                                <li>교육부 행정전자서명인증센터 시스템</li>
-                            </ul>
-                        </div>
-                        <div class="cont box2">
-                            <h3>자료실</h3>
-                            <img src="img/Coding_img3_34.gif" alt="download">
-                            <ul>
-                                <li>[어디서나 대학민원]호서대학교 팩스</li>
-                                <li>[전라북도 고창군]새올행정시스템 D</li>
-                                <li>교육부 행정전자서명인증센터 시스템</li>
-                            </ul>
-                        </div>
-                        <div class="cont box3">
-                            <h3>FAQ</h3>
-                            <img src="img/Coding_img3_35.gif" alt="fnq">
-                            <ul>
-                                <li>[어디서나 대학민원]호서대학교 팩스</li>
-                                <li>[전라북도 고창군]새올행정시스템 D</li>
-                                <li>교육부 행정전자서명인증센터 시스템</li>
-                            </ul>
-                        </div>
+                    </li>
+                    <li class="mainMenu">정책정보
+                        <ul>
+                            <li class="subMenu"><a href="#">분야별 정책정보</a></li>
+                            <li class="subMenu"><a href="#">정책뉴스</a></li>
+                            <li class="subMenu"><a href="#">연구보고서</a></li>
+                            <li class="subMenu"><a href="#">간행물</a></li>
+                            <li class="subMenu"><a href="#">정책자료</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainMenu">기관정보
+                        <ul>
+                            <li class="subMenu"><a href="#">분야별 정책정보</a></li>
+                            <li class="subMenu"><a href="#">정책뉴스</a></li>
+                            <li class="subMenu"><a href="#">연구보고서</a></li>
+                            <li class="subMenu"><a href="#">간행물</a></li>
+                            <li class="subMenu"><a href="#">정책자료</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainMenu">고객센터
+                        <ul>
+                            <li class="subMenu"><a href="#">분야별 정책정보</a></li>
+                            <li class="subMenu"><a href="#">정책뉴스</a></li>
+                            <li class="subMenu"><a href="#">연구보고서</a></li>
+                            <li class="subMenu"><a href="#">간행물</a></li>
+                            <li class="subMenu"><a href="#">정책자료</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main id="main">
+            <article>
+                <h1 class="ir_so">메인 배너</h1>
+                <div class="bannerWrap">
+                    <div class="bannerInner">
+                        <div class="img"><img src="./img/Coding_img3_03.gif" alt="배너 이미지1"></div>
+                        <div class="img"><img src="./img/Coding_img3_03.gif" alt="배너 이미지2"></div>
+                        <div class="img"><img src="./img/Coding_img3_03.gif" alt="배너 이미지3"></div>
                     </div>
                 </div>
-                </article>
-                <footer id="footer">
-                    <div class="footerWrap">
-                        <div class="footer__logo">
-                            <img src="img/Coding_img3_41.gif" alt="정부24">
-                        </div>
-                        <div class="address">
-                            <p>03171 서울특별시 세종대로 209(세종로) 행정안전부</p>
-                            <p>정부24 콜센터 1588-2188 정부민원안내콜센터 국번없이 110</p>
-                            <p>Copyright © Ministry of the Interior and Safety.All Rights reserved.</p>
-                        </div>
-                        <div class="footer__sns">
-                            <span class="blog"></span>
-                            <span class="twiter"></span>
-                            <span class="facebook"></span>
-                        </div>
-                    </div>
-                </footer>
+            </article>
+            <section id="section1">
+                <ul class="tabMenu">
+                    <li class="active">자주 찾는 서비스</li>
+                    <li>키워드 서비스</li>
+                </ul>
+                <div class="tabMenuSub service show">
+                    <div><a href="#"><img src="./img/Coding_img3_12.gif" alt="주민등록표등본교부"><p>주민등록표등본<br>(초본)교부</p></a></div>
+                    <div><a href="#"><img src="./img/Coding_img3_14.gif" alt="토지대장 열람/등본 발급신청"><p>토지(임야)대장<br>열람/등본 발급신청</p></a></div>
+                    <div><a href="#"><img src="./img/Coding_img3_16.gif" alt="주민등록표등본교부"><p>건축물대장 등/초본<br>발급(열람) 신청</p></a></div>
+                    <div><a href="#"><img src="./img/Coding_img3_18.gif" alt="주민등록표등본교부"><p>지방세 납세증명</p></a></div>
+                    <div><a href="#"><img src="./img/Coding_img3_20.gif" alt="주민등록표등본교부"><p>지적도(임야도)등본<br>발급 및 열람</p></a></div>
+                </div>
+                <div class="tabMenuSub keyword">
+                    <div><a href="#"><img src="./img/Coding_img3_12.gif" alt="주민등록표등본교부"><p>주민등록표등본<br>(초본)2</p></a></div>
+                    <div><a href="#"><img src="./img/Coding_img3_14.gif" alt="토지대장 열람/등본 발급신청"><p>토지(임야)대장<br>열람/등본 2</p></a></div>
+                    <div><a href="#"><img src="./img/Coding_img3_16.gif" alt="주민등록표등본교부"><p>건축물대장 등/초본<br>발급(열람) 2</p></a></div>
+                    <div><a href="#"><img src="./img/Coding_img3_18.gif" alt="주민등록표등본교부"><p>지방세 납세증명2</p></a></div>
+                    <div><a href="#"><img src="./img/Coding_img3_20.gif" alt="주민등록표등본교부"><p>지적도(임야도)등본<br>발급 및 열람2</p></a></div>
+                </div>
+            </section>
+            <section id="section2">
+                <h1 class="ir_so">게시판</h1>
+                <div class="cardWrap">
+                    <h2>공지사항</h2>
+                    <a href="#"><img class="plus" src="./img/Coding_img3_28.gif" alt="공지사항 더보기"></a>
+                    <img class="img" src="./img/Coding_img3_32.gif" alt="공지사항">
+                    <ul>
+                        <li><a href="#">[어디서나 대학민원] 호서대학교 패스</a></li>
+                        <li><a href="#">[전라북도 고창군] 새올행정시스템 D</a></li>
+                        <li><a href="#">교육부 행정전자서명인증센터 시스템</a></li>
+                    </ul>
+                </div>
+                <div class="cardWrap">
+                    <h2>공지사항</h2>
+                    <a href="#"><img class="plus" src="./img/Coding_img3_28.gif" alt="공지사항 더보기"></a>
+                    <img class="img" src="./img/Coding_img3_34.gif" alt="공지사항">
+                    <ul>
+                        <li><a href="#">[어디서나 대학민원] 호서대학교 패스</a></li>
+                        <li><a href="#">[전라북도 고창군] 새올행정시스템 D</a></li>
+                        <li><a href="#">교육부 행정전자서명인증센터 시스템</a></li>
+                    </ul>
+                </div>
+                <div class="cardWrap">
+                    <h2>공지사항</h2>
+                    <a href="#"><img class="plus" src="./img/Coding_img3_28.gif" alt="공지사항 더보기"></a>
+                    <img class="img" src="./img/Coding_img3_35.gif" alt="공지사항">
+                    <ul>
+                        <li><a href="#">[어디서나 대학민원] 호서대학교 패스</a></li>
+                        <li><a href="#">[전라북도 고창군] 새올행정시스템 D</a></li>
+                        <li><a href="#">교육부 행정전자서명인증센터 시스템</a></li>
+                    </ul>
+                </div>
             </section>
         </main>
     </div>
+    <footer>
+        <div class="container">
+            <div class="footerLogo"><img src="./img/Coding_img3_41.gif" alt=""> 정부 24</div>
+            <div class="textarea">
+                <p>03171 서울특별시 세종대로 209(세종로) 행정안전부</p>
+                <p>정부24 콜센터 1588-2188 정부민원안내콜센터 국번없이 110</p>
+                <p>Copyright c Ministry of the Interior and Safety. All Rights reserved. </p>
+            </div>
+            <div class="sns">
+                <a href="#"><img src="./img/blog24.jpeg" alt="블로그"></a>
+                <a href="#"><img src="./img/twiter24.jpeg" alt="트위터"></a>
+                <a href="#"><img src="./img/facebook24.jpeg" alt="페이스북"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mainMenu = document.querySelectorAll(".mainMenu"), 
+            subMenu = document.querySelectorAll(".subMenu"),
+            bannerWrap = document.querySelector(".bannerWrap"),
+            bannerInner = document.querySelector(".bannerInner"),
+            bannerImg = document.querySelector(".bannerInner .img"),
+            tabMenu = document.querySelectorAll(".tabMenu li"),
+            tabMenuSub = document.querySelectorAll(".tabMenuSub");
+
+
+        //배너 슬라이드
+        let intervalTime = 2000,
+            currentIndex = 0,
+            bannerHeight = bannerImg.offsetHeight,
+            bannerCnt = document.querySelectorAll(".bannerInner .img").length;
+
+        let bannerClone = bannerInner.firstElementChild.cloneNode(true);
+        bannerInner.appendChild(bannerClone);
+
+        setInterval(() => {
+            currentIndex++;
+            bannerInner.style.transition = "all .3s";
+            bannerInner.style.transform = "translatey(" + (-bannerHeight * currentIndex) + "px)";
+
+            if (currentIndex == bannerCnt) {
+                setTimeout(() => {
+                    bannerInner.style.transition = "0s";
+                    bannerInner.style.transform = "translatey(0)";
+                }, intervalTime/10);
+                currentIndex = 0;
+            }
+        }, intervalTime);
+
+        //메뉴 토글
+        mainMenu.forEach((menu, i) => {
+            menu.addEventListener("click", () => {
+                mainMenu.forEach((e)=>e.classList.remove("active"));
+                menu.classList.add("active");
+            })
+        });
+
+        //탭메뉴 
+        tabMenu.forEach((tab, index) => {
+            tab.addEventListener("click", ()=>{
+                tabMenu.forEach(e=>e.classList.remove("active"));
+                tab.classList.add("active");
+                tabMenuSub.forEach(e=>e.classList.remove("show"));
+                tabMenuSub[index].classList.add("show");
+            })
+        });
+    </script>
 </body>
 
 </html>
