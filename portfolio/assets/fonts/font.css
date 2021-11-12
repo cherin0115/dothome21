@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Eros Romano';
+    src: url('ErosRomanoRegular.eot');
+    src: url('ErosRomanoRegular.eot?#iefix') format('embedded-opentype'),
+        url('ErosRomanoRegular.woff2') format('woff2'),
+        url('ErosRomanoRegular.woff') format('woff'),
+        url('ErosRomanoRegular.svg#ErosRomanoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ChosunSm';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Chomsky Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Chomsky Regular'), url('Chomsky.woff') format('woff');
+    }
+    @font-face {
+        font-family: 'Theramy';
+        src: url('TheramyRegular.eot');
+        src: url('TheramyRegular.eot?#iefix') format('embedded-opentype'),
+            url('TheramyRegular.woff2') format('woff2'),
+            url('TheramyRegular.woff') format('woff'),
+            url('TheramyRegular.svg#TheramyRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    

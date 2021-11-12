@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ChosunSm';
+    font-size: 1vw;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  iframe {
+    border: 0;
+  }
+
+  body {
+    height: 10000px;
+    background: #D8D1C8;
+  }
+
+  .scroll {
+    position: fixed;
+    right: 1vw;
+    bottom: 1vw;
+    width: 3vw;
+    height: 3vw;
+    background: rgba(171, 135, 122, 0.3);
+    text-align: center;
+    line-height: 3vw;
+    color: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+    font-size: 0.8vw;
+  }
+  .container {
+    width: 95vw;
+    margin: 0 auto;
+  }
+/* header */
+  #header {
+    display: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: #000;
+    align-items: center;
+    border-bottom: 0.1vw solid #2E2E30;
+    height: 8vh;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  .header_left {
+    flex: 30%;
+  }
+  .header_center {
+    flex: 40%;
+    font-family:'Chomsky Regular';
+    font-size: 2vw;
+  }
+  
+  .header_ham {
+    position: absolute;
+    flex: 30%;
+    right: 0vw;
+    top: 1.5vh;
+    width: 2vw;
+    height: 0.5vh;
+  }
+  .header_ham::before {
+        content: '';
+        position: absolute;
+        right: 0vw;
+        top: 1.5vh;
+        width: 1.5vw;
+        height: 0.2vh;
+        background: #000;
+        box-shadow: 0 1vh 0 #000;
+  }
+  /* section1 */
+  #section1 {
+    color: #3f3f3f;
+  }
+  #section1 .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sct1{
+    margin-top: 2vh;
+  }
+  .sct1 img{ 
+    width: 33vw;
+    margin-bottom: 1vh;
+  }
+  .sct1 h2 {
+    font-size: 1.5vw;
+    font-family: 'Theramy';
+  }
+  .sct1.left{
+    flex: 0 0 20vw;
+  }
+  .sct1.center{
+    flex: 0 0 20vw;
+    text-align: center;
+  }
+  .sct1.center h1{
+    font-family: 'Eros Romano';
+    font-size: 3vw;
+  }
+  .sct1.center p {
+    margin-top: 1vh;
+  }
+  .sct1.right{
+    flex: 0 0 20vw;
+  }
+  /* section2 */
+  /* section3 */
+  /* section4 */
+  /* section5 */

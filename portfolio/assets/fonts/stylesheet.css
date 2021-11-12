@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Theramy';
+    src: url('TheramyRegular.eot');
+    src: url('TheramyRegular.eot?#iefix') format('embedded-opentype'),
+        url('TheramyRegular.woff2') format('woff2'),
+        url('TheramyRegular.woff') format('woff'),
+        url('TheramyRegular.svg#TheramyRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
