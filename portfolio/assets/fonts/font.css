@@ -21,6 +21,7 @@
     font-weight: normal;
     src: local('Chomsky Regular'), url('Chomsky.woff') format('woff');
     }
+    
 @font-face {
     font-family: 'Theramy';
     src: url('TheramyRegular.eot');
