@@ -16,11 +16,14 @@
     font-style: normal;
 }
 @font-face {
-    font-family: 'Chomsky Regular';
-    font-style: normal;
+    font-family: 'Chomsky';
+    src: url('Chomsky.ttf.woff') format('woff'),
+        url('Chomsky.ttf.svg#Chomsky') format('svg'),
+        url('Chomsky.ttf.eot'),
+        url('Chomsky.ttf.eot?#iefix') format('embedded-opentype');
     font-weight: normal;
-    src: local('Chomsky Regular'), url('Chomsky.woff') format('woff');
-    }
+    font-style: normal;
+}
     
 @font-face {
     font-family: 'Theramy';
