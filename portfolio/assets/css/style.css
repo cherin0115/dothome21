@@ -8,6 +8,14 @@
   width: 90vw;
   margin: 0 auto;
 }
+.container {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 2vh;
+}
 /* header */
 #header {
   display: fixed;
@@ -20,24 +28,16 @@
   height: 8vh;
 }
 
-.container {
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
 .header_left {
   flex: 25%;
   padding: 0 0 0 2.5vw;
 }
 
 .header_center {
-   font-family: 'Chomsky';
+ font-family: 'Chomsky';
   flex: 40%;
   font-size: 2vw;
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 .header_ham {
@@ -152,7 +152,7 @@
   color: #D8D1C8;
   text-align: center;
   font-weight: normal;
-  font-size: 25vw;
+  font-size: 23vw;
   letter-spacing: 1.2vw;
   font-family: 'Eros Romano';
 }
@@ -262,6 +262,7 @@
 
 .sec3.top .right img {
   width: 100%;
+  height: 45vh;
 }
 
 .sec3.bottom {}
@@ -295,6 +296,47 @@
 }
 
 /* section4 */
+
+.sec4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sec4 img {
+  width: 30vw;
+  border: none;
+}
+.sec4 h1 {
+  padding-left:6vw;
+  padding-top: 8vh;
+  font-size: 18vw;
+  text-align: right;
+  position: relative;
+  
+}
+.sec4 h1::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-bottom: 1px solid #000;
+}
+.sec4_2 {
+    flex: 0 0 50%;
+    padding-right: 2vw;
+    line-height: 1.7vw;
+    border-right: 1px solid #000;
+}
+.sec4_3 {
+  flex: 0 0 50%;
+  padding-left: 2vw;
+   line-height: 1.7vw;
+}
+
+
+
+
+
 /* section5 */
 
 
@@ -460,7 +502,7 @@
 
   /* sec3 */
   #section3 .container {
-    margin-top: 2vh;
+    margin-top: 0;
   }
 
   .sec3 {
@@ -469,23 +511,11 @@
   }
 
   .sec3.top {
-    display: block;
     margin-bottom: 3vh;
   }
 
   .sec3.top .left {
-    flex: 0 0 50%;
-    padding-right: 2vw;
-    border: none;
-  }
-
-  .sec3.top .left h3 {
     display: none;
-  }
-
-  .sec3.top .left p {
-    padding-top: 0;
-    line-height: 3vw;
   }
 
   .sec3.top .right {
@@ -493,15 +523,14 @@
   }
 
   .sec3.bottom img {
-    width: 100%;
-    height: 30vh;
+    width: 60vw;
   }
   .sec3_2 {
       flex: 0 0 40%;
   }
   .sec3_2 h1 {
     text-align: right;
-    font-size: 7vw;
+    font-size: 5vw;
     line-height: 6vw;
     padding-bottom: 1vw;
   }
@@ -514,8 +543,8 @@
     font-size: 4vw;
     border: 1px solid #3f3f3f;
     border-radius: 50%;
-    margin-top: 6vh;
-    height: 7vh;
+    margin-top: 4vh;
+    height: 6vh;
     text-align: center;
     font-family: 'Theramy';
     background: #e9e9e95e;
