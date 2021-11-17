@@ -203,7 +203,7 @@
 .sec2_3 {
   display: flex;
   width: 100vw;
-  height: 37vh;
+  height: 35vh;
   padding-top: 3vh;
 }
 
@@ -212,7 +212,7 @@
   background: #000;
   color: #D8D1C8;
   font-family: 'Eros Romano';
-  font-size: 18vw;
+  font-size: 17vw;
   letter-spacing: -0.3vw;
   font-style: normal;
   font-weight: normal;
@@ -231,7 +231,7 @@
 }
 
 .sec3 {
-  flex: 0 0 60vw;
+  flex: 0 0 60%;
   padding-right: 1vw;
 }
 
@@ -252,7 +252,7 @@
 
 .sec3.top .left p {
   padding-top: 3vh;
-  line-height: 1.7vw;
+  line-height: 1.3vw;
 }
 
 .sec3.top .right {
@@ -271,14 +271,16 @@
 }
 
 .sec3_2 {
+  flex: 0 0 40%;
+  padding-left: 2vw;
   border-left: 1px solid #000;
-  padding-left: 1.5vw;
 }
+
 
 .sec3_2 h1 {
   text-align: right;
-  font-size: 6vw;
-  line-height: 4vw;
+  font-size: 5vw;
+  line-height: 4.1vw;
   padding-bottom: 2vw;
 }
 
@@ -287,7 +289,7 @@
 }
 
 .sec3_2 .btn {
-  margin-top: 6vh;
+  margin-top: 7vh;
   font-size: 4vw;
   line-height: 2.5;
 }
@@ -305,6 +307,9 @@
 
 @media (max-width: 700px) {
 
+  #content {
+    width: 95vw;
+  }
   /* Header */
   #header {
     display: fixed;
@@ -385,7 +390,7 @@
     color: #D8D1C8;
     text-align: center;
     font-weight: normal;
-    font-size: 25vw;
+    font-size: 20vw;
     letter-spacing: 1.2vw;
     font-family: 'Eros Romano';
   }
@@ -440,7 +445,7 @@
     background: #000;
     color: #D8D1C8;
     font-family: 'Eros Romano';
-    font-size: 15vw;
+    font-size: 12vw;
     letter-spacing: 0.8vw;
     font-style: normal;
     font-weight: normal;
@@ -459,7 +464,7 @@
   }
 
   .sec3 {
-    flex: 0 0 60vw;
+    flex: 0 0 60%;
     padding-right: 1vw;
   }
 
@@ -491,7 +496,9 @@
     width: 100%;
     height: 30vh;
   }
-
+  .sec3_2 {
+      flex: 0 0 40%;
+  }
   .sec3_2 h1 {
     text-align: right;
     font-size: 7vw;
