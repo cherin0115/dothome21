@@ -12,7 +12,12 @@
   a {
     text-decoration: none;
   }
-
+  em {
+    font-style: normal;
+    font-size: 2vw;
+    color: rgb(221, 210, 195);
+    background-color: black;
+  }
   li {
     list-style: none;
   }
@@ -30,7 +35,7 @@
     border: 1px solid #3f3f3f;
   }
 
-  /* btn */
+  /* btn  style*/
   .btn {
     border: 1px solid #3f3f3f;
     border-radius: 50%;
@@ -40,4 +45,17 @@
     font-family: 'Theramy';
     background: #e9e9e95e;
   }
-  
+
+  /* box style */
+.box.st1{
+  border: 1px solid #000;
+  height: 10vh;
+  background:#C9BDAD;
+}
+.box.st2 {
+  border: 1px solid #000;
+  height: 10vh;
+  width: 17vw;
+}
+.st2_border{}
+.box.st3{}
