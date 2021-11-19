@@ -354,7 +354,7 @@
   padding-bottom: 2vh;
 }
 .sec6.odd .right p {
-line-height: 3vh;
+line-height: 1.7vw;
 padding-bottom: 2vh;
 }
 .sec6.odd .right .box.st1 {
@@ -367,7 +367,11 @@ padding-bottom: 2vh;
   padding-top: 0.5vh;
   color: #957F5F;
 }
-
+.box.st2 .outline img {
+  width: 2vw;
+  position: absolute;
+  border: 0px;
+}
 
 
 

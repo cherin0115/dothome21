@@ -52,10 +52,27 @@
   height: 10vh;
   background:#C9BDAD;
 }
-.box.st2 {
-  border: 1px solid #000;
-  height: 10vh;
-  width: 17vw;
+.box_inner {
+  margin-top: 2vh;
 }
-.st2_border{}
-.box.st3{}
+.box.st2 {
+  float: left;
+  border: 3px solid #000;
+  height: 18vh;
+  width: 17vw;
+  position: relative;
+}
+.box.st2 .outline {
+    border: 1px solid #000;
+    height: 16vh;
+    width: 16vw;
+    top: 0.5vh;
+    left: 0.5vh;
+    position: absolute;
+}
+.box.st3 {
+  float: right;
+  border: 3px solid #000;
+  height: 18vh;
+  width: 14vw;
+}
