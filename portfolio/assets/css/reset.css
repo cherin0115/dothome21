@@ -139,3 +139,10 @@ img {
   left: 0.5vh;
   position: absolute;
 }
+
+/* input */
+
+input {
+  background: transparent;
+  border-bottom: 1px solid #000;
+}

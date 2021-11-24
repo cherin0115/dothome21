@@ -608,18 +608,17 @@
 
 .sec9_2 {
   width: 100%;
-  height: 1000px;
   border: 1px solid #000;
   display: flex;
-justify-content: space-evenly;
-align-items: center;
-text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
   padding: 1vw;
 }
 
 .sec9_2 .left {
-  width: 40vw;
-  height: 1000px;
+  width: 41vw;
+  height: 900px;
 }
 
 .sec9_2 .left .img3 {
@@ -629,10 +628,13 @@ text-align: center;
 .sec9_2 .left h2 {
   font-size: 2vw;
   padding: 2vw;
+  font-family: 'ChosunSm';
 }
+
 .sec9_2 .left .innerTxt {
   position: relative;
 }
+
 .sec9_2 .left .innerTxt h2::before {
   top: 0;
   left: 6vw;
@@ -640,6 +642,7 @@ text-align: center;
   background-image: url(../img/contLin.png);
   position: absolute;
 }
+
 .sec9_2 .left h2::after {
   top: 0vw;
   right: 0vw;
@@ -647,17 +650,20 @@ text-align: center;
   background-image: url(../img/contLine2.png);
   position: absolute;
 }
+
 .sec9_2 .left .innerTxt p {
   padding-top: 1vw;
   line-height: 1.6;
 }
+
 .sec9_2 .right {
-  width: 40vw;
-  height: 1000px;
+  width: 41vw;
+  height: 900px;
   border: 1px solid #000;
   padding-left: 2vw;
   position: relative;
 }
+
 .sec9_2 .right img {
   border: 0;
   position: absolute;
@@ -667,5 +673,22 @@ text-align: center;
 
 }
 
+.sec9_2 .right .bottom {
+  margin-top: 40vh;
+  text-align: left;
+}
+
+.sec9_2 .right input {
+  display: block;
+  font-size: 3vw;
+  margin-top: 3vw;
+  border-bottom: 1px solid #000;
+}
+
+.sec9_2 .right .ContentBox {
+  margin-top: 3vw;
+  height: 30vh;
+  border: 1px solid #000;
+}
 
 /* Responsive web design */
