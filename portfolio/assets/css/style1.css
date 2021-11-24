@@ -83,11 +83,12 @@ body {
 .sec1>img {
     border: 1px solid #000;
     width: 100%;
+    overflow: hidden;
 }
 
 .sec1 h2 {
     font-family: 'Theramy';
-    font-size: 2.5vw;
+    font-size: 2vw;
     padding-top: 10px;
 }
 
