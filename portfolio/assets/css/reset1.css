@@ -91,3 +91,11 @@ h5,
 h6 {
     font-weight: normal;
 }
+
+p {
+    font-family: 'ChosunSm';
+    font-size: 16px;
+}
+img {
+    border: 1px solid #222;
+}
