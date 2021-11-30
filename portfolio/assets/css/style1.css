@@ -52,11 +52,19 @@ body {
 
 #section3 {}
 
-#section4 {}
+#section4 {
+    margin-top: 0.5%;
+}
 
 #section5 {}
 
-#section6 {}
+#section6,
+#section7,
+#section8,
+#section9,
+#section10 {
+    margin-top: 2%;
+}
 
 /* container */
 .container {
@@ -118,17 +126,18 @@ body {
     bottom: -8%;
 }
 
+
 /* btn */
 .btn {
     border: 1px solid #3f3f3f;
     border-radius: 50%;
-    height: 10vw;
-    line-height: 1.9;
-    font-size: 5vw;
+    height: 9.5vw;
+    line-height: 2.5;
+    font-size: 4vw;
     text-align: center;
     font-family: 'Theramy';
     background: #e9e9e95e;
-  }
+}
 
 /* header */
 #header {
@@ -144,6 +153,7 @@ body {
     padding: 0 3%;
     box-sizing: border-box;
     background-color: #D8D1C8;
+    z-index: 10000;
 }
 
 #header>div {
@@ -253,12 +263,15 @@ body {
     font-family: 'Eros Romano';
     text-align: center;
 }
+
 .sec2 .contInner {
     margin-top: 2%;
 }
-.sec2 > img {
-    width: 100%;  
+
+.sec2>img {
+    width: 100%;
 }
+
 .sec2 .contInner h2 {
     font-size: 5vw;
     font-family: 'Eros Romano';
@@ -266,19 +279,23 @@ body {
 }
 
 .aboutL {
-    flex: 0 0  35;
+    flex: 0 0 35;
     padding-right: 4.8%;
 }
+
 .aboutL h2 {
     padding-bottom: 5px;
 }
+
 .aboutL p {
     padding-top: 15px;
 }
+
 .aboutR {
-    flex: 0 0  60%;
-    
+    flex: 0 0 60%;
+
 }
+
 .aboutR h2 {
     padding-top: 15px;
     padding-bottom: 5px;
@@ -286,6 +303,11 @@ body {
 
 
 /* sec3 */
+#section3 .container {
+    padding-bottom: 2%;
+    border-bottom: 2px solid #000;
+}
+
 .sec3 {
     margin-top: 2%;
     display: flex;
@@ -299,11 +321,12 @@ body {
     font-size: 15vw;
     line-height: 1;
     font-family: 'Eros Romano';
-    flex:  0 0 75%;
+    flex: 0 0 75%;
     text-align: center;
 }
+
 .sec3 .aboutImg {
-    flex:  0 0 19%;
+    flex: 0 0 19%;
     width: 100%;
 }
 
@@ -316,29 +339,35 @@ body {
 .sec3_2 .about2 {
     flex: 0 0 58%;
 }
+
 .sec3_2 .about2 .aboutTit2 {
     flex: 0 0 48%;
     padding-right: 2%;
     text-align: justify;
 }
+
 .sec3_2 .about2 .aboutTit2 h2 {
     font-family: 'Eros Romano';
     font-size: 63px;
     line-height: 0.75;
     padding-bottom: 15px;
 }
+
 .sec3_2 .about2 .aboutImg2 {
     flex: 0 0 46%;
     width: 100%;
 }
+
 .sec3_2 .aboutTit3 {
     margin-top: 3%;
 }
+
 /* sec3_2 right */
 .sec3_2 .about3 {
     flex: 0 0 38%;
     padding-left: 0.7%;
 }
+
 .sec3_2 .about3 h2 {
     font-size: 5.5vw;
     font-family: 'Eros Romano';
@@ -346,14 +375,323 @@ body {
     text-align: right;
     padding-bottom: 15px;
 }
+
 .sec3_2 .about3 p {
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     text-align: justify;
 }
 
 
+/* sec4 */
+
+#section4 .container {
+    margin-bottom: 1%;
+}
+
+.sec4 {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 2%;
+}
+
+.sec4 .sec4Img {
+    width: 30vw;
+    flex: 0 0 15%;
+}
+
+.sec4 h1 {
+    flex: 0 0 80%;
+    font-size: 18vw;
+    text-align: right;
+    line-height: 0.8;
+    font-family: 'Eros Romano';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.sec4_2 {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid #000;
+    margin-top: 0.5%;
+    padding-top: 2%;
+    padding-bottom: 0.8%;
+}
+
+.sec4_2 p {
+    text-align: justify;
+}
+
+.sec4_2 .ProjectL {
+    flex: 0 0 48%;
+    margin-right: 2%;
+}
+
+.sec4_2 .ProjectR {
+    flex: 0 0 48%;
+}
+
+/* sec5 */
+.sec5 h2 {
+    font-size: 63px;
+    font-family: 'Eros Romano';
+    line-height: 0.8;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.sec5 .contInner .bildL {
+    flex: 0 0 50%;
+    padding-right: 2%;
+    text-align: justify;
+}
+
+.sec5 .contInner .bildR {
+    flex: 0 0 48%;
+    text-align: justify;
+}
+
+/* sec6 */
+#section6 .container,
+#section7 .container,
+#section8 .container,
+#section9 .container {
+    border-top: 1px solid #000;
+}
+
+.sec6 {
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec6 .scriptL {
+    flex: 0 0 60%;
+}
+
+.sec6 .scriptL img {
+    position: absolute;
+    height: 100%;
+}
+
+.sec6 .scriptR {
+    flex: 0 0 35.5%;
+}
+
+.scriptR .contDetail .desc h2 {
+    font-size: 63px;
+    line-height: 0.75;
+    font-family: 'Eros Romano';
+    padding-bottom: 15px;
+    text-align: justify;
+
+}
+
+.scriptR .contDetail .desc p {
+    padding-bottom: 25px;
+}
+
+.scriptR .contDetail .box.style1 {
+    border: 1px solid #000;
+    background-color: #C9BDAD;
+    padding: 10px;
+    margin-bottom: 35px;
+}
+
+.scriptR .contDetail .box.style1 strong {
+    font-weight: bold;
+}
+
+.scriptR .contDetail .box.style1 p {
+    color: #7e492c;
+}
+
+.sec6 .scriptR .contDetail .boxCont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.scriptR .boxCont .box.style2 {
+    flex: 0 0 55%;
+    border: 1px solid #000;
+    position: relative;
+    margin: 10px;
+}
+
+.scriptR .boxCont .box.style2::before {
+    content: '';
+    position: absolute;
+    width: 106%;
+    height: 109%;
+    top: -11px;
+    left: -12px;
+    border: 2px solid #000;
+}
+
+.scriptR .boxCont .box.style2 .clickBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    width: 4vw;
+}
+
+.scriptR .boxCont .box.style2 h2 {
+    font-family: 'Theramy';
+    font-size: 3vw;
+    line-height: 0.8;
+    text-align: left;
+    padding: 30px 0 0 20px;
+}
+
+.scriptR .boxCont .box.style2 h3 {
+    font-family: 'ChosunSm';
+    line-height: 1.3;
+    font-size: 1.8vw;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.scriptR .boxCont .box.style2 h4 {
+    font-family: 'ChosunSm';
+    line-height: 1.3;
+    font-size: 1.8vw;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.scriptR .boxCont .box.style2 p {
+    font-size: 0.7vw;
+    padding: 20px 0 10px 5px;
+}
+
+.scriptR .boxCont .box.style3 {
+    flex: 0 0 35%;
+    border: 1px solid #000000;
+    margin: 10px;
+    position: relative;
+}
+
+.scriptR .boxCont .box.style3::before {
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 109%;
+    top: -11px;
+    right: -12px;
+    border: 2px solid #000;
+}
+
+.scriptR .boxCont .box.style3 h2 {
+    font-family: 'Theramy';
+    font-size: 2vw;
+    line-height: 1.2;
+    padding: 80px 0 0 10px;
+}
+
+.scriptR .boxCont .box.style3 img {
+    border: none;
+    position: absolute;
+    overflow: hidden;
+    top: -2.8vw;
+    right: -1vw;
+    width: 95%;
+}
 
 
+/* sec10 */
+#section10 .container {
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+
+.sec10 {
+    margin: 1% 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec10 .title h2 {
+    font-size: 8vw;
+    font-family: 'Eros Romano';
+    border-bottom: 1px solid #000;
+}
+
+.sec10 .sideBar {
+    width: 36.5%;
+    margin-right: 1%;
+    height: 95vh;
+    position: sticky;
+    top: 70px;
+    align-items: center;
+    text-align: center;
+}
+
+.sec10 .sideBar .imgBox {
+    text-align: center;
+    align-items: center;
+    padding: 2vw 5vw 0 5vw;
+    justify-content: space-around;
+}
+
+.sec10 .sideBar .imgBox img {
+    width: 100%;
+}
+
+.sec10 .sideBar .imgBox p {
+    padding-top: 5px;
+}
+
+.sec10 .sideBar h1 {
+    font-family: 'Eros Romano';
+    font-size: 8vw;
+    line-height: 1;
+    margin-bottom: 4vw;
+}
+
+.sec10 .sideBar .btn2 {
+    border: 1px solid #000;
+    display: inline;
+    padding: 3vw 9vw;
+    border-radius: 50%;
+    font-size: 3vw;
+    font-family: 'Eros Romano';
+}
+
+.sec10 .cont {
+    width: 60%;
+    height: 480vh;
+}
+.sec10 .cont .scriptImg {
+    padding: 2vw;
+}
+.sec10 .cont .scriptImg img {
+    width: 100%;
+}
+
+.sec10 .cont h3 {
+    font-size: 3vw;
+    font-family: 'Eros Romano';
+    line-height: 1;
+    padding-top: 5px;
+}
+
+.sec10 .cont .scriptImg p {
+    text-align: justify;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #000;
+}
+
+.sec10 .cont .scriptImg p:last-child {
+    border: none;
+}
 
 @media (max-width: 960px) {
     .container {
