@@ -1,0 +1,371 @@
+@font-face {
+    font-family: 'Eros Romano';
+    src: url('https://cherin0115.github.io/dothome21/portfolio/assets/fonts/ErosRomanoRegular.eot');
+    src: url('https://cherin0115.github.io/dothome21/portfolio/assets/fonts/ErosRomanoRegular.eot?#iefix') format('embedded-opentype'),
+        url('https://cherin0115.github.io/dothome21/portfolio/assets/fonts/ErosRomanoRegular.woff2') format('woff2'),
+        url('https://cherin0115.github.io/dothome21/portfolio/assets/fonts/ErosRomanoRegular.woff') format('woff'),
+        url('https://cherin0115.github.io/dothome21/portfolio/assets/fonts/ErosRomanoRegular.eotErosRomanoRegular.svg#ErosRomanoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ChosunSm';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Chomsky';
+    src: url('https://cherin0115.github.io/dothome21/portfolio/assets/fonts/Chomsky.woff') format('woff'),
+        url('https://cherin0115.github.io/dothome21/portfolio/assets/fonts/Chomsky.svg#Chomsky') format('svg'),
+        url('https://cherin0115.github.io/dothome21/portfolio/assets/fonts/Chomsky.eot'),
+        url('https://cherin0115.github.io/dothome21/portfolio/assets/fonts/Chomsky.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Theramy';
+    src: url('https://cherin0115.github.io/dothome21/portfolio/assets/fonts/TheramyRegular.eot');
+    src: url('https://cherin0115.github.io/dothome21/portfolio/assets/fonts/TheramyRegular.eot?#iefix') format('embedded-opentype'),
+        url('https://cherin0115.github.io/dothome21/portfolio/assets/fonts/TheramyRegular.woff2') format('woff2'),
+        url('https://cherin0115.github.io/dothome21/portfolio/assets/fonts/TheramyRegular.woff') format('woff'),
+        url('https://cherin0115.github.io/dothome21/portfolio/assets/fonts/TheramyRegular.svg#TheramyRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+* {box-sizing: border-box;}
+/* layout */
+body {
+    background: #D8D1C8;
+}
+#contents {}
+#section1 {}
+#section2 {}
+#section3 {
+    height: 4000px;
+}
+#section4 {}
+#section5 {}
+#section6 {}
+
+/* container */
+.container {
+    width: 90%;
+    max-width: 1760px;
+    margin: 0 auto;
+}
+
+/* font */
+.eros {
+    font-family: 'Eros Romano' !important;
+    font-size: 60px;
+}
+.ch {
+    font-family: 'ChosunSm' !important;
+    font-size: 16px;
+    text-align: justify;
+}
+.tr {
+    font-family: 'Theramy' !important;
+    font-size: 80px;
+    text-align: center;
+}
+
+/* layout */
+.border {
+    border: 1px solid #000;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+.flexCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* btn */
+.btn {
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: 1vw 0;
+    align-items: center;
+}
+/* line */
+.lineRight,
+.lineLeft,
+.lineTop,
+.lineBom {
+    position: relative;
+}
+.lineRight::after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    right: -1.4%; top: 0;
+}
+.lineLeft::before {
+    content: '';
+    width: 1px;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    left: -1.4%;
+    top: 0;
+}
+.lineTop::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: -8%;
+}
+.lineBom::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    bottom: -8%;
+}
+
+/* header */
+#header {
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 68px;
+    border-bottom: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3%;
+    box-sizing: border-box;
+    background: #D8D1C8;
+}
+#header > div {
+    flex: 0 0 10%;
+}
+#header>div.info {
+    font-family: 'ChosunSm';
+    font-size: 14px;
+    line-height: 1.4;
+}
+#header>div.title {
+    text-align: center;
+    flex: 0 0 20%;
+    font-family: 'Chomsky';
+    font-size: 30px;
+}
+#header>div.ham {
+    text-align: right;
+}
+#header>div.ham span {
+    width: 20px; height: 2px;
+    background: #000;
+    display: inline-block;
+    position: relative;
+    top: -4px;
+}
+#header>div.ham span::after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    left: 0; top: -6px;
+}
+#header>div.ham span::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+
+/* sec1 */
+.sec1 {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.sec1 > div {
+    flex: 0 0 32%;
+}
+.sec1>div img {
+    border: 1px solid #000;
+}
+.sec1>div h2 {
+    font-family: 'Theramy';
+    font-size: 80px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.sec1>div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    text-align: center;
+}
+.sec1>div h3 {
+    font-family: 'Theramy';
+    font-size: 40px;
+    line-height: 1;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+.sec1>div p {
+    font-family: 'ChosunSm';
+    font-size: 16px;
+}
+
+/* sec2 */
+.sec2 {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.sec2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.sec2 h1 {
+    width: 100%;
+    background: #000;
+    color: #D8D1C8;
+    font-size: 26vmax;
+    line-height: .8;
+    font-family: 'Eros Romano';
+    text-align: center;
+    margin-bottom: 2%;
+}
+.sec2 .left {
+    width: 29%;
+}
+.sec2 .left h2 {
+    margin-top: -.54vw;
+    margin-bottom: .54vw;
+    line-height: .91;
+}
+.sec2 .left p {
+    margin-top: .54vw;
+    text-align: justify;
+    margin-bottom: .8vw;
+}
+.sec2 .right {
+    width: 69%;
+}
+.sec2 .right h2 {
+    margin-top: .54vw;
+    margin-bottom: .54vw;
+    line-height: .91;
+}
+
+.sec3 .title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec3 .title h2 {
+    width: 80%;
+    background: #ccc;
+    background: #000;
+    color: #D8D1C8;
+    font-size: 20vmax;
+    line-height: .8;
+    font-family: 'Eros Romano';
+    text-align: center;
+    white-space: nowrap;
+}
+.sec3 .title .small {
+    width: 18%;
+    background: rgb(144, 144, 144);
+}
+.sec3 .layout {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+.sec3 .layout .contLeft{
+    justify-content: space-between;
+    width: 58%;
+}
+.sec3 .layout .contRight{
+    width: 40%;
+}
+
+.sec3 .layout .contLeft .txtAbout {
+    height: 32%;
+}
+.sec3 .layout .contLeft .txtAbout.Image{
+    height: 65%;
+}
+
+.sec3 .layout .contLeft .txtAbout .txtDetail{
+    width: 48%;
+}
+.sec3 .layout .contLeft .txtDetail h2{
+    margin-top: 0.54vw;
+    margin-bottom: 0.54vw;
+    line-height: .91;
+}
+.sec3 .layout .contLeft img {
+    height: 100%;
+    border: 1px solid #000;
+}
+.sec3 .layout .contRight h2{
+    margin-top: 0.54vw;
+    margin-bottom: 0.54vw;
+    line-height: .91;
+    font-size: 100px;
+    text-align: right;
+}
+.sec3 .layout .contRight p{
+    margin-bottom: 2vw;
+}
+
+
+
+
+@media (max-width: 960px) {
+    .container {
+        width: 96%;
+    }
+    .sec1 {
+        flex-direction: column;
+    }
+    .sec1>div{
+        flex: 0 0 100%;
+    }
+    .sec1>div:nth-child(1){
+        display: none;
+    }
+    .sec1>div p {
+        margin-bottom: 40px;
+    }
+    .sec1>div:nth-child(2).lineRight::after {
+        width: 0; height: 0;
+    }
+    .sec1>div:nth-child(2).lineRight::before {
+        width: 0;
+        height: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    
+}
