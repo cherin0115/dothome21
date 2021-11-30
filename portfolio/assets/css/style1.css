@@ -777,7 +777,9 @@ body {
         margin: 50px;
     }
 }
+@media (max-width: 1200px) {
 
+}
 @media (max-width: 960px) {
 
     /* header */
