@@ -9,12 +9,14 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'ChosunSm';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Chomsky';
     src: url('https://cherin0115.github.io/dothome21/portfolio/assets/fonts/Chomsky.woff') format('woff'),
@@ -36,19 +38,30 @@
     font-style: normal;
     font-display: swap;
 }
-* {box-sizing: border-box;}
+
+* {
+    box-sizing: border-box;
+}
+
 /* layout */
 body {
     background: #D8D1C8;
 }
+
 #contents {}
+
 #section1 {}
+
 #section2 {}
+
 #section3 {
     height: 4000px;
 }
+
 #section4 {}
+
 #section5 {}
+
 #section6 {}
 
 /* container */
@@ -63,11 +76,13 @@ body {
     font-family: 'Eros Romano' !important;
     font-size: 60px;
 }
+
 .ch {
     font-family: 'ChosunSm' !important;
     font-size: 16px;
     text-align: justify;
 }
+
 .tr {
     font-family: 'Theramy' !important;
     font-size: 80px;
@@ -78,10 +93,12 @@ body {
 .border {
     border: 1px solid #000;
 }
+
 .flex {
     display: flex;
     justify-content: space-between;
 }
+
 .flexCol {
     display: flex;
     flex-direction: column;
@@ -95,6 +112,7 @@ body {
     padding: 1vw 0;
     align-items: center;
 }
+
 /* line */
 .lineRight,
 .lineLeft,
@@ -102,14 +120,17 @@ body {
 .lineBom {
     position: relative;
 }
+
 .lineRight::after {
     content: '';
     width: 1px;
     height: 100%;
     background: #000;
     position: absolute;
-    right: -1.4%; top: 0;
+    right: -1.4%;
+    top: 0;
 }
+
 .lineLeft::before {
     content: '';
     width: 1px;
@@ -119,6 +140,7 @@ body {
     left: -1.4%;
     top: 0;
 }
+
 .lineTop::before {
     content: '';
     width: 100%;
@@ -128,6 +150,7 @@ body {
     left: 0;
     top: -8%;
 }
+
 .lineBom::after {
     content: '';
     width: 100%;
@@ -141,7 +164,8 @@ body {
 /* header */
 #header {
     position: fixed;
-    left: 0; top: 0;
+    left: 0;
+    top: 0;
     z-index: 10000;
     width: 100%;
     height: 68px;
@@ -153,38 +177,47 @@ body {
     box-sizing: border-box;
     background: #D8D1C8;
 }
-#header > div {
+
+#header>div {
     flex: 0 0 10%;
 }
+
 #header>div.info {
     font-family: 'ChosunSm';
     font-size: 14px;
     line-height: 1.4;
 }
+
 #header>div.title {
     text-align: center;
     flex: 0 0 20%;
     font-family: 'Chomsky';
     font-size: 30px;
 }
+
 #header>div.ham {
     text-align: right;
 }
+
 #header>div.ham span {
-    width: 20px; height: 2px;
+    width: 20px;
+    height: 2px;
     background: #000;
     display: inline-block;
     position: relative;
     top: -4px;
 }
+
 #header>div.ham span::after {
     content: '';
     width: 20px;
     height: 2px;
     background: #000;
     position: absolute;
-    left: 0; top: -6px;
+    left: 0;
+    top: -6px;
 }
+
 #header>div.ham span::before {
     content: '';
     width: 20px;
@@ -201,12 +234,15 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.sec1 > div {
+
+.sec1>div {
     flex: 0 0 32%;
 }
+
 .sec1>div img {
     border: 1px solid #000;
 }
+
 .sec1>div h2 {
     font-family: 'Theramy';
     font-size: 80px;
@@ -214,13 +250,15 @@ body {
     text-align: center;
     margin-bottom: 10px;
 }
-.sec1>div:nth-child(2){
+
+.sec1>div:nth-child(2) {
     display: flex;
     flex-direction: column;
-    align-items: center;  
+    align-items: center;
     justify-content: center;
     text-align: center;
 }
+
 .sec1>div h3 {
     font-family: 'Theramy';
     font-size: 40px;
@@ -228,6 +266,7 @@ body {
     padding-top: 15px;
     padding-bottom: 5px;
 }
+
 .sec1>div p {
     font-family: 'ChosunSm';
     font-size: 16px;
@@ -238,11 +277,13 @@ body {
     margin-top: 2%;
     margin-bottom: 2%;
 }
+
 .sec2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .sec2 h1 {
     width: 100%;
     background: #000;
@@ -253,22 +294,27 @@ body {
     text-align: center;
     margin-bottom: 2%;
 }
+
 .sec2 .left {
     width: 29%;
 }
+
 .sec2 .left h2 {
     margin-top: -.54vw;
     margin-bottom: .54vw;
     line-height: .91;
 }
+
 .sec2 .left p {
     margin-top: .54vw;
     text-align: justify;
     margin-bottom: .8vw;
 }
+
 .sec2 .right {
     width: 69%;
 }
+
 .sec2 .right h2 {
     margin-top: .54vw;
     margin-bottom: .54vw;
@@ -291,81 +337,142 @@ body {
     text-align: center;
     white-space: nowrap;
 }
+
 .sec3 .title .small {
     width: 18%;
     background: rgb(144, 144, 144);
 }
+
 .sec3 .layout {
     margin-top: 2%;
     display: flex;
     justify-content: space-between;
 }
-.sec3 .layout .contLeft{
+
+.sec3 .layout .contLeft {
     justify-content: space-between;
     width: 58%;
 }
-.sec3 .layout .contRight{
+
+.sec3 .layout .contRight {
     width: 40%;
 }
 
 .sec3 .layout .contLeft .txtAbout {
     height: 32%;
 }
-.sec3 .layout .contLeft .txtAbout.Image{
+
+.sec3 .layout .contLeft .txtAbout.Image {
     height: 65%;
 }
 
-.sec3 .layout .contLeft .txtAbout .txtDetail{
+.sec3 .layout .contLeft .txtAbout .txtDetail {
     width: 48%;
 }
-.sec3 .layout .contLeft .txtDetail h2{
+
+.sec3 .layout .contLeft .txtDetail h2 {
     margin-top: 0.54vw;
     margin-bottom: 0.54vw;
     line-height: .91;
 }
+
 .sec3 .layout .contLeft img {
     height: 100%;
     border: 1px solid #000;
 }
-.sec3 .layout .contRight h2{
+
+.sec3 .layout .contRight h2 {
     margin-top: 0.54vw;
     margin-bottom: 0.54vw;
     line-height: .91;
     font-size: 100px;
     text-align: right;
 }
-.sec3 .layout .contRight p{
+
+.sec3 .layout .contRight p {
     margin-bottom: 2vw;
 }
 
 
+@media (max-width: 1600px) {
+    .sec2 .left p:first-of-type {
+        display: none;
+    }
 
+    .sec2 .right h2 {
+        padding-top: 2%;
+        font-size: 3vw;
+    }
+
+    .sec2 .right p {
+        display: none;
+    }
+    /* section3 */
+    .sec3 .layout {
+        display: inline-block;
+    }
+    .sec3 .layout .contLeft.flexCol {
+        display: inline;
+        width: 50%;
+    }
+    .sec3 .layout .contLeft .txtAbout.flex {
+        display: none;
+    }
+    .sec3 .layout .contLeft .txtAbout.Image {
+        width: 50%;
+        float: left;
+    }
+    .sec3 .layout .contRight {
+        width: 100%;
+        display: block;
+
+    }
+    .sec3 .layout .contRight h2 {
+        margin-top: 2%;
+        font-size: 6.8vw;
+    }
+    
+}
+@media (max-width: 1450px) {
+    .sec2 .left h2 {
+        display: none;
+    }
+    .sec2 .right h2 {
+        display: none;
+    }
+}
 
 @media (max-width: 960px) {
     .container {
         width: 96%;
     }
+
     .sec1 {
         flex-direction: column;
     }
-    .sec1>div{
+
+    .sec1>div {
         flex: 0 0 100%;
     }
-    .sec1>div:nth-child(1){
+
+    .sec1>div:nth-child(1) {
         display: none;
     }
+
     .sec1>div p {
         margin-bottom: 40px;
     }
+
     .sec1>div:nth-child(2).lineRight::after {
-        width: 0; height: 0;
+        width: 0;
+        height: 0;
     }
+
     .sec1>div:nth-child(2).lineRight::before {
         width: 0;
         height: 0;
     }
+
 }
 
-@media (max-width: 800px) {
-    
-}
+@media (max-width: 800px) {}
