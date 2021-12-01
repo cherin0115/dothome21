@@ -596,6 +596,10 @@ body {
     .sec3 .btn .tr{
         font-size: 35px;
     }
-    
-    
+        
+}
+@media (max-width: 325px) {
+    .sec1>div h3 {
+        font-size: 25px;
+    }        
 }
