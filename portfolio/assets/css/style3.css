@@ -403,7 +403,9 @@ body {
         padding-top: 2%;
         font-size: 3vw;
     }
-
+    .sec2 .right img {
+        height: 100%;
+    }
     .sec2 .right p {
         display: none;
     }
@@ -434,15 +436,46 @@ body {
     
 }
 @media (max-width: 1450px) {
+    .sec2 h1 {
+        font-size: 23vmax;
+    }
     .sec2 .left h2 {
         display: none;
     }
     .sec2 .right h2 {
         display: none;
     }
+
+    .sec3 .btn {
+        display: none;
+    }
+}
+@media (max-width: 1250px) {
+    #header>div.info {
+        font-size: 13px;
+    }
+    #header>div.title {
+        font-size: 22px;
+    }
+    .sec2 h1 {
+        font-size: 17vmax;
+    }
+    .sec2 .left h2 {
+        display: none;
+    }
+    .sec2 .right h2 {
+        display: none;
+    }
+    .sec3 .title h2 {
+        font-size: 17vmax;
+    }
+ 
 }
 
 @media (max-width: 960px) {
+    #header>div.info {
+        font-size: 12px;
+    }
     .container {
         width: 96%;
     }
@@ -450,9 +483,16 @@ body {
     .sec1 {
         flex-direction: column;
     }
-
+    
     .sec1>div {
         flex: 0 0 100%;
+    }
+    .sec1 >div img {
+       margin-top: 10px;
+    }
+
+    .sec1>div p:last-of-type {
+        margin-bottom: 0;
     }
 
     .sec1>div:nth-child(1) {
@@ -473,6 +513,89 @@ body {
         height: 0;
     }
 
+    /* section2 */
+    .sec2 h1 {
+        font-size: 14vmax;
+    }
+    .sec2 .left {
+        flex: 0 0 100%;
+    }
+    .sec2 .left p {
+        display: block;
+    }
+    .sec2 .right img {
+        display: none;
+    }
+    .sec3 .title h2 {
+        font-size: 15vmax;
+    }
+    .sec3 .layout .contLeft img {
+        display: none;
+    }
+    .sec3 .layout .contRight h2 br {
+        display: none;
+    }
+ 
 }
 
-@media (max-width: 800px) {}
+@media (max-width: 800px) {
+    #header>div.info {
+        font-size: 9px;
+    }
+    #header>div.title {
+        font-size: 18px;
+    }
+    .sec2 h1 {
+        font-size: 10vmax;
+    }
+    .sec3 .title h2 {
+        font-size: 10vmax;
+    }
+    .sec3 .btn {
+        display: block;
+    }
+}
+@media (max-width: 610px) {
+    #header>div.info {
+       display: none;
+    }
+    #header>div.title {
+        display: none;
+    }
+    .sec2 h1 {
+        font-size: 7vmax;
+    }
+    .sec3 .title h2 {
+        font-size: 8vmax;
+    }
+    
+}
+@media (max-width: 415px) {
+    .sec1>div h2 {
+       font-size: 50px;
+    }
+    .sec1>div h3 {
+        font-size: 32px;
+    }
+    .sec3 .title .small {
+        display: none;
+    }
+    .sec3 .title h2 {
+        flex: 0 0 100%;
+    }
+    .sec3 .layout .contRight h2 {
+        font-size: 6vw;
+        text-align: center;
+    }
+    .sec3 .layout .contRight p {
+        display: none;
+    }
+    .sec3 .btn {
+        margin-top: 3%;
+    }
+    .sec3 .btn .tr{
+        font-size: 35px;
+    }
+    
+    
+}
