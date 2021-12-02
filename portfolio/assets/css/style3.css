@@ -119,12 +119,6 @@ body {
     background: rgba(230, 230, 230, 0.322);
 }
 
-/* box */
-.box {
-    background: #c3b6a35b;
-    padding: 2%;
-}
-
 /* line */
 .lineRight,
 .lineLeft,
@@ -456,6 +450,13 @@ body {
     width: 100%;
 }
 
+#section5 h2 {
+    margin-top: 0.54vw;
+    margin-bottom: 0.54vw;
+    line-height: .91;
+    font-size: 60px;
+}
+
 .sec5 {
     display: flex;
     justify-content: space-between;
@@ -484,145 +485,111 @@ body {
     padding-bottom: 2%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     border-top: 1px solid #000;
 }
 
 .sec6 .img {
     width: 60%;
-    height: 100%;
+    align-items: start;
 }
 
 .sec6 .desc {
     width: 38%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
 .sec6 .desc h2 {
-    line-height: 0.8;
-    padding-bottom: 2%;
+    height: 12%;
+    font-size: 5.5vw;
+    line-height: 0.7;
+}
+
+.sec6 .desc p:first-of-type {
+    height: 32%;
+}
+
+.sec6 .desc .keyword {
+    height: 14%;
+    padding: 1% 0 1% 2%;
+}
+
+.sec6 .desc .keyword strong {
+    font-size: 25px;
 }
 
 .sec6 .desc .box {
-    margin-top: 4%;
-    margin-bottom: 4%;
-}
-
-.sec6 .desc .box strong {
-    font-size: 30px;
-}
-
-.sec6 .desc .box p {
-    font-size: 20px;
-    color: #68410f;
-}
-
-.sec6 .desc .boxWrap {
+    height: 28%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    align-items: center;
+
 }
 
-.sec6 .desc .boxWrap .left {
-    width: 56%;
-    height: 100%;
+.sec6 .desc .box .left {
+    width: 58%;
     padding: 2%;
 }
-.sec6 .desc .boxWrap .leftSec {
+
+.sec6 .desc .box .right {
+    width: 38%;
     padding: 2%;
+}
+
+.sec6 .desc .box .boxInner {
+    width: 100%;
+    height: 100%;
+
+}
+
+.sec6 .desc .box .left .boxInner {
+    width: 100%;
     height: 100%;
     position: relative;
+    padding: 4% 0 4% 4%;
 }
-.sec6 .desc .boxWrap .leftSec img {
+
+.sec6 .desc .box .right .boxInner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 4% 0 4% 4%;
+}
+
+.sec6 .desc .left .boxInner img {
+    width: 25%;
     position: absolute;
-    top: 2%;
-    right: 1%;
-    width: 28%;
-}
-.sec6 .desc .boxWrap .right {
-    width: 40%;
-    height: 100%;
-    padding: 2%;
-}
-.sec6 .desc .boxWrap .rightSec {
-    height: 100%;
-    padding: 2%;
-    position: relative;
-    align-items: center;
+    top: 3%;
+    right: 3%;
 }
 
-.sec6 .desc .boxWrap .leftSec h2 {
-    margin-top: 3%;
-    font-size: 45px;
+.sec6 .desc .right .boxInner img {
+    position: absolute;
+    width: 60%;
+    right: 0;
+    bottom: 0;
+}
+
+.sec6 .desc .boxInner h3.tr {
     text-align: left;
 }
 
-.sec6 .desc .boxWrap .leftSec h3 {
-    font-size: 40px;
-    line-height: 0.8;
-    padding: 2% 0;
-}
-
-.sec6 .desc .boxWrap .leftSec p {
-    padding-top: 1%;
-    padding-bottom: 2%;
-    font-size: 13px;
-}
-
-.sec6 .desc .boxWrap .rightSec img{
-    position: absolute;
-    bottom: 0%;
-    right: -5%;
-    width: 70%;
-}
-.sec6 .desc .boxWrap .rightSec h2 {
-    font-size: 45px;
-    text-align: left;
-    padding-top: 10px;
+.sec6 .desc .boxInner h3 {
+    font-size: 30px;
     line-height: 1;
 }
 
+.sec6 .desc .right .boxInner h3 {
+    font-size: 33px;
+    line-height: 1.2;
+}
 
+.sec6 .desc .left .boxInner p {
+    font-size: 13px;
+    line-height: 2;
+}
 
 
 
 /* responsive devices */
 
-@media (max-width: 1880px){
-    .sec6 .desc h2 {
-        font-size: 55px;
-    }
-    .sec6 .desc .box {
-        margin: 2% 0;
-        padding: 1%;
-    }
-    .sec6 .desc .box strong {
-        font-size: 25px;
-    }
-    .sec6 .desc .box p {
-        font-size: 15px;
-    }
-    .sec6 .desc .boxWrap{
-        height: 20vh;
-    }
-    .sec6 .desc .boxWrap .leftSec h2{
-        font-size: 30px;
-    }
-    .sec6 .desc .boxWrap .leftSec h3{
-        font-size: 28px;
-    }
-    .sec6 .desc .boxWrap .leftSec p {
-        font-size: 12px;
-    }
-    .sec6 .desc .boxWrap .rightSec h2 {
-        font-size: 30px;
-        line-height: 1;
-    }
-}
 @media (max-width: 1600px) {
     .sec2 .left p:first-of-type {
         display: none;
@@ -671,33 +638,10 @@ body {
         font-size: 6.8vw;
     }
 
-    /* section */
-    .sec6 .desc h2 {
-        font-size: 50px;
-    }
-    .sec6 .desc .box {
-        display: none;
-    }
-    .sec6 .desc .boxWrap{
-        margin-top: 2%;
-        height: 20vh;
-    }
-    .sec6 .desc .boxWrap .leftSec h2{
-        font-size: 30px;
-    }
-    .sec6 .desc .boxWrap .leftSec h3{
-        font-size: 28px;
-    }
-    .sec6 .desc .boxWrap .leftSec p {
-        font-size: 12px;
-    }
-    .sec6 .desc .boxWrap .rightSec h2 {
-        font-size: 30px;
-        line-height: 1;
-    }
+
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1440px) {
     .sec2 h1 {
         font-size: 23vmax;
     }
@@ -713,37 +657,34 @@ body {
     .sec3 .btn {
         display: none;
     }
-    .sec6 .desc .boxWrap{
-        margin-top: 2%;
-        height: 15vh;
-        align-items: center;
-        justify-content: space-between;
+
+    .sec6 .desc p:first-of-type {
+        height: 61%;
+        margin-bottom: 2%;
     }
-    .sec6 .desc .boxWrap .leftSec h2{
-        font-size: 25px;
+
+    .sec6 .desc .keyword {
+        display: block;
+        height: 19%;
     }
-    .sec6 .desc .boxWrap .leftSec h3{
-        font-size: 25px;
-    }
-    .sec6 .desc .boxWrap .leftSec p {
+
+    .sec6 .desc .box {
         display: none;
     }
-    .sec6 .desc .boxWrap .rightSec img {
-        width: 60%;
-    }
-    .sec6 .desc .boxWrap .rightSec h2 {
-        font-size: 25px;
-        line-height: 0.8;
-    }
+  
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1260px) {
     #header>div.info {
         font-size: 13px;
     }
 
     #header>div.title {
         font-size: 22px;
+    }
+
+    .sec1>div h3 {
+        font-size: 36px;
     }
 
     .sec2 h1 {
@@ -766,7 +707,31 @@ body {
         padding: 1px 4px;
         font-size: 2vw;
     }
-    
+
+    .sec6 {
+        display: block;
+    }
+
+    .sec6 .img {
+        width: 100%;
+    }
+    .sec6 .desc {
+        width: 100%;
+    }
+    .sec6 .desc .box {
+        margin-top: 2%;
+    }
+    .sec6 .desc.flexCol {
+        width: 100%;
+    }
+    .sec6 .desc.flexCol h2 {
+        margin-top: 0.54vw;
+        margin-bottom: 0.54vw;
+        line-height: .91;
+    }
+    .sec6 .desc .right .boxInner img {
+        width: 38%;
+    } 
 }
 
 @media (max-width: 960px) {
@@ -861,6 +826,7 @@ body {
         width: 100%;
         padding-top: 1%;
     }
+
     .sec4-2 .right {
         width: 100%;
     }
@@ -884,6 +850,13 @@ body {
     .sec5 .right em {
         padding: 1px 4px;
         font-size: 2vw;
+    }
+    .sec6 .desc .keyword {
+        display: block;
+        padding: 2%;
+    }
+    .sec6 .desc .box {
+        display: none;
     }
 }
 
