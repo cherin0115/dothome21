@@ -407,16 +407,18 @@ body {
 .sec4 .left {
     width: 30%;
     background: #ccc;
+    height: 550px;
 }
 
 
 .sec4 .right {
     width: 68%;
     text-align: right;
-    line-height: 1.2;
+    line-height: 1.35;
     font-size: 12.2vw;
     background: #ccc;
-    position: relative;
+    vertical-align: bottom;
+    height: 550px;
 }
 /* responsive devices */
 
