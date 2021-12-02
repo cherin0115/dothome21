@@ -110,6 +110,7 @@ body {
     border-radius: 50%;
     padding: 1vw 0;
     align-items: center;
+    background: rgba(230, 230, 230, 0.322);
 }
 
 /* line */
@@ -736,7 +737,10 @@ body {
 }
 
 @media (max-width: 415px) {
-
+    #header>div.title {
+        line-height: 1;
+        font-size: 11px;
+    }
     .sec1>div h2 {
         font-size: 40px;
     }
