@@ -715,25 +715,25 @@ body {
     }
     .sec6 .desc .boxWrap{
         margin-top: 2%;
-        height: 18vh;
+        height: 15vh;
         align-items: center;
         justify-content: space-between;
     }
-    .sec6 .desc .boxWrap .leftSec {
-        align-items: center;
-    }
     .sec6 .desc .boxWrap .leftSec h2{
-        font-size: 30px;
+        font-size: 25px;
     }
     .sec6 .desc .boxWrap .leftSec h3{
-        font-size: 28px;
+        font-size: 25px;
     }
     .sec6 .desc .boxWrap .leftSec p {
         display: none;
     }
+    .sec6 .desc .boxWrap .rightSec img {
+        width: 60%;
+    }
     .sec6 .desc .boxWrap .rightSec h2 {
-        font-size: 30px;
-        line-height: 1;
+        font-size: 25px;
+        line-height: 0.8;
     }
 }
 
@@ -762,6 +762,11 @@ body {
         font-size: 17vmax;
     }
 
+    .sec5 .right em {
+        padding: 1px 4px;
+        font-size: 2vw;
+    }
+    
 }
 
 @media (max-width: 960px) {
