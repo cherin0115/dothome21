@@ -54,11 +54,11 @@ body {
 
 #section2 {}
 
-#section3 {
+#section3 {}
+
+#section4 {
     height: 4000px;
 }
-
-#section4 {}
 
 #section5 {}
 
@@ -394,6 +394,33 @@ body {
 }
 
 
+/* sec4 */
+.sec4 {
+    margin-top: 2%;
+    padding-top: 2%;
+    border-top: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sec4 .left {
+    width: 30%;
+    background: #ccc;
+}
+
+
+.sec4 .right {
+    width: 68%;
+    text-align: right;
+    line-height: 1.2;
+    font-size: 12.2vw;
+    background: #ccc;
+    position: relative;
+}
+/* responsive devices */
+
+
 @media (max-width: 1600px) {
     .sec2 .left p:first-of-type {
         display: none;
@@ -403,45 +430,56 @@ body {
         padding-top: 2%;
         font-size: 3vw;
     }
+
     .sec2 .right img {
         height: 100%;
     }
+
     .sec2 .right p {
         display: none;
     }
+
     /* section3 */
     .sec3 .layout {
         display: inline-block;
     }
+
     .sec3 .layout .contLeft.flexCol {
         display: inline;
         width: 50%;
     }
+
     .sec3 .layout .contLeft .txtAbout.flex {
         display: none;
     }
+
     .sec3 .layout .contLeft .txtAbout.Image {
         width: 50%;
         float: left;
     }
+
     .sec3 .layout .contRight {
         width: 100%;
         display: block;
 
     }
+
     .sec3 .layout .contRight h2 {
         margin-top: 2%;
         font-size: 6.8vw;
     }
-    
+
 }
+
 @media (max-width: 1450px) {
     .sec2 h1 {
         font-size: 23vmax;
     }
+
     .sec2 .left h2 {
         display: none;
     }
+
     .sec2 .right h2 {
         display: none;
     }
@@ -450,32 +488,39 @@ body {
         display: none;
     }
 }
+
 @media (max-width: 1250px) {
     #header>div.info {
         font-size: 13px;
     }
+
     #header>div.title {
         font-size: 22px;
     }
+
     .sec2 h1 {
         font-size: 17vmax;
     }
+
     .sec2 .left h2 {
         display: none;
     }
+
     .sec2 .right h2 {
         display: none;
     }
+
     .sec3 .title h2 {
         font-size: 17vmax;
     }
- 
+
 }
 
 @media (max-width: 960px) {
     #header>div.info {
         font-size: 12px;
     }
+
     .container {
         width: 96%;
     }
@@ -483,12 +528,13 @@ body {
     .sec1 {
         flex-direction: column;
     }
-    
+
     .sec1>div {
         flex: 0 0 100%;
     }
-    .sec1 >div img {
-       margin-top: 10px;
+
+    .sec1>div img {
+        margin-top: 10px;
     }
 
     .sec1>div p:last-of-type {
@@ -517,94 +563,118 @@ body {
     .sec2 h1 {
         font-size: 14vmax;
     }
+
     .sec2 .left {
         flex: 0 0 100%;
     }
+
     .sec2 .left p {
         display: block;
     }
+
     .sec2 .right img {
         display: none;
     }
+
     .sec3 .title h2 {
         font-size: 15vmax;
     }
+
     .sec3 .layout .contLeft img {
         display: none;
     }
+
     .sec3 .layout .contRight h2 br {
         display: none;
     }
- 
+
 }
 
 @media (max-width: 800px) {
     #header>div.info {
         font-size: 9px;
     }
+
     #header>div.title {
         font-size: 18px;
     }
+
     .sec2 h1 {
         font-size: 10vmax;
     }
+
     .sec3 .title h2 {
         font-size: 10vmax;
     }
+
     .sec3 .btn {
         display: block;
     }
 }
+
 @media (max-width: 610px) {
     #header>div.info {
-       display: none;
+        display: none;
     }
+
     #header>div.title {
         display: none;
     }
+
     .sec2 h1 {
         font-size: 9vmax;
     }
+
     .sec3 .title h2 {
         font-size: 8vmax;
     }
-    
+
 }
+
 @media (max-width: 415px) {
     .sec1>div h2 {
-       font-size: 50px;
+        font-size: 50px;
     }
+
     .sec1>div h3 {
         font-size: 32px;
     }
+
     .sec2 h1 {
         font-size: 7vmax;
         line-height: 1.2;
     }
+
     .sec3 .title .small {
         display: none;
     }
+
     .sec3 .title h2 {
         flex: 0 0 100%;
         line-height: 1.1;
     }
+
     .sec3 .layout .contRight h2 {
         font-size: 6vw;
         text-align: center;
     }
+
     .sec3 .layout .contRight p {
         display: none;
     }
+
     .sec3 .btn {
         margin-top: 3%;
     }
-    .sec3 .btn .tr{
+
+    .sec3 .btn .tr {
         font-size: 35px;
     }
-        
+
 }
+
 @media (max-width: 325px) {
     .sec1>div h3 {
         font-size: 25px;
-    }        
+    }
 }
