@@ -563,7 +563,7 @@ body {
         display: none;
     }
     .sec2 h1 {
-        font-size: 7vmax;
+        font-size: 9vmax;
     }
     .sec3 .title h2 {
         font-size: 8vmax;
@@ -577,11 +577,16 @@ body {
     .sec1>div h3 {
         font-size: 32px;
     }
+    .sec2 h1 {
+        font-size: 7vmax;
+        line-height: 1.2;
+    }
     .sec3 .title .small {
         display: none;
     }
     .sec3 .title h2 {
         flex: 0 0 100%;
+        line-height: 1.1;
     }
     .sec3 .layout .contRight h2 {
         font-size: 6vw;
