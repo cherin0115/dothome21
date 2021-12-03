@@ -48,6 +48,20 @@ body {
     background: #D8D1C8;
 }
 
+body.mac.chrome .sec2 h1 {
+    line-height: 0.9;
+    padding-bottom: 2%;
+    font-family: 'Eros Romano';
+    text-align: center;
+}
+
+body.mac.chrome .sec3 .title h2 {
+    line-height: 0.9;
+    padding-bottom: 2%;
+    font-family: 'Eros Romano';
+    text-align: center;
+}
+
 #contents {}
 
 #section1 {}
@@ -599,7 +613,9 @@ body {
         padding-top: 2%;
         font-size: 3vw;
     }
-
+    .sec2 .right h2 {
+        display: none;
+    }
     .sec2 .right img {
         height: 100%;
     }
@@ -637,7 +653,9 @@ body {
         margin-top: 2%;
         font-size: 6.8vw;
     }
-
+   .sec6 .keyword {
+       display: none;
+   }
 
 }
 
@@ -671,7 +689,7 @@ body {
     .sec6 .desc .box {
         display: none;
     }
-  
+
 }
 
 @media (max-width: 1260px) {
@@ -715,23 +733,28 @@ body {
     .sec6 .img {
         width: 100%;
     }
+
     .sec6 .desc {
         width: 100%;
     }
+
     .sec6 .desc .box {
         margin-top: 2%;
     }
+
     .sec6 .desc.flexCol {
         width: 100%;
     }
+
     .sec6 .desc.flexCol h2 {
         margin-top: 0.54vw;
         margin-bottom: 0.54vw;
         line-height: .91;
     }
+
     .sec6 .desc .right .boxInner img {
         width: 38%;
-    } 
+    }
 }
 
 @media (max-width: 960px) {
@@ -851,10 +874,12 @@ body {
         padding: 1px 4px;
         font-size: 2vw;
     }
+
     .sec6 .desc .keyword {
         display: block;
         padding: 2%;
     }
+
     .sec6 .desc .box {
         display: none;
     }
