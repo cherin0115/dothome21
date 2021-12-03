@@ -609,8 +609,9 @@ body.mac.chrome .sec3 .title h2 {
     padding: 1% 0;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
-.sec7  h2 {
+.sec7 h2 {
     font-size: 180px;
     line-height: 0.7;
     padding-bottom: 0.54vw;
@@ -619,35 +620,35 @@ body.mac.chrome .sec3 .title h2 {
 }
 .sec7 .left {
     width: 30%;
-    height: 1018px;
-    background: #ccc;
-}
-.sec7 .left .imgWrap {
-    padding: 5% 10% ;
-}
-.sec7 .left .imgWrap p {
     text-align: center;
-    padding-top: 2%;
+    position: sticky;
+    top: 80px;
 }
-.sec7 .right .imgWrap {
-    padding-top: 2%;
+.sec7 .left .cont{
+    width: 100%;
+    height: 85%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
 }
-.line {
-    width: 1px;
-    height: 100%;
-    background: #000;
+.sec7 .left .imgBox img{
+    padding: 10%;
 }
-
+.sec7 .left .imgBox p.ch{
+    text-align: center;
+}
+.sec7 .left h3 {
+    font-size: 150px;
+}
 .sec7 .right {
-    width: 66%;
-    height: 100%;
-    background: #ccc;
+    width: 68%;
 }
 
-
-
-
-
+.sec7 .right .scriptImg img {
+    margin-top: 2%;
+}
 /* responsive devices */
 
 @media (max-width: 1600px) {
