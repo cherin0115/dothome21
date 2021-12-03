@@ -613,9 +613,11 @@ body.mac.chrome .sec3 .title h2 {
         padding-top: 2%;
         font-size: 3vw;
     }
+
     .sec2 .right h2 {
         display: none;
     }
+
     .sec2 .right img {
         height: 100%;
     }
@@ -653,10 +655,32 @@ body.mac.chrome .sec3 .title h2 {
         margin-top: 2%;
         font-size: 6.8vw;
     }
-   .sec6 .keyword {
-       display: none;
-   }
 
+    .sec6 .desc h2 {
+        height: 20%;
+        font-size: 93px;
+    }
+
+    .sec6 .desc p:first-of-type {
+        height: 52%;
+    }
+
+    .sec6 .keyword {
+        display: none;
+    }
+
+    .sec6 .desc .box {
+        height: 35%;
+    }
+
+    .sec6 .desc .boxInner h3 {
+        font-size: 35px;
+    }
+
+    .sec6 .desc .boxInner p {
+        font-size: 14px;
+        padding-top: 2%;
+    }
 }
 
 @media (max-width: 1440px) {
@@ -754,6 +778,19 @@ body.mac.chrome .sec3 .title h2 {
 
     .sec6 .desc .right .boxInner img {
         width: 38%;
+    }
+ 
+    .sec6.odd {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sec6.odd .desc {
+        order: 2;
+    }
+
+    .sec6.odd .img {
+        order: 1;
     }
 }
 
