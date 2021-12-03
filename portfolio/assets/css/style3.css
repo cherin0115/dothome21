@@ -74,8 +74,10 @@ body.mac.chrome .sec3 .title h2 {
 
 #section5 {}
 
-#section6 {
-    height: 4000px;
+#section6 {}
+
+#section7 {
+    height: 3000px;
 }
 
 /* container */
@@ -500,6 +502,7 @@ body.mac.chrome .sec3 .title h2 {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid #000;
+    border-bottom: 2px solid #000;
 }
 
 .sec6 .img {
@@ -599,6 +602,26 @@ body.mac.chrome .sec3 .title h2 {
     font-size: 13px;
     line-height: 2;
 }
+
+.sec7 {
+    border-top: 1px solid #000;
+    padding-top: 1%;
+    height: 100%;
+}
+
+.sec7 .left {
+    width: 40%;
+    height: 100%;
+    background: #ccc;
+}
+
+.sec7 .right {
+    width: 56%;
+    height: 100%;
+    background: #ccc;
+}
+
+
 
 
 
@@ -779,7 +802,7 @@ body.mac.chrome .sec3 .title h2 {
     .sec6 .desc .right .boxInner img {
         width: 38%;
     }
- 
+
     .sec6.odd {
         display: flex;
         flex-direction: column;
