@@ -607,7 +607,6 @@ body.mac.chrome .sec3 .title h2 {
     border-top: 1px solid #000;
     margin: 1% 0;
     padding: 1% 0;
-    height: 300px;
     display: flex;
     justify-content: space-between;
 }
@@ -620,8 +619,18 @@ body.mac.chrome .sec3 .title h2 {
 }
 .sec7 .left {
     width: 30%;
-    height: 100%;
+    height: 1018px;
     background: #ccc;
+}
+.sec7 .left .imgWrap {
+    padding: 5% 10% ;
+}
+.sec7 .left .imgWrap p {
+    text-align: center;
+    padding-top: 2%;
+}
+.sec7 .right .imgWrap {
+    padding-top: 2%;
 }
 .line {
     width: 1px;
