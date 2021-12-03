@@ -681,7 +681,7 @@ body.mac.chrome .sec3 .title h2 {
 
     .sec6 .desc h2 {
         height: 20%;
-        font-size: 93px;
+        font-size: 85px;
     }
 
     .sec6 .desc p:first-of-type {
@@ -721,6 +721,11 @@ body.mac.chrome .sec3 .title h2 {
 
     .sec3 .btn {
         display: none;
+    }
+
+    .sec6 .desc h2 {
+        height: 20%;
+        font-size: 82px;
     }
 
     .sec6 .desc p:first-of-type {
