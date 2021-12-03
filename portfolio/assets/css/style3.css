@@ -605,18 +605,32 @@ body.mac.chrome .sec3 .title h2 {
 
 .sec7 {
     border-top: 1px solid #000;
-    padding-top: 1%;
-    height: 100%;
+    margin: 1% 0;
+    padding: 1% 0;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
 }
-
+.sec7  h2 {
+    font-size: 180px;
+    line-height: 0.7;
+    padding-bottom: 0.54vw;
+    text-align: left;
+    border-bottom: 1px solid #000;
+}
 .sec7 .left {
-    width: 40%;
+    width: 30%;
     height: 100%;
     background: #ccc;
 }
+.line {
+    width: 1px;
+    height: 100%;
+    background: #000;
+}
 
 .sec7 .right {
-    width: 56%;
+    width: 66%;
     height: 100%;
     background: #ccc;
 }
@@ -680,12 +694,12 @@ body.mac.chrome .sec3 .title h2 {
     }
 
     .sec6 .desc h2 {
-        height: 20%;
+        height: 16%;
         font-size: 85px;
     }
 
     .sec6 .desc p:first-of-type {
-        height: 52%;
+        height: 48%;
     }
 
     .sec6 .keyword {
