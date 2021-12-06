@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/reset1.css">
     <link rel="stylesheet" href="assets/css/style3.css">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
 </head>
 
 <body>
@@ -471,11 +474,77 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
+
+        <section id="section8">
+            <div class="container">
+                <div class="sec8">
+                    <div class="title">
+                        <h2 class="eros">animation</h2>
+                        <div class="btnSM">
+                            <a href="/">✓</a>
+                        </div>
+                    </div>
+                    <div class="game-section">
+                        <div class="owl-carousel custom-carousel owl-theme">
+                            <div class="item active">
+                                <div class="item-desc">
+                                    <iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/cherin0115/embed/OJxMXeO?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                                    <h3>Dota 2</h3>
+                                    <p>Dota 2 is a multiplayer online battle arena by Valve. The game is a sequel to
+                                        Defense of the
+                                        Ancients, which was a community-created mod for Blizzard Entertainment's
+                                        Warcraft III.</p>
+                                </div>
+                            </div>
+                            <div class="item"
+                                style="background-image: url(https://ucarecdn.com/2a5f69bc-befa-49f4-acc6-ab1dcae514c7/winter3.jpg);">
+                                <div class="item-desc">
+                                    <h3>The Witcher 3</h3>
+                                    <p>The Witcher 3 is a multiplayer online battle arena by Valve. The game is a sequel
+                                        to Defense
+                                        of the Ancients, which was a community-created mod for Blizzard Entertainment's
+                                        Warcraft III.</p>
+                                </div>
+                            </div>
+                            <div class="item"
+                                style="background-image: url(https://ucarecdn.com/ec1918b1-2674-452c-bf61-8f73d8cc40c6/rdr2.jpg);">
+                                <div class="item-desc">
+                                    <h3>RDR 2</h3>
+                                    <p>RDR 2 is a multiplayer online battle arena by Valve. The game is a sequel to
+                                        Defense of the
+                                        Ancients, which was a community-created mod for Blizzard Entertainment's
+                                        Warcraft III.</p>
+                                </div>
+                            </div>
+                            <div class="item"
+                                style="background-image: url(https://ucarecdn.com/6ba9052d-6105-4491-917b-e1a65b68f920/pubg.jpg);">
+                                <div class="item-desc">
+                                    <h3>PUBG Mobile</h3>
+                                    <p>PUBG 2 is a multiplayer online battle arena by Valve. The game is a sequel to
+                                        Defense of the
+                                        Ancients, which was a community-created mod for Blizzard Entertainment's
+                                        Warcraft III.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section8 -->
     </div>
+
+
     <!-- //contents -->
+
+
+    <!-- script -->
+    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
     <script>
         function agentCheck() {
             const agent = navigator.userAgent.toLowerCase();
@@ -506,40 +575,18 @@
                 }
             }
         }
-        agentCheck();
+        agentCheck(); //UserAgent Check
 
-
-        // function getSectionPoint() {
-        //     const section = document.querySelector('#section7')
-        //     const sections = document.querySelectorAll('.sec7');
-        //     const thisPoint = document.documentElement.scrollTop;
-
-        //     for (let i = 0; i < sections.length; i++) {
-        //         let number = 0; //margin-bottom
-
-        //         if (thisPoint >= (section.offsetTop + sections[0].offsetTop) && thisPoint <= (section.offsetTop +
-        //                 section.clientHeight)) {
-
-        //             let point = sections[0].offsetTop + Math.abs(sections[0].getBoundingClientRect().top);
-        //             const num = document.querySelectorAll('.num');
-
-        //             // console.log(sections[0].getBoundingClientRect().top);
-        //             // console.log("sections.offsetTop : " + sections[0].offsetTop);
-
-        //             if ((sections[i].offsetTop - number) <= point) {
-        //                 if (Number(num[i].textContent) > 1) {
-        //                     sections[i - 1].classList.remove('active');
-        //                     sections[i].classList.add('active');
-        //                 } else {
-        //                     sections[i].classList.add('active');
-        //                 }
-        //             } else {
-        //                 sections[i].classList.remove('active');
-        //             }
-        //         }
-        //     }
-        // }
-        // window.addEventListener('scroll', getSectionPoint);
+        $(".custom-carousel").owlCarousel({
+            autoWidth: true,
+            loop: true
+        });
+        $(document).ready(function () {
+            $(".custom-carousel .item").click(function () {
+                $(".custom-carousel .item").not($(this)).removeClass("active");
+                $(this).toggleClass("active");
+            });
+        });
     </script>
 </body>
 

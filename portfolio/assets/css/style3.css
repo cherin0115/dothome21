@@ -76,8 +76,10 @@ body.mac.chrome .sec3 .title h2 {
 
 #section6 {}
 
-#section7 {
-    height: 3000px;
+#section7 {}
+
+#section8 {
+    height: 1000px;
 }
 
 /* container */
@@ -611,20 +613,23 @@ body.mac.chrome .sec3 .title h2 {
     justify-content: space-between;
     align-items: flex-start;
 }
+
 .sec7 h2 {
     font-size: 180px;
     line-height: 0.7;
-    padding-bottom: 0.54vw;
+    padding-bottom: 1.54vw;
     text-align: left;
     border-bottom: 1px solid #000;
 }
+
 .sec7 .left {
     width: 30%;
     text-align: center;
     position: sticky;
     top: 80px;
 }
-.sec7 .left .cont{
+
+.sec7 .left .cont {
     width: 100%;
     height: 85%;
     margin-top: 2%;
@@ -633,21 +638,166 @@ body.mac.chrome .sec3 .title h2 {
     justify-content: space-between;
     position: sticky;
 }
-.sec7 .left .imgBox img{
+
+.sec7 .left .imgBox img {
     padding: 10%;
 }
-.sec7 .left .imgBox p.ch{
+
+.sec7 .left .imgBox p.ch {
     text-align: center;
 }
+
 .sec7 .left h3 {
     font-size: 150px;
 }
+
 .sec7 .right {
     width: 68%;
 }
 
 .sec7 .right .scriptImg img {
     margin-top: 2%;
+}
+
+
+/* section8 */
+.sec8 {
+    position: relative;
+}
+
+.sec8 .title {
+    height: 250px;
+    margin-top: 2%;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    position: relative;
+}
+
+.sec8 .title h2 {
+    font-size: 300px;
+    line-height: 0.7;
+    padding-bottom: 1.54vw;
+    float: left;
+}
+
+.sec8 .title .btnSM {
+    border: 1px solid #000;
+    border-radius: 50%;
+    float: right;
+    position: absolute;
+    right: 30px;
+    top: 50px;
+}
+
+.sec8 .title .btnSM a {
+    font-size: 100px;
+    padding: 0 50px;
+}
+.line-title {
+    position: relative;
+    width: 400px;
+}
+
+.line-title::before,
+.line-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.line-title::before {
+    width: 100%;
+    background: #f2f2f2;
+}
+
+.line-title::after {
+    width: 32px;
+    background: #e73700;
+}
+
+.game-section {
+    padding: 60px 50px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.game-section .owl-stage {
+    margin: 15px 0;
+    display: flex;
+}
+
+.game-section .item {
+    margin: 0 15px 60px;
+    width: 320px;
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+    background: #343434 no-repeat center center / cover;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.game-section .item.active {
+    width: 500px;
+    box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+}
+
+.game-section .item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.game-section .item-desc {
+    padding: 0 24px 12px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transform: translateY(calc(100% - 54px));
+    -webkit-transform: translateY(calc(100% - 54px));
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+
+.game-section .item.active .item-desc {
+    transform: none;
+    -webkit-transform: none;
+}
+
+.game-section .item-desc p {
+    opacity: 0;
+    -webkit-transform: translateY(32px);
+    transform: translateY(32px);
+    transition: all 0.4s ease-in-out 0.2s;
+    -webkit-transition: all 0.4s ease-in-out 0.2s;
+}
+
+.game-section .item.active .item-desc p {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.game-section .owl-nav {
+    display: none;
+}
+.game-section .owl-dots{
+    display: none;
 }
 /* responsive devices */
 
@@ -727,6 +877,10 @@ body.mac.chrome .sec3 .title h2 {
     .sec6 .desc .boxInner p {
         font-size: 14px;
         padding-top: 2%;
+    }
+
+    .sec7 h2 {
+        padding-bottom: 1.7vw;
     }
 }
 
