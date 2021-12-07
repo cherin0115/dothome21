@@ -547,11 +547,13 @@ body.mac.chrome .sec3 .title h2 {
 
 .sec6 .desc .box .left {
     width: 58%;
+    height: 100%;
     padding: 2%;
 }
 
 .sec6 .desc .box .right {
     width: 38%;
+    height: 100%;
     padding: 2%;
 }
 
@@ -582,7 +584,7 @@ body.mac.chrome .sec3 .title h2 {
     right: 3%;
 }
 
-.sec6 .desc .right .boxInner img {
+.sec6 .desc .right .boxInner a img {
     position: absolute;
     width: 60%;
     right: 0;
