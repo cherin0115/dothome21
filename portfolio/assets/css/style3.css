@@ -829,7 +829,7 @@ body.mac.chrome .sec3 .title h2 {
 .sec9 .cont {
     margin-top: 2%;
     margin-bottom: 2%;
-    padding: 2%;
+    padding: 4%;
     width: 100%;
     height: 600px;
     border: 1px solid #000;
@@ -842,7 +842,7 @@ body.mac.chrome .sec3 .title h2 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 48%;
+    width: 46%;
 }
 
 .sec9 .line {
@@ -852,7 +852,7 @@ body.mac.chrome .sec3 .title h2 {
 }
 
 .sec9 .right {
-    width: 48%;
+    width: 46%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
