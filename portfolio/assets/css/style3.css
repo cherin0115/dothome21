@@ -78,8 +78,7 @@ body.mac.chrome .sec3 .title h2 {
 
 #section7 {}
 
-#section8 {
-}
+#section8 {}
 
 /* container */
 .container {
@@ -812,15 +811,106 @@ body.mac.chrome .sec3 .title h2 {
 
 /* section9 */
 .sec9 .title {
-background: #000;
+    background: #000;
 }
-.sec9 .title h2{
-   width: 80%;
-   color: #D8D1C8;
-   font-size: 20vmax;
-   line-height: .8;
-   text-align: center;
-   white-space: nowrap;
+
+.sec9 .title h2 {
+    width: 80%;
+    color: #D8D1C8;
+    font-size: 20vmax;
+    line-height: .8;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.sec9 .cont {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 2%;
+    width: 100%;
+    height: 600px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec9 .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 48%;
+}
+
+.sec9 .line {
+    width: 1px;
+    height: 100%;
+    background: #000;
+}
+
+.sec9 .right {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sec9 .left img {
+    width: 50%;
+    height: 56%;
+}
+
+.sec9 .left h3 {
+    width: 100%;
+    height: 18%;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.sec9 .left h3::before {
+    content: '⌜';
+    position: absolute;
+    top: -13px;
+    left: 0;
+}
+
+.sec9 .left h3::after {
+    content: '⌟';
+    position: absolute;
+    top: 62px;
+    right: 0;
+}
+
+.sec9 .left p {
+    height: 18%;
+}
+
+.sec9 .right img {
+    width: 100%;
+    height: 35%;
+}
+
+.sec9 .right .eros {
+    font-size: 20px;
+}
+
+.sec9 .right .inputBox {
+    background: transparent;
+    height: 8%;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+.sec9 .right .contentBox {
+    background: transparent;
+    height: 30%;
+}
+
+.sec9 .right .btn2 {
+    background: transparent;
+    width: 20%;
+    height: 8%;
 }
 
 /* responsive devices */
