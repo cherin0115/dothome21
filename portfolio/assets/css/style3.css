@@ -79,7 +79,6 @@ body.mac.chrome .sec3 .title h2 {
 #section7 {}
 
 #section8 {
-    height: 1000px;
 }
 
 /* container */
@@ -809,6 +808,19 @@ body.mac.chrome .sec3 .title h2 {
 
 .game-section .owl-dots {
     display: none;
+}
+
+/* section9 */
+.sec9 .title {
+background: #000;
+}
+.sec9 .title h2{
+   width: 80%;
+   color: #D8D1C8;
+   font-size: 20vmax;
+   line-height: .8;
+   text-align: center;
+   white-space: nowrap;
 }
 
 /* responsive devices */
