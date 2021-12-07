@@ -308,10 +308,10 @@
                             <div class="right borderSt2">
                                 <div class="boxInner border">
                                     <a href="../site-php/pages/main.php">
-                                    <img src="./assets/img/camera.png" alt="camera">
-                                    <h3 class="tr">View</h3>
-                                    <h3 class="tr">Actual</h3>
-                                    <h3 class="tr">Site</h3>
+                                        <img src="./assets/img/camera.png" alt="camera">
+                                        <h3 class="tr">View</h3>
+                                        <h3 class="tr">Actual</h3>
+                                        <h3 class="tr">Site</h3>
                                     </a>
                                 </div>
                             </div>
@@ -561,14 +561,31 @@
             </div>
         </section>
         <!-- section9 -->
+        <!-- section10 -->
     </div>
-
-
     <!-- //contents -->
 
-
+    <footer id="footer">
+        <div class="carouselWrap">
+            <div class="scroll">
+                <div class="part">
+                    <div class="box">&nbsp;Let's</div>
+                    <div class="box">&nbsp;create</div>
+                    <div class="box">&nbsp;something</div>
+                    <div class="box">&nbsp;together</div>
+                </div>
+                <div class="part">
+                    <div class="box">&nbsp;Let's</div>
+                    <div class="box">&nbsp;create</div>
+                    <div class="box">&nbsp;something</div>
+                    <div class="box">&nbsp;together</div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- script -->
     <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
@@ -614,6 +631,46 @@
                 $(this).toggleClass("active");
             });
         });
+
+        // footer-carousel
+        const part = document.querySelector(".part");
+        const root = document.querySelector(".carouselWrap");
+        const scrollContainer = document.querySelector(".scroll");
+
+        const partWidth = part.clientWidth;
+
+        scrollContainer.style.width = `${partWidth}px`;
+        scrollContainer.style.animationName = "scroll";
+
+        const partClons = [];
+
+        const updatePartCount = _.throttle(function () {
+            const rootWidth = root.clientWidth;
+            const cloneCount = Math.floor(rootWidth / partWidth);
+
+            if (cloneCount > partClons.length) {
+                const addCount = cloneCount - partClons.length;
+
+                [...Array(addCount)].forEach(() => {
+                    const newNode = part.cloneNode(true);
+                    partClons.push(newNode);
+                    scrollContainer.appendChild(newNode);
+                });
+            }
+
+            if (cloneCount < partClons.length) {
+                const removeCount = partClons.length - cloneCount;
+
+                [...Array(removeCount)].forEach(() => {
+                    const oldNode = partClons.pop();
+                    scrollContainer.removeChild(oldNode);
+                });
+            }
+        }, 200);
+
+        updatePartCount();
+
+        window.addEventListener("resize", updatePartCount);
     </script>
 </body>
 
