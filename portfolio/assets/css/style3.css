@@ -527,12 +527,15 @@ body.mac.chrome .sec3 .title h2 {
 .sec6 .desc .keyword {
     height: 14%;
     padding: 1% 0 1% 2%;
+    background: #c9bcaa;
 }
 
 .sec6 .desc .keyword strong {
     font-size: 25px;
 }
-
+.sec6 .desc .keyword p {
+    color: #8c6c3e;
+}
 .sec6 .desc .box {
     height: 28%;
     display: flex;
